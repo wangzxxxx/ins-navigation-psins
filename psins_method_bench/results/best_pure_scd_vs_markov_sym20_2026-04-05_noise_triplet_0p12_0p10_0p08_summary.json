@@ -1,0 +1,188 @@
+{
+  "task": "best_pure_scd_vs_markov_sym20_noise_triplet_threshold_check",
+  "comparison_mode": "best_pure_scd_vs_markov_sym20_noise_triplet_2026_04_05",
+  "report_date": "2026-04-05",
+  "noise_scales": [
+    0.12,
+    0.1,
+    0.08
+  ],
+  "setup": {
+    "path_case_tag": "ch3corrected_symmetric20_att0zero_1200s",
+    "att0_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "state_setting": 42,
+    "best_pure_scd_cfg": {
+      "mode": "once_per_phase",
+      "alpha": 0.9998,
+      "transition_duration": 1.0,
+      "target": "selected",
+      "bias_to_target": false,
+      "apply_policy_names": [
+        "iter2_commit"
+      ]
+    },
+    "evaluation_rule": "overall mean / median / max (% error, lower is better)",
+    "delta_definition": "delta_markov_minus_scd = markov - scd (positive => scd better)"
+  },
+  "scales": [
+    {
+      "noise_scale": 0.12,
+      "markov": {
+        "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p12_param_errors.json",
+        "status": "reused_verified",
+        "overall": {
+          "mean_pct_error": 0.8635092356514139,
+          "median_pct_error": 0.456621051385936,
+          "max_pct_error": 4.337295383400988
+        }
+      },
+      "best_pure_scd": {
+        "json_path": "/root/.openclaw/workspace/psins_method_bench/results/G4_best_pure_scd_selected_once_a09998_td1_b0_sym20_shared_noise0p12_param_errors.json",
+        "status": "rerun",
+        "overall": {
+          "mean_pct_error": 0.8643745924795602,
+          "median_pct_error": 0.45832501646652285,
+          "max_pct_error": 4.336966883951124
+        },
+        "scd_cfg": {
+          "mode": "once_per_phase",
+          "alpha": 0.9998,
+          "transition_duration": 1.0,
+          "target": "selected",
+          "bias_to_target": false,
+          "apply_policy_names": [
+            "iter2_commit"
+          ]
+        }
+      },
+      "delta_markov_minus_scd": {
+        "mean_pct_error": -0.0008653568281462576,
+        "median_pct_error": -0.0017039650805868445,
+        "max_pct_error": 0.00032849944986423907
+      },
+      "delta_scd_minus_markov": {
+        "mean_pct_error": 0.0008653568281462576,
+        "median_pct_error": 0.0017039650805868445,
+        "max_pct_error": -0.00032849944986423907
+      },
+      "scd_beats_markov": {
+        "mean": false,
+        "median": false,
+        "max": true,
+        "all_three": false
+      }
+    },
+    {
+      "noise_scale": 0.1,
+      "markov": {
+        "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p1_param_errors.json",
+        "status": "rerun",
+        "overall": {
+          "mean_pct_error": 0.8310855534818559,
+          "median_pct_error": 0.4436490498089194,
+          "max_pct_error": 4.023994776299328
+        }
+      },
+      "best_pure_scd": {
+        "json_path": "/root/.openclaw/workspace/psins_method_bench/results/G4_best_pure_scd_selected_once_a09998_td1_b0_sym20_shared_noise0p1_param_errors.json",
+        "status": "rerun",
+        "overall": {
+          "mean_pct_error": 0.8328975966767945,
+          "median_pct_error": 0.4437627408139335,
+          "max_pct_error": 4.021571166097898
+        },
+        "scd_cfg": {
+          "mode": "once_per_phase",
+          "alpha": 0.9998,
+          "transition_duration": 1.0,
+          "target": "selected",
+          "bias_to_target": false,
+          "apply_policy_names": [
+            "iter2_commit"
+          ]
+        }
+      },
+      "delta_markov_minus_scd": {
+        "mean_pct_error": -0.0018120431949386617,
+        "median_pct_error": -0.0001136910050141271,
+        "max_pct_error": 0.0024236102014301153
+      },
+      "delta_scd_minus_markov": {
+        "mean_pct_error": 0.0018120431949386617,
+        "median_pct_error": 0.0001136910050141271,
+        "max_pct_error": -0.0024236102014301153
+      },
+      "scd_beats_markov": {
+        "mean": false,
+        "median": false,
+        "max": true,
+        "all_three": false
+      }
+    },
+    {
+      "noise_scale": 0.08,
+      "markov": {
+        "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p08_param_errors.json",
+        "status": "rerun",
+        "overall": {
+          "mean_pct_error": 0.8353233395169339,
+          "median_pct_error": 0.5301637775684834,
+          "max_pct_error": 3.7685829734795373
+        }
+      },
+      "best_pure_scd": {
+        "json_path": "/root/.openclaw/workspace/psins_method_bench/results/G4_best_pure_scd_selected_once_a09998_td1_b0_sym20_shared_noise0p08_param_errors.json",
+        "status": "rerun",
+        "overall": {
+          "mean_pct_error": 0.8362949984416068,
+          "median_pct_error": 0.5323610111140669,
+          "max_pct_error": 3.767410369243599
+        },
+        "scd_cfg": {
+          "mode": "once_per_phase",
+          "alpha": 0.9998,
+          "transition_duration": 1.0,
+          "target": "selected",
+          "bias_to_target": false,
+          "apply_policy_names": [
+            "iter2_commit"
+          ]
+        }
+      },
+      "delta_markov_minus_scd": {
+        "mean_pct_error": -0.0009716589246728802,
+        "median_pct_error": -0.0021972335455834324,
+        "max_pct_error": 0.001172604235938124
+      },
+      "delta_scd_minus_markov": {
+        "mean_pct_error": 0.0009716589246728802,
+        "median_pct_error": 0.0021972335455834324,
+        "max_pct_error": -0.001172604235938124
+      },
+      "scd_beats_markov": {
+        "mean": false,
+        "median": false,
+        "max": true,
+        "all_three": false
+      }
+    }
+  ],
+  "aggregate_beats": {
+    "mean": false,
+    "median": false,
+    "max": true,
+    "all_three": false
+  },
+  "first_all_three_overtake_scale": null,
+  "trend_conclusion": "Lower noise gives partial gains (some metrics flip), but no full mean/median/max overtake appears within 0.12→0.08.",
+  "code_fixes_needed": "none",
+  "files": {
+    "script": "/root/.openclaw/workspace/psins_method_bench/scripts/compare_best_pure_scd_vs_markov_sym20_noise_triplet_2026-04-05.py",
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/best_pure_scd_vs_markov_sym20_2026-04-05_noise_triplet_0p12_0p10_0p08_summary.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_best_pure_scd_vs_markov_sym20_2026-04-05_noise_triplet_0p12_0p10_0p08.md"
+  }
+}

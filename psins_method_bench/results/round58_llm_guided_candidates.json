@@ -1,0 +1,73 @@
+{
+  "baseline": "state12_guard_keep_yyka",
+  "allowed_knobs": [
+    "state_alpha_mult",
+    "state_prior_diag_mult",
+    "state_q_static_mult",
+    "state_q_dynamic_mult",
+    "state_q_late_mult",
+    "post_rx_y_mult",
+    "post_ry_z_mult"
+  ],
+  "candidates": [
+    {
+      "name": "llm_alpha12_plus",
+      "description": "Extend the only proven R57 win direction: a barely-stronger iter2 state12 alpha lift, touching nothing else.",
+      "rationale": "R57 improved dKg_xx/max with a 12-only alpha micro-guard; first LLM step is to test an even smaller same-direction nudge before trying orthogonal knobs.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "12": 1.0018
+          }
+        }
+      },
+      "post_rx_y_mult": 1.00045,
+      "post_ry_z_mult": 1.0011
+    },
+    {
+      "name": "llm_prior12_micro",
+      "description": "Keep the R57 alpha/lever stack and add only a tiny iter2 state12 prior-diagonal opening.",
+      "rationale": "If state12 is still slightly under-moving, a microscopic prior widening may help dKg_xx without perturbing the preserved 15/16/20/21 route.",
+      "iter_patches": {
+        "1": {
+          "state_prior_diag_mult": {
+            "12": 1.006
+          }
+        }
+      },
+      "post_rx_y_mult": 1.00045,
+      "post_ry_z_mult": 1.0011
+    },
+    {
+      "name": "llm_q12_dynlate_micro",
+      "description": "Keep R57 intact, but add a nearly invisible iter2 state12 dynamic/late Q lift.",
+      "rationale": "If the remaining xx drift is mostly in the commit/late phase, a tiny Q increase might unlock state12 correction more selectively than more alpha.",
+      "iter_patches": {
+        "1": {
+          "state_q_dynamic_mult": {
+            "12": 1.004
+          },
+          "state_q_late_mult": {
+            "12": 1.008
+          }
+        }
+      },
+      "post_rx_y_mult": 1.00045,
+      "post_ry_z_mult": 1.0011
+    },
+    {
+      "name": "llm_alpha12_plus_lever_plus",
+      "description": "Pair the slightly stronger state12 alpha lift with an equally tiny lever confirmation.",
+      "rationale": "Tests whether xx/max and mean can move together by combining the proven state12 path with a near-no-op rx_y/ry_z confirmation, still within narrow bounds.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "12": 1.0018
+          }
+        }
+      },
+      "post_rx_y_mult": 1.00047,
+      "post_ry_z_mult": 1.00113
+    }
+  ]
+}

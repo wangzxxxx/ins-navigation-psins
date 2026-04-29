@@ -1,0 +1,76 @@
+{
+  "mode": "shared_dataset_apples_to_apples",
+  "noise_scale": 0.25,
+  "noise_scale_tag": "noise0p25",
+  "noise_config": {
+    "arw_dpsh": 0.00125,
+    "vrw_ugpsHz": 1.25,
+    "bi_g_dph": 0.0005,
+    "bi_a_ug": 1.25,
+    "tau_g": 300.0,
+    "tau_a": 300.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "files": {
+    "kf36_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_shared_noise0p25_param_errors.json",
+    "markov_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_shared_noise0p25_param_errors.json",
+    "scd_json": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_markov_neutral_shared_noise0p25_param_errors.json",
+    "round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R61_42state_gm1_round61_h_scd_state20_microtight_commit_shared_noise0p25_param_errors.json",
+    "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p25.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_four_methods_shared_noise0p25_full_params_2026-03-29.md"
+  },
+  "overall_by_method": {
+    "kf36_noisy": {
+      "mean_pct_error": 2.5372080511972865,
+      "median_pct_error": 1.1399159849886256,
+      "max_pct_error": 12.568015337027003
+    },
+    "markov42_noisy": {
+      "mean_pct_error": 2.5319573345025885,
+      "median_pct_error": 1.1403190370494205,
+      "max_pct_error": 12.58827730256219
+    },
+    "scd42_neutral": {
+      "mean_pct_error": 2.487085289382478,
+      "median_pct_error": 1.0872281784162592,
+      "max_pct_error": 13.253760785254093
+    },
+    "round61": {
+      "mean_pct_error": 2.3783234179360835,
+      "median_pct_error": 1.1366422874731112,
+      "max_pct_error": 13.180470246637293
+    }
+  },
+  "best_by_metric": {
+    "mean_pct_error": {
+      "method": "round61",
+      "value": 2.3783234179360835
+    },
+    "median_pct_error": {
+      "method": "scd42_neutral",
+      "value": 1.0872281784162592
+    },
+    "max_pct_error": {
+      "method": "kf36_noisy",
+      "value": 12.568015337027003
+    }
+  },
+  "round61_rank": {
+    "mean_pct_error": 1,
+    "median_pct_error": 2,
+    "max_pct_error": 3
+  },
+  "best_param_count": {
+    "kf36_noisy": 5,
+    "markov42_noisy": 3,
+    "scd42_neutral": 11,
+    "round61": 11
+  },
+  "execution": {
+    "kf36_noisy": "reused_verified",
+    "markov42_noisy": "reused_verified",
+    "scd42_neutral": "reused_verified",
+    "round61": "reused_verified"
+  }
+}

@@ -1,0 +1,1627 @@
+{
+  "task": "chapter-3 corrected frontier relaunch batch 3",
+  "report_date": "2026-04-02",
+  "noise_scale": 0.08,
+  "corrected_att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "references": {
+    "prompt_launch_leader": {
+      "label": "prompt launch leader / relay_l12y0p5_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.064025708138846,
+          "median_pct_error": 0.5688883097231023,
+          "max_pct_error": 4.858658774220444
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.858658774220444,
+          "eb_x": 4.744283517862616,
+          "Ka2_y": 3.0767670530831364,
+          "dKa_xx": 2.4005906984590384,
+          "dKg_yy": 2.056232629164154
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.858658774220444
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0637841753176789,
+          "median_pct_error": 0.5690363105960747,
+          "max_pct_error": 4.85889585346557
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.85889585346557,
+          "eb_x": 4.742195566463992,
+          "Ka2_y": 3.0748094208057393,
+          "dKa_xx": 2.3994777531675515,
+          "dKg_yy": 2.056037310958101
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.85889585346557
+        }
+      },
+      "markov42_triplet": "1.064 / 0.569 / 4.859",
+      "kf36_triplet": "1.064 / 0.569 / 4.859",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l12y0p5_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l12y0p5_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "batch2_incumbent": {
+      "label": "actual incumbent after resume batch2 / relay_l9y0p75_l12y0p25_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0628330299996445,
+          "median_pct_error": 0.614884789415418,
+          "max_pct_error": 4.725238024216171
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.725238024216171,
+          "eb_x": 4.637090047239685,
+          "Ka2_y": 2.8604546299145586,
+          "dKa_xx": 2.528409498448308,
+          "dKg_yy": 2.443111498104721
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.725238024216171
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0625646738983392,
+          "median_pct_error": 0.6148208149509837,
+          "max_pct_error": 4.725432373197525
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.725432373197525,
+          "eb_x": 4.635012547828279,
+          "Ka2_y": 2.858531817421764,
+          "dKa_xx": 2.5272717307904364,
+          "dKg_yy": 2.442860859705797
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.725432373197525
+        }
+      },
+      "markov42_triplet": "1.063 / 0.615 / 4.725",
+      "kf36_triplet": "1.063 / 0.615 / 4.725",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l9y0p75_l12y0p25_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l9y0p75_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "prompt_second_point": {
+      "label": "prompt second point / entryrelay_l8x1_l9y0p75_unifiedcore",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0705692649318101,
+          "median_pct_error": 0.6069541518453548,
+          "max_pct_error": 4.959209277699915
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.959209277699915,
+          "eb_x": 4.4016266618710524,
+          "Ka2_y": 2.801159120460783,
+          "dKa_xx": 2.581242019029185,
+          "dKg_yy": 2.4195288655912925
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.959209277699915
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0702846688894243,
+          "median_pct_error": 0.6071055470231608,
+          "max_pct_error": 4.959429219542432
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.959429219542432,
+          "eb_x": 4.399531710433259,
+          "Ka2_y": 2.7992494269088977,
+          "dKa_xx": 2.5801802017284285,
+          "dKg_yy": 2.4192685760236152
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.959429219542432
+        }
+      },
+      "markov42_triplet": "1.071 / 0.607 / 4.959",
+      "kf36_triplet": "1.070 / 0.607 / 4.959",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_entryrelay_l8x1_l9y0p75_unifiedcore_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_entryrelay_l8x1_l9y0p75_unifiedcore_shared_noise0p08_param_errors.json"
+      }
+    },
+    "faithful12": {
+      "label": "corrected faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.9544212948566337,
+          "median_pct_error": 0.43062068381890417,
+          "max_pct_error": 15.12164342723992
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0106503323827263,
+          "eb_x": 14.231617445817285,
+          "Ka2_y": 15.12164342723992,
+          "dKa_xx": 2.326041029798204,
+          "dKg_yy": 2.48950860648218
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.12164342723992
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.9543549309026789,
+          "median_pct_error": 0.43053588431934986,
+          "max_pct_error": 15.121086969267727
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.010211603329637,
+          "eb_x": 14.230670596275147,
+          "Ka2_y": 15.121086969267727,
+          "dKa_xx": 2.32596007677614,
+          "dKg_yy": 2.489406084047194
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.121086969267727
+        }
+      },
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      }
+    },
+    "default18": {
+      "label": "default18",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0808366935504474,
+          "eb_x": 14.713291940947315,
+          "Ka2_y": 1.9994816607900874,
+          "dKa_xx": 3.2547206718784216,
+          "dKg_yy": 1.272677074280863
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.713291940947315
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0818904661751674,
+          "eb_x": 14.711353452042115,
+          "Ka2_y": 2.0007501033211734,
+          "dKa_xx": 3.253999899547709,
+          "dKg_yy": 1.2732158843885046
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.711353452042115
+        }
+      },
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "kf36_triplet": "1.556 / 0.813 / 14.711",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+      }
+    }
+  },
+  "hypotheses_tested": [
+    {
+      "id": "A",
+      "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+      "summary": "Hold the incumbent l9 = 0.75 s soft gate fixed and probe only smaller / larger / asymmetric l12 terminal reclosures. This directly tests whether the new winner is sitting on a narrow terminal timing ridge or just at one coarse-grid lucky point.",
+      "candidate_names": [
+        "relay_r3_l9y0p75_l12y0p125_on_entry",
+        "relay_r3_l9y0p75_l12y0p375_on_entry",
+        "relay_r3_l9y0p75_l12split375_125_on_entry",
+        "relay_r3_l9y0p75_l12split125_375_on_entry"
+      ]
+    },
+    {
+      "id": "B",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "summary": "Retune l9 slightly below/above 0.75 s, first with the incumbent l12 = 0.25 s micro-closure and then with the directionally expected companion l12 adjustment (lower l9 -> slightly heavier closure, higher l9 -> slightly lighter closure).",
+      "candidate_names": [
+        "relay_r3_l9y0p6875_l12y0p25_on_entry",
+        "relay_r3_l9y0p8125_l12y0p25_on_entry",
+        "relay_r3_l9y0p6875_l12y0p375_on_entry",
+        "relay_r3_l9y0p8125_l12y0p125_on_entry"
+      ]
+    },
+    {
+      "id": "C",
+      "family": "tight_micro_hybrid_with_prompt_second_point",
+      "summary": "The asymmetrically split l12 probes are the physically meaningful micro-hybrid here: they keep the prompt second point backbone (`l8 x1 + l9 0.75 + unified core`) and only add a tiny directionally biased terminal reclosure, instead of reopening broader side families.",
+      "candidate_names": [
+        "relay_r3_l9y0p75_l12split375_125_on_entry",
+        "relay_r3_l9y0p75_l12split125_375_on_entry"
+      ]
+    }
+  ],
+  "tested_candidates": [
+    "relay_r3_l9y0p75_l12y0p125_on_entry",
+    "relay_r3_l9y0p75_l12y0p375_on_entry",
+    "relay_r3_l9y0p75_l12split375_125_on_entry",
+    "relay_r3_l9y0p75_l12split125_375_on_entry",
+    "relay_r3_l9y0p6875_l12y0p25_on_entry",
+    "relay_r3_l9y0p8125_l12y0p25_on_entry",
+    "relay_r3_l9y0p6875_l12y0p375_on_entry",
+    "relay_r3_l9y0p8125_l12y0p125_on_entry"
+  ],
+  "rows_sorted": [
+    {
+      "candidate_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Coupled higher-l9 / lighter-l12 variant: if later l9 already supplies more y-information, the terminal closure may need to back off proportionally.",
+      "total_time_s": 1347.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057061223856136,
+          "median_pct_error": 0.6107914879608048,
+          "max_pct_error": 4.71375006474353
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.71375006474353,
+          "eb_x": 4.57033221551275,
+          "Ka2_y": 2.832591244946224,
+          "dKa_xx": 2.5107008594485913,
+          "dKg_yy": 2.4546934956879305
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.71375006474353
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 0.005771806143508362,
+        "median_pct_error": 0.004093301454613174,
+        "max_pct_error": 0.011487959472641585
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.006964484282709904,
+        "median_pct_error": -0.04190317823770251,
+        "max_pct_error": 0.1449087094769146
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.013508041075674049,
+        "median_pct_error": -0.0038373361154500074,
+        "max_pct_error": 0.2454592129563853
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8973600710004976,
+        "median_pct_error": -0.18017080414190068,
+        "max_pct_error": 10.407893362496392
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49931786307936643,
+        "median_pct_error": 0.20200833570477816,
+        "max_pct_error": 9.999541876203786
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0567915141378126,
+          "median_pct_error": 0.610720244961116,
+          "max_pct_error": 4.713960072310424
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.713960072310424,
+          "eb_x": 4.5682794025537055,
+          "Ka2_y": 2.830686460074407,
+          "dKa_xx": 2.5095605382777633,
+          "dKg_yy": 2.454444318342507
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.713960072310424
+        }
+      },
+      "delta_vs_batch2_kf36": {
+        "mean_pct_error": 0.005773159760526614,
+        "median_pct_error": 0.004100569989867742,
+        "max_pct_error": 0.011472300887101383
+      },
+      "delta_vs_prompt_leader_kf36": {
+        "mean_pct_error": 0.0069926611798663,
+        "median_pct_error": -0.04168393436504125,
+        "max_pct_error": 0.14493578115514616
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p8125_l12y0p25_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Raise the l9 gate slightly above 0.75 s while keeping the incumbent l12 = 0.25 s, to test the upper side of the same compatibility ridge.",
+      "total_time_s": 1348.125,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p8125_l12y0p25_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r3_l9y0p8125_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057835822250634,
+          "median_pct_error": 0.6081732654754177,
+          "max_pct_error": 4.700816728119583
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.700816728119583,
+          "eb_x": 4.5676057923606574,
+          "Ka2_y": 2.8461130967200803,
+          "dKa_xx": 2.5238032919209736,
+          "dKg_yy": 2.455183431557582
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.700816728119583
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 0.004997207749010357,
+        "median_pct_error": 0.006711523940000297,
+        "max_pct_error": 0.024421296096588385
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.006189885888211899,
+        "median_pct_error": -0.03928495575231539,
+        "max_pct_error": 0.1578420461008614
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.012733442681176044,
+        "median_pct_error": -0.0012191136300628846,
+        "max_pct_error": 0.2583925495803321
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8965854726059996,
+        "median_pct_error": -0.17755258165651355,
+        "max_pct_error": 10.420826699120337
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4985432646848684,
+        "median_pct_error": 0.2046265581901653,
+        "max_pct_error": 10.01247521282773
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0575698289015967,
+          "median_pct_error": 0.6081083712060551,
+          "max_pct_error": 4.701025623243005
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.701025623243005,
+          "eb_x": 4.565556320548499,
+          "Ka2_y": 2.8442132884685134,
+          "dKa_xx": 2.52266930790317,
+          "dKg_yy": 2.4549314953079424
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.701025623243005
+        }
+      },
+      "delta_vs_batch2_kf36": {
+        "mean_pct_error": 0.00499484499674252,
+        "median_pct_error": 0.006712443744928631,
+        "max_pct_error": 0.024406749954519746
+      },
+      "delta_vs_prompt_leader_kf36": {
+        "mean_pct_error": 0.006214346416082206,
+        "median_pct_error": -0.039072060609980364,
+        "max_pct_error": 0.15787023022256452
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p6875_l12y0p25_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Lower the l9 gate slightly below 0.75 s while keeping the incumbent l12 = 0.25 s, to test whether the coarse-grid optimum is drifting mildly downward.",
+      "total_time_s": 1347.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p6875_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0589857210378786,
+          "median_pct_error": 0.572285921390433,
+          "max_pct_error": 4.846338564923188
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.846338564923188,
+          "eb_x": 4.77400927170259,
+          "Ka2_y": 3.1074559871950815,
+          "dKa_xx": 2.3258167336609836,
+          "dKg_yy": 2.041995524335772
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.846338564923188
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 0.003847308961765883,
+        "median_pct_error": 0.042598868024985026,
+        "max_pct_error": -0.12110054070701626
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.005039987100967425,
+        "median_pct_error": -0.0033976116673306578,
+        "max_pct_error": 0.012320209297256746
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.01158354389393157,
+        "median_pct_error": 0.034668230454921845,
+        "max_pct_error": 0.11287071277672744
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8954355738187552,
+        "median_pct_error": -0.14166523757152882,
+        "max_pct_error": 10.275304862316734
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49739336589762395,
+        "median_pct_error": 0.24051390227515002,
+        "max_pct_error": 9.866953376024128
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p6875_l12y0p375_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Coupled lower-l9 / heavier-l12 variant: if earlier l9 closure slightly under-excites the terminal correction, a somewhat stronger l12 reclosure may compensate.",
+      "total_time_s": 1348.125,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p6875_l12y0p375_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0599112875375387,
+          "median_pct_error": 0.5732644933910784,
+          "max_pct_error": 4.830592205151476
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.830592205151476,
+          "eb_x": 4.766156194722567,
+          "Ka2_y": 3.0993059275298585,
+          "dKa_xx": 2.343321076081046,
+          "dKg_yy": 2.0484663726373973
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.830592205151476
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 0.0029217424621057475,
+        "median_pct_error": 0.04162029602433959,
+        "max_pct_error": -0.10535418093530424
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.004114420601307289,
+        "median_pct_error": -0.004376183667976097,
+        "max_pct_error": 0.02806656906896876
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.010657977394271434,
+        "median_pct_error": 0.033689658454276405,
+        "max_pct_error": 0.12861707254843946
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.894510007319095,
+        "median_pct_error": -0.14264380957217426,
+        "max_pct_error": 10.291051222088445
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4964677993979638,
+        "median_pct_error": 0.23953533027450458,
+        "max_pct_error": 9.882699735795839
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p75_l12y0p375_on_entry",
+      "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+      "hypothesis_id": "A",
+      "rationale": "Same incumbent backbone, but strengthen the terminal l12 dwell from 0.25 s to 0.375 s on each leg to test the opposite side of the local terminal ridge.",
+      "total_time_s": 1348.25,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p75_l12y0p375_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0629713828139966,
+          "median_pct_error": 0.6168017244738058,
+          "max_pct_error": 4.747032299489649
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.747032299489649,
+          "eb_x": 4.627562576208316,
+          "Ka2_y": 2.8674268882687475,
+          "dKa_xx": 2.532162149971184,
+          "dKg_yy": 2.4381448387986766
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.747032299489649
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.00013835281435214952,
+        "median_pct_error": -0.0019169350583877476,
+        "max_pct_error": -0.02179427527347766
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.0010543253248493922,
+        "median_pct_error": -0.04791341475070343,
+        "max_pct_error": 0.11162647473079534
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.007597882117813537,
+        "median_pct_error": -0.009847572628450929,
+        "max_pct_error": 0.21217697821026604
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8914499120426371,
+        "median_pct_error": -0.1861810406549016,
+        "max_pct_error": 10.37461112775027
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4934077041215059,
+        "median_pct_error": 0.19599809919177724,
+        "max_pct_error": 9.966259641457665
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p75_l12split375_125_on_entry",
+      "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+      "hypothesis_id": "A",
+      "rationale": "Keep the total terminal dwell equal to the incumbent (0.5 s total), but front-load it on the outgoing l12 leg (0.375 / 0.125). This checks whether the useful terminal information is concentrated before exact closure rather than after it.",
+      "total_time_s": 1348.0,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p75_l12split375_125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0631870715362586,
+          "median_pct_error": 0.6160285492138386,
+          "max_pct_error": 4.7264246949778315
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.7264246949778315,
+          "eb_x": 4.639732557220497,
+          "Ka2_y": 2.860997285346984,
+          "dKa_xx": 2.530860770966619,
+          "dKg_yy": 2.4426539829678346
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.7264246949778315
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.00035404153661411364,
+        "median_pct_error": -0.0011437597984206294,
+        "max_pct_error": -0.0011866707616601246
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.0008386366025874281,
+        "median_pct_error": -0.04714023949073631,
+        "max_pct_error": 0.13223407924261288
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.007382193395551573,
+        "median_pct_error": -0.00907439736848381,
+        "max_pct_error": 0.23278458272208358
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8912342233203752,
+        "median_pct_error": -0.18540786539493448,
+        "max_pct_error": 10.395218732262089
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49319201539924395,
+        "median_pct_error": 0.19677127445174436,
+        "max_pct_error": 9.986867245969483
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p75_l12split125_375_on_entry",
+      "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+      "hypothesis_id": "A",
+      "rationale": "Reverse the same total terminal dwell split (0.125 / 0.375) to test whether any asymmetry benefit is directional or just due to total time.",
+      "total_time_s": 1348.0,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p75_l12split125_375_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0631870715362586,
+          "median_pct_error": 0.6160285492138386,
+          "max_pct_error": 4.7264246949778315
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.7264246949778315,
+          "eb_x": 4.639732557220497,
+          "Ka2_y": 2.860997285346984,
+          "dKa_xx": 2.530860770966619,
+          "dKg_yy": 2.4426539829678346
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.7264246949778315
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.00035404153661411364,
+        "median_pct_error": -0.0011437597984206294,
+        "max_pct_error": -0.0011866707616601246
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.0008386366025874281,
+        "median_pct_error": -0.04714023949073631,
+        "max_pct_error": 0.13223407924261288
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.007382193395551573,
+        "median_pct_error": -0.00907439736848381,
+        "max_pct_error": 0.23278458272208358
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8912342233203752,
+        "median_pct_error": -0.18540786539493448,
+        "max_pct_error": 10.395218732262089
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49319201539924395,
+        "median_pct_error": 0.19677127445174436,
+        "max_pct_error": 9.986867245969483
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p75_l12y0p125_on_entry",
+      "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+      "hypothesis_id": "A",
+      "rationale": "Same incumbent backbone, but halve the terminal l12 dwell from 0.25 s to 0.125 s on each leg to test whether the current winner is still slightly over-closed at the terminal y ridge.",
+      "total_time_s": 1347.75,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p75_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0642407191853551,
+          "median_pct_error": 0.6126794074993359,
+          "max_pct_error": 4.745275438166554
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.745275438166554,
+          "eb_x": 4.657478055573729,
+          "Ka2_y": 2.8851875500300443,
+          "dKa_xx": 2.528399231105776,
+          "dKg_yy": 2.442388426502129
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.745275438166554
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.0014076891857106588,
+        "median_pct_error": 0.0022053819160821053,
+        "max_pct_error": -0.02003741395038272
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": -0.00021501104650911707,
+        "median_pct_error": -0.04379109777623358,
+        "max_pct_error": 0.11338333605389028
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.006328545746455028,
+        "median_pct_error": -0.005725255653981076,
+        "max_pct_error": 0.21393383953336098
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8901805756712786,
+        "median_pct_error": -0.18205872368043174,
+        "max_pct_error": 10.376367989073366
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4921383677501474,
+        "median_pct_error": 0.2001204161662471,
+        "max_pct_error": 9.96801650278076
+      }
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+    "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+    "hypothesis_id": "B",
+    "rationale": "Coupled higher-l9 / lighter-l12 variant: if later l9 already supplies more y-information, the terminal closure may need to back off proportionally.",
+    "total_time_s": 1347.875,
+    "result_files": {
+      "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+      "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+    },
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.057061223856136,
+        "median_pct_error": 0.6107914879608048,
+        "max_pct_error": 4.71375006474353
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.71375006474353,
+        "eb_x": 4.57033221551275,
+        "Ka2_y": 2.832591244946224,
+        "dKa_xx": 2.5107008594485913,
+        "dKg_yy": 2.4546934956879305
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.71375006474353
+      }
+    },
+    "delta_vs_batch2_markov42": {
+      "mean_pct_error": 0.005771806143508362,
+      "median_pct_error": 0.004093301454613174,
+      "max_pct_error": 0.011487959472641585
+    },
+    "delta_vs_prompt_leader_markov42": {
+      "mean_pct_error": 0.006964484282709904,
+      "median_pct_error": -0.04190317823770251,
+      "max_pct_error": 0.1449087094769146
+    },
+    "delta_vs_second_point_markov42": {
+      "mean_pct_error": 0.013508041075674049,
+      "median_pct_error": -0.0038373361154500074,
+      "max_pct_error": 0.2454592129563853
+    },
+    "delta_vs_faithful12_markov42": {
+      "mean_pct_error": 0.8973600710004976,
+      "median_pct_error": -0.18017080414190068,
+      "max_pct_error": 10.407893362496392
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": 0.49931786307936643,
+      "median_pct_error": 0.20200833570477816,
+      "max_pct_error": 9.999541876203786
+    },
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 1.0567915141378126,
+        "median_pct_error": 0.610720244961116,
+        "max_pct_error": 4.713960072310424
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.713960072310424,
+        "eb_x": 4.5682794025537055,
+        "Ka2_y": 2.830686460074407,
+        "dKa_xx": 2.5095605382777633,
+        "dKg_yy": 2.454444318342507
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.713960072310424
+      }
+    },
+    "delta_vs_batch2_kf36": {
+      "mean_pct_error": 0.005773159760526614,
+      "median_pct_error": 0.004100569989867742,
+      "max_pct_error": 0.011472300887101383
+    },
+    "delta_vs_prompt_leader_kf36": {
+      "mean_pct_error": 0.0069926611798663,
+      "median_pct_error": -0.04168393436504125,
+      "max_pct_error": 0.14493578115514616
+    }
+  },
+  "best_candidate_timing_table": [
+    {
+      "pos_id": 1,
+      "anchor_id": 1,
+      "segment_role": "anchor",
+      "label": "anchor_1",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 2,
+      "anchor_id": 2,
+      "segment_role": "anchor",
+      "label": "anchor_2",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 3,
+      "anchor_id": 3,
+      "segment_role": "anchor",
+      "label": "anchor_3",
+      "motor_action": "I(0→90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 4,
+      "anchor_id": 4,
+      "segment_role": "anchor",
+      "label": "anchor_4",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 5,
+      "anchor_id": 5,
+      "segment_role": "anchor",
+      "label": "anchor_5",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 6,
+      "anchor_id": 6,
+      "segment_role": "anchor",
+      "label": "anchor_6",
+      "motor_action": "I(90→0) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 7,
+      "anchor_id": 7,
+      "segment_role": "anchor",
+      "label": "anchor_7",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 8,
+      "anchor_id": 8,
+      "segment_role": "anchor",
+      "label": "anchor_8",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 9,
+      "anchor_id": 8,
+      "segment_role": "motif_out",
+      "label": "l8_x1_out",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 10,
+      "anchor_id": 8,
+      "segment_role": "motif_return",
+      "label": "l8_x1_return",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 11,
+      "anchor_id": 9,
+      "segment_role": "anchor",
+      "label": "anchor_9",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 12,
+      "anchor_id": 9,
+      "segment_role": "motif_out",
+      "label": "l9_ypair_neg0p8125_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 13,
+      "anchor_id": 9,
+      "segment_role": "motif_return",
+      "label": "l9_ypair_neg0p8125_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 14,
+      "anchor_id": 10,
+      "segment_role": "anchor",
+      "label": "anchor_10",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 15,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_zpair_neg5_out",
+      "motor_action": "O[-Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 16,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_zpair_neg5_return",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 17,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_ypair_neg1_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 18,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_ypair_neg1_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 19,
+      "anchor_id": 11,
+      "segment_role": "anchor",
+      "label": "anchor_11",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 20,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_open",
+      "label": "l11_xpair_outerhold_inner_open",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 21,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_sweep",
+      "label": "l11_xpair_outerhold_outer_sweep",
+      "motor_action": "O[-X] +90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 22,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_return",
+      "label": "l11_xpair_outerhold_outer_return",
+      "motor_action": "O[-X] -90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 23,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_close",
+      "label": "l11_xpair_outerhold_inner_close",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 24,
+      "anchor_id": 11,
+      "segment_role": "motif_y_pos",
+      "label": "l11_zquad_y10x0back2_q1",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 25,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_a",
+      "label": "l11_zquad_y10x0back2_q2",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 26,
+      "anchor_id": 11,
+      "segment_role": "motif_y_neg",
+      "label": "l11_zquad_y10x0back2_q3",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 27,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_b",
+      "label": "l11_zquad_y10x0back2_q4",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 2.0,
+      "node_total_s": 7.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 28,
+      "anchor_id": 12,
+      "segment_role": "anchor",
+      "label": "anchor_12",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 29,
+      "anchor_id": 12,
+      "segment_role": "motif_out",
+      "label": "l12_yneg0p125_out",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 30,
+      "anchor_id": 12,
+      "segment_role": "motif_return",
+      "label": "l12_yneg0p125_return",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    }
+  ],
+  "beat_batch2_incumbent_candidates": [
+    "relay_r3_l9y0p8125_l12y0p125_on_entry",
+    "relay_r3_l9y0p8125_l12y0p25_on_entry"
+  ],
+  "beat_prompt_threshold_candidates": [
+    "relay_r3_l9y0p8125_l12y0p125_on_entry",
+    "relay_r3_l9y0p8125_l12y0p25_on_entry",
+    "relay_r3_l9y0p6875_l12y0p25_on_entry",
+    "relay_r3_l9y0p6875_l12y0p375_on_entry",
+    "relay_r3_l9y0p75_l12y0p375_on_entry",
+    "relay_r3_l9y0p75_l12split375_125_on_entry",
+    "relay_r3_l9y0p75_l12split125_375_on_entry"
+  ],
+  "near_misses": [
+    {
+      "candidate_name": "relay_r3_l9y0p6875_l12y0p25_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Lower the l9 gate slightly below 0.75 s while keeping the incumbent l12 = 0.25 s, to test whether the coarse-grid optimum is drifting mildly downward.",
+      "total_time_s": 1347.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p6875_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0589857210378786,
+          "median_pct_error": 0.572285921390433,
+          "max_pct_error": 4.846338564923188
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.846338564923188,
+          "eb_x": 4.77400927170259,
+          "Ka2_y": 3.1074559871950815,
+          "dKa_xx": 2.3258167336609836,
+          "dKg_yy": 2.041995524335772
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.846338564923188
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 0.003847308961765883,
+        "median_pct_error": 0.042598868024985026,
+        "max_pct_error": -0.12110054070701626
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.005039987100967425,
+        "median_pct_error": -0.0033976116673306578,
+        "max_pct_error": 0.012320209297256746
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.01158354389393157,
+        "median_pct_error": 0.034668230454921845,
+        "max_pct_error": 0.11287071277672744
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8954355738187552,
+        "median_pct_error": -0.14166523757152882,
+        "max_pct_error": 10.275304862316734
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49739336589762395,
+        "median_pct_error": 0.24051390227515002,
+        "max_pct_error": 9.866953376024128
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p6875_l12y0p375_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Coupled lower-l9 / heavier-l12 variant: if earlier l9 closure slightly under-excites the terminal correction, a somewhat stronger l12 reclosure may compensate.",
+      "total_time_s": 1348.125,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p6875_l12y0p375_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0599112875375387,
+          "median_pct_error": 0.5732644933910784,
+          "max_pct_error": 4.830592205151476
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.830592205151476,
+          "eb_x": 4.766156194722567,
+          "Ka2_y": 3.0993059275298585,
+          "dKa_xx": 2.343321076081046,
+          "dKg_yy": 2.0484663726373973
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.830592205151476
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 0.0029217424621057475,
+        "median_pct_error": 0.04162029602433959,
+        "max_pct_error": -0.10535418093530424
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.004114420601307289,
+        "median_pct_error": -0.004376183667976097,
+        "max_pct_error": 0.02806656906896876
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.010657977394271434,
+        "median_pct_error": 0.033689658454276405,
+        "max_pct_error": 0.12861707254843946
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.894510007319095,
+        "median_pct_error": -0.14264380957217426,
+        "max_pct_error": 10.291051222088445
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4964677993979638,
+        "median_pct_error": 0.23953533027450458,
+        "max_pct_error": 9.882699735795839
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p75_l12y0p375_on_entry",
+      "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+      "hypothesis_id": "A",
+      "rationale": "Same incumbent backbone, but strengthen the terminal l12 dwell from 0.25 s to 0.375 s on each leg to test the opposite side of the local terminal ridge.",
+      "total_time_s": 1348.25,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p75_l12y0p375_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0629713828139966,
+          "median_pct_error": 0.6168017244738058,
+          "max_pct_error": 4.747032299489649
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.747032299489649,
+          "eb_x": 4.627562576208316,
+          "Ka2_y": 2.8674268882687475,
+          "dKa_xx": 2.532162149971184,
+          "dKg_yy": 2.4381448387986766
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.747032299489649
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.00013835281435214952,
+        "median_pct_error": -0.0019169350583877476,
+        "max_pct_error": -0.02179427527347766
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.0010543253248493922,
+        "median_pct_error": -0.04791341475070343,
+        "max_pct_error": 0.11162647473079534
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.007597882117813537,
+        "median_pct_error": -0.009847572628450929,
+        "max_pct_error": 0.21217697821026604
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8914499120426371,
+        "median_pct_error": -0.1861810406549016,
+        "max_pct_error": 10.37461112775027
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4934077041215059,
+        "median_pct_error": 0.19599809919177724,
+        "max_pct_error": 9.966259641457665
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p75_l12split375_125_on_entry",
+      "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+      "hypothesis_id": "A",
+      "rationale": "Keep the total terminal dwell equal to the incumbent (0.5 s total), but front-load it on the outgoing l12 leg (0.375 / 0.125). This checks whether the useful terminal information is concentrated before exact closure rather than after it.",
+      "total_time_s": 1348.0,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p75_l12split375_125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0631870715362586,
+          "median_pct_error": 0.6160285492138386,
+          "max_pct_error": 4.7264246949778315
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.7264246949778315,
+          "eb_x": 4.639732557220497,
+          "Ka2_y": 2.860997285346984,
+          "dKa_xx": 2.530860770966619,
+          "dKg_yy": 2.4426539829678346
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.7264246949778315
+        }
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.00035404153661411364,
+        "median_pct_error": -0.0011437597984206294,
+        "max_pct_error": -0.0011866707616601246
+      },
+      "delta_vs_prompt_leader_markov42": {
+        "mean_pct_error": 0.0008386366025874281,
+        "median_pct_error": -0.04714023949073631,
+        "max_pct_error": 0.13223407924261288
+      },
+      "delta_vs_second_point_markov42": {
+        "mean_pct_error": 0.007382193395551573,
+        "median_pct_error": -0.00907439736848381,
+        "max_pct_error": 0.23278458272208358
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8912342233203752,
+        "median_pct_error": -0.18540786539493448,
+        "max_pct_error": 10.395218732262089
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49319201539924395,
+        "median_pct_error": 0.19677127445174436,
+        "max_pct_error": 9.986867245969483
+      }
+    }
+  ],
+  "kf36_rechecked_candidates": [
+    "relay_r3_l9y0p8125_l12y0p125_on_entry",
+    "relay_r3_l9y0p8125_l12y0p25_on_entry"
+  ],
+  "kf36_gate_reason": "No candidate was close enough to the incumbent to justify KF36.",
+  "bottom_line": {
+    "beat_batch2_incumbent": "YES",
+    "beat_prompt_threshold": "YES",
+    "batch_best_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+    "batch_best_triplet": "1.057 / 0.611 / 4.714",
+    "statement": "A fresh local improvement was found even after the batch2 win; the corrected frontier still had headroom inside the narrow l9/l12 ridge."
+  }
+}

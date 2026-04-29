@@ -1,0 +1,2210 @@
+{
+  "task": "chapter-3 corrected one-off unified16 anchor11 xpair probe",
+  "report_date": "2026-04-03",
+  "noise_scale": 0.08,
+  "corrected_att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "hard_constraints": {
+    "att0_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "real_dual_axis_legality_only": true,
+    "continuity_safe_execution": true,
+    "total_time_s": 1200.0,
+    "same_low_noise_shared_setup": true,
+    "uniform_row_timing": {
+      "rotation_time_s": 7.5,
+      "pre_static_s": 7.5,
+      "post_static_s": 60.0,
+      "row_total_s": 75.0
+    },
+    "fusion_rule": "original faithful12 + anchor11 xpair outerhold inserted after original anchor11 before original anchor12"
+  },
+  "references": {
+    "faithful12": {
+      "candidate_name": "ch3faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.9544212948566337,
+          "median_pct_error": 0.43062068381890417,
+          "max_pct_error": 15.12164342723992
+        },
+        "key_param_errors": {
+          "dKa_yy": 2.8518392519687805,
+          "dKg_zz": 2.9396081058255543,
+          "Ka2_y": 15.12164342723992,
+          "Ka2_z": 0.3676756547566293,
+          "dKg_xz": 2.9848164485364337,
+          "dKa_xz": 0.06938589552110229
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.9543549309026789,
+          "median_pct_error": 0.43053588431934986,
+          "max_pct_error": 15.121086969267727
+        },
+        "key_param_errors": {
+          "dKa_yy": 2.852321774879297,
+          "dKg_zz": 2.9396315707592544,
+          "Ka2_y": 15.121086969267727,
+          "Ka2_z": 0.36769393779520876,
+          "dKg_xz": 2.9848062803883506,
+          "dKa_xz": 0.06972756517532706
+        }
+      },
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      }
+    },
+    "current_corrected_best": {
+      "candidate_name": "relay_l11back0p5_l12y0p125_on_entry",
+      "source_summary": "/root/.openclaw/workspace/psins_method_bench/results/ch3_corrected_zcadence_handoff_refine_2026-04-03.json",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0565119091331543,
+          "median_pct_error": 0.5883913535584239,
+          "max_pct_error": 4.560198072125949
+        },
+        "key_param_errors": {
+          "dKa_yy": 1.2582727643138576,
+          "dKg_zz": 0.8867329322674264,
+          "Ka2_y": 2.7579155183339354,
+          "Ka2_z": 0.23170256644052964,
+          "dKg_xz": 0.7803242936327055,
+          "dKa_xz": 0.041086894900239895
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0562428184101837,
+          "median_pct_error": 0.5883390128999019,
+          "max_pct_error": 4.5581765380700325
+        },
+        "key_param_errors": {
+          "dKa_yy": 1.2558373047020996,
+          "dKg_zz": 0.8861001428909724,
+          "Ka2_y": 2.7560507159814036,
+          "Ka2_z": 0.2323230957100934,
+          "dKg_xz": 0.7800459548280683,
+          "dKa_xz": 0.04100742284715901
+        }
+      },
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      }
+    }
+  },
+  "candidate": {
+    "candidate_name": "anchor11_xpair_outerhold_unified16_75s",
+    "method_tag": "ch3corrected_anchor11_xpair_outerhold_unified16_75s",
+    "n_rows": 16,
+    "total_time_s": 1200.0,
+    "row_timing_s": {
+      "rotation_time_s": 7.5,
+      "pre_static_s": 7.5,
+      "post_static_s": 60.0,
+      "row_total_s": 75.0
+    },
+    "rows": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "source_anchor_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_1"
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "source_anchor_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_2"
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "source_anchor_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_3"
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "source_anchor_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_4"
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "source_anchor_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_5"
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "source_anchor_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_6"
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "source_anchor_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_7"
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "source_anchor_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_8"
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "source_anchor_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_9"
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 10,
+        "source_anchor_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_10"
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_11"
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "motif_inner_open",
+        "label": "anchor11_xpair_outerhold_inner_open"
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "motif_outer_sweep",
+        "label": "anchor11_xpair_outerhold_outer_sweep"
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "motif_outer_return",
+        "label": "anchor11_xpair_outerhold_outer_return"
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "motif_inner_close",
+        "label": "anchor11_xpair_outerhold_inner_close"
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 12,
+        "source_anchor_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 7.5,
+        "pre_static_s": 7.5,
+        "post_static_s": 60.0,
+        "node_total_s": 75.0,
+        "segment_role": "anchor",
+        "label": "anchor_12"
+      }
+    ],
+    "actions": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "source_anchor_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_1",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "source_anchor_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_2",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "source_anchor_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_3",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "source_anchor_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_4",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "source_anchor_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_5",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "source_anchor_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_6",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "source_anchor_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_7",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "source_anchor_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_8",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "source_anchor_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_9",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 10,
+        "source_anchor_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_10",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              6.162975822039155e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_11",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              6.162975822039155e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_inner_open",
+        "label": "anchor11_xpair_outerhold_inner_open",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              5.473822126268817e-48
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          -1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_outer_sweep",
+        "label": "anchor11_xpair_outerhold_outer_sweep",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              5.473822126268817e-48
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -1.0,
+              2.220446049250313e-16,
+              2.465190328815662e-32
+            ],
+            [
+              4.930380657631324e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          -1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_outer_return",
+        "label": "anchor11_xpair_outerhold_outer_return",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -1.0,
+              2.220446049250313e-16,
+              2.465190328815662e-32
+            ],
+            [
+              4.930380657631324e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              0.0
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 11,
+        "source_anchor_id": 11,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_inner_close",
+        "label": "anchor11_xpair_outerhold_inner_close",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              0.0
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 12,
+        "source_anchor_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_12",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              4.930380657631324e-32,
+              0.0
+            ],
+            [
+              -4.930380657631324e-32,
+              1.0,
+              1.0947644252537633e-47
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      }
+    ],
+    "faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          -2.220446049250313e-16,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          2.220446049250313e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "continuity_checks": [
+      {
+        "anchor_id": 11,
+        "closure_rule": "exact_same_mechanism_state_before_resume",
+        "state_before_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "state_after_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "closure_ok": true,
+        "next_base_action_preview": {
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "state_before": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                5.473822126268817e-48,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after": {
+            "beta_deg": 0,
+            "outer_axis_body": [
+              1,
+              0,
+              0
+            ],
+            "outer_family": "x",
+            "gravity_body": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "face_name": "+Z",
+            "C": [
+              [
+                1.0,
+                4.930380657631324e-32,
+                0.0
+              ],
+              [
+                -4.930380657631324e-32,
+                1.0,
+                1.0947644252537633e-47
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "face_after": [
+            0,
+            1,
+            0
+          ]
+        }
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 0.875719299773804,
+        "median_pct_error": 0.42460235071868824,
+        "max_pct_error": 4.291573489901101
+      },
+      "key_param_errors": {
+        "dKa_yy": 1.421647092823796,
+        "dKg_zz": 3.9620997120252883,
+        "Ka2_y": 0.1161731350156157,
+        "Ka2_z": 0.413578330146245,
+        "dKg_xz": 0.18676774209460403,
+        "dKa_xz": 0.23540356671869928
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_anchor11_xpair_outerhold_unified16_75s_shared_noise0p08_param_errors.json",
+    "markov42_status": "rerun",
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 0.8757672597557882,
+        "median_pct_error": 0.4244640800019581,
+        "max_pct_error": 4.292147131480119
+      },
+      "key_param_errors": {
+        "dKa_yy": 1.4218319838152018,
+        "dKg_zz": 3.962534278482183,
+        "Ka2_y": 0.11678770660384113,
+        "Ka2_z": 0.41333681402264943,
+        "dKg_xz": 0.1867776110157206,
+        "dKa_xz": 0.23536385227841497
+      }
+    },
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3corrected_anchor11_xpair_outerhold_unified16_75s_shared_noise0p08_param_errors.json",
+    "kf36_status": "rerun",
+    "delta_vs_faithful12": {
+      "markov42": {
+        "mean_pct_error": {
+          "reference": 1.9544212948566337,
+          "candidate": 0.875719299773804,
+          "improvement_pct_points": 1.0787019950828296,
+          "relative_improvement_pct": 55.19291044984023
+        },
+        "median_pct_error": {
+          "reference": 0.43062068381890417,
+          "candidate": 0.42460235071868824,
+          "improvement_pct_points": 0.0060183331002159335,
+          "relative_improvement_pct": 1.3975949893635204
+        },
+        "max_pct_error": {
+          "reference": 15.12164342723992,
+          "candidate": 4.291573489901101,
+          "improvement_pct_points": 10.83006993733882,
+          "relative_improvement_pct": 71.6196621713066
+        }
+      },
+      "kf36": {
+        "mean_pct_error": {
+          "reference": 1.9543549309026789,
+          "candidate": 0.8757672597557882,
+          "improvement_pct_points": 1.0785876711468907,
+          "relative_improvement_pct": 55.188934931522994
+        },
+        "median_pct_error": {
+          "reference": 0.43053588431934986,
+          "candidate": 0.4244640800019581,
+          "improvement_pct_points": 0.006071804317391738,
+          "relative_improvement_pct": 1.4102899522512227
+        },
+        "max_pct_error": {
+          "reference": 15.121086969267727,
+          "candidate": 4.292147131480119,
+          "improvement_pct_points": 10.828939837787608,
+          "relative_improvement_pct": 71.6148241181105
+        }
+      }
+    },
+    "delta_vs_current_corrected_best": {
+      "markov42": {
+        "mean_pct_error": {
+          "reference": 1.0565119091331543,
+          "candidate": 0.875719299773804,
+          "improvement_pct_points": 0.18079260935935026,
+          "relative_improvement_pct": 17.11221688998156
+        },
+        "median_pct_error": {
+          "reference": 0.5883913535584239,
+          "candidate": 0.42460235071868824,
+          "improvement_pct_points": 0.16378900283973563,
+          "relative_improvement_pct": 27.836745365000056
+        },
+        "max_pct_error": {
+          "reference": 4.560198072125949,
+          "candidate": 4.291573489901101,
+          "improvement_pct_points": 0.26862458222484875,
+          "relative_improvement_pct": 5.890634090365659
+        }
+      },
+      "kf36": {
+        "mean_pct_error": {
+          "reference": 1.0562428184101837,
+          "candidate": 0.8757672597557882,
+          "improvement_pct_points": 0.18047555865439557,
+          "relative_improvement_pct": 17.086559596782912
+        },
+        "median_pct_error": {
+          "reference": 0.5883390128999019,
+          "candidate": 0.4244640800019581,
+          "improvement_pct_points": 0.16387493289794375,
+          "relative_improvement_pct": 27.85382735205848
+        },
+        "max_pct_error": {
+          "reference": 4.5581765380700325,
+          "candidate": 4.292147131480119,
+          "improvement_pct_points": 0.26602940658991336,
+          "relative_improvement_pct": 5.836312050839354
+        }
+      }
+    }
+  },
+  "bottom_line": "The one-off unified 16-step probe is a genuine corrected-basis frontier improvement: it beats the current corrected best path on both Markov42 mean and max.",
+  "comparative_flags": {
+    "beats_corrected_faithful12_on_markov42_mean_and_max": true,
+    "beats_current_corrected_best_on_markov42_mean_and_max": true
+  },
+  "files": {
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_corrected_unified16_anchor11_xpair_probe_2026-04-03_summary.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_ch3_corrected_unified16_anchor11_xpair_probe_2026-04-03.md",
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_anchor11_xpair_outerhold_unified16_75s_shared_noise0p08_param_errors.json",
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3corrected_anchor11_xpair_outerhold_unified16_75s_shared_noise0p08_param_errors.json"
+  }
+}

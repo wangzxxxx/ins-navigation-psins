@@ -1,0 +1,148 @@
+{
+  "round_name": "Round67_OBS_GROUPED_SCHEDULE",
+  "round_type": "new mechanism probe",
+  "mechanism_axis": "observability-aware static measurement scheduling + grouped conservative feedback fusion on Round61 backbone",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "same_dataset_round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_round61_param_errors.json",
+  "dataset": {
+    "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+    "source_trajectory_reference": "method_42state_gm1_round53_internalized_trustcov_release.py::_build_dataset",
+    "noise_config": {
+      "noise_scale_tag": "mainline_1x_round53_family",
+      "arw_dpsh": 0.005,
+      "vrw_ugpsHz": 5.0,
+      "bi_g_dph": 0.002,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42
+    },
+    "constraint_note": "Use exactly the same fixed noisy dataset/noise strength/seed as Round65/66 mainline"
+  },
+  "protected_metrics": [
+    "dKg_xy",
+    "dKg_yy",
+    "dKa_xx",
+    "rx_y",
+    "ry_z"
+  ],
+  "clean_win_gate": "mean<0, max<=0, dKg_xx<0 and no hard-protected regression vs Round61",
+  "round67_candidates": [
+    {
+      "name": "r67_obs_sched_reinf_mild",
+      "description": "Observability-aware static-measurement reinforcement only (no grouped feedback change).",
+      "rationale": "Isolate one new knob: reinforce extra static measurement only when dominant-scale observability exceeds protected-group observability.",
+      "obs_schedule": {
+        "reinforce_enabled": true,
+        "ratio_threshold": 1.02,
+        "factor_base": 0.1,
+        "factor_gain": 0.18,
+        "factor_min": 0.08,
+        "factor_max": 0.2,
+        "static_start": 12,
+        "static_end": 2200,
+        "r_scale": 1.0
+      },
+      "grouped_feedback": {
+        "enabled": false,
+        "ratio_ref": 1.0,
+        "dom_gain": 0.0,
+        "dom_max": 1.0,
+        "xy_guard_gain": 0.0,
+        "xy_min": 1.0,
+        "prot_gain": 0.0,
+        "prot_min": 1.0,
+        "lever_guard": 1.0,
+        "kg_yy_guard": 1.0,
+        "ka_xx_guard": 1.0
+      }
+    },
+    {
+      "name": "r67_obs_sched_reinf_bal_grouplite",
+      "description": "Mild observability reinforcement plus light grouped feedback scaling by parameter family.",
+      "rationale": "Add a small grouped-feedback layer to protect yy/Ka_xx while keeping xx/zz reinforcement active.",
+      "obs_schedule": {
+        "reinforce_enabled": true,
+        "ratio_threshold": 1.0,
+        "factor_base": 0.12,
+        "factor_gain": 0.22,
+        "factor_min": 0.1,
+        "factor_max": 0.24,
+        "static_start": 10,
+        "static_end": 2400,
+        "r_scale": 1.0
+      },
+      "grouped_feedback": {
+        "enabled": true,
+        "ratio_ref": 1.0,
+        "dom_gain": 0.15,
+        "dom_max": 1.06,
+        "xy_guard_gain": 0.1,
+        "xy_min": 0.9,
+        "prot_gain": 0.22,
+        "prot_min": 0.88,
+        "lever_guard": 0.85,
+        "kg_yy_guard": 0.92,
+        "ka_xx_guard": 0.92
+      }
+    },
+    {
+      "name": "r67_grouped_conservative_guard",
+      "description": "Grouped conservative fusion only (no extra measurement), with explicit yy/Ka_xx/lever guard.",
+      "rationale": "Paper-friendly grouped-update baseline: keep measurement schedule unchanged and make feedback fusion conservative for protected groups.",
+      "obs_schedule": {
+        "reinforce_enabled": false,
+        "ratio_threshold": 9.99,
+        "factor_base": 0.0,
+        "factor_gain": 0.0,
+        "factor_min": 0.0,
+        "factor_max": 0.0,
+        "static_start": 999999,
+        "static_end": 0,
+        "r_scale": 1.0
+      },
+      "grouped_feedback": {
+        "enabled": true,
+        "ratio_ref": 1.0,
+        "dom_gain": 0.18,
+        "dom_max": 1.05,
+        "xy_guard_gain": 0.2,
+        "xy_min": 0.86,
+        "prot_gain": 0.34,
+        "prot_min": 0.78,
+        "lever_guard": 0.6,
+        "kg_yy_guard": 0.7,
+        "ka_xx_guard": 0.72
+      }
+    },
+    {
+      "name": "r67_async_static_window_guard",
+      "description": "Asynchronous static-window reinforcement (skip early windows) plus protected grouped guard.",
+      "rationale": "Test grouped/asynchronous update scheduling by enabling reinforcement only after static evidence stabilizes.",
+      "obs_schedule": {
+        "reinforce_enabled": true,
+        "ratio_threshold": 1.05,
+        "factor_base": 0.08,
+        "factor_gain": 0.16,
+        "factor_min": 0.06,
+        "factor_max": 0.18,
+        "static_start": 40,
+        "static_end": 2600,
+        "r_scale": 1.05
+      },
+      "grouped_feedback": {
+        "enabled": true,
+        "ratio_ref": 1.02,
+        "dom_gain": 0.12,
+        "dom_max": 1.04,
+        "xy_guard_gain": 0.16,
+        "xy_min": 0.88,
+        "prot_gain": 0.28,
+        "prot_min": 0.82,
+        "lever_guard": 0.7,
+        "kg_yy_guard": 0.8,
+        "ka_xx_guard": 0.8
+      }
+    }
+  ]
+}

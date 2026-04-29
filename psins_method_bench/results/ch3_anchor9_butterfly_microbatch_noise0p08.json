@@ -1,0 +1,3625 @@
+{
+  "experiment": "ch3_anchor9_butterfly_microbatch",
+  "report_date": "2026-04-01",
+  "noise_scale": 0.08,
+  "hard_constraints": {
+    "base_reference": "faithful12 base remains the base reference",
+    "physical_legality": "real dual-axis legality only",
+    "continuity_rule": "exact same mechanism state before resume",
+    "search_scope": "very small anchor9 butterfly-only local micro-batch",
+    "broad_random_search": false
+  },
+  "reference_candidate_specs": [
+    {
+      "artifact_name": "probe2_l9_diag_butterfly_same",
+      "display_name": "butterfly_same_d6",
+      "family": "reference_prompt_same",
+      "rationale": "Prompt reference point: original same-sign butterfly with uniform d6 dwell."
+    },
+    {
+      "artifact_name": "probe2_l9_diag_butterfly_flip",
+      "display_name": "butterfly_flip_d6",
+      "family": "reference_prompt_flip",
+      "rationale": "Prompt reference point: original flip-sign butterfly with uniform d6 dwell."
+    },
+    {
+      "artifact_name": "probe3_l9_diag_bfly_same_d8",
+      "display_name": "butterfly_same_d8_incumbent",
+      "family": "family_incumbent_same",
+      "rationale": "Current best-known mean-oriented butterfly incumbent before this micro-batch."
+    },
+    {
+      "artifact_name": "probe3_l9_diag_bfly_flip_d8",
+      "display_name": "butterfly_flip_d8_incumbent",
+      "family": "family_incumbent_flip",
+      "rationale": "Current best-known balanced flip-sign butterfly incumbent before this micro-batch."
+    }
+  ],
+  "microbatch_specs": [
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_rev_d8",
+      "display_name": "butterfly_same_revorder_d8",
+      "family": "order_sensitivity",
+      "hypothesis": "H1 order sensitivity",
+      "rationale": "Reverse the diagonal visit order while keeping the same-sign sweep pattern and the same total dwell budget (8/8). If the loop is order-sensitive, this should move the branch even with identical total time."
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_flip_rev_d8",
+      "display_name": "butterfly_flip_revorder_d8",
+      "family": "order_sensitivity",
+      "hypothesis": "H1 order sensitivity",
+      "rationale": "Reverse the diagonal visit order for the flip-sign butterfly at the same 8/8 dwell level."
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_split_10_6",
+      "display_name": "butterfly_same_split10_6",
+      "family": "dwell_split",
+      "hypothesis": "H2 dwell split",
+      "rationale": "Bias dwell toward the entry-side diagonal (10/6 instead of 8/8) while preserving exact closure and total time. This checks whether the butterfly should load more strongly before the cross-over."
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_split_6_10",
+      "display_name": "butterfly_same_split6_10",
+      "family": "dwell_split",
+      "hypothesis": "H2 dwell split",
+      "rationale": "Bias dwell toward the resume-side diagonal (6/10 instead of 8/8). This is the most direct check of whether the second diagonal visit should carry more weight because it is closest to the anchor10 resume boundary."
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_d8_closebias",
+      "display_name": "butterfly_same_d8_closebias",
+      "family": "asymmetry_resume_boundary",
+      "hypothesis": "H3/H4 asymmetry + minimal resume interaction",
+      "rationale": "Keep the same-sign d8 butterfly and total time fixed, but shift one second of hold from the opening edge to the final closing edge (open/cross/close = 2/3/4). This is a mild asymmetry tweak that minimally increases settling time immediately before node10 resumes while preserving exact continuity."
+    }
+  ],
+  "references": {
+    "butterfly_same_d6": {
+      "artifact_name": "probe2_l9_diag_butterfly_same",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.785386864260651,
+          "median_pct_error": 1.2127800994271065,
+          "max_pct_error": 99.94944264158522
+        },
+        "key_param_errors": {
+          "dKa_yy": 85.24446475191372,
+          "dKg_zz": 32.43027136911215,
+          "Ka2_y": 99.94944264158522,
+          "Ka2_z": 4.98799154202589,
+          "dKg_xz": 1.2836571645531143,
+          "dKa_xz": 0.7240160362323506
+        }
+      },
+      "kf36": null
+    },
+    "butterfly_flip_d6": {
+      "artifact_name": "probe2_l9_diag_butterfly_flip",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.98102168141319,
+          "median_pct_error": 1.4633308492416635,
+          "max_pct_error": 99.88540070212439
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.20551053001007,
+          "dKg_zz": 32.08316347261216,
+          "Ka2_y": 99.88540070212439,
+          "Ka2_z": 4.753270274077426,
+          "dKg_xz": 1.7046843834047396,
+          "dKa_xz": 0.8572429703842872
+        }
+      },
+      "kf36": null
+    },
+    "butterfly_same_d8_incumbent": {
+      "artifact_name": "probe3_l9_diag_bfly_same_d8",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.279840836916332,
+          "median_pct_error": 1.0775064909898178,
+          "max_pct_error": 99.94160943165572
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.32209010578066,
+          "dKg_zz": 31.466271478827668,
+          "Ka2_y": 99.94160943165572,
+          "Ka2_z": 3.9257245252912782,
+          "dKg_xz": 1.0765891937396095,
+          "dKa_xz": 0.4111656066164124
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.279503775569077,
+          "median_pct_error": 1.0777387205315319,
+          "max_pct_error": 99.94159584617923
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.32516839229524,
+          "dKg_zz": 31.46091308583909,
+          "Ka2_y": 99.94159584617923,
+          "Ka2_z": 3.9263729560030547,
+          "dKg_xz": 1.0769696127796178,
+          "dKa_xz": 0.4115462578219493
+        }
+      }
+    },
+    "butterfly_flip_d8_incumbent": {
+      "artifact_name": "probe3_l9_diag_bfly_flip_d8",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.393123370545569,
+          "median_pct_error": 1.0931054635027482,
+          "max_pct_error": 99.87407869101315
+        },
+        "key_param_errors": {
+          "dKa_yy": 90.83173913284412,
+          "dKg_zz": 28.14020365914185,
+          "Ka2_y": 99.87407869101315,
+          "Ka2_z": 2.9543178594436315,
+          "dKg_xz": 1.3232186431281576,
+          "dKa_xz": 0.37837471245322996
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.393324913111602,
+          "median_pct_error": 1.0931294816959725,
+          "max_pct_error": 99.87406338492546
+        },
+        "key_param_errors": {
+          "dKa_yy": 90.83678281276228,
+          "dKg_zz": 28.13535849783264,
+          "Ka2_y": 99.87406338492546,
+          "Ka2_z": 2.9549443452473847,
+          "dKg_xz": 1.3235326209001113,
+          "dKa_xz": 0.37868133812408755
+        }
+      }
+    },
+    "current_unified_winner": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 9.922637196934726,
+          "median_pct_error": 1.0256631258803282,
+          "max_pct_error": 99.63308567370115
+        },
+        "key_param_errors": {
+          "dKa_yy": 82.60930965112222,
+          "dKg_zz": 59.01728589983005,
+          "Ka2_y": 99.63308567370115,
+          "Ka2_z": 0.8419410516265626,
+          "dKg_xz": 0.030207268369070252,
+          "dKa_xz": 0.5877972014887517
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 9.92334744136203,
+          "median_pct_error": 1.025156020576718,
+          "max_pct_error": 99.63308003208641
+        },
+        "key_param_errors": {
+          "dKa_yy": 82.60954698016752,
+          "dKg_zz": 59.02037242790023,
+          "Ka2_y": 99.63308003208641,
+          "Ka2_z": 0.8407056601679301,
+          "dKg_xz": 0.03051643729167634,
+          "dKa_xz": 0.5882365694939456
+        }
+      }
+    },
+    "old_best_legal": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.014162810085333,
+          "median_pct_error": 1.0603379306680452,
+          "max_pct_error": 99.92214937787182
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.77132397757674,
+          "dKg_zz": 76.46895197802066,
+          "Ka2_y": 99.92214937787182,
+          "Ka2_z": 3.8821190036200264,
+          "dKg_xz": 0.43475000616637505,
+          "dKa_xz": 0.14567951573398194
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.014092121257267,
+          "median_pct_error": 1.0602406508286844,
+          "max_pct_error": 99.92213961977083
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.76480779442812,
+          "dKg_zz": 76.46961291525153,
+          "Ka2_y": 99.92213961977083,
+          "Ka2_z": 3.8809407722658174,
+          "dKg_xz": 0.4344164417122317,
+          "dKa_xz": 0.14535565627381575
+        }
+      }
+    }
+  },
+  "microbatch_markov42_rows": [
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_split_10_6",
+      "display_name": "butterfly_same_split10_6",
+      "family": "dwell_split",
+      "hypothesis": "H2 dwell split",
+      "rationale": "Bias dwell toward the entry-side diagonal (10/6 instead of 8/8) while preserving exact closure and total time. This checks whether the butterfly should load more strongly before the cross-over.",
+      "total_time_s": 1271.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.109080355733937,
+          "median_pct_error": 1.147000177144523,
+          "max_pct_error": 99.93837123531367
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.24632428660662,
+          "dKg_zz": 30.905348887489232,
+          "Ka2_y": 99.93837123531367,
+          "Ka2_z": 3.9058756286190475,
+          "dKg_xz": 1.0938476469368823,
+          "dKa_xz": 0.41208792782415815
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_probe5_l9_diag_bfly_same_split_10_6_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_same_d6": {
+        "mean_pct_error": {
+          "reference": 11.785386864260651,
+          "candidate": 11.109080355733937,
+          "improvement_pct_points": 0.6763065085267144,
+          "relative_improvement_pct": 5.738517677155115
+        },
+        "median_pct_error": {
+          "reference": 1.2127800994271065,
+          "candidate": 1.147000177144523,
+          "improvement_pct_points": 0.06577992228258345,
+          "relative_improvement_pct": 5.423895256333493
+        },
+        "max_pct_error": {
+          "reference": 99.94944264158522,
+          "candidate": 99.93837123531367,
+          "improvement_pct_points": 0.011071406271554451,
+          "relative_improvement_pct": 0.011077006513439078
+        }
+      },
+      "delta_vs_flip_d6": {
+        "mean_pct_error": {
+          "reference": 11.98102168141319,
+          "candidate": 11.109080355733937,
+          "improvement_pct_points": 0.8719413256792521,
+          "relative_improvement_pct": 7.277687570100487
+        },
+        "median_pct_error": {
+          "reference": 1.4633308492416635,
+          "candidate": 1.147000177144523,
+          "improvement_pct_points": 0.3163306720971404,
+          "relative_improvement_pct": 21.617166908021606
+        },
+        "max_pct_error": {
+          "reference": 99.88540070212439,
+          "candidate": 99.93837123531367,
+          "improvement_pct_points": -0.052970533189281355,
+          "relative_improvement_pct": -0.053031306694407414
+        }
+      },
+      "delta_vs_same_d8": {
+        "mean_pct_error": {
+          "reference": 11.279840836916332,
+          "candidate": 11.109080355733937,
+          "improvement_pct_points": 0.17076048118239484,
+          "relative_improvement_pct": 1.5138554138417888
+        },
+        "median_pct_error": {
+          "reference": 1.0775064909898178,
+          "candidate": 1.147000177144523,
+          "improvement_pct_points": -0.0694936861547053,
+          "relative_improvement_pct": -6.44949118504772
+        },
+        "max_pct_error": {
+          "reference": 99.94160943165572,
+          "candidate": 99.93837123531367,
+          "improvement_pct_points": 0.0032381963420533566,
+          "relative_improvement_pct": 0.003240088247996218
+        }
+      },
+      "delta_vs_flip_d8": {
+        "mean_pct_error": {
+          "reference": 11.393123370545569,
+          "candidate": 11.109080355733937,
+          "improvement_pct_points": 0.2840430148116315,
+          "relative_improvement_pct": 2.493109269280474
+        },
+        "median_pct_error": {
+          "reference": 1.0931054635027482,
+          "candidate": 1.147000177144523,
+          "improvement_pct_points": -0.053894713641774894,
+          "relative_improvement_pct": -4.930422126797777
+        },
+        "max_pct_error": {
+          "reference": 99.87407869101315,
+          "candidate": 99.93837123531367,
+          "improvement_pct_points": -0.06429254430051401,
+          "relative_improvement_pct": -0.06437360438579863
+        }
+      },
+      "delta_vs_current_unified": {
+        "mean_pct_error": {
+          "reference": 9.922637196934726,
+          "candidate": 11.109080355733937,
+          "improvement_pct_points": -1.1864431587992108,
+          "relative_improvement_pct": -11.956933779315479
+        },
+        "median_pct_error": {
+          "reference": 1.0256631258803282,
+          "candidate": 1.147000177144523,
+          "improvement_pct_points": -0.12133705126419492,
+          "relative_improvement_pct": -11.83010758625559
+        },
+        "max_pct_error": {
+          "reference": 99.63308567370115,
+          "candidate": 99.93837123531367,
+          "improvement_pct_points": -0.3052855616125214,
+          "relative_improvement_pct": -0.30640982315084886
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.109080355733937,
+          "improvement_pct_points": -0.09491754564860422,
+          "relative_improvement_pct": -0.8617772161647285
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.147000177144523,
+          "improvement_pct_points": -0.08666224647647791,
+          "relative_improvement_pct": -8.173078032007972
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.93837123531367,
+          "improvement_pct_points": -0.016221857441848897,
+          "relative_improvement_pct": -0.016234496098060613
+        }
+      }
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_d8_closebias",
+      "display_name": "butterfly_same_d8_closebias",
+      "family": "asymmetry_resume_boundary",
+      "hypothesis": "H3/H4 asymmetry + minimal resume interaction",
+      "rationale": "Keep the same-sign d8 butterfly and total time fixed, but shift one second of hold from the opening edge to the final closing edge (open/cross/close = 2/3/4). This is a mild asymmetry tweak that minimally increases settling time immediately before node10 resumes while preserving exact continuity.",
+      "total_time_s": 1271.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.237144041561512,
+          "median_pct_error": 1.0705380718987492,
+          "max_pct_error": 99.94237994237982
+        },
+        "key_param_errors": {
+          "dKa_yy": 82.95234254654424,
+          "dKg_zz": 31.845582949949463,
+          "Ka2_y": 99.94237994237982,
+          "Ka2_z": 3.796385878721299,
+          "dKg_xz": 1.024459641514433,
+          "dKa_xz": 0.3554843266860965
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_probe5_l9_diag_bfly_same_d8_closebias_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_same_d6": {
+        "mean_pct_error": {
+          "reference": 11.785386864260651,
+          "candidate": 11.237144041561512,
+          "improvement_pct_points": 0.5482428226991392,
+          "relative_improvement_pct": 4.6518865185638765
+        },
+        "median_pct_error": {
+          "reference": 1.2127800994271065,
+          "candidate": 1.0705380718987492,
+          "improvement_pct_points": 0.14224202752835735,
+          "relative_improvement_pct": 11.728591819370196
+        },
+        "max_pct_error": {
+          "reference": 99.94944264158522,
+          "candidate": 99.94237994237982,
+          "improvement_pct_points": 0.00706269920540592,
+          "relative_improvement_pct": 0.00706627172572886
+        }
+      },
+      "delta_vs_flip_d6": {
+        "mean_pct_error": {
+          "reference": 11.98102168141319,
+          "candidate": 11.237144041561512,
+          "improvement_pct_points": 0.7438776398516769,
+          "relative_improvement_pct": 6.2087997136813025
+        },
+        "median_pct_error": {
+          "reference": 1.4633308492416635,
+          "candidate": 1.0705380718987492,
+          "improvement_pct_points": 0.3927927773429143,
+          "relative_improvement_pct": 26.842376592174617
+        },
+        "max_pct_error": {
+          "reference": 99.88540070212439,
+          "candidate": 99.94237994237982,
+          "improvement_pct_points": -0.056979240255429886,
+          "relative_improvement_pct": -0.057044612981382414
+        }
+      },
+      "delta_vs_same_d8": {
+        "mean_pct_error": {
+          "reference": 11.279840836916332,
+          "candidate": 11.237144041561512,
+          "improvement_pct_points": 0.04269679535481963,
+          "relative_improvement_pct": 0.3785230303523682
+        },
+        "median_pct_error": {
+          "reference": 1.0775064909898178,
+          "candidate": 1.0705380718987492,
+          "improvement_pct_points": 0.006968419091068601,
+          "relative_improvement_pct": 0.6467171334315842
+        },
+        "max_pct_error": {
+          "reference": 99.94160943165572,
+          "candidate": 99.94237994237982,
+          "improvement_pct_points": -0.0007705107240951747,
+          "relative_improvement_pct": -0.0007709608925420422
+        }
+      },
+      "delta_vs_flip_d8": {
+        "mean_pct_error": {
+          "reference": 11.393123370545569,
+          "candidate": 11.237144041561512,
+          "improvement_pct_points": 0.1559793289840563,
+          "relative_improvement_pct": 1.3690655662283688
+        },
+        "median_pct_error": {
+          "reference": 1.0931054635027482,
+          "candidate": 1.0705380718987492,
+          "improvement_pct_points": 0.02256739160399901,
+          "relative_improvement_pct": 2.0645209778463682
+        },
+        "max_pct_error": {
+          "reference": 99.87407869101315,
+          "candidate": 99.94237994237982,
+          "improvement_pct_points": -0.06830125136666254,
+          "relative_improvement_pct": -0.0683873656326488
+        }
+      },
+      "delta_vs_current_unified": {
+        "mean_pct_error": {
+          "reference": 9.922637196934726,
+          "candidate": 11.237144041561512,
+          "improvement_pct_points": -1.314506844626786,
+          "relative_improvement_pct": -13.24755524703513
+        },
+        "median_pct_error": {
+          "reference": 1.0256631258803282,
+          "candidate": 1.0705380718987492,
+          "improvement_pct_points": -0.044874946018421014,
+          "relative_improvement_pct": -4.37521296087395
+        },
+        "max_pct_error": {
+          "reference": 99.63308567370115,
+          "candidate": 99.94237994237982,
+          "improvement_pct_points": -0.30929426867866994,
+          "relative_improvement_pct": -0.3104332929039358
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.237144041561512,
+          "improvement_pct_points": -0.22298123147617943,
+          "relative_improvement_pct": -2.024495509291022
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.0705380718987492,
+          "improvement_pct_points": -0.010200141230704007,
+          "relative_improvement_pct": -0.9619707958836866
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.94237994237982,
+          "improvement_pct_points": -0.02023056450799743,
+          "relative_improvement_pct": -0.0202463263990572
+        }
+      }
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_rev_d8",
+      "display_name": "butterfly_same_revorder_d8",
+      "family": "order_sensitivity",
+      "hypothesis": "H1 order sensitivity",
+      "rationale": "Reverse the diagonal visit order while keeping the same-sign sweep pattern and the same total dwell budget (8/8). If the loop is order-sensitive, this should move the branch even with identical total time.",
+      "total_time_s": 1271.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.275264162128318,
+          "median_pct_error": 0.9872866960770881,
+          "max_pct_error": 99.94406542871509
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.58537079250462,
+          "dKg_zz": 31.739275918623367,
+          "Ka2_y": 99.94406542871509,
+          "Ka2_z": 2.369886763973733,
+          "dKg_xz": 0.5357118721315106,
+          "dKa_xz": 0.1310433280794607
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_probe5_l9_diag_bfly_same_rev_d8_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_same_d6": {
+        "mean_pct_error": {
+          "reference": 11.785386864260651,
+          "candidate": 11.275264162128318,
+          "improvement_pct_points": 0.5101227021323336,
+          "relative_improvement_pct": 4.328434085429031
+        },
+        "median_pct_error": {
+          "reference": 1.2127800994271065,
+          "candidate": 0.9872866960770881,
+          "improvement_pct_points": 0.22549340335001844,
+          "relative_improvement_pct": 18.593098901980422
+        },
+        "max_pct_error": {
+          "reference": 99.94944264158522,
+          "candidate": 99.94406542871509,
+          "improvement_pct_points": 0.005377212870129711,
+          "relative_improvement_pct": 0.005379932822049028
+        }
+      },
+      "delta_vs_flip_d6": {
+        "mean_pct_error": {
+          "reference": 11.98102168141319,
+          "candidate": 11.275264162128318,
+          "improvement_pct_points": 0.7057575192848713,
+          "relative_improvement_pct": 5.890628846617909
+        },
+        "median_pct_error": {
+          "reference": 1.4633308492416635,
+          "candidate": 0.9872866960770881,
+          "improvement_pct_points": 0.4760441531645754,
+          "relative_improvement_pct": 32.53154632879324
+        },
+        "max_pct_error": {
+          "reference": 99.88540070212439,
+          "candidate": 99.94406542871509,
+          "improvement_pct_points": -0.058664726590706096,
+          "relative_improvement_pct": -0.05873203308825331
+        }
+      },
+      "delta_vs_same_d8": {
+        "mean_pct_error": {
+          "reference": 11.279840836916332,
+          "candidate": 11.275264162128318,
+          "improvement_pct_points": 0.004576674788014046,
+          "relative_improvement_pct": 0.04057393055614436
+        },
+        "median_pct_error": {
+          "reference": 1.0775064909898178,
+          "candidate": 0.9872866960770881,
+          "improvement_pct_points": 0.09021979491272969,
+          "relative_improvement_pct": 8.373016373186957
+        },
+        "max_pct_error": {
+          "reference": 99.94160943165572,
+          "candidate": 99.94406542871509,
+          "improvement_pct_points": -0.0024559970593713842,
+          "relative_improvement_pct": -0.0024574319678640944
+        }
+      },
+      "delta_vs_flip_d8": {
+        "mean_pct_error": {
+          "reference": 11.393123370545569,
+          "candidate": 11.275264162128318,
+          "improvement_pct_points": 0.11785920841725073,
+          "relative_improvement_pct": 1.0344767153311967
+        },
+        "median_pct_error": {
+          "reference": 1.0931054635027482,
+          "candidate": 0.9872866960770881,
+          "improvement_pct_points": 0.1058187674256601,
+          "relative_improvement_pct": 9.68056340022072
+        },
+        "max_pct_error": {
+          "reference": 99.87407869101315,
+          "candidate": 99.94406542871509,
+          "improvement_pct_points": -0.06998673770193875,
+          "relative_improvement_pct": -0.07007497703028752
+        }
+      },
+      "delta_vs_current_unified": {
+        "mean_pct_error": {
+          "reference": 9.922637196934726,
+          "candidate": 11.275264162128318,
+          "improvement_pct_points": -1.3526269651935916,
+          "relative_improvement_pct": -13.631728524866771
+        },
+        "median_pct_error": {
+          "reference": 1.0256631258803282,
+          "candidate": 0.9872866960770881,
+          "improvement_pct_points": 0.038376429803240075,
+          "relative_improvement_pct": 3.741621282358331
+        },
+        "max_pct_error": {
+          "reference": 99.63308567370115,
+          "candidate": 99.94406542871509,
+          "improvement_pct_points": -0.31097975501394615,
+          "relative_improvement_pct": -0.31212498630465624
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.275264162128318,
+          "improvement_pct_points": -0.261101352042985,
+          "relative_improvement_pct": -2.3705964451869415
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 0.9872866960770881,
+          "improvement_pct_points": 0.07305123459095708,
+          "relative_improvement_pct": 6.889429537329914
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.94406542871509,
+          "improvement_pct_points": -0.021916050843273638,
+          "relative_improvement_pct": -0.021933125918253155
+        }
+      }
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_flip_rev_d8",
+      "display_name": "butterfly_flip_revorder_d8",
+      "family": "order_sensitivity",
+      "hypothesis": "H1 order sensitivity",
+      "rationale": "Reverse the diagonal visit order for the flip-sign butterfly at the same 8/8 dwell level.",
+      "total_time_s": 1271.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.460512493028036,
+          "median_pct_error": 1.0510836645965735,
+          "max_pct_error": 99.91453454159684
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.93165936096335,
+          "dKg_zz": 33.5188240178741,
+          "Ka2_y": 99.91453454159684,
+          "Ka2_z": 3.036662512104767,
+          "dKg_xz": 0.7792397390219863,
+          "dKa_xz": 0.13144039182822975
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_probe5_l9_diag_bfly_flip_rev_d8_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_same_d6": {
+        "mean_pct_error": {
+          "reference": 11.785386864260651,
+          "candidate": 11.460512493028036,
+          "improvement_pct_points": 0.32487437123261564,
+          "relative_improvement_pct": 2.756586397836474
+        },
+        "median_pct_error": {
+          "reference": 1.2127800994271065,
+          "candidate": 1.0510836645965735,
+          "improvement_pct_points": 0.16169643483053298,
+          "relative_improvement_pct": 13.332708452827942
+        },
+        "max_pct_error": {
+          "reference": 99.94944264158522,
+          "candidate": 99.91453454159684,
+          "improvement_pct_points": 0.03490809998838529,
+          "relative_improvement_pct": 0.034925757528798194
+        }
+      },
+      "delta_vs_flip_d6": {
+        "mean_pct_error": {
+          "reference": 11.98102168141319,
+          "candidate": 11.460512493028036,
+          "improvement_pct_points": 0.5205091883851534,
+          "relative_improvement_pct": 4.344447428825269
+        },
+        "median_pct_error": {
+          "reference": 1.4633308492416635,
+          "candidate": 1.0510836645965735,
+          "improvement_pct_points": 0.4122471846450899,
+          "relative_improvement_pct": 28.17183720678938
+        },
+        "max_pct_error": {
+          "reference": 99.88540070212439,
+          "candidate": 99.91453454159684,
+          "improvement_pct_points": -0.029133839472450518,
+          "relative_improvement_pct": -0.029167264953296516
+        }
+      },
+      "delta_vs_same_d8": {
+        "mean_pct_error": {
+          "reference": 11.279840836916332,
+          "candidate": 11.460512493028036,
+          "improvement_pct_points": -0.18067165611170388,
+          "relative_improvement_pct": -1.6017216796216396
+        },
+        "median_pct_error": {
+          "reference": 1.0775064909898178,
+          "candidate": 1.0510836645965735,
+          "improvement_pct_points": 0.026422826393244225,
+          "relative_improvement_pct": 2.4522196955836173
+        },
+        "max_pct_error": {
+          "reference": 99.94160943165572,
+          "candidate": 99.91453454159684,
+          "improvement_pct_points": 0.027074890058884193,
+          "relative_improvement_pct": 0.02709070847753272
+        }
+      },
+      "delta_vs_flip_d8": {
+        "mean_pct_error": {
+          "reference": 11.393123370545569,
+          "candidate": 11.460512493028036,
+          "improvement_pct_points": -0.0673891224824672,
+          "relative_improvement_pct": -0.5914894475441831
+        },
+        "median_pct_error": {
+          "reference": 1.0931054635027482,
+          "candidate": 1.0510836645965735,
+          "improvement_pct_points": 0.042021798906174634,
+          "relative_improvement_pct": 3.844258427866598
+        },
+        "max_pct_error": {
+          "reference": 99.87407869101315,
+          "candidate": 99.91453454159684,
+          "improvement_pct_points": -0.04045585058368317,
+          "relative_improvement_pct": -0.04050685734868607
+        }
+      },
+      "delta_vs_current_unified": {
+        "mean_pct_error": {
+          "reference": 9.922637196934726,
+          "candidate": 11.460512493028036,
+          "improvement_pct_points": -1.5378752960933095,
+          "relative_improvement_pct": -15.498654899610617
+        },
+        "median_pct_error": {
+          "reference": 1.0256631258803282,
+          "candidate": 1.0510836645965735,
+          "improvement_pct_points": -0.02542053871624539,
+          "relative_improvement_pct": -2.4784491198732432
+        },
+        "max_pct_error": {
+          "reference": 99.63308567370115,
+          "candidate": 99.91453454159684,
+          "improvement_pct_points": -0.28144886789569057,
+          "relative_improvement_pct": -0.2824853471039099
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.460512493028036,
+          "improvement_pct_points": -0.44634968294270294,
+          "relative_improvement_pct": -4.052506673807238
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.0510836645965735,
+          "improvement_pct_points": 0.009254266071471617,
+          "relative_improvement_pct": 0.8727657290955487
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.91453454159684,
+          "improvement_pct_points": 0.00761483627498194,
+          "relative_improvement_pct": 0.007620769091130337
+        }
+      }
+    },
+    {
+      "artifact_name": "probe5_l9_diag_bfly_same_split_6_10",
+      "display_name": "butterfly_same_split6_10",
+      "family": "dwell_split",
+      "hypothesis": "H2 dwell split",
+      "rationale": "Bias dwell toward the resume-side diagonal (6/10 instead of 8/8). This is the most direct check of whether the second diagonal visit should carry more weight because it is closest to the anchor10 resume boundary.",
+      "total_time_s": 1271.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.612711321613979,
+          "median_pct_error": 1.1899346458720257,
+          "max_pct_error": 99.94365864532998
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.31596924085466,
+          "dKg_zz": 31.87807086527041,
+          "Ka2_y": 99.94365864532998,
+          "Ka2_z": 4.643778487108581,
+          "dKg_xz": 1.2406869680806076,
+          "dKa_xz": 0.5771508707750929
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_probe5_l9_diag_bfly_same_split_6_10_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_same_d6": {
+        "mean_pct_error": {
+          "reference": 11.785386864260651,
+          "candidate": 11.612711321613979,
+          "improvement_pct_points": 0.1726755426466724,
+          "relative_improvement_pct": 1.465166520501023
+        },
+        "median_pct_error": {
+          "reference": 1.2127800994271065,
+          "candidate": 1.1899346458720257,
+          "improvement_pct_points": 0.02284545355508083,
+          "relative_improvement_pct": 1.8837259587185322
+        },
+        "max_pct_error": {
+          "reference": 99.94944264158522,
+          "candidate": 99.94365864532998,
+          "improvement_pct_points": 0.005783996255246393,
+          "relative_improvement_pct": 0.005786921970128014
+        }
+      },
+      "delta_vs_flip_d6": {
+        "mean_pct_error": {
+          "reference": 11.98102168141319,
+          "candidate": 11.612711321613979,
+          "improvement_pct_points": 0.3683103597992101,
+          "relative_improvement_pct": 3.0741147924854357
+        },
+        "median_pct_error": {
+          "reference": 1.4633308492416635,
+          "candidate": 1.1899346458720257,
+          "improvement_pct_points": 0.27339620336963777,
+          "relative_improvement_pct": 18.683143563283647
+        },
+        "max_pct_error": {
+          "reference": 99.88540070212439,
+          "candidate": 99.94365864532998,
+          "improvement_pct_points": -0.05825794320558941,
+          "relative_improvement_pct": -0.0583247829973919
+        }
+      },
+      "delta_vs_same_d8": {
+        "mean_pct_error": {
+          "reference": 11.279840836916332,
+          "candidate": 11.612711321613979,
+          "improvement_pct_points": -0.33287048469764713,
+          "relative_improvement_pct": -2.9510211137752793
+        },
+        "median_pct_error": {
+          "reference": 1.0775064909898178,
+          "candidate": 1.1899346458720257,
+          "improvement_pct_points": -0.11242815488220792,
+          "relative_improvement_pct": -10.434104650165892
+        },
+        "max_pct_error": {
+          "reference": 99.94160943165572,
+          "candidate": 99.94365864532998,
+          "improvement_pct_points": -0.002049213674254702,
+          "relative_improvement_pct": -0.002050410920844776
+        }
+      },
+      "delta_vs_flip_d8": {
+        "mean_pct_error": {
+          "reference": 11.393123370545569,
+          "candidate": 11.612711321613979,
+          "improvement_pct_points": -0.21958795106841045,
+          "relative_improvement_pct": -1.9273727135800804
+        },
+        "median_pct_error": {
+          "reference": 1.0931054635027482,
+          "candidate": 1.1899346458720257,
+          "improvement_pct_points": -0.09682918236927751,
+          "relative_improvement_pct": -8.858173854423706
+        },
+        "max_pct_error": {
+          "reference": 99.87407869101315,
+          "candidate": 99.94365864532998,
+          "improvement_pct_points": -0.06957995431682207,
+          "relative_improvement_pct": -0.06966768077239144
+        }
+      },
+      "delta_vs_current_unified": {
+        "mean_pct_error": {
+          "reference": 9.922637196934726,
+          "candidate": 11.612711321613979,
+          "improvement_pct_points": -1.6900741246792528,
+          "relative_improvement_pct": -17.032509514722012
+        },
+        "median_pct_error": {
+          "reference": 1.0256631258803282,
+          "candidate": 1.1899346458720257,
+          "improvement_pct_points": -0.16427151999169753,
+          "relative_improvement_pct": -16.016128087933655
+        },
+        "max_pct_error": {
+          "reference": 99.63308567370115,
+          "candidate": 99.94365864532998,
+          "improvement_pct_points": -0.31057297162882946,
+          "relative_improvement_pct": -0.311716704876488
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.612711321613979,
+          "improvement_pct_points": -0.5985485115286462,
+          "relative_improvement_pct": -5.434353221840643
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.1899346458720257,
+          "improvement_pct_points": -0.12959671520398053,
+          "relative_improvement_pct": -12.22220873701374
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.94365864532998,
+          "improvement_pct_points": -0.021509267458156955,
+          "relative_improvement_pct": -0.02152602560300837
+        }
+      }
+    }
+  ],
+  "best_butterfly_candidate": {
+    "artifact_name": "probe5_l9_diag_bfly_same_split_10_6",
+    "display_name": "butterfly_same_split10_6",
+    "family": "dwell_split",
+    "rationale": "Bias dwell toward the entry-side diagonal (10/6 instead of 8/8) while preserving exact closure and total time. This checks whether the butterfly should load more strongly before the cross-over.",
+    "total_time_s": 1271.0,
+    "all_rows": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_1"
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_2"
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_3"
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_4"
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_5"
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_6"
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_7"
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_8"
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_9"
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -45.0,
+        "rotation_time_s": 2.5,
+        "pre_static_s": 0.0,
+        "post_static_s": 3.0,
+        "node_total_s": 5.5,
+        "segment_role": "motif_diag_open1",
+        "label": "l9_diag_bfly_same_split10_6_open1"
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 9,
+        "axis": [
+          -1,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_diag1_sweep",
+        "label": "l9_diag_bfly_same_split10_6_diag1_sweep"
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 9,
+        "axis": [
+          -1,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_diag1_return",
+        "label": "l9_diag_bfly_same_split10_6_diag1_return"
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 3.0,
+        "node_total_s": 8.0,
+        "segment_role": "motif_diag_cross",
+        "label": "l9_diag_bfly_same_split10_6_cross"
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 9,
+        "axis": [
+          1,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 6.0,
+        "node_total_s": 11.0,
+        "segment_role": "motif_diag2_sweep",
+        "label": "l9_diag_bfly_same_split10_6_diag2_sweep"
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 9,
+        "axis": [
+          1,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 6.0,
+        "node_total_s": 11.0,
+        "segment_role": "motif_diag2_return",
+        "label": "l9_diag_bfly_same_split10_6_diag2_return"
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -45.0,
+        "rotation_time_s": 2.5,
+        "pre_static_s": 0.0,
+        "post_static_s": 3.0,
+        "node_total_s": 5.5,
+        "segment_role": "motif_diag_close2",
+        "label": "l9_diag_bfly_same_split10_6_close2"
+      },
+      {
+        "pos_id": 17,
+        "anchor_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_10"
+      },
+      {
+        "pos_id": 18,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_11"
+      },
+      {
+        "pos_id": 19,
+        "anchor_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_12"
+      }
+    ],
+    "all_actions": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_1",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_2",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_3",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_4",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_5",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_6",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_7",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_8",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_9",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -45,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_diag_open1",
+        "label": "l9_diag_bfly_same_split10_6_open1",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -135,
+        "state_after": {
+          "beta_deg": -135,
+          "outer_axis_body": [
+            -1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865475,
+            -2.220446049250313e-16,
+            0.7071067811865476
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              -0.7071067811865476,
+              -7.395570986446986e-32,
+              -0.7071067811865475
+            ],
+            [
+              1.5700924586837754e-16,
+              -1.0,
+              -1.5700924586837747e-16
+            ],
+            [
+              -0.7071067811865475,
+              -2.220446049250313e-16,
+              0.7071067811865476
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 9,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          -1,
+          0,
+          -1
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": -135,
+        "segment_role": "motif_diag1_sweep",
+        "label": "l9_diag_bfly_same_split10_6_diag1_sweep",
+        "state_before": {
+          "beta_deg": -135,
+          "outer_axis_body": [
+            -1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865475,
+            -2.220446049250313e-16,
+            0.7071067811865476
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              -0.7071067811865476,
+              -7.395570986446986e-32,
+              -0.7071067811865475
+            ],
+            [
+              1.5700924586837754e-16,
+              -1.0,
+              -1.5700924586837747e-16
+            ],
+            [
+              -0.7071067811865475,
+              -2.220446049250313e-16,
+              0.7071067811865476
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -135,
+        "state_after": {
+          "beta_deg": -135,
+          "outer_axis_body": [
+            -1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -1.895269253967044e-16,
+            1.0,
+            2.7755575615628914e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -0.7071067811865475,
+              1.2116883882008518e-16,
+              -0.7071067811865475
+            ],
+            [
+              -0.7071067811865476,
+              -2.7755575615628914e-16,
+              0.7071067811865476
+            ],
+            [
+              -1.895269253967044e-16,
+              1.0,
+              2.7755575615628914e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 9,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          -1,
+          0,
+          -1
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": -135,
+        "segment_role": "motif_diag1_return",
+        "label": "l9_diag_bfly_same_split10_6_diag1_return",
+        "state_before": {
+          "beta_deg": -135,
+          "outer_axis_body": [
+            -1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -1.895269253967044e-16,
+            1.0,
+            2.7755575615628914e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -0.7071067811865475,
+              1.2116883882008518e-16,
+              -0.7071067811865475
+            ],
+            [
+              -0.7071067811865476,
+              -2.7755575615628914e-16,
+              0.7071067811865476
+            ],
+            [
+              -1.895269253967044e-16,
+              1.0,
+              2.7755575615628914e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -135,
+        "state_after": {
+          "beta_deg": -135,
+          "outer_axis_body": [
+            -1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865476,
+            -2.7476618026966064e-16,
+            0.7071067811865476
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -0.7071067811865475,
+              -1.0146536357569526e-17,
+              -0.7071067811865472
+            ],
+            [
+              1.4353998199084256e-16,
+              -1.0000000000000002,
+              -1.6653345369377348e-16
+            ],
+            [
+              -0.7071067811865476,
+              -2.7476618026966064e-16,
+              0.7071067811865476
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -135,
+        "segment_role": "motif_diag_cross",
+        "label": "l9_diag_bfly_same_split10_6_cross",
+        "state_before": {
+          "beta_deg": -135,
+          "outer_axis_body": [
+            -1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865476,
+            -2.7476618026966064e-16,
+            0.7071067811865476
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -0.7071067811865475,
+              -1.0146536357569526e-17,
+              -0.7071067811865472
+            ],
+            [
+              1.4353998199084256e-16,
+              -1.0000000000000002,
+              -1.6653345369377348e-16
+            ],
+            [
+              -0.7071067811865476,
+              -2.7476618026966064e-16,
+              0.7071067811865476
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -45,
+        "state_after": {
+          "beta_deg": -45,
+          "outer_axis_body": [
+            1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865477,
+            -2.7476618026966064e-16,
+            -0.7071067811865475
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              0.7071067811865471,
+              -1.0146536357569526e-17,
+              -0.7071067811865476
+            ],
+            [
+              1.665334536937735e-16,
+              -1.0000000000000002,
+              1.4353998199084254e-16
+            ],
+            [
+              -0.7071067811865477,
+              -2.7476618026966064e-16,
+              -0.7071067811865475
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 9,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          -1
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": -45,
+        "segment_role": "motif_diag2_sweep",
+        "label": "l9_diag_bfly_same_split10_6_diag2_sweep",
+        "state_before": {
+          "beta_deg": -45,
+          "outer_axis_body": [
+            1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865477,
+            -2.7476618026966064e-16,
+            -0.7071067811865475
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              0.7071067811865471,
+              -1.0146536357569526e-17,
+              -0.7071067811865476
+            ],
+            [
+              1.665334536937735e-16,
+              -1.0000000000000002,
+              1.4353998199084254e-16
+            ],
+            [
+              -0.7071067811865477,
+              -2.7476618026966064e-16,
+              -0.7071067811865475
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -45,
+        "state_after": {
+          "beta_deg": -45,
+          "outer_axis_body": [
+            1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -4.115715303217357e-16,
+            1.0,
+            -1.6653345369377348e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              0.7071067811865472,
+              2.9040269150165053e-16,
+              -0.7071067811865472
+            ],
+            [
+              -0.7071067811865478,
+              -2.7476618026966064e-16,
+              -0.7071067811865477
+            ],
+            [
+              -4.115715303217357e-16,
+              1.0,
+              -1.6653345369377348e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 9,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          -1
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": -45,
+        "segment_role": "motif_diag2_return",
+        "label": "l9_diag_bfly_same_split10_6_diag2_return",
+        "state_before": {
+          "beta_deg": -45,
+          "outer_axis_body": [
+            1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -4.115715303217357e-16,
+            1.0,
+            -1.6653345369377348e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              0.7071067811865472,
+              2.9040269150165053e-16,
+              -0.7071067811865472
+            ],
+            [
+              -0.7071067811865478,
+              -2.7476618026966064e-16,
+              -0.7071067811865477
+            ],
+            [
+              -4.115715303217357e-16,
+              1.0,
+              -1.6653345369377348e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -45,
+        "state_after": {
+          "beta_deg": -45,
+          "outer_axis_body": [
+            1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865477,
+            -3.5327080320384943e-16,
+            -0.7071067811865475
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              0.7071067811865469,
+              6.223285321735619e-19,
+              -0.7071067811865475
+            ],
+            [
+              8.802883075958471e-17,
+              -1.0000000000000004,
+              2.220446049250313e-16
+            ],
+            [
+              -0.7071067811865477,
+              -3.5327080320384943e-16,
+              -0.7071067811865475
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -45,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -45,
+        "segment_role": "motif_diag_close2",
+        "label": "l9_diag_bfly_same_split10_6_close2",
+        "state_before": {
+          "beta_deg": -45,
+          "outer_axis_body": [
+            1,
+            0,
+            -1
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -0.7071067811865477,
+            -3.5327080320384943e-16,
+            -0.7071067811865475
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              0.7071067811865469,
+              6.223285321735619e-19,
+              -0.7071067811865475
+            ],
+            [
+              8.802883075958471e-17,
+              -1.0000000000000004,
+              2.220446049250313e-16
+            ],
+            [
+              -0.7071067811865477,
+              -3.5327080320384943e-16,
+              -0.7071067811865475
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -3.5327080320384943e-16,
+            1.2116883882008518e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -2.999268993270465e-16,
+              6.223285321735619e-19,
+              -0.9999999999999994
+            ],
+            [
+              2.1925502903840278e-16,
+              -1.0000000000000004,
+              9.476346269835224e-17
+            ],
+            [
+              -1.0,
+              -3.5327080320384943e-16,
+              1.2116883882008518e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 17,
+        "anchor_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_10",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -3.5327080320384943e-16,
+            1.2116883882008518e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -2.999268993270465e-16,
+              6.223285321735619e-19,
+              -0.9999999999999994
+            ],
+            [
+              2.1925502903840278e-16,
+              -1.0000000000000004,
+              9.476346269835224e-17
+            ],
+            [
+              -1.0,
+              -3.5327080320384943e-16,
+              1.2116883882008518e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            2.422485007413338e-16,
+            -1.0,
+            1.2116883882008518e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              -6.223285321735952e-19,
+              -2.999268993270465e-16,
+              -0.9999999999999994
+            ],
+            [
+              1.0000000000000004,
+              1.0823272657588708e-16,
+              9.476346269835224e-17
+            ],
+            [
+              2.422485007413338e-16,
+              -1.0,
+              1.2116883882008518e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 18,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_11",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            2.422485007413338e-16,
+            -1.0,
+            1.2116883882008518e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              -6.223285321735952e-19,
+              -2.999268993270465e-16,
+              -0.9999999999999994
+            ],
+            [
+              1.0000000000000004,
+              1.0823272657588708e-16,
+              9.476346269835224e-17
+            ],
+            [
+              2.422485007413338e-16,
+              -1.0,
+              1.2116883882008518e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            1.3122619827881812e-16,
+            1.2116883882008518e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              2.999268993270465e-16,
+              -6.223285321736286e-19,
+              -0.9999999999999994
+            ],
+            [
+              2.7895758866286227e-18,
+              1.0000000000000004,
+              9.476346269835224e-17
+            ],
+            [
+              1.0,
+              1.3122619827881812e-16,
+              1.2116883882008518e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 19,
+        "anchor_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_12",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            1.3122619827881812e-16,
+            1.2116883882008518e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              2.999268993270465e-16,
+              -6.223285321736286e-19,
+              -0.9999999999999994
+            ],
+            [
+              2.7895758866286227e-18,
+              1.0000000000000004,
+              9.476346269835224e-17
+            ],
+            [
+              1.0,
+              1.3122619827881812e-16,
+              1.2116883882008518e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -1.0146536357569526e-17,
+            1.3122619827881812e-16,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              0.9999999999999994,
+              -6.223285321736286e-19,
+              1.889045968645309e-16
+            ],
+            [
+              -9.476346269835224e-17,
+              1.0000000000000004,
+              2.789575886628633e-18
+            ],
+            [
+              -1.0146536357569526e-17,
+              1.3122619827881812e-16,
+              1.0
+            ]
+          ]
+        }
+      }
+    ],
+    "all_faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          -2.220446049250313e-16,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -45.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -0.7071067811865475,
+          -2.220446049250313e-16,
+          0.7071067811865476
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          -1,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.895269253967044e-16,
+          1.0,
+          2.7755575615628914e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          -1,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -0.7071067811865476,
+          -2.7476618026966064e-16,
+          0.7071067811865476
+        ]
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -0.7071067811865477,
+          -2.7476618026966064e-16,
+          -0.7071067811865475
+        ]
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          1,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -4.115715303217357e-16,
+          1.0,
+          -1.6653345369377348e-16
+        ]
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          1,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -0.7071067811865477,
+          -3.5327080320384943e-16,
+          -0.7071067811865475
+        ]
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -45.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          -3.5327080320384943e-16,
+          1.2116883882008518e-16
+        ]
+      },
+      {
+        "pos_id": 17,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          2.422485007413338e-16,
+          -1.0,
+          1.2116883882008518e-16
+        ]
+      },
+      {
+        "pos_id": 18,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          1.3122619827881812e-16,
+          1.2116883882008518e-16
+        ]
+      },
+      {
+        "pos_id": 19,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -1.0146536357569526e-17,
+          1.3122619827881812e-16,
+          1.0
+        ]
+      }
+    ],
+    "continuity_checks": [
+      {
+        "anchor_id": 9,
+        "closure_rule": "exact_same_mechanism_state_before_resume",
+        "state_before_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "state_after_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -3.5327080320384943e-16,
+            1.2116883882008518e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -2.999268993270465e-16,
+              6.223285321735619e-19,
+              -0.9999999999999994
+            ],
+            [
+              2.1925502903840278e-16,
+              -1.0000000000000004,
+              9.476346269835224e-17
+            ],
+            [
+              -1.0,
+              -3.5327080320384943e-16,
+              1.2116883882008518e-16
+            ]
+          ]
+        },
+        "closure_ok": true,
+        "next_base_action_preview": {
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            0,
+            -1
+          ],
+          "outer_mode": "z",
+          "state_before": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              -1.0,
+              -3.5327080320384943e-16,
+              1.2116883882008518e-16
+            ],
+            "face_name": "-X",
+            "C": [
+              [
+                -2.999268993270465e-16,
+                6.223285321735619e-19,
+                -0.9999999999999994
+              ],
+              [
+                2.1925502903840278e-16,
+                -1.0000000000000004,
+                9.476346269835224e-17
+              ],
+              [
+                -1.0,
+                -3.5327080320384943e-16,
+                1.2116883882008518e-16
+              ]
+            ]
+          },
+          "state_after": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              2.422485007413338e-16,
+              -1.0,
+              1.2116883882008518e-16
+            ],
+            "face_name": "-Y",
+            "C": [
+              [
+                -6.223285321735952e-19,
+                -2.999268993270465e-16,
+                -0.9999999999999994
+              ],
+              [
+                1.0000000000000004,
+                1.0823272657588708e-16,
+                9.476346269835224e-17
+              ],
+              [
+                2.422485007413338e-16,
+                -1.0,
+                1.2116883882008518e-16
+              ]
+            ]
+          },
+          "face_after": [
+            0,
+            0,
+            -1
+          ]
+        }
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 11.109080355733937,
+        "median_pct_error": 1.147000177144523,
+        "max_pct_error": 99.93837123531367
+      },
+      "key_param_errors": {
+        "dKa_yy": 83.24632428660662,
+        "dKg_zz": 30.905348887489232,
+        "Ka2_y": 99.93837123531367,
+        "Ka2_z": 3.9058756286190475,
+        "dKg_xz": 1.0938476469368823,
+        "dKa_xz": 0.41208792782415815
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_probe5_l9_diag_bfly_same_split_10_6_shared_noise0p08_param_errors.json",
+    "delta_vs_same_d6": {
+      "mean_pct_error": {
+        "reference": 11.785386864260651,
+        "candidate": 11.109080355733937,
+        "improvement_pct_points": 0.6763065085267144,
+        "relative_improvement_pct": 5.738517677155115
+      },
+      "median_pct_error": {
+        "reference": 1.2127800994271065,
+        "candidate": 1.147000177144523,
+        "improvement_pct_points": 0.06577992228258345,
+        "relative_improvement_pct": 5.423895256333493
+      },
+      "max_pct_error": {
+        "reference": 99.94944264158522,
+        "candidate": 99.93837123531367,
+        "improvement_pct_points": 0.011071406271554451,
+        "relative_improvement_pct": 0.011077006513439078
+      }
+    },
+    "delta_vs_flip_d6": {
+      "mean_pct_error": {
+        "reference": 11.98102168141319,
+        "candidate": 11.109080355733937,
+        "improvement_pct_points": 0.8719413256792521,
+        "relative_improvement_pct": 7.277687570100487
+      },
+      "median_pct_error": {
+        "reference": 1.4633308492416635,
+        "candidate": 1.147000177144523,
+        "improvement_pct_points": 0.3163306720971404,
+        "relative_improvement_pct": 21.617166908021606
+      },
+      "max_pct_error": {
+        "reference": 99.88540070212439,
+        "candidate": 99.93837123531367,
+        "improvement_pct_points": -0.052970533189281355,
+        "relative_improvement_pct": -0.053031306694407414
+      }
+    },
+    "delta_vs_same_d8": {
+      "mean_pct_error": {
+        "reference": 11.279840836916332,
+        "candidate": 11.109080355733937,
+        "improvement_pct_points": 0.17076048118239484,
+        "relative_improvement_pct": 1.5138554138417888
+      },
+      "median_pct_error": {
+        "reference": 1.0775064909898178,
+        "candidate": 1.147000177144523,
+        "improvement_pct_points": -0.0694936861547053,
+        "relative_improvement_pct": -6.44949118504772
+      },
+      "max_pct_error": {
+        "reference": 99.94160943165572,
+        "candidate": 99.93837123531367,
+        "improvement_pct_points": 0.0032381963420533566,
+        "relative_improvement_pct": 0.003240088247996218
+      }
+    },
+    "delta_vs_flip_d8": {
+      "mean_pct_error": {
+        "reference": 11.393123370545569,
+        "candidate": 11.109080355733937,
+        "improvement_pct_points": 0.2840430148116315,
+        "relative_improvement_pct": 2.493109269280474
+      },
+      "median_pct_error": {
+        "reference": 1.0931054635027482,
+        "candidate": 1.147000177144523,
+        "improvement_pct_points": -0.053894713641774894,
+        "relative_improvement_pct": -4.930422126797777
+      },
+      "max_pct_error": {
+        "reference": 99.87407869101315,
+        "candidate": 99.93837123531367,
+        "improvement_pct_points": -0.06429254430051401,
+        "relative_improvement_pct": -0.06437360438579863
+      }
+    },
+    "delta_vs_current_unified": {
+      "mean_pct_error": {
+        "reference": 9.922637196934726,
+        "candidate": 11.109080355733937,
+        "improvement_pct_points": -1.1864431587992108,
+        "relative_improvement_pct": -11.956933779315479
+      },
+      "median_pct_error": {
+        "reference": 1.0256631258803282,
+        "candidate": 1.147000177144523,
+        "improvement_pct_points": -0.12133705126419492,
+        "relative_improvement_pct": -11.83010758625559
+      },
+      "max_pct_error": {
+        "reference": 99.63308567370115,
+        "candidate": 99.93837123531367,
+        "improvement_pct_points": -0.3052855616125214,
+        "relative_improvement_pct": -0.30640982315084886
+      }
+    },
+    "delta_vs_old_best": {
+      "mean_pct_error": {
+        "reference": 11.014162810085333,
+        "candidate": 11.109080355733937,
+        "improvement_pct_points": -0.09491754564860422,
+        "relative_improvement_pct": -0.8617772161647285
+      },
+      "median_pct_error": {
+        "reference": 1.0603379306680452,
+        "candidate": 1.147000177144523,
+        "improvement_pct_points": -0.08666224647647791,
+        "relative_improvement_pct": -8.173078032007972
+      },
+      "max_pct_error": {
+        "reference": 99.92214937787182,
+        "candidate": 99.93837123531367,
+        "improvement_pct_points": -0.016221857441848897,
+        "relative_improvement_pct": -0.016234496098060613
+      }
+    }
+  },
+  "kf36_recheck": {
+    "artifact_name": "probe5_l9_diag_bfly_same_split_10_6",
+    "display_name": "butterfly_same_split10_6",
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 11.109080355733937,
+        "median_pct_error": 1.147000177144523,
+        "max_pct_error": 99.93837123531367
+      },
+      "key_param_errors": {
+        "dKa_yy": 83.24632428660662,
+        "dKg_zz": 30.905348887489232,
+        "Ka2_y": 99.93837123531367,
+        "Ka2_z": 3.9058756286190475,
+        "dKg_xz": 1.0938476469368823,
+        "dKa_xz": 0.41208792782415815
+      }
+    },
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 11.10942959331203,
+        "median_pct_error": 1.1596562420011398,
+        "max_pct_error": 99.93835794829432
+      },
+      "key_param_errors": {
+        "dKa_yy": 83.24936109629922,
+        "dKg_zz": 30.9001144212954,
+        "Ka2_y": 99.93835794829432,
+        "Ka2_z": 3.906587164701974,
+        "dKg_xz": 1.0942535740677646,
+        "dKa_xz": 0.4124820463462566
+      }
+    },
+    "kf36_status": "rerun",
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_probe5_l9_diag_bfly_same_split_10_6_shared_noise0p08_param_errors.json"
+  },
+  "hypothesis_findings": [
+    {
+      "id": "H1 order sensitivity",
+      "finding": "Reversing the butterfly order did improve the family incumbent. Best order-reversal candidate `probe5_l9_diag_bfly_same_rev_d8` landed at 11.275 / 0.987 / 99.944, which is Δmean +0.005 vs same_d8."
+    },
+    {
+      "id": "H2 dwell split",
+      "finding": "The better split candidate was `probe5_l9_diag_bfly_same_split_10_6` at 11.109 / 1.147 / 99.938. This is Δmean +0.171 and Δmax +0.003 vs same_d8, so the 8/8 incumbent was displaced by a split variant."
+    },
+    {
+      "id": "H3 mild asymmetry",
+      "finding": "The close-biased asymmetry candidate landed at 11.237 / 1.071 / 99.942, with Δmean +0.043 and Δmax -0.001 vs same_d8."
+    },
+    {
+      "id": "H4 minimal anchor10 boundary interaction",
+      "finding": "The only boundary-touching test was the close-bias timing shift. It changed only the hold allocation immediately before node10 resumed, kept the mechanism state exactly identical, and therefore cleanly isolated resume-boundary sensitivity without introducing any new illegal motion."
+    }
+  ],
+  "comparison_rows": [
+    {
+      "label": "butterfly_same_d6",
+      "note": "prompt reference point (no dedicated KF36 rerun saved)",
+      "artifact_name": "probe2_l9_diag_butterfly_same",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.785386864260651,
+          "median_pct_error": 1.2127800994271065,
+          "max_pct_error": 99.94944264158522
+        },
+        "key_param_errors": {
+          "dKa_yy": 85.24446475191372,
+          "dKg_zz": 32.43027136911215,
+          "Ka2_y": 99.94944264158522,
+          "Ka2_z": 4.98799154202589,
+          "dKg_xz": 1.2836571645531143,
+          "dKa_xz": 0.7240160362323506
+        }
+      },
+      "kf36": null
+    },
+    {
+      "label": "butterfly_flip_d6",
+      "note": "prompt reference point (no dedicated KF36 rerun saved)",
+      "artifact_name": "probe2_l9_diag_butterfly_flip",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.98102168141319,
+          "median_pct_error": 1.4633308492416635,
+          "max_pct_error": 99.88540070212439
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.20551053001007,
+          "dKg_zz": 32.08316347261216,
+          "Ka2_y": 99.88540070212439,
+          "Ka2_z": 4.753270274077426,
+          "dKg_xz": 1.7046843834047396,
+          "dKa_xz": 0.8572429703842872
+        }
+      },
+      "kf36": null
+    },
+    {
+      "label": "butterfly_same_d8_incumbent",
+      "note": "current family incumbent before this micro-batch",
+      "artifact_name": "probe3_l9_diag_bfly_same_d8",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.279840836916332,
+          "median_pct_error": 1.0775064909898178,
+          "max_pct_error": 99.94160943165572
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.32209010578066,
+          "dKg_zz": 31.466271478827668,
+          "Ka2_y": 99.94160943165572,
+          "Ka2_z": 3.9257245252912782,
+          "dKg_xz": 1.0765891937396095,
+          "dKa_xz": 0.4111656066164124
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.279503775569077,
+          "median_pct_error": 1.0777387205315319,
+          "max_pct_error": 99.94159584617923
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.32516839229524,
+          "dKg_zz": 31.46091308583909,
+          "Ka2_y": 99.94159584617923,
+          "Ka2_z": 3.9263729560030547,
+          "dKg_xz": 1.0769696127796178,
+          "dKa_xz": 0.4115462578219493
+        }
+      }
+    },
+    {
+      "label": "best butterfly after micro-batch",
+      "note": "probe5_l9_diag_bfly_same_split_10_6",
+      "artifact_name": "probe5_l9_diag_bfly_same_split_10_6",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.109080355733937,
+          "median_pct_error": 1.147000177144523,
+          "max_pct_error": 99.93837123531367
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.24632428660662,
+          "dKg_zz": 30.905348887489232,
+          "Ka2_y": 99.93837123531367,
+          "Ka2_z": 3.9058756286190475,
+          "dKg_xz": 1.0938476469368823,
+          "dKa_xz": 0.41208792782415815
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.10942959331203,
+          "median_pct_error": 1.1596562420011398,
+          "max_pct_error": 99.93835794829432
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.24936109629922,
+          "dKg_zz": 30.9001144212954,
+          "Ka2_y": 99.93835794829432,
+          "Ka2_z": 3.906587164701974,
+          "dKg_xz": 1.0942535740677646,
+          "dKa_xz": 0.4124820463462566
+        }
+      }
+    },
+    {
+      "label": "current unified winner",
+      "note": "twoanchor_l10_zpair_neg5_then_ypair_neg1_plus_l11_y10x0back2",
+      "artifact_name": null,
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 9.922637196934726,
+          "median_pct_error": 1.0256631258803282,
+          "max_pct_error": 99.63308567370115
+        },
+        "key_param_errors": {
+          "dKa_yy": 82.60930965112222,
+          "dKg_zz": 59.01728589983005,
+          "Ka2_y": 99.63308567370115,
+          "Ka2_z": 0.8419410516265626,
+          "dKg_xz": 0.030207268369070252,
+          "dKa_xz": 0.5877972014887517
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 9.92334744136203,
+          "median_pct_error": 1.025156020576718,
+          "max_pct_error": 99.63308003208641
+        },
+        "key_param_errors": {
+          "dKa_yy": 82.60954698016752,
+          "dKg_zz": 59.02037242790023,
+          "Ka2_y": 99.63308003208641,
+          "Ka2_z": 0.8407056601679301,
+          "dKg_xz": 0.03051643729167634,
+          "dKa_xz": 0.5882365694939456
+        }
+      }
+    },
+    {
+      "label": "old best legal",
+      "note": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "artifact_name": null,
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.014162810085333,
+          "median_pct_error": 1.0603379306680452,
+          "max_pct_error": 99.92214937787182
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.77132397757674,
+          "dKg_zz": 76.46895197802066,
+          "Ka2_y": 99.92214937787182,
+          "Ka2_z": 3.8821190036200264,
+          "dKg_xz": 0.43475000616637505,
+          "dKa_xz": 0.14567951573398194
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.014092121257267,
+          "median_pct_error": 1.0602406508286844,
+          "max_pct_error": 99.92213961977083
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.76480779442812,
+          "dKg_zz": 76.46961291525153,
+          "Ka2_y": 99.92213961977083,
+          "Ka2_z": 3.8809407722658174,
+          "dKg_xz": 0.4344164417122317,
+          "dKa_xz": 0.14535565627381575
+        }
+      }
+    }
+  ],
+  "verdict": "best butterfly remains `probe5_l9_diag_bfly_same_split_10_6` at 11.109 / 1.147 / 99.938; the micro-batch did displace the current family incumbent.",
+  "competition_verdict": "borderline: improved locally but still not a full competing family",
+  "competition_explanation": "The micro-batch displaced the previous same_d8 incumbent with `probe5_l9_diag_bfly_same_split_10_6` at 11.109 / 1.147 / 99.938. Relative to old best legal this is Δmean -0.095, Δmax -0.016; relative to the unified winner it is Δmean -1.186, Δmax -0.305.",
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_anchor9_butterfly_microbatch_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_anchor9_butterfly_microbatch_2026-04-01.md"
+  }
+}

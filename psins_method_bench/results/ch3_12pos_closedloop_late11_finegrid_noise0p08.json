@@ -1,0 +1,5323 @@
+{
+  "experiment": "ch3_12pos_closedloop_late11_finegrid",
+  "report_date": "2026-03-31",
+  "noise_scale": 0.08,
+  "hard_constraints": {
+    "base_skeleton": "faithful chapter-3 12-position original sequence",
+    "locality_rule": "late11 family only, plus at most one adjacent late10/late11 variant",
+    "insertion_rule": "closed-loop insertion-return motifs only",
+    "continuity_check": [
+      "beta_deg",
+      "outer_axis_body",
+      "full_orientation_matrix"
+    ],
+    "time_budget_s": [
+      1200.0,
+      1800.0
+    ],
+    "seed": 42,
+    "truth_family": "shared low-noise benchmark"
+  },
+  "references": {
+    "faithful12": {
+      "candidate_name": "legal_base_faithful12",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        }
+      ],
+      "action_sequence": [
+        {
+          "pos_id": 1,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 2,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 3,
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 4,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            0,
+            1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 5,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            0,
+            1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 6,
+          "kind": "inner",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 7,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 8,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 9,
+          "kind": "inner",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 10,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            0,
+            -1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 11,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            0,
+            -1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 12,
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": 0
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 15.290300274032441,
+          "median_pct_error": 1.483362834112179,
+          "max_pct_error": 122.58269656383278
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.58269656383278,
+          "dKg_zz": 85.57075351197156,
+          "Ka2_y": 99.94129544126406,
+          "Ka2_z": 64.70431004852547,
+          "dKg_xz": 18.68063496921905,
+          "dKa_xz": 18.85408106874926
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 15.288687861181792,
+          "median_pct_error": 1.4837439708458107,
+          "max_pct_error": 122.5882646997851
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.5882646997851,
+          "dKg_zz": 85.57095512255164,
+          "Ka2_y": 99.94128958152183,
+          "Ka2_z": 64.68594016040949,
+          "dKg_xz": 18.674921597907467,
+          "dKa_xz": 18.84829522348288
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    "old_best_legal": {
+      "candidate_name": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.014162810085333,
+          "median_pct_error": 1.0603379306680452,
+          "max_pct_error": 99.92214937787182
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.77132397757674,
+          "dKg_zz": 76.46895197802066,
+          "Ka2_y": 99.92214937787182,
+          "Ka2_z": 3.8821190036200264,
+          "dKg_xz": 0.43475000616637505,
+          "dKa_xz": 0.14567951573398194
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.014092121257267,
+          "median_pct_error": 1.0602406508286844,
+          "max_pct_error": 99.92213961977083
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.76480779442812,
+          "dKg_zz": 76.46961291525153,
+          "Ka2_y": 99.92213961977083,
+          "Ka2_z": 3.8809407722658174,
+          "dKg_xz": 0.4344164417122317,
+          "dKa_xz": 0.14535565627381575
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json"
+    }
+  },
+  "previous_incumbent": {
+    "candidate_name": "late11_yneg_xpair_return_then_zpair_pos_med",
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 12.463345722821371,
+        "median_pct_error": 1.009049145706172,
+        "max_pct_error": 99.9402103481785
+      },
+      "key_param_errors": {
+        "dKa_yy": 89.70267315546643,
+        "dKg_zz": 97.00382192250441,
+        "Ka2_y": 99.9402103481785,
+        "Ka2_z": 1.5200087803075115,
+        "dKg_xz": 0.22225729420454438,
+        "dKa_xz": 0.6316097799177687
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_return_then_zpair_pos_med_shared_noise0p08_param_errors.json"
+  },
+  "candidate_specs": [
+    {
+      "name": "late11_yneg_xpair_return_then_zpair_pos_med",
+      "rationale": "Reference incumbent from the previous branch: y-negative x-pair closed loop first, then the medium z-pair. Reused here as the fine-grid anchor.",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late11_zpair_pos_med_then_yneg_xpair_return",
+      "rationale": "Whole-motif reverse-order reference kept in-batch so the fine-grid can be read against the already-known order sensitivity.",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late11_zwrap_yneg_xpair_return",
+      "rationale": "Local order variant: open the z-loop, run the yneg-xpair while staying inside that late z excursion, then close the z-loop. Same total motif budget as the incumbent, but different local order and state occupancy.",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_d6_then_zpair_d8",
+      "rationale": "Mild rebalance at fixed 70 s insertion budget: strengthen the yneg-xpair dwell slightly (6 s per step) and lighten the z-pair dwell slightly (8 s per step).",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_d7_then_zpair_d6",
+      "rationale": "Further fixed-budget rebalance toward the yneg-xpair component: x-pair dwell 7 s, z-pair dwell 6 s.",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_d8_then_zpair_d4",
+      "rationale": "Strongest fixed-budget tilt toward the yneg-xpair component tested here: x-pair dwell 8 s, z-pair dwell 4 s.",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "rationale": "Same total 70 s as the incumbent, but reallocate x-pair dwell away from inner-open/inner-close holds and concentrate it on the outer sweep/return states.",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_then_zpair_pos_frontload",
+      "rationale": "Pre/post allocation tweak at fixed 70 s: keep the incumbent motif order, but push the z-pair dwell entirely onto the excursion half (out=20 s, return=0 s) instead of splitting it evenly.",
+      "insertion_anchors": [
+        11
+      ]
+    },
+    {
+      "name": "late10_zpair_pos_med_then_late11_yneg_xpair_return",
+      "rationale": "Single adjacent-anchor local variant: move the z-pair one anchor earlier (node 10), keep the yneg-xpair at node 11, and preserve the faithful12 base skeleton everywhere else.",
+      "insertion_anchors": [
+        10,
+        11
+      ]
+    }
+  ],
+  "markov42_rows": [
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "rationale": "Same total 70 s as the incumbent, but reallocate x-pair dwell away from inner-open/inner-close holds and concentrate it on the outer sweep/return states.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.767592246509638,
+          "median_pct_error": 1.172756377231194,
+          "max_pct_error": 99.7669122147695
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75138201135951,
+          "dKg_zz": 95.64478653087211,
+          "Ka2_y": 99.7669122147695,
+          "Ka2_z": 1.8953781041161446,
+          "dKg_xz": 0.4918971121523441,
+          "dKa_xz": 0.4310277201788655
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.767592246509638,
+          "improvement_pct_points": 3.5227080275228033,
+          "relative_improvement_pct": 23.038841385642556
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.172756377231194,
+          "improvement_pct_points": 0.310606456880985,
+          "relative_improvement_pct": 20.939344692890927
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.7669122147695,
+          "improvement_pct_points": 22.81578434906328,
+          "relative_improvement_pct": 18.612565222190526
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.767592246509638,
+          "improvement_pct_points": -0.7534294364243053,
+          "relative_improvement_pct": -6.840551110561149
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.172756377231194,
+          "improvement_pct_points": -0.11241844656314881,
+          "relative_improvement_pct": -10.602133839758213
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.7669122147695,
+          "improvement_pct_points": 0.1552371631023135,
+          "relative_improvement_pct": 0.1553581103577536
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 11.767592246509638,
+          "improvement_pct_points": 0.695753476311733,
+          "relative_improvement_pct": 5.582397309558327
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 1.172756377231194,
+          "improvement_pct_points": -0.16370723152502187,
+          "relative_improvement_pct": -16.223910621365537
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 99.7669122147695,
+          "improvement_pct_points": 0.17329813340899136,
+          "relative_improvement_pct": 0.17340180974729144
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_d7_then_zpair_d6",
+      "rationale": "Further fixed-budget rebalance toward the yneg-xpair component: x-pair dwell 7 s, z-pair dwell 6 s.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.290677357807384,
+          "median_pct_error": 0.7188401453068582,
+          "max_pct_error": 102.07919468864404
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.02852527555828,
+          "dKg_zz": 102.07919468864404,
+          "Ka2_y": 99.95357383324662,
+          "Ka2_z": 0.648691967999432,
+          "dKg_xz": 0.03744785159175378,
+          "dKa_xz": 0.9063837374268712
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_d7_then_zpair_d6_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.290677357807384,
+          "improvement_pct_points": 2.999622916225057,
+          "relative_improvement_pct": 19.617815624715526
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 0.7188401453068582,
+          "improvement_pct_points": 0.7645226888053207,
+          "relative_improvement_pct": 51.5398303924004
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 102.07919468864404,
+          "improvement_pct_points": 20.503501875188746,
+          "relative_improvement_pct": 16.726261087356573
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.290677357807384,
+          "improvement_pct_points": -1.2765145477220514,
+          "relative_improvement_pct": -11.589755569558005
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 0.7188401453068582,
+          "improvement_pct_points": 0.3414977853611869,
+          "relative_improvement_pct": 32.20650468912613
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 102.07919468864404,
+          "improvement_pct_points": -2.1570453107722187,
+          "relative_improvement_pct": -2.1587258923094237
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 12.290677357807384,
+          "improvement_pct_points": 0.17266836501398686,
+          "relative_improvement_pct": 1.3854094145668883
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 0.7188401453068582,
+          "improvement_pct_points": 0.29020900039931385,
+          "relative_improvement_pct": 28.760640810633088
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 102.07919468864404,
+          "improvement_pct_points": -2.138984340465541,
+          "relative_improvement_pct": -2.140263996857323
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_d8_then_zpair_d4",
+      "rationale": "Strongest fixed-budget tilt toward the yneg-xpair component tested here: x-pair dwell 8 s, z-pair dwell 4 s.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.31204729382664,
+          "median_pct_error": 0.692932086708757,
+          "max_pct_error": 105.85971954218702
+        },
+        "key_param_errors": {
+          "dKa_yy": 79.24455328870275,
+          "dKg_zz": 105.85971954218702,
+          "Ka2_y": 99.96147527721979,
+          "Ka2_z": 0.31421411623381246,
+          "dKg_xz": 0.2399402231132244,
+          "dKa_xz": 1.043120418292815
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_d8_then_zpair_d4_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.31204729382664,
+          "improvement_pct_points": 2.978252980205802,
+          "relative_improvement_pct": 19.47805423588559
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 0.692932086708757,
+          "improvement_pct_points": 0.790430747403422,
+          "relative_improvement_pct": 53.28640634821553
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 105.85971954218702,
+          "improvement_pct_points": 16.72297702164576,
+          "relative_improvement_pct": 13.642200318980228
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.31204729382664,
+          "improvement_pct_points": -1.2978844837413064,
+          "relative_improvement_pct": -11.783777905960072
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 0.692932086708757,
+          "improvement_pct_points": 0.3674058439592882,
+          "relative_improvement_pct": 34.649882205742784
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 105.85971954218702,
+          "improvement_pct_points": -5.937570164315204,
+          "relative_improvement_pct": -5.94219620102578
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 12.31204729382664,
+          "improvement_pct_points": 0.1512984289947319,
+          "relative_improvement_pct": 1.2139471403548767
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 0.692932086708757,
+          "improvement_pct_points": 0.31611705899741516,
+          "relative_improvement_pct": 31.328212341548937
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 105.85971954218702,
+          "improvement_pct_points": -5.919509194008526,
+          "relative_improvement_pct": -5.923050565318742
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_d6_then_zpair_d8",
+      "rationale": "Mild rebalance at fixed 70 s insertion budget: strengthen the yneg-xpair dwell slightly (6 s per step) and lighten the z-pair dwell slightly (8 s per step).",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.334843556700843,
+          "median_pct_error": 0.7772861587355688,
+          "max_pct_error": 99.94616720444394
+        },
+        "key_param_errors": {
+          "dKa_yy": 86.50676720669777,
+          "dKg_zz": 99.3545121360992,
+          "Ka2_y": 99.94616720444394,
+          "Ka2_z": 0.9625792128323217,
+          "dKg_xz": 0.09893075827194257,
+          "dKa_xz": 0.786071533420225
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_d6_then_zpair_d8_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.334843556700843,
+          "improvement_pct_points": 2.9554567173315984,
+          "relative_improvement_pct": 19.328964535450353
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 0.7772861587355688,
+          "improvement_pct_points": 0.7060766753766101,
+          "relative_improvement_pct": 47.599728073220234
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.94616720444394,
+          "improvement_pct_points": 22.636529359388845,
+          "relative_improvement_pct": 18.466333335717795
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.334843556700843,
+          "improvement_pct_points": -1.3206807466155102,
+          "relative_improvement_pct": -11.990750176728849
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 0.7772861587355688,
+          "improvement_pct_points": 0.2830517719324763,
+          "relative_improvement_pct": 26.694487082447864
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.94616720444394,
+          "improvement_pct_points": -0.024017826572119816,
+          "relative_improvement_pct": -0.024036539167399718
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 12.334843556700843,
+          "improvement_pct_points": 0.12850216612052812,
+          "relative_improvement_pct": 1.0310406930719294
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 0.7772861587355688,
+          "improvement_pct_points": 0.23176298697060327,
+          "relative_improvement_pct": 22.96845381187122
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 99.94616720444394,
+          "improvement_pct_points": -0.0059568562654419566,
+          "relative_improvement_pct": -0.005960419979794975
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_then_zpair_pos_frontload",
+      "rationale": "Pre/post allocation tweak at fixed 70 s: keep the incumbent motif order, but push the z-pair dwell entirely onto the excursion half (out=20 s, return=0 s) instead of splitting it evenly.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.425507723340454,
+          "median_pct_error": 0.9947844005842669,
+          "max_pct_error": 99.93215584194324
+        },
+        "key_param_errors": {
+          "dKa_yy": 98.70280600222779,
+          "dKg_zz": 89.58500461461028,
+          "Ka2_y": 99.93215584194324,
+          "Ka2_z": 1.5883209195970756,
+          "dKg_xz": 0.29328067122840773,
+          "dKa_xz": 0.6377288364021179
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_then_zpair_pos_frontload_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.425507723340454,
+          "improvement_pct_points": 2.8647925506919876,
+          "relative_improvement_pct": 18.736012369601877
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 0.9947844005842669,
+          "improvement_pct_points": 0.4885784335279121,
+          "relative_improvement_pct": 32.9372168624095
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.93215584194324,
+          "improvement_pct_points": 22.65054072188954,
+          "relative_improvement_pct": 18.477763466473156
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.425507723340454,
+          "improvement_pct_points": -1.411344913255121,
+          "relative_improvement_pct": -12.81391003193448
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 0.9947844005842669,
+          "improvement_pct_points": 0.06555353008377829,
+          "relative_improvement_pct": 6.182324350358528
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.93215584194324,
+          "improvement_pct_points": -0.010006464071423693,
+          "relative_improvement_pct": -0.010014260235318423
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 12.425507723340454,
+          "improvement_pct_points": 0.03783799948091726,
+          "relative_improvement_pct": 0.30359423803540087
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 0.9947844005842669,
+          "improvement_pct_points": 0.014264745121905231,
+          "relative_improvement_pct": 1.413681898706946
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 99.93215584194324,
+          "improvement_pct_points": 0.008054506235254166,
+          "relative_improvement_pct": 0.00805932487753761
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_return_then_zpair_pos_med",
+      "rationale": "Reference incumbent from the previous branch: y-negative x-pair closed loop first, then the medium z-pair. Reused here as the fine-grid anchor.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.463345722821371,
+          "median_pct_error": 1.009049145706172,
+          "max_pct_error": 99.9402103481785
+        },
+        "key_param_errors": {
+          "dKa_yy": 89.70267315546643,
+          "dKg_zz": 97.00382192250441,
+          "Ka2_y": 99.9402103481785,
+          "Ka2_z": 1.5200087803075115,
+          "dKg_xz": 0.22225729420454438,
+          "dKa_xz": 0.6316097799177687
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_return_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.463345722821371,
+          "improvement_pct_points": 2.8269545512110703,
+          "relative_improvement_pct": 18.488548298898323
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.009049145706172,
+          "improvement_pct_points": 0.47431368840600685,
+          "relative_improvement_pct": 31.97556777738015
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.9402103481785,
+          "improvement_pct_points": 22.642486215654287,
+          "relative_improvement_pct": 18.47119279503173
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.463345722821371,
+          "improvement_pct_points": -1.4491829127360383,
+          "relative_improvement_pct": -13.15744952861116
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.009049145706172,
+          "improvement_pct_points": 0.05128878496187306,
+          "relative_improvement_pct": 4.8370225640763005
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.9402103481785,
+          "improvement_pct_points": -0.01806097030667786,
+          "relative_improvement_pct": -0.018075041839199606
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 12.463345722821371,
+          "improvement_pct_points": 0.0,
+          "relative_improvement_pct": 0.0
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 1.009049145706172,
+          "improvement_pct_points": 0.0,
+          "relative_improvement_pct": 0.0
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 99.9402103481785,
+          "improvement_pct_points": 0.0,
+          "relative_improvement_pct": 0.0
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_zpair_pos_med_then_yneg_xpair_return",
+      "rationale": "Whole-motif reverse-order reference kept in-batch so the fine-grid can be read against the already-known order sensitivity.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.556775731066702,
+          "median_pct_error": 0.9685089604957526,
+          "max_pct_error": 101.21032029768904
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.20608690720604,
+          "dKg_zz": 101.21032029768904,
+          "Ka2_y": 99.93912430811405,
+          "Ka2_z": 0.9097674293052332,
+          "dKg_xz": 0.29710646719457484,
+          "dKa_xz": 0.6786492549177147
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                5.473822126268817e-48,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  5.473822126268817e-48,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  1.0947644252537633e-47
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_zpair_pos_med_then_yneg_xpair_return_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.556775731066702,
+          "improvement_pct_points": 2.733524542965739,
+          "relative_improvement_pct": 17.877507269154755
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 0.9685089604957526,
+          "improvement_pct_points": 0.5148538736164263,
+          "relative_improvement_pct": 34.70855961714695
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 101.21032029768904,
+          "improvement_pct_points": 21.372376266143746,
+          "relative_improvement_pct": 17.43506780748167
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.556775731066702,
+          "improvement_pct_points": -1.5426129209813695,
+          "relative_improvement_pct": -14.005721066415013
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 0.9685089604957526,
+          "improvement_pct_points": 0.09182897017229252,
+          "relative_improvement_pct": 8.66034945240877
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 101.21032029768904,
+          "improvement_pct_points": -1.2881709198172189,
+          "relative_improvement_pct": -1.289174550224887
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 12.556775731066702,
+          "improvement_pct_points": -0.09343000824533121,
+          "relative_improvement_pct": -0.7496382618533439
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 0.9685089604957526,
+          "improvement_pct_points": 0.040540185210419466,
+          "relative_improvement_pct": 4.017662111199535
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 101.21032029768904,
+          "improvement_pct_points": -1.270109949510541,
+          "relative_improvement_pct": -1.2708697981379524
+        }
+      }
+    },
+    {
+      "candidate_name": "late10_zpair_pos_med_then_late11_yneg_xpair_return",
+      "rationale": "Single adjacent-anchor local variant: move the z-pair one anchor earlier (node 10), keep the yneg-xpair at node 11, and preserve the faithful12 base skeleton everywhere else.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.561824362933455,
+          "median_pct_error": 0.9543341537989678,
+          "max_pct_error": 106.41535927900125
+        },
+        "key_param_errors": {
+          "dKa_yy": 79.66755753033654,
+          "dKg_zz": 106.41535927900125,
+          "Ka2_y": 99.95821432242408,
+          "Ka2_z": 1.1795901053060176,
+          "dKg_xz": 0.3100223240926697,
+          "dKa_xz": 0.6410118792325604
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 10,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "-Y",
+            "C": [
+              [
+                6.162975822039155e-32,
+                -1.1102230246251565e-16,
+                -1.0
+              ],
+              [
+                1.0,
+                1.1102230246251565e-16,
+                4.930380657631324e-32
+              ],
+              [
+                1.1102230246251565e-16,
+                -1.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "-Y",
+            "C": [
+              [
+                6.162975822039155e-32,
+                -1.1102230246251565e-16,
+                -1.0
+              ],
+              [
+                1.0,
+                1.1102230246251565e-16,
+                4.930380657631324e-32
+              ],
+              [
+                1.1102230246251565e-16,
+                -1.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "outer",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              0,
+              -1
+            ],
+            "outer_mode": "z",
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.1102230246251565e-16,
+                -1.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "-Y",
+              "C": [
+                [
+                  6.162975822039155e-32,
+                  -1.1102230246251565e-16,
+                  -1.0
+                ],
+                [
+                  1.0,
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.1102230246251565e-16,
+                  -1.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              0,
+              -1
+            ]
+          }
+        },
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                5.473822126268817e-48,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  5.473822126268817e-48,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  1.0947644252537633e-47
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late10_zpair_pos_med_then_late11_yneg_xpair_return_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.561824362933455,
+          "improvement_pct_points": 2.728475911098986,
+          "relative_improvement_pct": 17.844488742531524
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 0.9543341537989678,
+          "improvement_pct_points": 0.5290286803132112,
+          "relative_improvement_pct": 35.66414555814626
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 106.41535927900125,
+          "improvement_pct_points": 16.167337284831532,
+          "relative_improvement_pct": 13.18892285618197
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.561824362933455,
+          "improvement_pct_points": -1.5476615528481226,
+          "relative_improvement_pct": -14.05155870250053
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 0.9543341537989678,
+          "improvement_pct_points": 0.10600377686907736,
+          "relative_improvement_pct": 9.99716918570401
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 106.41535927900125,
+          "improvement_pct_points": -6.493209901129433,
+          "relative_improvement_pct": -6.498268843851933
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 12.561824362933455,
+          "improvement_pct_points": -0.09847864011208429,
+          "relative_improvement_pct": -0.7901460996284659
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 0.9543341537989678,
+          "improvement_pct_points": 0.0547149919072043,
+          "relative_improvement_pct": 5.422430824111407
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 106.41535927900125,
+          "improvement_pct_points": -6.475148930822755,
+          "relative_improvement_pct": -6.479022715946055
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_zwrap_yneg_xpair_return",
+      "rationale": "Local order variant: open the z-loop, run the yneg-xpair while staying inside that late z excursion, then close the z-loop. Same total motif budget as the incumbent, but different local order and state occupancy.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 14.08052304332485,
+          "median_pct_error": 1.3442761171460074,
+          "max_pct_error": 102.50754547736791
+        },
+        "key_param_errors": {
+          "dKa_yy": 102.50754547736791,
+          "dKg_zz": 99.62573656124071,
+          "Ka2_y": 99.93875511095133,
+          "Ka2_z": 3.951664900324077,
+          "dKg_xz": 1.205411330775187,
+          "dKa_xz": 0.21985214083084528
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251564e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251564e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251564e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251564e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                1.232595164407831e-32,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  1.232595164407831e-32,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_zwrap_yneg_xpair_return_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 14.08052304332485,
+          "improvement_pct_points": 1.2097772307075907,
+          "relative_improvement_pct": 7.912056722405633
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.3442761171460074,
+          "improvement_pct_points": 0.1390867169661716,
+          "relative_improvement_pct": 9.376446124148556
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 102.50754547736791,
+          "improvement_pct_points": 20.07515108646487,
+          "relative_improvement_pct": 16.376822870763892
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 14.08052304332485,
+          "improvement_pct_points": -3.066360233239518,
+          "relative_improvement_pct": -27.840157133247978
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.3442761171460074,
+          "improvement_pct_points": -0.2839381864779622,
+          "relative_improvement_pct": -26.778084445123312
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 102.50754547736791,
+          "improvement_pct_points": -2.5853960994960943,
+          "relative_improvement_pct": -2.5874104146008703
+        }
+      },
+      "delta_vs_previous_incumbent": {
+        "mean_pct_error": {
+          "reference": 12.463345722821371,
+          "candidate": 14.08052304332485,
+          "improvement_pct_points": -1.6171773205034796,
+          "relative_improvement_pct": -12.97546707335816
+        },
+        "median_pct_error": {
+          "reference": 1.009049145706172,
+          "candidate": 1.3442761171460074,
+          "improvement_pct_points": -0.33522697143983526,
+          "relative_improvement_pct": -33.222065829631156
+        },
+        "max_pct_error": {
+          "reference": 99.9402103481785,
+          "candidate": 102.50754547736791,
+          "improvement_pct_points": -2.5673351291894164,
+          "relative_improvement_pct": -2.568871048244905
+        }
+      }
+    }
+  ],
+  "kf36_rows": [
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.767592246509638,
+          "median_pct_error": 1.172756377231194,
+          "max_pct_error": 99.7669122147695
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75138201135951,
+          "dKg_zz": 95.64478653087211,
+          "Ka2_y": 99.7669122147695,
+          "Ka2_z": 1.8953781041161446,
+          "dKg_xz": 0.4918971121523441,
+          "dKa_xz": 0.4310277201788655
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.769134789568334,
+          "median_pct_error": 1.1727867413063198,
+          "max_pct_error": 99.76690609562479
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75418151865216,
+          "dKg_zz": 95.64679662296489,
+          "Ka2_y": 99.76690609562479,
+          "Ka2_z": 1.8943915113063445,
+          "dKg_xz": 0.49165114197850907,
+          "dKa_xz": 0.4313058883087202
+        }
+      },
+      "kf36_status": "rerun",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+      "note": "new recheck"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_d6_then_zpair_d8",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 12.334843556700843,
+          "median_pct_error": 0.7772861587355688,
+          "max_pct_error": 99.94616720444394
+        },
+        "key_param_errors": {
+          "dKa_yy": 86.50676720669777,
+          "dKg_zz": 99.3545121360992,
+          "Ka2_y": 99.94616720444394,
+          "Ka2_z": 0.9625792128323217,
+          "dKg_xz": 0.09893075827194257,
+          "dKa_xz": 0.786071533420225
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 12.336186103888018,
+          "median_pct_error": 0.7774150979710028,
+          "max_pct_error": 99.9461619079103
+        },
+        "key_param_errors": {
+          "dKa_yy": 86.50814544422188,
+          "dKg_zz": 99.35615896395848,
+          "Ka2_y": 99.9461619079103,
+          "Ka2_z": 0.9615034232706826,
+          "dKg_xz": 0.09873062157522396,
+          "dKa_xz": 0.7863251711944103
+        }
+      },
+      "kf36_status": "rerun",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_d6_then_zpair_d8_shared_noise0p08_param_errors.json",
+      "note": "new recheck"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_then_zpair_pos_frontload",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 12.425507723340454,
+          "median_pct_error": 0.9947844005842669,
+          "max_pct_error": 99.93215584194324
+        },
+        "key_param_errors": {
+          "dKa_yy": 98.70280600222779,
+          "dKg_zz": 89.58500461461028,
+          "Ka2_y": 99.93215584194324,
+          "Ka2_z": 1.5883209195970756,
+          "dKg_xz": 0.29328067122840773,
+          "dKa_xz": 0.6377288364021179
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 12.426874163393903,
+          "median_pct_error": 0.9947591799842372,
+          "max_pct_error": 99.93215175174686
+        },
+        "key_param_errors": {
+          "dKa_yy": 98.70576533278617,
+          "dKg_zz": 89.586335777938,
+          "Ka2_y": 99.93215175174686,
+          "Ka2_z": 1.5871872460119785,
+          "dKg_xz": 0.2930457967869579,
+          "dKa_xz": 0.6380096490452178
+        }
+      },
+      "kf36_status": "rerun",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_then_zpair_pos_frontload_shared_noise0p08_param_errors.json",
+      "note": "new recheck"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_return_then_zpair_pos_med",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 12.463345722821371,
+          "median_pct_error": 1.009049145706172,
+          "max_pct_error": 99.9402103481785
+        },
+        "key_param_errors": {
+          "dKa_yy": 89.70267315546643,
+          "dKg_zz": 97.00382192250441,
+          "Ka2_y": 99.9402103481785,
+          "Ka2_z": 1.5200087803075115,
+          "dKg_xz": 0.22225729420454438,
+          "dKa_xz": 0.6316097799177687
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 12.464713617503948,
+          "median_pct_error": 1.0090223703632741,
+          "max_pct_error": 99.94020562898868
+        },
+        "key_param_errors": {
+          "dKa_yy": 89.70425201695241,
+          "dKg_zz": 97.00585297338745,
+          "Ka2_y": 99.94020562898868,
+          "Ka2_z": 1.5188185287685567,
+          "dKg_xz": 0.22202449636359614,
+          "dKa_xz": 0.6319003045111242
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_return_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+      "note": "existing incumbent re-used"
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+    "rationale": "Same total 70 s as the incumbent, but reallocate x-pair dwell away from inner-open/inner-close holds and concentrate it on the outer sweep/return states.",
+    "total_time_s": 1270.0,
+    "all_rows": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_1"
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_2"
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_3"
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_4"
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_5"
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_6"
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_7"
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_8"
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_9"
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_10"
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_11"
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 0.0,
+        "node_total_s": 5.0,
+        "segment_role": "motif_inner_open",
+        "label": "yneg_xpair_outerhold_inner_open"
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 11,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_outer_sweep",
+        "label": "yneg_xpair_outerhold_outer_sweep"
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 11,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_outer_return",
+        "label": "yneg_xpair_outerhold_outer_return"
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 0.0,
+        "node_total_s": 5.0,
+        "segment_role": "motif_inner_close",
+        "label": "yneg_xpair_outerhold_inner_close"
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_out",
+        "label": "z11_pos_med_out"
+      },
+      {
+        "pos_id": 17,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_return",
+        "label": "z11_pos_med_return"
+      },
+      {
+        "pos_id": 18,
+        "anchor_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_12"
+      }
+    ],
+    "all_actions": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_1",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_2",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_3",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_4",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_5",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_6",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_7",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_8",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_9",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_10",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              6.162975822039155e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_11",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              6.162975822039155e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 11,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_inner_open",
+        "label": "yneg_xpair_outerhold_inner_open",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              5.473822126268817e-48
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          -1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_outer_sweep",
+        "label": "yneg_xpair_outerhold_outer_sweep",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              5.473822126268817e-48
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -1.0,
+              2.220446049250313e-16,
+              2.465190328815662e-32
+            ],
+            [
+              4.930380657631324e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          -1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_outer_return",
+        "label": "yneg_xpair_outerhold_outer_return",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -1.0,
+              2.220446049250313e-16,
+              2.465190328815662e-32
+            ],
+            [
+              4.930380657631324e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              0.0
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 11,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_inner_close",
+        "label": "yneg_xpair_outerhold_inner_close",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              0.0
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_out",
+        "label": "z11_pos_med_out",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -3.697785493223493e-32,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              -1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 17,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_return",
+        "label": "z11_pos_med_return",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -3.697785493223493e-32,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              -1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 18,
+        "anchor_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_12",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              4.930380657631324e-32,
+              0.0
+            ],
+            [
+              -4.930380657631324e-32,
+              1.0,
+              5.473822126268817e-48
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      }
+    ],
+    "all_faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          -2.220446049250313e-16,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          2.220446049250313e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 17,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 18,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "continuity_checks": [
+      {
+        "anchor_id": 11,
+        "closure_rule": "exact_same_mechanism_state_before_resume",
+        "state_before_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "state_after_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "closure_ok": true,
+        "next_base_action_preview": {
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "state_before": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after": {
+            "beta_deg": 0,
+            "outer_axis_body": [
+              1,
+              0,
+              0
+            ],
+            "outer_family": "x",
+            "gravity_body": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "face_name": "+Z",
+            "C": [
+              [
+                1.0,
+                4.930380657631324e-32,
+                0.0
+              ],
+              [
+                -4.930380657631324e-32,
+                1.0,
+                5.473822126268817e-48
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "face_after": [
+            0,
+            1,
+            0
+          ]
+        }
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 11.767592246509638,
+        "median_pct_error": 1.172756377231194,
+        "max_pct_error": 99.7669122147695
+      },
+      "key_param_errors": {
+        "dKa_yy": 91.75138201135951,
+        "dKg_zz": 95.64478653087211,
+        "Ka2_y": 99.7669122147695,
+        "Ka2_z": 1.8953781041161446,
+        "dKg_xz": 0.4918971121523441,
+        "dKa_xz": 0.4310277201788655
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 11.769134789568334,
+        "median_pct_error": 1.1727867413063198,
+        "max_pct_error": 99.76690609562479
+      },
+      "key_param_errors": {
+        "dKa_yy": 91.75418151865216,
+        "dKg_zz": 95.64679662296489,
+        "Ka2_y": 99.76690609562479,
+        "Ka2_z": 1.8943915113063445,
+        "dKg_xz": 0.49165114197850907,
+        "dKa_xz": 0.4313058883087202
+      }
+    },
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+    "delta_vs_previous_incumbent": {
+      "mean_pct_error": {
+        "reference": 12.463345722821371,
+        "candidate": 11.767592246509638,
+        "improvement_pct_points": 0.695753476311733,
+        "relative_improvement_pct": 5.582397309558327
+      },
+      "median_pct_error": {
+        "reference": 1.009049145706172,
+        "candidate": 1.172756377231194,
+        "improvement_pct_points": -0.16370723152502187,
+        "relative_improvement_pct": -16.223910621365537
+      },
+      "max_pct_error": {
+        "reference": 99.9402103481785,
+        "candidate": 99.7669122147695,
+        "improvement_pct_points": 0.17329813340899136,
+        "relative_improvement_pct": 0.17340180974729144
+      }
+    },
+    "delta_vs_faithful": {
+      "mean_pct_error": {
+        "reference": 15.290300274032441,
+        "candidate": 11.767592246509638,
+        "improvement_pct_points": 3.5227080275228033,
+        "relative_improvement_pct": 23.038841385642556
+      },
+      "median_pct_error": {
+        "reference": 1.483362834112179,
+        "candidate": 1.172756377231194,
+        "improvement_pct_points": 0.310606456880985,
+        "relative_improvement_pct": 20.939344692890927
+      },
+      "max_pct_error": {
+        "reference": 122.58269656383278,
+        "candidate": 99.7669122147695,
+        "improvement_pct_points": 22.81578434906328,
+        "relative_improvement_pct": 18.612565222190526
+      }
+    },
+    "delta_vs_old_best": {
+      "mean_pct_error": {
+        "reference": 11.014162810085333,
+        "candidate": 11.767592246509638,
+        "improvement_pct_points": -0.7534294364243053,
+        "relative_improvement_pct": -6.840551110561149
+      },
+      "median_pct_error": {
+        "reference": 1.0603379306680452,
+        "candidate": 1.172756377231194,
+        "improvement_pct_points": -0.11241844656314881,
+        "relative_improvement_pct": -10.602133839758213
+      },
+      "max_pct_error": {
+        "reference": 99.92214937787182,
+        "candidate": 99.7669122147695,
+        "improvement_pct_points": 0.1552371631023135,
+        "relative_improvement_pct": 0.1553581103577536
+      }
+    }
+  },
+  "finegrid_summary": {
+    "mean_gap_to_old_best_before": 1.4491829127360383,
+    "mean_gap_to_old_best_after": 0.7534294364243053,
+    "extra_mean_gap_closed": 0.695753476311733,
+    "extra_gap_closure_pct": 48.01005243693908,
+    "materiality_verdict": "partly yes — the fine-grid narrowed the mean gap by a meaningful amount, but did not fully beat the old best."
+  },
+  "scientific_conclusion": "The local late11 fine-grid found a modestly better faithful12-base candidate (late11_yneg_xpair_outerhold_then_zpair_pos_med) than the previous incumbent. However, the branch still does not beat the old best legal result; Ka2_y remains the max ceiling and the remaining mean gap is not fully closed.",
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_closedloop_late11_finegrid_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_closedloop_late11_finegrid_2026-03-31.md"
+  }
+}

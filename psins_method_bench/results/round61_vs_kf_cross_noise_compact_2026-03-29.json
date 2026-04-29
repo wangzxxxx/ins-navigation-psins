@@ -1,0 +1,460 @@
+{
+  "task_scope": "compact cross-noise summary using reused Round61-vs-Markov dense curve + four-method anchors at 0.08/0.10/0.25/1.00",
+  "constraints_respected": {
+    "reused_existing_round61_vs_markov_curve": true,
+    "reused_existing_four_method_0p08": true,
+    "reused_new_four_method_0p10": true,
+    "extra_four_method_runs_count": 2,
+    "extra_four_method_runs": [
+      0.25,
+      1.0
+    ]
+  },
+  "direct_four_method_anchor_summary": [
+    {
+      "noise_scale": 0.08,
+      "suffix": "noise0p08",
+      "files": {
+        "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p08.json",
+        "compare_compact_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p08_compact.json",
+        "report_md": null
+      },
+      "overall_by_method": {
+        "kf36": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "markov42": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "pure_scd": {
+          "mean_pct_error": 1.5531059338899633,
+          "median_pct_error": 0.7583522538401852,
+          "max_pct_error": 15.265739852473125
+        },
+        "round61": {
+          "mean_pct_error": 1.4442226300343577,
+          "median_pct_error": 0.43846101514601554,
+          "max_pct_error": 15.192360917619022
+        }
+      },
+      "round61_vs_kf_relative_advantage_pct": {
+        "mean_pct_error": 7.212686292413048,
+        "median_pct_error": 46.081208288378996,
+        "max_pct_error": -3.269634348361993
+      },
+      "round61_vs_kf_status": {
+        "mean_pct_error": "win",
+        "median_pct_error": "win",
+        "max_pct_error": "loss"
+      },
+      "best_by_metric": {
+        "mean": "round61",
+        "median": "round61",
+        "max": "kf36_noisy"
+      },
+      "markov_minus_kf_pct_points": {
+        "mean_pct_error": -0.00010807960294179075,
+        "median_pct_error": -0.000387937460590293,
+        "max_pct_error": 0.0019384889051998755
+      }
+    },
+    {
+      "noise_scale": 0.1,
+      "suffix": "noise0p1",
+      "files": {
+        "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p1.json",
+        "compare_compact_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p1_compact.json",
+        "report_md": "/root/.openclaw/workspace/reports/psins_four_methods_shared_noise0p1_full_params_2026-03-29.md"
+      },
+      "overall_by_method": {
+        "kf36": {
+          "mean_pct_error": 1.6655734957568198,
+          "median_pct_error": 0.7479929727124004,
+          "max_pct_error": 14.459176627536028
+        },
+        "markov42": {
+          "mean_pct_error": 1.6653580138850876,
+          "median_pct_error": 0.7482901305511351,
+          "max_pct_error": 14.462230621147567
+        },
+        "pure_scd": {
+          "mean_pct_error": 1.6578319544057634,
+          "median_pct_error": 0.7259993345994049,
+          "max_pct_error": 15.027968708553994
+        },
+        "round61": {
+          "mean_pct_error": 1.546794706080964,
+          "median_pct_error": 0.5110000868474462,
+          "max_pct_error": 14.954603610735804
+        }
+      },
+      "round61_vs_kf_relative_advantage_pct": {
+        "mean_pct_error": 7.13140488717275,
+        "median_pct_error": 31.683838553397315,
+        "max_pct_error": -3.4263844751456025
+      },
+      "round61_vs_kf_status": {
+        "mean_pct_error": "win",
+        "median_pct_error": "win",
+        "max_pct_error": "loss"
+      },
+      "best_by_metric": {
+        "mean": "round61",
+        "median": "round61",
+        "max": "kf36_noisy"
+      },
+      "markov_minus_kf_pct_points": {
+        "mean_pct_error": -0.00021548187173214828,
+        "median_pct_error": 0.00029715783873474066,
+        "max_pct_error": 0.0030539936115392408
+      }
+    },
+    {
+      "noise_scale": 0.25,
+      "suffix": "noise0p25",
+      "files": {
+        "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p25.json",
+        "compare_compact_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p25_compact.json",
+        "report_md": "/root/.openclaw/workspace/reports/psins_four_methods_shared_noise0p25_full_params_2026-03-29.md"
+      },
+      "overall_by_method": {
+        "kf36": {
+          "mean_pct_error": 2.5372080511972865,
+          "median_pct_error": 1.1399159849886256,
+          "max_pct_error": 12.568015337027003
+        },
+        "markov42": {
+          "mean_pct_error": 2.5319573345025885,
+          "median_pct_error": 1.1403190370494205,
+          "max_pct_error": 12.58827730256219
+        },
+        "pure_scd": {
+          "mean_pct_error": 2.487085289382478,
+          "median_pct_error": 1.0872281784162592,
+          "max_pct_error": 13.253760785254093
+        },
+        "round61": {
+          "mean_pct_error": 2.3783234179360835,
+          "median_pct_error": 1.1366422874731112,
+          "max_pct_error": 13.180470246637293
+        }
+      },
+      "round61_vs_kf_relative_advantage_pct": {
+        "mean_pct_error": 6.26218386727201,
+        "median_pct_error": 0.28718761370356466,
+        "max_pct_error": -4.873123505872237
+      },
+      "round61_vs_kf_status": {
+        "mean_pct_error": "win",
+        "median_pct_error": "win",
+        "max_pct_error": "loss"
+      },
+      "best_by_metric": {
+        "mean": "round61",
+        "median": "scd42_neutral",
+        "max": "kf36_noisy"
+      },
+      "markov_minus_kf_pct_points": {
+        "mean_pct_error": -0.00525071669469801,
+        "median_pct_error": 0.0004030520607949395,
+        "max_pct_error": 0.020261965535187443
+      }
+    },
+    {
+      "noise_scale": 1.0,
+      "suffix": "noise1x",
+      "files": {
+        "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise1x.json",
+        "compare_compact_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise1x_compact.json",
+        "report_md": "/root/.openclaw/workspace/reports/psins_four_methods_shared_noise1x_full_params_2026-03-29.md"
+      },
+      "overall_by_method": {
+        "kf36": {
+          "mean_pct_error": 7.335721552215393,
+          "median_pct_error": 3.731686690648405,
+          "max_pct_error": 40.236816526611975
+        },
+        "markov42": {
+          "mean_pct_error": 6.9716838233744305,
+          "median_pct_error": 3.7562940945140486,
+          "max_pct_error": 39.74099863098036
+        },
+        "pure_scd": {
+          "mean_pct_error": 6.798698453070575,
+          "median_pct_error": 3.755059400748615,
+          "max_pct_error": 39.15060852306472
+        },
+        "round61": {
+          "mean_pct_error": 6.7031793507805055,
+          "median_pct_error": 3.78024779156694,
+          "max_pct_error": 38.675657340235304
+        }
+      },
+      "round61_vs_kf_relative_advantage_pct": {
+        "mean_pct_error": 8.62276733014572,
+        "median_pct_error": -1.3013177403191196,
+        "max_pct_error": 3.879927193902493
+      },
+      "round61_vs_kf_status": {
+        "mean_pct_error": "win",
+        "median_pct_error": "loss",
+        "max_pct_error": "win"
+      },
+      "best_by_metric": {
+        "mean": "round61",
+        "median": "kf36_noisy",
+        "max": "round61"
+      },
+      "markov_minus_kf_pct_points": {
+        "mean_pct_error": -0.3640377288409624,
+        "median_pct_error": 0.02460740386564364,
+        "max_pct_error": -0.4958178956316175
+      }
+    }
+  ],
+  "dense_round61_vs_markov_curve": [
+    {
+      "noise_scale": 0.03,
+      "suffix": "noise0p03",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 2.6928611475877573,
+        "median": 22.6715738591728,
+        "max": -2.9058347000135574
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "loss"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p03.json"
+    },
+    {
+      "noise_scale": 0.05,
+      "suffix": "noise0p05",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 5.007020626258632,
+        "median": 31.31498321841316,
+        "max": -3.042440665891041
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "loss"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p05.json"
+    },
+    {
+      "noise_scale": 0.08,
+      "suffix": "noise0p08",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 7.206242864775314,
+        "median": 46.05547363819124,
+        "max": -3.256028484954143
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "loss"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p08.json"
+    },
+    {
+      "noise_scale": 0.1,
+      "suffix": "noise0p1",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 7.119388552827102,
+        "median": 31.710967980951267,
+        "max": -3.404543894274916
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "loss"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p1.json"
+    },
+    {
+      "noise_scale": 0.15,
+      "suffix": "noise0p15",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 6.559531168511924,
+        "median": 7.763926977536219,
+        "max": -3.7991323109555712
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "loss"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p15.json"
+    },
+    {
+      "noise_scale": 0.2,
+      "suffix": "noise1over5",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 6.37158445924452,
+        "median": 2.8660552660277774,
+        "max": -4.230636153200185
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "loss"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise1over5.json"
+    },
+    {
+      "noise_scale": 0.25,
+      "suffix": "noise0p25",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 6.067792473157409,
+        "median": 0.32243165788259215,
+        "max": -4.704320772744413
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "loss"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p25.json"
+    },
+    {
+      "noise_scale": 0.3333333333333333,
+      "suffix": "noise1over3",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 5.404629062496557,
+        "median": 0.7200514220106317,
+        "max": 6.475750636651441
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "win"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise1over3.json"
+    },
+    {
+      "noise_scale": 0.5,
+      "suffix": "noise0p5",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 4.829580758520822,
+        "median": 2.5409392188372126,
+        "max": 4.420710351727839
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "win"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p5.json"
+    },
+    {
+      "noise_scale": 0.75,
+      "suffix": "noise0p75",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 4.228461499443694,
+        "median": 6.7748489507095915,
+        "max": 3.179569673451612
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "win"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise0p75.json"
+    },
+    {
+      "noise_scale": 1.0,
+      "suffix": "noise1x",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 3.851357568650662,
+        "median": -0.6376949314984456,
+        "max": 2.6807109218301304
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "loss",
+        "max": "win"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise1x.json"
+    },
+    {
+      "noise_scale": 1.5,
+      "suffix": "noise1p5",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 4.29614459665848,
+        "median": -7.806675104264092,
+        "max": 2.37872046584954
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "loss",
+        "max": "win"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise1p5.json"
+    },
+    {
+      "noise_scale": 2.0,
+      "suffix": "noise2p0",
+      "round61_vs_markov_relative_advantage_pct": {
+        "mean": 3.789390024923589,
+        "median": 7.166466568537766,
+        "max": 2.3202928702068766
+      },
+      "round61_vs_markov_status": {
+        "mean": "win",
+        "median": "win",
+        "max": "win"
+      },
+      "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_baseline_vs_round61_shared_noise2p0.json"
+    }
+  ],
+  "recommendation": {
+    "directly_verified_with_kf": {
+      "wins_on_mean": [
+        0.08,
+        0.1,
+        0.25,
+        1.0
+      ],
+      "wins_on_median": [
+        0.08,
+        0.1,
+        0.25
+      ],
+      "wins_on_max": [
+        1.0
+      ],
+      "all_three_metrics_win": [],
+      "two_of_three_win": [
+        0.08,
+        0.1,
+        0.25,
+        1.0
+      ],
+      "one_of_three_win": []
+    },
+    "best_optimization_targets": [
+      {
+        "regime": "0.08–0.10 (sweet-spot low-noise)",
+        "why": "Round61 already beats KF on mean and median at both tested anchors, but still loses on max. This is the cleanest place to attack tail error / worst-case control without rebuilding the whole mechanism.",
+        "goal": "Turn max from slight loss into non-negative while preserving current strong mean/median advantage."
+      },
+      {
+        "regime": "1.00 (nominal-noise)",
+        "why": "Round61 already beats KF on mean and max at 1.00, but loses slightly on median. This is the most promising single-anchor path to an all-three-metric win at nominal operating noise.",
+        "goal": "Improve central-error distribution (median) without giving back the current mean/max win."
+      },
+      {
+        "regime": "Avoid prioritizing 0.03–0.05 first",
+        "why": "Dense Round61-vs-Markov curve shows the mean advantage collapses sharply in the ultra-low-noise regime, so this is not the fastest route to broad KF-consistency unless the scientific target is specifically ultra-low noise.",
+        "goal": "Treat as later robustness work, not the first optimization front."
+      }
+    ],
+    "main_judgment": "Round61 does not yet beat standard KF broadly enough across all metrics. It already has stable mean wins, selective median wins in low noise, and a max win at 1.00, but it still lacks all-three-metric consistency across regimes."
+  }
+}

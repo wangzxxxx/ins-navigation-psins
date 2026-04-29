@@ -1,0 +1,65 @@
+{
+  "baseline": {
+    "name": "markov42_baseline",
+    "overall": {
+      "mean_pct_error": 1.9544212948566337,
+      "median_pct_error": 0.43062068381890417,
+      "max_pct_error": 15.12164342723992
+    },
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json"
+  },
+  "candidates": [
+    {
+      "name": "soft_weak_release",
+      "overall": {
+        "mean_pct_error": 6.825938340362145,
+        "median_pct_error": 1.0271268458509106,
+        "max_pct_error": 72.09716815565505
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -4.871517045505511,
+        "median_pct_error": -0.5965061620320065,
+        "max_pct_error": -56.97552472841514
+      },
+      "verdict_vs_baseline": "worse",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/RZ42_markov_soft_weak_release_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "lever_late_release",
+      "overall": {
+        "mean_pct_error": 6.917689267190111,
+        "median_pct_error": 0.9949799347233728,
+        "max_pct_error": 73.36195308355741
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -4.963267972333478,
+        "median_pct_error": -0.5643592509044686,
+        "max_pct_error": -58.24030965631749
+      },
+      "verdict_vs_baseline": "worse",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/RZ42_markov_lever_late_release_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "staged_qr_softfreeze",
+      "overall": {
+        "mean_pct_error": NaN,
+        "median_pct_error": NaN,
+        "max_pct_error": NaN
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": NaN,
+        "median_pct_error": NaN,
+        "max_pct_error": NaN
+      },
+      "verdict_vs_baseline": "mixed",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/RZ42_markov_staged_qr_softfreeze_ch3faithful12_shared_noise0p08_param_errors.json"
+    }
+  ],
+  "best_candidate": "soft_weak_release",
+  "noise_scale": 0.08,
+  "att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

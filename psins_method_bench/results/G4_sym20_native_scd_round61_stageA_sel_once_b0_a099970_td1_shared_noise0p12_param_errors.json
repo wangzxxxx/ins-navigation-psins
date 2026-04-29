@@ -1,0 +1,684 @@
+{
+  "variant": "g4_sym20_native_scd_round61_stageA_sel_once_b0_a099970_td1_noise0p12",
+  "method_file": "round53_base + _build_patched_method(neutral+tiny_repair) + _run_internalized_hybrid_scd",
+  "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+  "param_order": [
+    "eb_x",
+    "eb_y",
+    "eb_z",
+    "db_x",
+    "db_y",
+    "db_z",
+    "dKg_xx",
+    "dKg_yx",
+    "dKg_zx",
+    "dKg_xy",
+    "dKg_yy",
+    "dKg_zy",
+    "dKg_xz",
+    "dKg_yz",
+    "dKg_zz",
+    "dKa_xx",
+    "dKa_xy",
+    "dKa_xz",
+    "dKa_yy",
+    "dKa_yz",
+    "dKa_zz",
+    "Ka2_x",
+    "Ka2_y",
+    "Ka2_z",
+    "rx_x",
+    "rx_y",
+    "rx_z",
+    "ry_x",
+    "ry_y",
+    "ry_z"
+  ],
+  "param_errors": {
+    "eb_x": {
+      "true": 4.84813681109536e-07,
+      "est": 4.865678550759114e-07,
+      "abs_error": 1.7541739663753591e-09,
+      "pct_error": 0.36182435329811397
+    },
+    "eb_y": {
+      "true": 9.69627362219072e-07,
+      "est": 9.731210825022089e-07,
+      "abs_error": 3.493720283136785e-09,
+      "pct_error": 0.36031576864137976
+    },
+    "eb_z": {
+      "true": 1.4544410433286078e-06,
+      "est": 1.4458382867616912e-06,
+      "abs_error": 8.602756566916666e-09,
+      "pct_error": 0.591481972155334
+    },
+    "db_x": {
+      "true": 0.00097803267715,
+      "est": 0.0009786082352651166,
+      "abs_error": 5.755581151166769e-07,
+      "pct_error": 0.058848556757209874
+    },
+    "db_y": {
+      "true": 0.0019560653543,
+      "est": 0.00196375256808392,
+      "abs_error": 7.687213783920399e-06,
+      "pct_error": 0.39299370887693863
+    },
+    "db_z": {
+      "true": 0.00293409803145,
+      "est": 0.0029404546636284676,
+      "abs_error": 6.356632178467457e-06,
+      "pct_error": 0.21664689149210456
+    },
+    "dKg_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -9.641968464757511e-06,
+      "abs_error": 3.580315351969787e-07,
+      "pct_error": 3.5803153519860813
+    },
+    "dKg_yx": {
+      "true": 0.0001454441043328608,
+      "est": 0.0001438199190077851,
+      "abs_error": 1.6241853250756897e-06,
+      "pct_error": 1.1167075712870478
+    },
+    "dKg_zx": {
+      "true": 0.00024240684055476798,
+      "est": 0.0002427753005281304,
+      "abs_error": 3.684599733624254e-07,
+      "pct_error": 0.15200065003082192
+    },
+    "dKg_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.8914725098488176e-05,
+      "abs_error": 4.333569875345793e-07,
+      "pct_error": 0.8938629506964536
+    },
+    "dKg_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -1.9894931099440072e-05,
+      "abs_error": 1.050689005799299e-07,
+      "pct_error": 0.5253445028991242
+    },
+    "dKg_zy": {
+      "true": 0.0002908882086657216,
+      "est": 0.00028912063671516147,
+      "abs_error": 1.7675719505601132e-06,
+      "pct_error": 0.6076464765168066
+    },
+    "dKg_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.693430650738207e-05,
+      "abs_error": 2.8429714525119365e-08,
+      "pct_error": 0.029320247790920035
+    },
+    "dKg_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.00019335293767789796,
+      "abs_error": 5.725347659164251e-07,
+      "pct_error": 0.2952344314036952
+    },
+    "dKg_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -2.964617992673446e-05,
+      "abs_error": 3.5382007324002984e-07,
+      "pct_error": 1.1794002441344356
+    },
+    "dKa_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -9.572243010680381e-06,
+      "abs_error": 4.2775698927410843e-07,
+      "pct_error": 4.277569892760551
+    },
+    "dKa_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.904145513333323e-05,
+      "abs_error": 5.60087022379633e-07,
+      "pct_error": 1.1552624115264813
+    },
+    "dKa_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.686805149342463e-05,
+      "abs_error": 9.468472848256208e-08,
+      "pct_error": 0.09765063587507297
+    },
+    "dKa_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -1.913263926844877e-05,
+      "abs_error": 8.673607315712317e-07,
+      "pct_error": 4.336803657851821
+    },
+    "dKa_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.00019510707104791346,
+      "abs_error": 1.18159860409907e-06,
+      "pct_error": 0.6093055178408355
+    },
+    "dKa_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -2.960764132686755e-05,
+      "abs_error": 3.923586731069406e-07,
+      "pct_error": 1.307862243690914
+    },
+    "Ka2_x": {
+      "true": 1.0224607248440952e-06,
+      "est": 1.0222330100299736e-06,
+      "abs_error": 2.2771481412165607e-10,
+      "pct_error": 0.022271252928211794
+    },
+    "Ka2_y": {
+      "true": 2.0449214496881904e-06,
+      "est": 2.046521778031729e-06,
+      "abs_error": 1.6003283435383917e-09,
+      "pct_error": 0.07825867070749391
+    },
+    "Ka2_z": {
+      "true": 3.0673821745322856e-06,
+      "est": 3.0441607060973893e-06,
+      "abs_error": 2.3221468434896358e-08,
+      "pct_error": 0.7570451646911969
+    },
+    "rx_x": {
+      "true": 0.01,
+      "est": 0.010149306048283088,
+      "abs_error": 0.0001493060482830877,
+      "pct_error": 1.493060482830877
+    },
+    "rx_y": {
+      "true": 0.02,
+      "est": 0.01994973862681283,
+      "abs_error": 5.02613731871715e-05,
+      "pct_error": 0.2513068659358575
+    },
+    "rx_z": {
+      "true": 0.03,
+      "est": 0.03021656284779517,
+      "abs_error": 0.00021656284779517088,
+      "pct_error": 0.7218761593172363
+    },
+    "ry_x": {
+      "true": 0.04,
+      "est": 0.03995673586058138,
+      "abs_error": 4.326413941862367e-05,
+      "pct_error": 0.10816034854655918
+    },
+    "ry_y": {
+      "true": 0.05,
+      "est": 0.05008843604212956,
+      "abs_error": 8.843604212955408e-05,
+      "pct_error": 0.17687208425910816
+    },
+    "ry_z": {
+      "true": 0.06,
+      "est": 0.06012024336627228,
+      "abs_error": 0.00012024336627228238,
+      "pct_error": 0.20040561045380398
+    }
+  },
+  "focus_scale_pct": {
+    "dKg_xx": 3.5803153519860813,
+    "dKg_xy": 0.8938629506964536,
+    "dKg_yy": 0.5253445028991242,
+    "dKg_zz": 1.1794002441344356,
+    "dKa_xx": 4.277569892760551
+  },
+  "lever_guard_pct": {
+    "rx_y": 0.2513068659358575,
+    "ry_z": 0.20040561045380398
+  },
+  "overall": {
+    "mean_pct_error": 0.8651884892394163,
+    "median_pct_error": 0.4591691058880314,
+    "max_pct_error": 4.336803657851821
+  },
+  "extra": {
+    "comparison_mode": "sym20_native_scd_round61_focused_search_2026_04_05",
+    "path_case_key": "symmetric20",
+    "path_case_tag": "ch3corrected_symmetric20_att0zero_1200s",
+    "path_case_display_name": "20-position corrected symmetric scheme",
+    "att0_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_motion_rows": 20,
+    "claimed_position_count": 20,
+    "total_time_s": 1200.0,
+    "timing_note": "uniform 20 × 60 s = 1200 s, row split 6 / 6 / 48 s",
+    "source_builder": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_ch3_corrected_symmetric20_front2_back11.py",
+    "source_reference": "anchor2_zpair_anchor11_xpair_symmetric20_60s",
+    "builder_method_tag": "ch3closedloop_anchor2_zpair_anchor11_xpair_symmetric20_60s",
+    "rationale": "Restore stronger front/back symmetry under the real two-axis mechanism by pairing the existing late anchor11 x-family outerhold with its front-half counterpart after anchor2. Under legality, the mirrored front motif must sweep the z-family (not x-family) because anchor2 inner-open +90 shifts the legal outer axis from +X to +Z before the outer pair executes.",
+    "noise_scale": 0.12,
+    "noise_config": {
+      "arw_dpsh": 0.0006,
+      "vrw_ugpsHz": 0.6,
+      "bi_g_dph": 0.00024,
+      "bi_a_ug": 0.6,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42,
+      "base_family": "round53_round61_shared"
+    },
+    "candidate_name": "stageA_sel_once_b0_a099970_td1",
+    "candidate_stage": "A",
+    "candidate_parent": null,
+    "candidate_stage_index": 18,
+    "candidate_description": "Stage A base-local refinement: target=selected, mode=once_per_phase, alpha=0.9997, transition_duration=1.0, bias_to_target=False, apply_policy_names=['iter2_commit']",
+    "candidate_signature": "{\"name\": \"stageA_sel_once_b0_a099970_td1\", \"parent\": null, \"repair\": {\"knobs\": [], \"pattern\": \"base_only\", \"post_ry_z_mult\": null, \"scaling\": null, \"state20_alpha_mult\": null}, \"scd\": {\"alpha\": 0.9997, \"apply_policy_names\": [\"iter2_commit\"], \"bias_to_target\": false, \"mode\": \"once_per_phase\", \"target\": \"selected\", \"transition_duration\": 1.0}, \"stage\": \"A\"}",
+    "scd_cfg": {
+      "mode": "once_per_phase",
+      "alpha": 0.9997,
+      "transition_duration": 1.0,
+      "target": "selected",
+      "bias_to_target": false,
+      "apply_policy_names": [
+        "iter2_commit"
+      ]
+    },
+    "repair": {
+      "state20_alpha_mult": null,
+      "post_ry_z_mult": null,
+      "scaling": null,
+      "pattern": "base_only",
+      "knobs": []
+    },
+    "iter_patches": {
+      "0": {
+        "selected_prior_scale": 1.0,
+        "other_scale_prior_scale": 1.0,
+        "ka2_prior_scale": 1.0,
+        "lever_prior_scale": 1.0,
+        "selected_q_static_scale": 1.0,
+        "selected_q_dynamic_scale": 1.0,
+        "selected_q_late_mult": 1.0,
+        "other_scale_q_scale": 1.0,
+        "other_scale_q_late_mult": 1.0,
+        "ka2_q_scale": 1.0,
+        "lever_q_scale": 1.0,
+        "static_r_scale": 1.0,
+        "dynamic_r_scale": 1.0,
+        "late_r_mult": 1.0,
+        "late_release_frac": 0.58,
+        "selected_alpha_floor": 1.0,
+        "selected_alpha_span": 0.0,
+        "other_scale_alpha": 1.0,
+        "ka2_alpha": 1.0,
+        "lever_alpha": 1.0,
+        "markov_alpha": 1.0,
+        "trust_score_soft": 2.1,
+        "trust_cov_soft": 0.44,
+        "trust_mix": 0.58,
+        "state_alpha_mult": {},
+        "state_alpha_add": {},
+        "state_prior_diag_mult": {},
+        "state_q_static_mult": {},
+        "state_q_dynamic_mult": {},
+        "state_q_late_mult": {}
+      },
+      "1": {
+        "selected_prior_scale": 1.0,
+        "other_scale_prior_scale": 1.0,
+        "ka2_prior_scale": 1.0,
+        "lever_prior_scale": 1.0,
+        "selected_q_static_scale": 1.0,
+        "selected_q_dynamic_scale": 1.0,
+        "selected_q_late_mult": 1.0,
+        "other_scale_q_scale": 1.0,
+        "other_scale_q_late_mult": 1.0,
+        "ka2_q_scale": 1.0,
+        "lever_q_scale": 1.0,
+        "static_r_scale": 1.0,
+        "dynamic_r_scale": 1.0,
+        "late_r_mult": 1.0,
+        "late_release_frac": 0.58,
+        "selected_alpha_floor": 1.0,
+        "selected_alpha_span": 0.0,
+        "other_scale_alpha": 1.0,
+        "ka2_alpha": 1.0,
+        "lever_alpha": 1.0,
+        "markov_alpha": 1.0,
+        "trust_score_soft": 2.1,
+        "trust_cov_soft": 0.44,
+        "trust_mix": 0.58,
+        "state_alpha_mult": {},
+        "state_alpha_add": {},
+        "state_prior_diag_mult": {},
+        "state_q_static_mult": {},
+        "state_q_dynamic_mult": {},
+        "state_q_late_mult": {}
+      }
+    },
+    "post_ry_z_mult": 1.0,
+    "round61_reference_knobs": {
+      "reference_candidate_name": "r61_s20_08988_ryz00116",
+      "inspected_from_script": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_round61_hybrid_micro.py",
+      "inspected_extra_candidate": {
+        "name": "r61_s20_08988_ryz00116",
+        "description": "Keep exact R60 route, only tighten iter2 state20 from 0.899 to 0.8988.",
+        "rationale": "Most conservative zz-only follow-up: preserve the R60 lever repair and nudge only the dKg_zz line.",
+        "iter_patches": {
+          "1": {
+            "state_alpha_mult": {
+              "20": 0.8988
+            }
+          }
+        }
+      },
+      "inspected_merged_scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "scale_block",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter2_state20_alpha_mult_old": 0.8988,
+      "post_ry_z_mult_old": 1.00116,
+      "neutral_state20_alpha_mult": 1.0,
+      "neutral_post_ry_z_mult": 1.0,
+      "delta_from_neutral": {
+        "iter2_state20_alpha_mult": -0.10119999999999996,
+        "post_ry_z_mult": 0.0011600000000000499
+      },
+      "extracted_useful_knobs": [
+        "iter2.state_alpha_mult[20]",
+        "post_ry_z_mult"
+      ]
+    },
+    "runtime_log": {
+      "schedule_log": [
+        {
+          "policy_name": "iter1_seed",
+          "n_static_meas": 5192,
+          "n_dynamic_sched": 800,
+          "n_late_sched": 2517,
+          "late_release_frac": 0.58
+        },
+        {
+          "policy_name": "iter2_commit",
+          "n_static_meas": 5192,
+          "n_dynamic_sched": 800,
+          "n_late_sched": 2517,
+          "late_release_frac": 0.58
+        },
+        {
+          "policy_name": "iter3_readout_only",
+          "n_static_meas": 5192,
+          "n_dynamic_sched": 800,
+          "n_late_sched": 0,
+          "late_release_frac": 1.0
+        }
+      ],
+      "feedback_log": [
+        {
+          "policy_name": "iter1_seed",
+          "selected_state_labels": {
+            "12": "dKg_xx",
+            "15": "dKg_xy",
+            "16": "dKg_yy",
+            "20": "dKg_zz",
+            "21": "dKa_xx"
+          },
+          "selected_trust": {
+            "12": {
+              "p_diag": 7.720354274517816e-11,
+              "x_abs": 1.1399111886400893e-05,
+              "snr_like": 1.2973357966845818,
+              "score_n": 0.38186858006518987,
+              "cov_drop": 11.381025202781801,
+              "cov_n": 0.9593384183333307,
+              "trust": 0.624405912137809,
+              "alpha": 1.0,
+              "label": "dKg_xx",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -1.1399111886400893e-05
+            },
+            "15": {
+              "p_diag": 1.2415237215242587e-10,
+              "x_abs": 5.094175093145539e-05,
+              "snr_like": 4.571896152751623,
+              "score_n": 0.6852468995438548,
+              "cov_drop": 43.51082879833621,
+              "cov_n": 0.9897557273675464,
+              "trust": 0.8131406072298053,
+              "alpha": 1.0,
+              "label": "dKg_xy",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": 5.094175093145539e-05
+            },
+            "16": {
+              "p_diag": 5.131657778457404e-11,
+              "x_abs": 1.9764156621051912e-05,
+              "snr_like": 2.758985662741401,
+              "score_n": 0.5678110318162172,
+              "cov_drop": 13.959541586523608,
+              "cov_n": 0.967163055753898,
+              "trust": 0.7355388818700432,
+              "alpha": 1.0,
+              "label": "dKg_yy",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -1.9764156621051912e-05
+            },
+            "20": {
+              "p_diag": 6.811761755904311e-11,
+              "x_abs": 2.449694134852333e-05,
+              "snr_like": 2.9681246616803603,
+              "score_n": 0.5856455513263292,
+              "cov_drop": 12.116307172606584,
+              "cov_n": 0.9619255534291276,
+              "trust": 0.7436831522095045,
+              "alpha": 1.0,
+              "label": "dKg_zz",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -2.449694134852333e-05
+            },
+            "21": {
+              "p_diag": 3.104042361754167e-11,
+              "x_abs": 9.349771697055922e-06,
+              "snr_like": 1.6781747663958395,
+              "score_n": 0.44417605594161574,
+              "cov_drop": 17.948831487770626,
+              "cov_n": 0.9746964020952501,
+              "trust": 0.6669946013261423,
+              "alpha": 1.0,
+              "label": "dKa_xx",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -9.349771697055922e-06
+            }
+          },
+          "other_scale_alpha": 1.0,
+          "ka2_alpha": 1.0,
+          "lever_alpha": 1.0,
+          "markov_alpha": 1.0,
+          "state_prior_diag_mult": {},
+          "state_q_static_mult": {},
+          "state_q_dynamic_mult": {},
+          "state_q_late_mult": {},
+          "state_alpha_mult": {},
+          "state_alpha_add": {},
+          "post_rx_y_mult": 1.0,
+          "post_ry_z_mult": 1.0,
+          "post_rx_y_before": -0.01999664708419906,
+          "post_rx_y_after": -0.01999664708419906,
+          "post_ry_z_before": -0.06023797752317186,
+          "post_ry_z_after": -0.06023797752317186
+        },
+        {
+          "policy_name": "iter2_commit",
+          "selected_state_labels": {
+            "12": "dKg_xx",
+            "15": "dKg_xy",
+            "16": "dKg_yy",
+            "20": "dKg_zz",
+            "21": "dKa_xx"
+          },
+          "selected_trust": {
+            "12": {
+              "p_diag": 7.74456446288568e-11,
+              "x_abs": 1.7564292523216913e-06,
+              "snr_like": 0.19958695936906112,
+              "score_n": 0.08679252530803266,
+              "cov_drop": 11.363222236548507,
+              "cov_n": 0.9592714108470869,
+              "trust": 0.4532336572344354,
+              "alpha": 1.0,
+              "label": "dKg_xx",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": 1.7564292523216913e-06
+            },
+            "15": {
+              "p_diag": 1.2404861690967175e-10,
+              "x_abs": 2.0273802353583104e-06,
+              "snr_like": 0.18202843913067954,
+              "score_n": 0.07976606952366544,
+              "cov_drop": 43.529021395422134,
+              "cov_n": 0.9897600646765747,
+              "trust": 0.46196354748788737,
+              "alpha": 1.0,
+              "label": "dKg_xy",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -2.0273802353583104e-06
+            },
+            "16": {
+              "p_diag": 5.163203549309286e-11,
+              "x_abs": 1.3153952479347666e-07,
+              "snr_like": 0.018306134346365712,
+              "score_n": 0.008641873830013875,
+              "cov_drop": 13.916831747041215,
+              "cov_n": 0.9670580562566817,
+              "trust": 0.4111766704492144,
+              "alpha": 1.0,
+              "label": "dKg_yy",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -1.3153952479347666e-07
+            },
+            "20": {
+              "p_diag": 6.862628165208371e-11,
+              "x_abs": 5.14985375035886e-06,
+              "snr_like": 0.621655330021967,
+              "score_n": 0.22841074810782505,
+              "cov_drop": 12.0713200831897,
+              "cov_n": 0.9617767556787389,
+              "trust": 0.5364244712876088,
+              "alpha": 1.0,
+              "label": "dKg_zz",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -5.14985375035886e-06
+            },
+            "21": {
+              "p_diag": 3.104496995393996e-11,
+              "x_abs": 2.2246923337182555e-07,
+              "snr_like": 0.039927703911041404,
+              "score_n": 0.018658435907936276,
+              "cov_drop": 17.947517194122725,
+              "cov_n": 0.9746944894381626,
+              "trust": 0.42019357839063143,
+              "alpha": 1.0,
+              "label": "dKa_xx",
+              "base_alpha": 1.0,
+              "alpha_mult": 1.0,
+              "alpha_add": 0.0,
+              "x_feedback": -2.2246923337182555e-07
+            }
+          },
+          "other_scale_alpha": 1.0,
+          "ka2_alpha": 1.0,
+          "lever_alpha": 1.0,
+          "markov_alpha": 1.0,
+          "state_prior_diag_mult": {},
+          "state_q_static_mult": {},
+          "state_q_dynamic_mult": {},
+          "state_q_late_mult": {},
+          "state_alpha_mult": {},
+          "state_alpha_add": {},
+          "post_rx_y_mult": 1.0,
+          "post_ry_z_mult": 1.0,
+          "post_rx_y_before": -0.01994973862681283,
+          "post_rx_y_after": -0.01994973862681283,
+          "post_ry_z_before": -0.06012024336627228,
+          "post_ry_z_after": -0.06012024336627228
+        }
+      ],
+      "scd_log": [
+        {
+          "policy_name": "iter1_seed",
+          "enabled": false,
+          "mode": "once_per_phase",
+          "alpha": 0.9997,
+          "transition_duration": 1.0,
+          "target": "selected",
+          "target_indices": [
+            12,
+            15,
+            16,
+            20,
+            21
+          ],
+          "bias_to_target": false,
+          "n_transition_eligible": 0,
+          "n_scd": 0
+        },
+        {
+          "policy_name": "iter2_commit",
+          "enabled": true,
+          "mode": "once_per_phase",
+          "alpha": 0.9997,
+          "transition_duration": 1.0,
+          "target": "selected",
+          "target_indices": [
+            12,
+            15,
+            16,
+            20,
+            21
+          ],
+          "bias_to_target": false,
+          "n_transition_eligible": 5092,
+          "n_scd": 21
+        },
+        {
+          "policy_name": "iter3_readout_only",
+          "enabled": false,
+          "mode": "once_per_phase",
+          "alpha": 0.9997,
+          "transition_duration": 1.0,
+          "target": "selected",
+          "target_indices": [
+            12,
+            15,
+            16,
+            20,
+            21
+          ],
+          "bias_to_target": false,
+          "n_transition_eligible": 0,
+          "n_scd": 0
+        }
+      ]
+    },
+    "baseline_g3_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p12_param_errors.json",
+    "baseline_old_pure_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_pure_scd_sym20_sweep_phase2_bias_false_sel_once_a09998_td1_b0_from_phase1_sel_once_a09998_td1_b1_shared_noise0p12_param_errors.json"
+  }
+}

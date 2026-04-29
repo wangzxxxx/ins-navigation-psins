@@ -1,0 +1,27 @@
+[LLM] Client initialized: model=mimo-v2-flash, provider=xiaomi
+  [Noisy LLM] Iter 1/3
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [LLM API Error] Connection error.
+    [Debug] Over this iteration, delta clipping was applied 3912 times.
+  [Noisy LLM] Iter 2/3
+    [Debug] Over this iteration, delta clipping was applied 3912 times.
+  [Noisy LLM] Iter 3/3
+    [Debug] Over this iteration, delta clipping was applied 3912 times.
+{"method": "llm_masking_scheme_a", "tuple_len": 5, "final_keys": ["Ka", "Ka2", "Kg", "db", "eb", "rx", "ry"], "eb_norm": 1.4983553148408397e-06, "db_norm": 0.00483023546210469, "Ka2_norm": 3.3167346349040247e-06, "rx_norm": 0.03369234652772364, "ry_norm": 0.08639535754296108, "p_trace_shape": [14706, 36], "x_trace_shape": [14706, 36], "iter_info_type": "list", "source": "test_calibration_schmidt_llm.py", "method_label": "Noisy w/ LLM Masking (Scheme A)", "llm_client_enabled": true}

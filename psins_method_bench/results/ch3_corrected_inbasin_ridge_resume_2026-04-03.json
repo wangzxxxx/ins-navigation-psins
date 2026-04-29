@@ -1,0 +1,1782 @@
+{
+  "task": "chapter-3 corrected-basis in-basin ridge resume",
+  "report_date": "2026-04-03",
+  "noise_scale": 0.08,
+  "corrected_att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "reused_context": {
+    "pending": "/root/.openclaw/workspace/PENDING.md",
+    "source_reports": [
+      "/root/.openclaw/workspace/reports/psins_ch3_corrected_inbasin_coupling_resume_2026-04-02.md",
+      "/root/.openclaw/workspace/reports/psins_ch3_corrected_frontier_relaunch_batch3_2026-04-02.md",
+      "/root/.openclaw/workspace/reports/psins_ch3_corrected_frontier_next2_2026-04-02.md"
+    ],
+    "source_summaries": [
+      "/root/.openclaw/workspace/psins_method_bench/results/ch3_corrected_inbasin_coupling_resume_2026-04-02.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/ch3_corrected_frontier_relaunch_batch3_2026-04-02.json"
+    ]
+  },
+  "references": {
+    "accepted_leader": {
+      "label": "accepted corrected leader / relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057061223856136,
+          "median_pct_error": 0.6107914879608048,
+          "max_pct_error": 4.71375006474353
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.71375006474353,
+          "eb_x": 4.57033221551275,
+          "Ka2_y": 2.832591244946224,
+          "dKa_xx": 2.5107008594485913,
+          "dKg_yy": 2.4546934956879305
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.71375006474353
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0567915141378126,
+          "median_pct_error": 0.610720244961116,
+          "max_pct_error": 4.713960072310424
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.713960072310424,
+          "eb_x": 4.5682794025537055,
+          "Ka2_y": 2.830686460074407,
+          "dKa_xx": 2.5095605382777633,
+          "dKg_yy": 2.454444318342507
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.713960072310424
+        }
+      },
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "kf36_triplet": "1.057 / 0.611 / 4.714",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "max_oriented_neighbor": {
+      "label": "nearby max-oriented point / relay_r3_l9y0p8125_l12y0p25_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057835822250634,
+          "median_pct_error": 0.6081732654754177,
+          "max_pct_error": 4.700816728119583
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.700816728119583,
+          "eb_x": 4.5676057923606574,
+          "Ka2_y": 2.8461130967200803,
+          "dKa_xx": 2.5238032919209736,
+          "dKg_yy": 2.455183431557582
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.700816728119583
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0575698289015967,
+          "median_pct_error": 0.6081083712060551,
+          "max_pct_error": 4.701025623243005
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.701025623243005,
+          "eb_x": 4.565556320548499,
+          "Ka2_y": 2.8442132884685134,
+          "dKa_xx": 2.52266930790317,
+          "dKg_yy": 2.4549314953079424
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.701025623243005
+        }
+      },
+      "markov42_triplet": "1.058 / 0.608 / 4.701",
+      "kf36_triplet": "1.058 / 0.608 / 4.701",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p8125_l12y0p25_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r3_l9y0p8125_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "batch2_incumbent": {
+      "label": "earlier accepted ridge base / relay_l9y0p75_l12y0p25_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0628330299996445,
+          "median_pct_error": 0.614884789415418,
+          "max_pct_error": 4.725238024216171
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.725238024216171,
+          "eb_x": 4.637090047239685,
+          "Ka2_y": 2.8604546299145586,
+          "dKa_xx": 2.528409498448308,
+          "dKg_yy": 2.443111498104721
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.725238024216171
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0625646738983392,
+          "median_pct_error": 0.6148208149509837,
+          "max_pct_error": 4.725432373197525
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.725432373197525,
+          "eb_x": 4.635012547828279,
+          "Ka2_y": 2.858531817421764,
+          "dKa_xx": 2.5272717307904364,
+          "dKg_yy": 2.442860859705797
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.725432373197525
+        }
+      },
+      "markov42_triplet": "1.063 / 0.615 / 4.725",
+      "kf36_triplet": "1.063 / 0.615 / 4.725",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l9y0p75_l12y0p25_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l9y0p75_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "faithful12": {
+      "label": "corrected faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.9544212948566337,
+          "median_pct_error": 0.43062068381890417,
+          "max_pct_error": 15.12164342723992
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0106503323827263,
+          "eb_x": 14.231617445817285,
+          "Ka2_y": 15.12164342723992,
+          "dKa_xx": 2.326041029798204,
+          "dKg_yy": 2.48950860648218
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.12164342723992
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.9543549309026789,
+          "median_pct_error": 0.43053588431934986,
+          "max_pct_error": 15.121086969267727
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.010211603329637,
+          "eb_x": 14.230670596275147,
+          "Ka2_y": 15.121086969267727,
+          "dKa_xx": 2.32596007677614,
+          "dKg_yy": 2.489406084047194
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.121086969267727
+        }
+      },
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      }
+    },
+    "default18": {
+      "label": "default18",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0808366935504474,
+          "eb_x": 14.713291940947315,
+          "Ka2_y": 1.9994816607900874,
+          "dKa_xx": 3.2547206718784216,
+          "dKg_yy": 1.272677074280863
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.713291940947315
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0818904661751674,
+          "eb_x": 14.711353452042115,
+          "Ka2_y": 2.0007501033211734,
+          "dKa_xx": 3.253999899547709,
+          "dKg_yy": 1.2732158843885046
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.711353452042115
+        }
+      },
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "kf36_triplet": "1.556 / 0.813 / 14.711",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+      }
+    }
+  },
+  "hypotheses_tested": [
+    {
+      "id": "A",
+      "family": "fixed_l9_terminal_midpoint_compromise",
+      "summary": "Hold the accepted l9 = 0.8125 s ridge fixed and move the terminal l12 dwell halfway between the current mean-leaning leader (0.125 s) and the max-leaning neighbor (0.25 s).",
+      "candidate_names": [
+        "relay_r4_l9y0p8125_l12y0p1875_on_entry"
+      ]
+    },
+    {
+      "id": "B",
+      "family": "higher_l9_with_light_terminal",
+      "summary": "Increase l9 only by one half-step to 0.84375 s while keeping the leader's lighter l12 = 0.125 s, to see whether dKg_xx suppression keeps improving before mean drifts.",
+      "candidate_names": [
+        "relay_r4_l9y0p84375_l12y0p125_on_entry"
+      ]
+    },
+    {
+      "id": "C",
+      "family": "higher_l9_coupled_terminal_push",
+      "summary": "Couple the same small l9 increase with midpoint / heavier terminal closures. This tests whether the max-oriented direction can be extended without reopening any new family.",
+      "candidate_names": [
+        "relay_r4_l9y0p84375_l12y0p1875_on_entry",
+        "relay_r4_l9y0p84375_l12y0p25_on_entry"
+      ]
+    }
+  ],
+  "tested_candidates": [
+    "relay_r4_l9y0p8125_l12y0p1875_on_entry",
+    "relay_r4_l9y0p84375_l12y0p125_on_entry",
+    "relay_r4_l9y0p84375_l12y0p1875_on_entry",
+    "relay_r4_l9y0p84375_l12y0p25_on_entry"
+  ],
+  "rows_sorted": [
+    {
+      "candidate_name": "relay_r4_l9y0p8125_l12y0p1875_on_entry",
+      "family": "fixed_l9_terminal_midpoint_compromise",
+      "hypothesis_id": "A",
+      "rationale": "Keep the accepted l9 ridge fixed and place l12 at the exact midpoint between the current leader (0.125 s) and the max-oriented neighbor (0.25 s).",
+      "total_time_s": 1348.0,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r4_l9y0p8125_l12y0p1875_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r4_l9y0p8125_l12y0p1875_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified",
+        "kf36": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0605509123030137,
+          "median_pct_error": 0.6157917370202703,
+          "max_pct_error": 4.728118913076986
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.728118913076986,
+          "eb_x": 4.570296986681384,
+          "Ka2_y": 2.8384717841192524,
+          "dKa_xx": 2.53212301238912,
+          "dKg_yy": 2.4579830343294096
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.728118913076986
+        }
+      },
+      "delta_vs_accepted_markov42": {
+        "mean_pct_error": -0.0034896884468775813,
+        "median_pct_error": -0.0050002490594655,
+        "max_pct_error": -0.014368848333456086
+      },
+      "delta_vs_max_neighbor_markov42": {
+        "mean_pct_error": -0.0027150900523795762,
+        "median_pct_error": -0.007618471544852623,
+        "max_pct_error": -0.027302184957402886
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 0.002282117696630781,
+        "median_pct_error": -0.0009069476048523262,
+        "max_pct_error": -0.002880888860814501
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8938703825536201,
+        "median_pct_error": -0.18517105320136618,
+        "max_pct_error": 10.393524514162934
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49582817463248885,
+        "median_pct_error": 0.19700808664531266,
+        "max_pct_error": 9.985173027870328
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0602857137869846,
+          "median_pct_error": 0.6157288421131252,
+          "max_pct_error": 4.728340704551062
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.728340704551062,
+          "eb_x": 4.568248785211736,
+          "Ka2_y": 2.8365752463047795,
+          "dKa_xx": 2.530983441729057,
+          "dKg_yy": 2.457724722068939
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.728340704551062
+        }
+      },
+      "delta_vs_accepted_kf36": {
+        "mean_pct_error": -0.0034941996491719696,
+        "median_pct_error": -0.0050085971520091865,
+        "max_pct_error": -0.014380632240638569
+      },
+      "delta_vs_max_neighbor_kf36": {
+        "mean_pct_error": -0.002715884885387876,
+        "median_pct_error": -0.007620470907070076,
+        "max_pct_error": -0.027315081308056932
+      }
+    },
+    {
+      "candidate_name": "relay_r4_l9y0p84375_l12y0p125_on_entry",
+      "family": "higher_l9_with_light_terminal",
+      "hypothesis_id": "B",
+      "rationale": "Micro-extend the accepted l9 gate upward by one half-step while keeping the lighter terminal closure unchanged, to test whether the current ridge is still climbing on max without sacrificing mean.",
+      "total_time_s": 1347.9375,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r4_l9y0p84375_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0628320775293316,
+          "median_pct_error": 0.5762775212113738,
+          "max_pct_error": 4.872362539010103
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.872362539010103,
+          "eb_x": 4.819764564335797,
+          "Ka2_y": 3.092857289341069,
+          "dKa_xx": 2.3254996250993507,
+          "dKg_yy": 2.0462611011164498
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.872362539010103
+        }
+      },
+      "delta_vs_accepted_markov42": {
+        "mean_pct_error": -0.0057708536731955196,
+        "median_pct_error": 0.03451396674943108,
+        "max_pct_error": -0.15861247426657332
+      },
+      "delta_vs_max_neighbor_markov42": {
+        "mean_pct_error": -0.0049962552786975145,
+        "median_pct_error": 0.03189574426404396,
+        "max_pct_error": -0.17154581089052012
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": 9.524703128427348e-07,
+        "median_pct_error": 0.038607268204044254,
+        "max_pct_error": -0.14712451479393174
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8915892173273021,
+        "median_pct_error": -0.1456568373924696,
+        "max_pct_error": 10.249280888229817
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4935470094061709,
+        "median_pct_error": 0.23652230245420924,
+        "max_pct_error": 9.840929401937212
+      }
+    },
+    {
+      "candidate_name": "relay_r4_l9y0p84375_l12y0p1875_on_entry",
+      "family": "higher_l9_coupled_terminal_push",
+      "hypothesis_id": "C",
+      "rationale": "Diagonal in-basin compromise: slightly stronger l9 plus midpoint l12, aimed at absorbing some max gain from the heavier terminal side with less mean tax than the full 0.25 closure.",
+      "total_time_s": 1348.0625,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r4_l9y0p84375_l12y0p1875_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0632753481560273,
+          "median_pct_error": 0.576419436787895,
+          "max_pct_error": 4.8798520347004315
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.8798520347004315,
+          "eb_x": 4.8168642673483975,
+          "Ka2_y": 3.09536860450521,
+          "dKa_xx": 2.3402063054174174,
+          "dKg_yy": 2.0421546603734524
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.8798520347004315
+        }
+      },
+      "delta_vs_accepted_markov42": {
+        "mean_pct_error": -0.0062141242998912105,
+        "median_pct_error": 0.03437205117290987,
+        "max_pct_error": -0.16610196995690174
+      },
+      "delta_vs_max_neighbor_markov42": {
+        "mean_pct_error": -0.0054395259053932055,
+        "median_pct_error": 0.031753828687522745,
+        "max_pct_error": -0.17903530658084854
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.0004423181563828482,
+        "median_pct_error": 0.03846535262752304,
+        "max_pct_error": -0.15461401048426016
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8911459467006064,
+        "median_pct_error": -0.1457987529689908,
+        "max_pct_error": 10.24179139253949
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4931037387794752,
+        "median_pct_error": 0.23638038687768803,
+        "max_pct_error": 9.833439906246884
+      }
+    },
+    {
+      "candidate_name": "relay_r4_l9y0p84375_l12y0p25_on_entry",
+      "family": "higher_l9_coupled_terminal_push",
+      "hypothesis_id": "C",
+      "rationale": "Most max-oriented admissible extension inside the same basin: raise l9 one half-step and keep the heavier 0.25 s terminal closure from the known max-leaning neighbor.",
+      "total_time_s": 1348.1875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r4_l9y0p84375_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0645343956288338,
+          "median_pct_error": 0.5765042018613042,
+          "max_pct_error": 4.874258604536919
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.874258604536919,
+          "eb_x": 4.817340221735843,
+          "Ka2_y": 3.1029081787319304,
+          "dKa_xx": 2.3393105797015914,
+          "dKg_yy": 2.0450712362431545
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.874258604536919
+        }
+      },
+      "delta_vs_accepted_markov42": {
+        "mean_pct_error": -0.007473171772697684,
+        "median_pct_error": 0.0342872860995006,
+        "max_pct_error": -0.16050853979338964
+      },
+      "delta_vs_max_neighbor_markov42": {
+        "mean_pct_error": -0.006698573378199679,
+        "median_pct_error": 0.03166906361411348,
+        "max_pct_error": -0.17344187641733644
+      },
+      "delta_vs_batch2_markov42": {
+        "mean_pct_error": -0.001701365629189322,
+        "median_pct_error": 0.038380587554113776,
+        "max_pct_error": -0.14902058032074805
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8898868992278,
+        "median_pct_error": -0.14588351804240007,
+        "max_pct_error": 10.247384822703001
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49184469130666875,
+        "median_pct_error": 0.23629562180427877,
+        "max_pct_error": 9.839033336410395
+      }
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "relay_r4_l9y0p8125_l12y0p1875_on_entry",
+    "family": "fixed_l9_terminal_midpoint_compromise",
+    "hypothesis_id": "A",
+    "rationale": "Keep the accepted l9 ridge fixed and place l12 at the exact midpoint between the current leader (0.125 s) and the max-oriented neighbor (0.25 s).",
+    "total_time_s": 1348.0,
+    "result_files": {
+      "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r4_l9y0p8125_l12y0p1875_on_entry_shared_noise0p08_param_errors.json",
+      "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r4_l9y0p8125_l12y0p1875_on_entry_shared_noise0p08_param_errors.json"
+    },
+    "result_modes": {
+      "markov42": "reused_verified",
+      "kf36": "reused_verified"
+    },
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.0605509123030137,
+        "median_pct_error": 0.6157917370202703,
+        "max_pct_error": 4.728118913076986
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.728118913076986,
+        "eb_x": 4.570296986681384,
+        "Ka2_y": 2.8384717841192524,
+        "dKa_xx": 2.53212301238912,
+        "dKg_yy": 2.4579830343294096
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.728118913076986
+      }
+    },
+    "delta_vs_accepted_markov42": {
+      "mean_pct_error": -0.0034896884468775813,
+      "median_pct_error": -0.0050002490594655,
+      "max_pct_error": -0.014368848333456086
+    },
+    "delta_vs_max_neighbor_markov42": {
+      "mean_pct_error": -0.0027150900523795762,
+      "median_pct_error": -0.007618471544852623,
+      "max_pct_error": -0.027302184957402886
+    },
+    "delta_vs_batch2_markov42": {
+      "mean_pct_error": 0.002282117696630781,
+      "median_pct_error": -0.0009069476048523262,
+      "max_pct_error": -0.002880888860814501
+    },
+    "delta_vs_faithful12_markov42": {
+      "mean_pct_error": 0.8938703825536201,
+      "median_pct_error": -0.18517105320136618,
+      "max_pct_error": 10.393524514162934
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": 0.49582817463248885,
+      "median_pct_error": 0.19700808664531266,
+      "max_pct_error": 9.985173027870328
+    },
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 1.0602857137869846,
+        "median_pct_error": 0.6157288421131252,
+        "max_pct_error": 4.728340704551062
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.728340704551062,
+        "eb_x": 4.568248785211736,
+        "Ka2_y": 2.8365752463047795,
+        "dKa_xx": 2.530983441729057,
+        "dKg_yy": 2.457724722068939
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.728340704551062
+      }
+    },
+    "delta_vs_accepted_kf36": {
+      "mean_pct_error": -0.0034941996491719696,
+      "median_pct_error": -0.0050085971520091865,
+      "max_pct_error": -0.014380632240638569
+    },
+    "delta_vs_max_neighbor_kf36": {
+      "mean_pct_error": -0.002715884885387876,
+      "median_pct_error": -0.007620470907070076,
+      "max_pct_error": -0.027315081308056932
+    }
+  },
+  "kf36_rechecked_candidates": [
+    "relay_r4_l9y0p8125_l12y0p1875_on_entry"
+  ],
+  "kf36_gate_reason": "No candidate was close enough to the accepted leader to justify KF36.",
+  "accepted_improvers_markov42": [],
+  "accepted_improvers_kf36": [],
+  "recommended_frontier_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+  "recommended_frontier_triplet": "1.057 / 0.611 / 4.714",
+  "recommended_timing_table": [
+    {
+      "pos_id": 1,
+      "anchor_id": 1,
+      "segment_role": "anchor",
+      "label": "anchor_1",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 2,
+      "anchor_id": 2,
+      "segment_role": "anchor",
+      "label": "anchor_2",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 3,
+      "anchor_id": 3,
+      "segment_role": "anchor",
+      "label": "anchor_3",
+      "motor_action": "I(0→90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 4,
+      "anchor_id": 4,
+      "segment_role": "anchor",
+      "label": "anchor_4",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 5,
+      "anchor_id": 5,
+      "segment_role": "anchor",
+      "label": "anchor_5",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 6,
+      "anchor_id": 6,
+      "segment_role": "anchor",
+      "label": "anchor_6",
+      "motor_action": "I(90→0) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 7,
+      "anchor_id": 7,
+      "segment_role": "anchor",
+      "label": "anchor_7",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 8,
+      "anchor_id": 8,
+      "segment_role": "anchor",
+      "label": "anchor_8",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 9,
+      "anchor_id": 8,
+      "segment_role": "motif_out",
+      "label": "l8_x1_out",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 10,
+      "anchor_id": 8,
+      "segment_role": "motif_return",
+      "label": "l8_x1_return",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 11,
+      "anchor_id": 9,
+      "segment_role": "anchor",
+      "label": "anchor_9",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 12,
+      "anchor_id": 9,
+      "segment_role": "motif_out",
+      "label": "l9_ypair_neg0p8125_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 13,
+      "anchor_id": 9,
+      "segment_role": "motif_return",
+      "label": "l9_ypair_neg0p8125_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 14,
+      "anchor_id": 10,
+      "segment_role": "anchor",
+      "label": "anchor_10",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 15,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_zpair_neg5_out",
+      "motor_action": "O[-Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 16,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_zpair_neg5_return",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 17,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_ypair_neg1_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 18,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_ypair_neg1_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 19,
+      "anchor_id": 11,
+      "segment_role": "anchor",
+      "label": "anchor_11",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 20,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_open",
+      "label": "l11_xpair_outerhold_inner_open",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 21,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_sweep",
+      "label": "l11_xpair_outerhold_outer_sweep",
+      "motor_action": "O[-X] +90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 22,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_return",
+      "label": "l11_xpair_outerhold_outer_return",
+      "motor_action": "O[-X] -90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 23,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_close",
+      "label": "l11_xpair_outerhold_inner_close",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 24,
+      "anchor_id": 11,
+      "segment_role": "motif_y_pos",
+      "label": "l11_zquad_y10x0back2_q1",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 25,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_a",
+      "label": "l11_zquad_y10x0back2_q2",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 26,
+      "anchor_id": 11,
+      "segment_role": "motif_y_neg",
+      "label": "l11_zquad_y10x0back2_q3",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 27,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_b",
+      "label": "l11_zquad_y10x0back2_q4",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 2.0,
+      "node_total_s": 7.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 28,
+      "anchor_id": 12,
+      "segment_role": "anchor",
+      "label": "anchor_12",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 29,
+      "anchor_id": 12,
+      "segment_role": "motif_out",
+      "label": "l12_yneg0p125_out",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 30,
+      "anchor_id": 12,
+      "segment_role": "motif_return",
+      "label": "l12_yneg0p125_return",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    }
+  ],
+  "best_candidate_timing_table": [
+    {
+      "pos_id": 1,
+      "anchor_id": 1,
+      "segment_role": "anchor",
+      "label": "anchor_1",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 2,
+      "anchor_id": 2,
+      "segment_role": "anchor",
+      "label": "anchor_2",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 3,
+      "anchor_id": 3,
+      "segment_role": "anchor",
+      "label": "anchor_3",
+      "motor_action": "I(0→90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 4,
+      "anchor_id": 4,
+      "segment_role": "anchor",
+      "label": "anchor_4",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 5,
+      "anchor_id": 5,
+      "segment_role": "anchor",
+      "label": "anchor_5",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 6,
+      "anchor_id": 6,
+      "segment_role": "anchor",
+      "label": "anchor_6",
+      "motor_action": "I(90→0) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 7,
+      "anchor_id": 7,
+      "segment_role": "anchor",
+      "label": "anchor_7",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 8,
+      "anchor_id": 8,
+      "segment_role": "anchor",
+      "label": "anchor_8",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 9,
+      "anchor_id": 8,
+      "segment_role": "motif_out",
+      "label": "l8_x1_out",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 10,
+      "anchor_id": 8,
+      "segment_role": "motif_return",
+      "label": "l8_x1_return",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 11,
+      "anchor_id": 9,
+      "segment_role": "anchor",
+      "label": "anchor_9",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 12,
+      "anchor_id": 9,
+      "segment_role": "motif_out",
+      "label": "l9_ypair_neg0p8125_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 13,
+      "anchor_id": 9,
+      "segment_role": "motif_return",
+      "label": "l9_ypair_neg0p8125_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 14,
+      "anchor_id": 10,
+      "segment_role": "anchor",
+      "label": "anchor_10",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 15,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_zpair_neg5_out",
+      "motor_action": "O[-Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 16,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_zpair_neg5_return",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 17,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_ypair_neg1_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 18,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_ypair_neg1_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 19,
+      "anchor_id": 11,
+      "segment_role": "anchor",
+      "label": "anchor_11",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 20,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_open",
+      "label": "l11_xpair_outerhold_inner_open",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 21,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_sweep",
+      "label": "l11_xpair_outerhold_outer_sweep",
+      "motor_action": "O[-X] +90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 22,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_return",
+      "label": "l11_xpair_outerhold_outer_return",
+      "motor_action": "O[-X] -90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 23,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_close",
+      "label": "l11_xpair_outerhold_inner_close",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 24,
+      "anchor_id": 11,
+      "segment_role": "motif_y_pos",
+      "label": "l11_zquad_y10x0back2_q1",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 25,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_a",
+      "label": "l11_zquad_y10x0back2_q2",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 26,
+      "anchor_id": 11,
+      "segment_role": "motif_y_neg",
+      "label": "l11_zquad_y10x0back2_q3",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 27,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_b",
+      "label": "l11_zquad_y10x0back2_q4",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 2.0,
+      "node_total_s": 7.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 28,
+      "anchor_id": 12,
+      "segment_role": "anchor",
+      "label": "anchor_12",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 29,
+      "anchor_id": 12,
+      "segment_role": "motif_out",
+      "label": "l12_yneg0p1875_out",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.1875,
+      "node_total_s": 5.1875,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 30,
+      "anchor_id": 12,
+      "segment_role": "motif_return",
+      "label": "l12_yneg0p1875_return",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.1875,
+      "node_total_s": 5.1875,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    }
+  ],
+  "required_comparison_rows": [
+    {
+      "label": "current leader / relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "note": "accepted corrected leader to beat",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": -0.0034896884468775813,
+        "median_pct_error": -0.0050002490594655,
+        "max_pct_error": -0.014368848333456086
+      },
+      "kf36_triplet": "1.057 / 0.611 / 4.714"
+    },
+    {
+      "label": "nearby max-oriented point / relay_r3_l9y0p8125_l12y0p25_on_entry",
+      "markov42_triplet": "1.058 / 0.608 / 4.701",
+      "note": "same-basin max-leaning trade-off point",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": -0.0027150900523795762,
+        "median_pct_error": -0.007618471544852623,
+        "max_pct_error": -0.027302184957402886
+      },
+      "kf36_triplet": "1.058 / 0.608 / 4.701"
+    },
+    {
+      "label": "faithful12",
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "note": "corrected faithful 12-position reference",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.8938703825536201,
+        "median_pct_error": -0.18517105320136618,
+        "max_pct_error": 10.393524514162934
+      },
+      "kf36_triplet": "1.954 / 0.431 / 15.121"
+    },
+    {
+      "label": "default18",
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "note": "default 18-position reference",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.49582817463248885,
+        "median_pct_error": 0.19700808664531266,
+        "max_pct_error": 9.985173027870328
+      },
+      "kf36_triplet": "1.556 / 0.813 / 14.711"
+    },
+    {
+      "label": "batch-best candidate / relay_r4_l9y0p8125_l12y0p1875_on_entry",
+      "markov42_triplet": "1.061 / 0.616 / 4.728",
+      "note": "best point found inside this restart batch",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.0,
+        "median_pct_error": 0.0,
+        "max_pct_error": 0.0
+      },
+      "kf36_triplet": "1.060 / 0.616 / 4.728"
+    }
+  ],
+  "near_tradeoffs": [],
+  "bottom_line": {
+    "task_can_close": "YES",
+    "recommended_frontier_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+    "recommended_frontier_triplet": "1.057 / 0.611 / 4.714",
+    "materially_better_found": "NO",
+    "beat_current_leader": "NO",
+    "statement": "The local in-basin ridge remains centered on the accepted leader: this restart batch did not uncover a clearly better valid point beyond the already accepted corrected frontier."
+  }
+}

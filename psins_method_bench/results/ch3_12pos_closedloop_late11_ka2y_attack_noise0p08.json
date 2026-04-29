@@ -1,0 +1,6596 @@
+{
+  "experiment": "ch3_12pos_closedloop_late11_ka2y_attack",
+  "report_date": "2026-04-01",
+  "noise_scale": 0.08,
+  "hard_constraints": {
+    "base_skeleton": "faithful chapter-3 12-position original sequence",
+    "locality_rule": "late11 family only",
+    "continuity_rule": "exact same mechanism state before resume",
+    "noise_scale": 0.08,
+    "seed": 42,
+    "truth_family": "shared low-noise benchmark",
+    "time_budget_s": [
+      1200.0,
+      1800.0
+    ]
+  },
+  "references": {
+    "faithful12": {
+      "candidate_name": "legal_base_faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 15.290300274032441,
+          "median_pct_error": 1.483362834112179,
+          "max_pct_error": 122.58269656383278
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.58269656383278,
+          "dKg_zz": 85.57075351197156,
+          "Ka2_y": 99.94129544126406,
+          "Ka2_z": 64.70431004852547,
+          "dKg_xz": 18.68063496921905,
+          "dKa_xz": 18.85408106874926
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 15.288687861181792,
+          "median_pct_error": 1.4837439708458107,
+          "max_pct_error": 122.5882646997851
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.5882646997851,
+          "dKg_zz": 85.57095512255164,
+          "Ka2_y": 99.94128958152183,
+          "Ka2_z": 64.68594016040949,
+          "dKg_xz": 18.674921597907467,
+          "dKa_xz": 18.84829522348288
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    "current_faithful_best": {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.767592246509638,
+          "median_pct_error": 1.172756377231194,
+          "max_pct_error": 99.7669122147695
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75138201135951,
+          "dKg_zz": 95.64478653087211,
+          "Ka2_y": 99.7669122147695,
+          "Ka2_z": 1.8953781041161446,
+          "dKg_xz": 0.4918971121523441,
+          "dKa_xz": 0.4310277201788655
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.769134789568334,
+          "median_pct_error": 1.1727867413063198,
+          "max_pct_error": 99.76690609562479
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75418151865216,
+          "dKg_zz": 95.64679662296489,
+          "Ka2_y": 99.76690609562479,
+          "Ka2_z": 1.8943915113063445,
+          "dKg_xz": 0.49165114197850907,
+          "dKa_xz": 0.4313058883087202
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json"
+    },
+    "old_best_legal": {
+      "candidate_name": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.014162810085333,
+          "median_pct_error": 1.0603379306680452,
+          "max_pct_error": 99.92214937787182
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.77132397757674,
+          "dKg_zz": 76.46895197802066,
+          "Ka2_y": 99.92214937787182,
+          "Ka2_z": 3.8821190036200264,
+          "dKg_xz": 0.43475000616637505,
+          "dKa_xz": 0.14567951573398194
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.014092121257267,
+          "median_pct_error": 1.0602406508286844,
+          "max_pct_error": 99.92213961977083
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.76480779442812,
+          "dKg_zz": 76.46961291525153,
+          "Ka2_y": 99.92213961977083,
+          "Ka2_z": 3.8809407722658174,
+          "dKg_xz": 0.4344164417122317,
+          "dKa_xz": 0.14535565627381575
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json"
+    },
+    "default18": {
+      "candidate_name": "default18",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9477898404987541,
+          "dKg_zz": 0.851304114610006,
+          "Ka2_y": 1.9994816607900874,
+          "Ka2_z": 1.2883358751632203,
+          "dKg_xz": 0.3510978642553199,
+          "dKa_xz": 0.3274679937728792
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9476606704907313,
+          "dKg_zz": 0.8522121112508451,
+          "Ka2_y": 2.0007501033211734,
+          "Ka2_z": 1.2888876792064823,
+          "dKg_xz": 0.35109847596388216,
+          "dKa_xz": 0.3275370623000178
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+    }
+  },
+  "candidate_specs": [
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "rationale": "Current faithful12-base incumbent from the late11 fine-grid. Kept as the direct in-branch baseline for the Ka2_y attack.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zbipolar_y10_x0",
+      "rationale": "Explicit +Y / 0 / -Y / 0 late z-family exposure using two opposite closed z-pairs, with all dwell placed on ±Y and none on the intervening zero states.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zbipolar_y10_x5",
+      "rationale": "Same bipolar ±Y pattern, but restore a small 5 s zero-state dwell between the positive and negative Y exposures to protect already-good channels.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zbipolar_y15_x0",
+      "rationale": "Heavier ±Y hold with zero-state dwell removed. Tests whether stronger sign-separated Y exposure lowers the Ka2_y ceiling further, even at some risk to the mean.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_d8_then_zbipolar_y10_x0",
+      "rationale": "Mildly shorten the xpair outer holds before the zero-dwell bipolar z block. Tests whether more of the late budget should be shifted from xpair dwell into ±Y exposure.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zbipolar_p10_x4_n10_x4",
+      "rationale": "Small-grid refinement around the successful bipolar family: reduce zero-state dwell from 5 s to 4 s.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zbipolar_p10_x6_n10_x6",
+      "rationale": "Small-grid refinement around the successful bipolar family: increase zero-state dwell from 5 s to 6 s.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zbipolar_p10_x5_n12_x5",
+      "rationale": "Asymmetric ±Y refinement: slightly heavier negative-Y dwell to compensate the base family’s existing positive-Y bias.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zbipolar_p8_x5_n12_x5",
+      "rationale": "Asymmetric ±Y refinement with a slightly lighter positive-Y hold and a heavier negative-Y hold.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zquad_y10_x0",
+      "rationale": "Full four-quarter-turn late z-cycle after the xpair, with hold on ±Y only and no added dwell on the intermediate ±X states. This creates a continuity-safe +Y / -X / -Y / +X sweep while preserving z-family excitation.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zquad_y8_x0",
+      "rationale": "Same four-quarter-turn z-cycle, but slightly lighter ±Y dwell to see whether the ceiling falls further when the cycle is tightened.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zquad_y12_x0",
+      "rationale": "Same four-quarter-turn z-cycle, but slightly heavier ±Y dwell to probe a nearby mean/max tradeoff point.",
+      "insertions": [
+        11
+      ]
+    },
+    {
+      "name": "late11_yneg_xpair_outerhold_then_zquad_y10_x2",
+      "rationale": "Four-quarter-turn z-cycle with a small 2 s hold on the intermediate ±X states. This tests whether a little zero-state buffering stabilizes the full cycle while keeping the new ±Y structure.",
+      "insertions": [
+        11
+      ]
+    }
+  ],
+  "markov42_rows": [
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y10_x2",
+      "family": "zquad",
+      "rationale": "Four-quarter-turn z-cycle with a small 2 s hold on the intermediate ±X states. This tests whether a little zero-state buffering stabilizes the full cycle while keeping the new ±Y structure.",
+      "total_time_s": 1284.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 10.600397933892411,
+          "median_pct_error": 1.3690264061372477,
+          "max_pct_error": 99.67648200707193
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.45798456157996,
+          "dKg_zz": 60.07016635968551,
+          "Ka2_y": 99.67648200707193,
+          "Ka2_z": 1.9243754054656885,
+          "dKg_xz": 0.008612595154540551,
+          "dKa_xz": 0.7015573968242012
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                0.0,
+                -1.0
+              ],
+              [
+                4.440892098500626e-16,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  0.0,
+                  -1.0
+                ],
+                [
+                  4.440892098500626e-16,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  -4.440892098500626e-16,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                -4.440892098500626e-16,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.440892098500626e-16
+                ],
+                [
+                  0.0,
+                  -4.440892098500626e-16,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y10_x2_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 10.600397933892411,
+          "improvement_pct_points": 4.68990234014003,
+          "relative_improvement_pct": 30.672401823951777
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.3690264061372477,
+          "improvement_pct_points": 0.11433642797493127,
+          "relative_improvement_pct": 7.707920499664117
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.67648200707193,
+          "improvement_pct_points": 22.906214556760858,
+          "relative_improvement_pct": 18.686335999170037
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 10.600397933892411,
+          "improvement_pct_points": 0.41376487619292135,
+          "relative_improvement_pct": 3.7566620661721966
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.3690264061372477,
+          "improvement_pct_points": -0.30868847546920253,
+          "relative_improvement_pct": -29.112273223567453
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.67648200707193,
+          "improvement_pct_points": 0.2456673707998931,
+          "relative_improvement_pct": 0.24585877338452966
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 10.600397933892411,
+          "improvement_pct_points": 1.1671943126172266,
+          "relative_improvement_pct": 9.918718189470118
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.3690264061372477,
+          "improvement_pct_points": -0.19627002890605372,
+          "relative_improvement_pct": -16.735788669888564
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.67648200707193,
+          "improvement_pct_points": 0.09043020769757959,
+          "relative_improvement_pct": 0.09064148192028769
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 10.600397933892411,
+          "improvement_pct_points": -9.04401884695691,
+          "relative_improvement_pct": -581.0935730808685
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.3690264061372477,
+          "improvement_pct_points": -0.5562265824716647,
+          "relative_improvement_pct": -68.43340343790695
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.67648200707193,
+          "improvement_pct_points": -84.96319006612461,
+          "relative_improvement_pct": -577.458738718225
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y10_x0",
+      "family": "zquad",
+      "rationale": "Full four-quarter-turn late z-cycle after the xpair, with hold on ±Y only and no added dwell on the intermediate ±X states. This creates a continuity-safe +Y / -X / -Y / +X sweep while preserving z-family excitation.",
+      "total_time_s": 1280.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 10.732991447724665,
+          "median_pct_error": 1.2716522103854278,
+          "max_pct_error": 99.63441661243088
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.39816133356977,
+          "dKg_zz": 63.45137416010089,
+          "Ka2_y": 99.63441661243088,
+          "Ka2_z": 2.3245487791473325,
+          "dKg_xz": 0.09157962079016145,
+          "dKa_xz": 0.6102769636483311
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                0.0,
+                -1.0
+              ],
+              [
+                4.440892098500626e-16,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  0.0,
+                  -1.0
+                ],
+                [
+                  4.440892098500626e-16,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  -4.440892098500626e-16,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                -4.440892098500626e-16,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.440892098500626e-16
+                ],
+                [
+                  0.0,
+                  -4.440892098500626e-16,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y10_x0_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 10.732991447724665,
+          "improvement_pct_points": 4.557308826307777,
+          "relative_improvement_pct": 29.805227789067466
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.2716522103854278,
+          "improvement_pct_points": 0.2117106237267512,
+          "relative_improvement_pct": 14.27234246794811
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.63441661243088,
+          "improvement_pct_points": 22.9482799514019,
+          "relative_improvement_pct": 18.72065193104313
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 10.732991447724665,
+          "improvement_pct_points": 0.2811713623606682,
+          "relative_improvement_pct": 2.5528164710186427
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.2716522103854278,
+          "improvement_pct_points": -0.2113142797173826,
+          "relative_improvement_pct": -19.928956005963887
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.63441661243088,
+          "improvement_pct_points": 0.2877327654409356,
+          "relative_improvement_pct": 0.2879569417115193
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 10.732991447724665,
+          "improvement_pct_points": 1.0346007987849735,
+          "relative_improvement_pct": 8.791949764335557
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.2716522103854278,
+          "improvement_pct_points": -0.09889583315423378,
+          "relative_improvement_pct": -8.432768738185912
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.63441661243088,
+          "improvement_pct_points": 0.13249560233862212,
+          "relative_improvement_pct": 0.13280515493292722
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 10.732991447724665,
+          "improvement_pct_points": -9.176612360789163,
+          "relative_improvement_pct": -589.6129315678378
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.2716522103854278,
+          "improvement_pct_points": -0.45885238671984474,
+          "relative_improvement_pct": -56.453307857585635
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.63441661243088,
+          "improvement_pct_points": -84.92112467148357,
+          "relative_improvement_pct": -577.1728380862667
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y12_x0",
+      "family": "zquad",
+      "rationale": "Same four-quarter-turn z-cycle, but slightly heavier ±Y dwell to probe a nearby mean/max tradeoff point.",
+      "total_time_s": 1284.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 10.733949006294074,
+          "median_pct_error": 1.3358104313843968,
+          "max_pct_error": 99.62638534002075
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.59426687093406,
+          "dKg_zz": 62.693872617127056,
+          "Ka2_y": 99.62638534002075,
+          "Ka2_z": 1.9792569963096862,
+          "dKg_xz": 0.01687050546666307,
+          "dKa_xz": 0.6908519355941116
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                0.0,
+                -1.0
+              ],
+              [
+                4.440892098500626e-16,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  0.0,
+                  -1.0
+                ],
+                [
+                  4.440892098500626e-16,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  -4.440892098500626e-16,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                -4.440892098500626e-16,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.440892098500626e-16
+                ],
+                [
+                  0.0,
+                  -4.440892098500626e-16,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y12_x0_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 10.733949006294074,
+          "improvement_pct_points": 4.556351267738368,
+          "relative_improvement_pct": 29.79896526608069
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.3358104313843968,
+          "improvement_pct_points": 0.14755240272778214,
+          "relative_improvement_pct": 9.94715516221593
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.62638534002075,
+          "improvement_pct_points": 22.956311223812037,
+          "relative_improvement_pct": 18.727203648891784
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 10.733949006294074,
+          "improvement_pct_points": 0.28021380379125915,
+          "relative_improvement_pct": 2.5441225867360155
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.3358104313843968,
+          "improvement_pct_points": -0.27547250071635165,
+          "relative_improvement_pct": -25.9796893753292
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.62638534002075,
+          "improvement_pct_points": 0.29576403785107175,
+          "relative_improvement_pct": 0.2959944713885127
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 10.733949006294074,
+          "improvement_pct_points": 1.0336432402155644,
+          "relative_improvement_pct": 8.783812512896606
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.3358104313843968,
+          "improvement_pct_points": -0.16305405415320284,
+          "relative_improvement_pct": -13.90348902115233
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.62638534002075,
+          "improvement_pct_points": 0.14052687474875825,
+          "relative_improvement_pct": 0.14085519099382796
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 10.733949006294074,
+          "improvement_pct_points": -9.177569919358572,
+          "relative_improvement_pct": -589.6744563324305
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.3358104313843968,
+          "improvement_pct_points": -0.5230106077188138,
+          "relative_improvement_pct": -64.34679148429545
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.62638534002075,
+          "improvement_pct_points": -84.91309339907343,
+          "relative_improvement_pct": -577.1182529367136
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y8_x0",
+      "family": "zquad",
+      "rationale": "Same four-quarter-turn z-cycle, but slightly lighter ±Y dwell to see whether the ceiling falls further when the cycle is tightened.",
+      "total_time_s": 1276.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 10.817494466541048,
+          "median_pct_error": 1.3882811626223275,
+          "max_pct_error": 99.60869757240562
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.82361635753065,
+          "dKg_zz": 62.6296124281052,
+          "Ka2_y": 99.60869757240562,
+          "Ka2_z": 2.3461725907033997,
+          "dKg_xz": 0.21289852015167768,
+          "dKa_xz": 0.5515686971948209
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                0.0,
+                -1.0
+              ],
+              [
+                4.440892098500626e-16,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  0.0,
+                  -1.0
+                ],
+                [
+                  4.440892098500626e-16,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  -4.440892098500626e-16,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                -4.440892098500626e-16,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.440892098500626e-16
+                ],
+                [
+                  0.0,
+                  -4.440892098500626e-16,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y8_x0_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 10.817494466541048,
+          "improvement_pct_points": 4.472805807491394,
+          "relative_improvement_pct": 29.25257010869546
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.3882811626223275,
+          "improvement_pct_points": 0.09508167148985147,
+          "relative_improvement_pct": 6.409872844546472
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.60869757240562,
+          "improvement_pct_points": 22.973998991427166,
+          "relative_improvement_pct": 18.74163290204981
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 10.817494466541048,
+          "improvement_pct_points": 0.1966683435442853,
+          "relative_improvement_pct": 1.7855950282866901
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.3882811626223275,
+          "improvement_pct_points": -0.3279432319542823,
+          "relative_improvement_pct": -30.92818076852802
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.60869757240562,
+          "improvement_pct_points": 0.313451805466201,
+          "relative_improvement_pct": 0.31369601976918265
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 10.817494466541048,
+          "improvement_pct_points": 0.9500977799685906,
+          "relative_improvement_pct": 8.073850283607483
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.3882811626223275,
+          "improvement_pct_points": -0.2155247853911335,
+          "relative_improvement_pct": -18.377626383066392
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.60869757240562,
+          "improvement_pct_points": 0.1582146423638875,
+          "relative_improvement_pct": 0.15858428295675506
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 10.817494466541048,
+          "improvement_pct_points": -9.261115379605545,
+          "relative_improvement_pct": -595.0423940635571
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.3882811626223275,
+          "improvement_pct_points": -0.5754813389567445,
+          "relative_improvement_pct": -70.80234544852946
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.60869757240562,
+          "improvement_pct_points": -84.8954056314583,
+          "relative_improvement_pct": -576.9980366881261
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_p10_x6_n10_x6",
+      "family": "zbipolar",
+      "rationale": "Small-grid refinement around the successful bipolar family: increase zero-state dwell from 5 s to 6 s.",
+      "total_time_s": 1292.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.727555613614047,
+          "median_pct_error": 1.1364751750526212,
+          "max_pct_error": 99.73503861154107
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.31434063715831,
+          "dKg_zz": 96.89297849843538,
+          "Ka2_y": 99.73503861154107,
+          "Ka2_z": 1.1114354501540267,
+          "dKg_xz": 0.46191778944902,
+          "dKa_xz": 0.6386772689345132
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_p10_x6_n10_x6_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.727555613614047,
+          "improvement_pct_points": 3.562744660418394,
+          "relative_improvement_pct": 23.300684725394262
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.1364751750526212,
+          "improvement_pct_points": 0.34688765905955776,
+          "relative_improvement_pct": 23.385219791297835
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.73503861154107,
+          "improvement_pct_points": 22.847657952291712,
+          "relative_improvement_pct": 18.638566937050694
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.727555613614047,
+          "improvement_pct_points": -0.7133928035287145,
+          "relative_improvement_pct": -6.477049738864242
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.1364751750526212,
+          "improvement_pct_points": -0.07613724438457603,
+          "relative_improvement_pct": -7.180469752374815
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.73503861154107,
+          "improvement_pct_points": 0.18711076633074697,
+          "relative_improvement_pct": 0.18725654671734218
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.727555613614047,
+          "improvement_pct_points": 0.040036632895590785,
+          "relative_improvement_pct": 0.34022790777328277
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.1364751750526212,
+          "improvement_pct_points": 0.03628120217857278,
+          "relative_improvement_pct": 3.0936691441602284
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.73503861154107,
+          "improvement_pct_points": 0.03187360322843347,
+          "relative_improvement_pct": 0.03194807027786803
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.727555613614047,
+          "improvement_pct_points": -10.171176526678545,
+          "relative_improvement_pct": -653.515368592205
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.1364751750526212,
+          "improvement_pct_points": -0.3236753513870382,
+          "relative_improvement_pct": -39.82227135917916
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.73503861154107,
+          "improvement_pct_points": -85.02174667059376,
+          "relative_improvement_pct": -577.8567231033929
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_y10_x5",
+      "family": "zbipolar",
+      "rationale": "Same bipolar ±Y pattern, but restore a small 5 s zero-state dwell between the positive and negative Y exposures to protect already-good channels.",
+      "total_time_s": 1290.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.730349594667777,
+          "median_pct_error": 1.2086183309963878,
+          "max_pct_error": 99.73322106979539
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.18831193301908,
+          "dKg_zz": 96.26332315353413,
+          "Ka2_y": 99.73322106979539,
+          "Ka2_z": 1.1730804744427044,
+          "dKg_xz": 0.4074995176773708,
+          "dKa_xz": 0.6859363419359299
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_y10_x5_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.730349594667777,
+          "improvement_pct_points": 3.5599506793646647,
+          "relative_improvement_pct": 23.282411826866074
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.2086183309963878,
+          "improvement_pct_points": 0.2747445031157911,
+          "relative_improvement_pct": 18.52173297035792
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.73322106979539,
+          "improvement_pct_points": 22.849475494037392,
+          "relative_improvement_pct": 18.64004964366152
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.730349594667777,
+          "improvement_pct_points": -0.7161867845824439,
+          "relative_improvement_pct": -6.502416905683049
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.2086183309963878,
+          "improvement_pct_points": -0.14828040032834267,
+          "relative_improvement_pct": -13.984258795205177
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.73322106979539,
+          "improvement_pct_points": 0.18892830807642724,
+          "relative_improvement_pct": 0.18907550453299818
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.730349594667777,
+          "improvement_pct_points": 0.037242651841861374,
+          "relative_improvement_pct": 0.31648489395022883
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.2086183309963878,
+          "improvement_pct_points": -0.035861953765193855,
+          "relative_improvement_pct": -3.057920166664259
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.73322106979539,
+          "improvement_pct_points": 0.03369114497411374,
+          "relative_improvement_pct": 0.033769858389108384
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.730349594667777,
+          "improvement_pct_points": -10.173970507732275,
+          "relative_improvement_pct": -653.6948866207614
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.2086183309963878,
+          "improvement_pct_points": -0.3958185073308048,
+          "relative_improvement_pct": -48.698153691241416
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.73322106979539,
+          "improvement_pct_points": -85.01992912884808,
+          "relative_improvement_pct": -577.844370043636
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_p10_x4_n10_x4",
+      "family": "zbipolar",
+      "rationale": "Small-grid refinement around the successful bipolar family: reduce zero-state dwell from 5 s to 4 s.",
+      "total_time_s": 1288.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.737731177611689,
+          "median_pct_error": 1.173904803389624,
+          "max_pct_error": 99.74005839899927
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.1908170235985,
+          "dKg_zz": 96.27231381730317,
+          "Ka2_y": 99.74005839899927,
+          "Ka2_z": 1.1290561665023604,
+          "dKg_xz": 0.28293294835482957,
+          "dKa_xz": 0.7641759029069639
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_p10_x4_n10_x4_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.737731177611689,
+          "improvement_pct_points": 3.5525690964207524,
+          "relative_improvement_pct": 23.234135581065665
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.173904803389624,
+          "improvement_pct_points": 0.30945803072255496,
+          "relative_improvement_pct": 20.861924244432853
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.74005839899927,
+          "improvement_pct_points": 22.842638164833517,
+          "relative_improvement_pct": 18.63447191581286
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.737731177611689,
+          "improvement_pct_points": -0.7235683675263562,
+          "relative_improvement_pct": -6.569435916307745
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.173904803389624,
+          "improvement_pct_points": -0.11356687272157884,
+          "relative_improvement_pct": -10.710441401452861
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.74005839899927,
+          "improvement_pct_points": 0.18209097887255155,
+          "relative_improvement_pct": 0.1822328482786584
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.737731177611689,
+          "improvement_pct_points": 0.02986106889794904,
+          "relative_improvement_pct": 0.2537568286903047
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.173904803389624,
+          "improvement_pct_points": -0.001148426158430027,
+          "relative_improvement_pct": -0.09792538166719594
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.74005839899927,
+          "improvement_pct_points": 0.026853815770238043,
+          "relative_improvement_pct": 0.02691655497208282
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.737731177611689,
+          "improvement_pct_points": -10.181352090676187,
+          "relative_improvement_pct": -654.1691658632592
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.173904803389624,
+          "improvement_pct_points": -0.361104979724041,
+          "relative_improvement_pct": -44.42729552960796
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.74005839899927,
+          "improvement_pct_points": -85.02676645805195,
+          "relative_improvement_pct": -577.8908404680069
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_p8_x5_n12_x5",
+      "family": "zbipolar",
+      "rationale": "Asymmetric ±Y refinement with a slightly lighter positive-Y hold and a heavier negative-Y hold.",
+      "total_time_s": 1290.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.755185711731839,
+          "median_pct_error": 1.2057792178402666,
+          "max_pct_error": 99.73683087089573
+        },
+        "key_param_errors": {
+          "dKa_yy": 89.45394635297912,
+          "dKg_zz": 98.09304480328439,
+          "Ka2_y": 99.73683087089573,
+          "Ka2_z": 1.165447350869263,
+          "dKg_xz": 0.3638569057084666,
+          "dKa_xz": 0.7105192822159704
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_p8_x5_n12_x5_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.755185711731839,
+          "improvement_pct_points": 3.5351145623006026,
+          "relative_improvement_pct": 23.119981288427
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.2057792178402666,
+          "improvement_pct_points": 0.2775836162719123,
+          "relative_improvement_pct": 18.713130050750625
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.73683087089573,
+          "improvement_pct_points": 22.845865692937053,
+          "relative_improvement_pct": 18.637104855203173
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.755185711731839,
+          "improvement_pct_points": -0.741022901646506,
+          "relative_improvement_pct": -6.72790946006331
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.2057792178402666,
+          "improvement_pct_points": -0.1454412871722215,
+          "relative_improvement_pct": -13.716503292548355
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.73683087089573,
+          "improvement_pct_points": 0.18531850697608832,
+          "relative_improvement_pct": 0.18546289099054136
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.755185711731839,
+          "improvement_pct_points": 0.012406534777799294,
+          "relative_improvement_pct": 0.10542967939324352
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.2057792178402666,
+          "improvement_pct_points": -0.03302284060907268,
+          "relative_improvement_pct": -2.8158312544876187
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.73683087089573,
+          "improvement_pct_points": 0.030081343873774813,
+          "relative_improvement_pct": 0.030151623625494513
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.755185711731839,
+          "improvement_pct_points": -10.198806624796337,
+          "relative_improvement_pct": -655.2906493287379
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.2057792178402666,
+          "improvement_pct_points": -0.39297939417468364,
+          "relative_improvement_pct": -48.348853276372076
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.73683087089573,
+          "improvement_pct_points": -85.02353892994842,
+          "relative_improvement_pct": -577.8689043294697
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "family": "reference",
+      "rationale": "Current faithful12-base incumbent from the late11 fine-grid. Kept as the direct in-branch baseline for the Ka2_y attack.",
+      "total_time_s": 1270.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.767592246509638,
+          "median_pct_error": 1.172756377231194,
+          "max_pct_error": 99.7669122147695
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75138201135951,
+          "dKg_zz": 95.64478653087211,
+          "Ka2_y": 99.7669122147695,
+          "Ka2_z": 1.8953781041161446,
+          "dKg_xz": 0.4918971121523441,
+          "dKa_xz": 0.4310277201788655
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.767592246509638,
+          "improvement_pct_points": 3.5227080275228033,
+          "relative_improvement_pct": 23.038841385642556
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.172756377231194,
+          "improvement_pct_points": 0.310606456880985,
+          "relative_improvement_pct": 20.939344692890927
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.7669122147695,
+          "improvement_pct_points": 22.81578434906328,
+          "relative_improvement_pct": 18.612565222190526
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.767592246509638,
+          "improvement_pct_points": -0.7534294364243053,
+          "relative_improvement_pct": -6.840551110561149
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.172756377231194,
+          "improvement_pct_points": -0.11241844656314881,
+          "relative_improvement_pct": -10.602133839758213
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.7669122147695,
+          "improvement_pct_points": 0.1552371631023135,
+          "relative_improvement_pct": 0.1553581103577536
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.767592246509638,
+          "improvement_pct_points": 0.0,
+          "relative_improvement_pct": 0.0
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.172756377231194,
+          "improvement_pct_points": 0.0,
+          "relative_improvement_pct": 0.0
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.7669122147695,
+          "improvement_pct_points": 0.0,
+          "relative_improvement_pct": 0.0
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.767592246509638,
+          "improvement_pct_points": -10.211213159574136,
+          "relative_improvement_pct": -656.0877902619425
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.172756377231194,
+          "improvement_pct_points": -0.35995655356561096,
+          "relative_improvement_pct": -44.28600291056545
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.7669122147695,
+          "improvement_pct_points": -85.05362027382219,
+          "relative_improvement_pct": -578.0733544552098
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_p10_x5_n12_x5",
+      "family": "zbipolar",
+      "rationale": "Asymmetric ±Y refinement: slightly heavier negative-Y dwell to compensate the base family’s existing positive-Y bias.",
+      "total_time_s": 1292.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.794146537226455,
+          "median_pct_error": 1.1351232052657634,
+          "max_pct_error": 99.73788645448268
+        },
+        "key_param_errors": {
+          "dKa_yy": 92.23462298637233,
+          "dKg_zz": 96.7059186611856,
+          "Ka2_y": 99.73788645448268,
+          "Ka2_z": 1.1097687632924125,
+          "dKg_xz": 0.470769765644925,
+          "dKa_xz": 0.6515193840990156
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_p10_x5_n12_x5_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.794146537226455,
+          "improvement_pct_points": 3.4961537368059865,
+          "relative_improvement_pct": 22.865173830127546
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.1351232052657634,
+          "improvement_pct_points": 0.34823962884641557,
+          "relative_improvement_pct": 23.476362009221006
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.73788645448268,
+          "improvement_pct_points": 22.844810109350107,
+          "relative_improvement_pct": 18.636243735635293
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.794146537226455,
+          "improvement_pct_points": -0.7799837271411221,
+          "relative_improvement_pct": -7.081643340399098
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.1351232052657634,
+          "improvement_pct_points": -0.07478527459771822,
+          "relative_improvement_pct": -7.0529660813511805
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.73788645448268,
+          "improvement_pct_points": 0.18426292338914152,
+          "relative_improvement_pct": 0.18440648498494702
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.794146537226455,
+          "improvement_pct_points": -0.02655429071681681,
+          "relative_improvement_pct": -0.22565610840818368
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.1351232052657634,
+          "improvement_pct_points": 0.03763317196543059,
+          "relative_improvement_pct": 3.2089505285215507
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.73788645448268,
+          "improvement_pct_points": 0.029025760286828017,
+          "relative_improvement_pct": 0.02909357385376816
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.794146537226455,
+          "improvement_pct_points": -10.237767450290953,
+          "relative_improvement_pct": -657.793948545597
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.1351232052657634,
+          "improvement_pct_points": -0.32232338160018037,
+          "relative_improvement_pct": -39.65593645758424
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.73788645448268,
+          "improvement_pct_points": -85.02459451353536,
+          "relative_improvement_pct": -577.8760786830487
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_y10_x0",
+      "family": "zbipolar",
+      "rationale": "Explicit +Y / 0 / -Y / 0 late z-family exposure using two opposite closed z-pairs, with all dwell placed on ±Y and none on the intervening zero states.",
+      "total_time_s": 1280.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.891934596138954,
+          "median_pct_error": 1.2700862029080735,
+          "max_pct_error": 99.7053987286563
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.01158178139504,
+          "dKg_zz": 98.3869917463672,
+          "Ka2_y": 99.7053987286563,
+          "Ka2_z": 1.759099618846368,
+          "dKg_xz": 0.16496020429399127,
+          "dKa_xz": 0.7416641022208023
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_y10_x0_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.891934596138954,
+          "improvement_pct_points": 3.398365677893487,
+          "relative_improvement_pct": 22.225630739671875
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.2700862029080735,
+          "improvement_pct_points": 0.21327663120410545,
+          "relative_improvement_pct": 14.377913906125036
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.7053987286563,
+          "improvement_pct_points": 22.877297835176478,
+          "relative_improvement_pct": 18.66274643686234
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.891934596138954,
+          "improvement_pct_points": -0.8777717860536214,
+          "relative_improvement_pct": -7.969482576105308
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.2700862029080735,
+          "improvement_pct_points": -0.20974827224002834,
+          "relative_improvement_pct": -19.7812665352715
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.7053987286563,
+          "improvement_pct_points": 0.21675064921551268,
+          "relative_improvement_pct": 0.21691952241322887
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.891934596138954,
+          "improvement_pct_points": -0.12434234962931612,
+          "relative_improvement_pct": -1.0566507321512355
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.2700862029080735,
+          "improvement_pct_points": -0.09732982567687953,
+          "relative_improvement_pct": -8.299236530835952
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.7053987286563,
+          "improvement_pct_points": 0.06151348611319918,
+          "relative_improvement_pct": 0.061657201518654114
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.891934596138954,
+          "improvement_pct_points": -10.335555509203452,
+          "relative_improvement_pct": -664.0769974334514
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.2700862029080735,
+          "improvement_pct_points": -0.4572863792424905,
+          "relative_improvement_pct": -56.26063957300212
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.7053987286563,
+          "improvement_pct_points": -84.99210678770899,
+          "relative_improvement_pct": -577.6552734006091
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_y15_x0",
+      "family": "zbipolar",
+      "rationale": "Heavier ±Y hold with zero-state dwell removed. Tests whether stronger sign-separated Y exposure lowers the Ka2_y ceiling further, even at some risk to the mean.",
+      "total_time_s": 1290.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.977824317143824,
+          "median_pct_error": 1.1983333347896719,
+          "max_pct_error": 99.66868722733874
+        },
+        "key_param_errors": {
+          "dKa_yy": 96.48147663733685,
+          "dKg_zz": 94.68783751232596,
+          "Ka2_y": 99.66868722733874,
+          "Ka2_z": 1.1486185983585533,
+          "dKg_xz": 0.39888233918968263,
+          "dKa_xz": 0.7490962463395078
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_y15_x0_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 11.977824317143824,
+          "improvement_pct_points": 3.3124759568886173,
+          "relative_improvement_pct": 21.663903896735135
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.1983333347896719,
+          "improvement_pct_points": 0.2850294993225071,
+          "relative_improvement_pct": 19.215089711554135
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.66868722733874,
+          "improvement_pct_points": 22.914009336494047,
+          "relative_improvement_pct": 18.69269479201086
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 11.977824317143824,
+          "improvement_pct_points": -0.9636615070584913,
+          "relative_improvement_pct": -8.74929419216589
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.1983333347896719,
+          "improvement_pct_points": -0.1379954041216267,
+          "relative_improvement_pct": -13.014285364165499
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.66868722733874,
+          "improvement_pct_points": 0.25346215053308185,
+          "relative_improvement_pct": 0.25365962613011217
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 11.977824317143824,
+          "improvement_pct_points": -0.21023207063418603,
+          "relative_improvement_pct": -1.7865342903646455
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.1983333347896719,
+          "improvement_pct_points": -0.025576957558477886,
+          "relative_improvement_pct": -2.180926751288577
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.66868722733874,
+          "improvement_pct_points": 0.09822498743076835,
+          "relative_improvement_pct": 0.09845447278083355
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 11.977824317143824,
+          "improvement_pct_points": -10.421445230208322,
+          "relative_improvement_pct": -669.5955579002325
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.1983333347896719,
+          "improvement_pct_points": -0.38553351112408885,
+          "relative_improvement_pct": -47.432774946406994
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.66868722733874,
+          "improvement_pct_points": -84.95539528639142,
+          "relative_improvement_pct": -577.4057609090137
+        }
+      }
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_d8_then_zbipolar_y10_x0",
+      "family": "zbipolar",
+      "rationale": "Mildly shorten the xpair outer holds before the zero-dwell bipolar z block. Tests whether more of the late budget should be shifted from xpair dwell into ±Y exposure.",
+      "total_time_s": 1276.0,
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.023948289025544,
+          "median_pct_error": 1.2456147723272024,
+          "max_pct_error": 99.7045524502502
+        },
+        "key_param_errors": {
+          "dKa_yy": 92.94244284465267,
+          "dKg_zz": 96.44526147646016,
+          "Ka2_y": 99.7045524502502,
+          "Ka2_z": 1.888412172051647,
+          "dKg_xz": 0.24984959510536142,
+          "dKa_xz": 0.6621936056665669
+        }
+      },
+      "continuity_checks": [
+        {
+          "anchor_id": 11,
+          "closure_rule": "exact_same_mechanism_state_before_resume",
+          "state_before_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after_insertion": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "closure_ok": true,
+          "next_base_action_preview": {
+            "kind": "inner",
+            "motor_angle_deg": 90,
+            "effective_body_axis": [
+              0,
+              1,
+              0
+            ],
+            "outer_mode": null,
+            "state_before": {
+              "beta_deg": -90,
+              "outer_axis_body": [
+                0,
+                0,
+                -1
+              ],
+              "outer_family": "z",
+              "gravity_body": [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ],
+              "face_name": "+X",
+              "C": [
+                [
+                  1.1102230246251565e-16,
+                  4.930380657631324e-32,
+                  -1.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  4.930380657631324e-32
+                ],
+                [
+                  1.0,
+                  0.0,
+                  1.1102230246251565e-16
+                ]
+              ]
+            },
+            "state_after": {
+              "beta_deg": 0,
+              "outer_axis_body": [
+                1,
+                0,
+                0
+              ],
+              "outer_family": "x",
+              "gravity_body": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "face_name": "+Z",
+              "C": [
+                [
+                  1.0,
+                  4.930380657631324e-32,
+                  0.0
+                ],
+                [
+                  -4.930380657631324e-32,
+                  1.0,
+                  5.473822126268817e-48
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ]
+            },
+            "face_after": [
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_d8_then_zbipolar_y10_x0_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "mean_pct_error": {
+          "reference": 15.290300274032441,
+          "candidate": 12.023948289025544,
+          "improvement_pct_points": 3.2663519850068976,
+          "relative_improvement_pct": 21.36224878823441
+        },
+        "median_pct_error": {
+          "reference": 1.483362834112179,
+          "candidate": 1.2456147723272024,
+          "improvement_pct_points": 0.23774806178497654,
+          "relative_improvement_pct": 16.027640461092805
+        },
+        "max_pct_error": {
+          "reference": 122.58269656383278,
+          "candidate": 99.7045524502502,
+          "improvement_pct_points": 22.87814411358258,
+          "relative_improvement_pct": 18.663436810324356
+        }
+      },
+      "delta_vs_old_best": {
+        "mean_pct_error": {
+          "reference": 11.014162810085333,
+          "candidate": 12.023948289025544,
+          "improvement_pct_points": -1.009785478940211,
+          "relative_improvement_pct": -9.168063849715216
+        },
+        "median_pct_error": {
+          "reference": 1.0603379306680452,
+          "candidate": 1.2456147723272024,
+          "improvement_pct_points": -0.18527684165915725,
+          "relative_improvement_pct": -17.47337676984046
+        },
+        "max_pct_error": {
+          "reference": 99.92214937787182,
+          "candidate": 99.7045524502502,
+          "improvement_pct_points": 0.21759692762161364,
+          "relative_improvement_pct": 0.2177664601656391
+        }
+      },
+      "delta_vs_current_faithful_best": {
+        "mean_pct_error": {
+          "reference": 11.767592246509638,
+          "candidate": 12.023948289025544,
+          "improvement_pct_points": -0.2563560425159057,
+          "relative_improvement_pct": -2.1784918881085718
+        },
+        "median_pct_error": {
+          "reference": 1.172756377231194,
+          "candidate": 1.2456147723272024,
+          "improvement_pct_points": -0.07285839509600844,
+          "relative_improvement_pct": -6.212577182314937
+        },
+        "max_pct_error": {
+          "reference": 99.7669122147695,
+          "candidate": 99.7045524502502,
+          "improvement_pct_points": 0.06235976451930014,
+          "relative_improvement_pct": 0.06250545710491419
+        }
+      },
+      "delta_vs_default18": {
+        "mean_pct_error": {
+          "reference": 1.5563790869355025,
+          "candidate": 12.023948289025544,
+          "improvement_pct_points": -10.467569202090042,
+          "relative_improvement_pct": -672.5591014397783
+        },
+        "median_pct_error": {
+          "reference": 0.812799823665583,
+          "candidate": 1.2456147723272024,
+          "improvement_pct_points": -0.4328149486616194,
+          "relative_improvement_pct": -53.2498822046615
+        },
+        "max_pct_error": {
+          "reference": 14.713291940947315,
+          "candidate": 99.7045524502502,
+          "improvement_pct_points": -84.99126050930289,
+          "relative_improvement_pct": -577.649521605501
+        }
+      }
+    }
+  ],
+  "kf36_rows": [
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y10_x2",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 10.600397933892411,
+          "median_pct_error": 1.3690264061372477,
+          "max_pct_error": 99.67648200707193
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.45798456157996,
+          "dKg_zz": 60.07016635968551,
+          "Ka2_y": 99.67648200707193,
+          "Ka2_z": 1.9243754054656885,
+          "dKg_xz": 0.008612595154540551,
+          "dKa_xz": 0.7015573968242012
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 10.601893794793817,
+          "median_pct_error": 1.3690910074536475,
+          "max_pct_error": 99.67647653394202
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.46085290381036,
+          "dKg_zz": 60.0724696268921,
+          "Ka2_y": 99.67647653394202,
+          "Ka2_z": 1.9232529777421639,
+          "dKg_xz": 0.00887452955469623,
+          "dKa_xz": 0.7018479504627129
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y10_x2_shared_noise0p08_param_errors.json",
+      "note": "overall-best mean frontier"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y8_x0",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 10.817494466541048,
+          "median_pct_error": 1.3882811626223275,
+          "max_pct_error": 99.60869757240562
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.82361635753065,
+          "dKg_zz": 62.6296124281052,
+          "Ka2_y": 99.60869757240562,
+          "Ka2_z": 2.3461725907033997,
+          "dKg_xz": 0.21289852015167768,
+          "dKa_xz": 0.5515686971948209
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 10.819071127056656,
+          "median_pct_error": 1.3883241163339106,
+          "max_pct_error": 99.60869188473094
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.82602830372898,
+          "dKg_zz": 62.631748588242864,
+          "Ka2_y": 99.60869188473094,
+          "Ka2_z": 2.3451358853802704,
+          "dKg_xz": 0.21266643507353672,
+          "dKa_xz": 0.5517995063305143
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y8_x0_shared_noise0p08_param_errors.json",
+      "note": "best max / Ka2_y frontier"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y12_x0",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 10.733949006294074,
+          "median_pct_error": 1.3358104313843968,
+          "max_pct_error": 99.62638534002075
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.59426687093406,
+          "dKg_zz": 62.693872617127056,
+          "Ka2_y": 99.62638534002075,
+          "Ka2_z": 1.9792569963096862,
+          "dKg_xz": 0.01687050546666307,
+          "dKa_xz": 0.6908519355941116
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 10.73548825460158,
+          "median_pct_error": 1.3358628285497303,
+          "max_pct_error": 99.62638058036471
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.59683163044994,
+          "dKg_zz": 62.696109449328,
+          "Ka2_y": 99.62638058036471,
+          "Ka2_z": 1.9781289833959121,
+          "dKg_xz": 0.01660848958897552,
+          "dKa_xz": 0.6911421034427162
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y12_x0_shared_noise0p08_param_errors.json",
+      "note": "frontier recheck"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y10_x0",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 10.732991447724665,
+          "median_pct_error": 1.2716522103854278,
+          "max_pct_error": 99.63441661243088
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.39816133356977,
+          "dKg_zz": 63.45137416010089,
+          "Ka2_y": 99.63441661243088,
+          "Ka2_z": 2.3245487791473325,
+          "dKg_xz": 0.09157962079016145,
+          "dKa_xz": 0.6102769636483311
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 10.734555477719539,
+          "median_pct_error": 1.2717020935100378,
+          "max_pct_error": 99.63441171710258
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.40063107353787,
+          "dKg_zz": 63.45356500982475,
+          "Ka2_y": 99.63441171710258,
+          "Ka2_z": 2.323453806124734,
+          "dKg_xz": 0.09133021905611319,
+          "dKa_xz": 0.6105379582734602
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y10_x0_shared_noise0p08_param_errors.json",
+      "note": "frontier recheck"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_y10_x5",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.730349594667777,
+          "median_pct_error": 1.2086183309963878,
+          "max_pct_error": 99.73322106979539
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.18831193301908,
+          "dKg_zz": 96.26332315353413,
+          "Ka2_y": 99.73322106979539,
+          "Ka2_z": 1.1730804744427044,
+          "dKg_xz": 0.4074995176773708,
+          "dKa_xz": 0.6859363419359299
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.731700545423818,
+          "median_pct_error": 1.20802778503073,
+          "max_pct_error": 99.73321653372882
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.19217287236509,
+          "dKg_zz": 96.26671007242763,
+          "Ka2_y": 99.73321653372882,
+          "Ka2_z": 1.1718927698471298,
+          "dKg_xz": 0.40721840211396754,
+          "dKa_xz": 0.6863238512983784
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_y10_x5_shared_noise0p08_param_errors.json",
+      "note": "frontier recheck"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zbipolar_p10_x6_n10_x6",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.727555613614047,
+          "median_pct_error": 1.1364751750526212,
+          "max_pct_error": 99.73503861154107
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.31434063715831,
+          "dKg_zz": 96.89297849843538,
+          "Ka2_y": 99.73503861154107,
+          "Ka2_z": 1.1114354501540267,
+          "dKg_xz": 0.46191778944902,
+          "dKa_xz": 0.6386772689345132
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.72885793926503,
+          "median_pct_error": 1.1358034609725676,
+          "max_pct_error": 99.73503382928297
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.31812024045531,
+          "dKg_zz": 96.89662481501739,
+          "Ka2_y": 99.73503382928297,
+          "Ka2_z": 1.1102295157666988,
+          "dKg_xz": 0.46162243668415365,
+          "dKa_xz": 0.6390912652188966
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zbipolar_p10_x6_n10_x6_shared_noise0p08_param_errors.json",
+      "note": "frontier recheck"
+    },
+    {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.767592246509638,
+          "median_pct_error": 1.172756377231194,
+          "max_pct_error": 99.7669122147695
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75138201135951,
+          "dKg_zz": 95.64478653087211,
+          "Ka2_y": 99.7669122147695,
+          "Ka2_z": 1.8953781041161446,
+          "dKg_xz": 0.4918971121523441,
+          "dKa_xz": 0.4310277201788655
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.769134789568334,
+          "median_pct_error": 1.1727867413063198,
+          "max_pct_error": 99.76690609562479
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75418151865216,
+          "dKg_zz": 95.64679662296489,
+          "Ka2_y": 99.76690609562479,
+          "Ka2_z": 1.8943915113063445,
+          "dKg_xz": 0.49165114197850907,
+          "dKa_xz": 0.4313058883087202
+        }
+      },
+      "kf36_status": "reused_verified",
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_late11_yneg_xpair_outerhold_then_zpair_pos_med_shared_noise0p08_param_errors.json",
+      "note": "previous faithful12-base best reference"
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y10_x2",
+    "rationale": "Four-quarter-turn z-cycle with a small 2 s hold on the intermediate ±X states. This tests whether a little zero-state buffering stabilizes the full cycle while keeping the new ±Y structure.",
+    "total_time_s": 1284.0,
+    "all_rows": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_1"
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_2"
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_3"
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_4"
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_5"
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_6"
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_7"
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_8"
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_9"
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_10"
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_11"
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 0.0,
+        "node_total_s": 5.0,
+        "segment_role": "motif_inner_open",
+        "label": "yneg_xpair_outerhold_inner_open"
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 11,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_outer_sweep",
+        "label": "yneg_xpair_outerhold_outer_sweep"
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 11,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_outer_return",
+        "label": "yneg_xpair_outerhold_outer_return"
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 0.0,
+        "node_total_s": 5.0,
+        "segment_role": "motif_inner_close",
+        "label": "yneg_xpair_outerhold_inner_close"
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_y_pos",
+        "label": "zquad_y10x2_q1"
+      },
+      {
+        "pos_id": 17,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 2.0,
+        "node_total_s": 7.0,
+        "segment_role": "motif_zero_a",
+        "label": "zquad_y10x2_q2"
+      },
+      {
+        "pos_id": 18,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 10.0,
+        "node_total_s": 15.0,
+        "segment_role": "motif_y_neg",
+        "label": "zquad_y10x2_q3"
+      },
+      {
+        "pos_id": 19,
+        "anchor_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 2.0,
+        "node_total_s": 7.0,
+        "segment_role": "motif_zero_b",
+        "label": "zquad_y10x2_q4"
+      },
+      {
+        "pos_id": 20,
+        "anchor_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "anchor",
+        "label": "anchor_12"
+      }
+    ],
+    "all_actions": [
+      {
+        "pos_id": 1,
+        "anchor_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_1",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 2,
+        "anchor_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_2",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 3,
+        "anchor_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_3",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -2.220446049250313e-16
+            ],
+            [
+              0.0,
+              2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 4,
+        "anchor_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_4",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              1.0,
+              2.220446049250313e-16,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 5,
+        "anchor_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_5",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.1102230246251565e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 90,
+        "state_after": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 6,
+        "anchor_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "segment_role": "anchor",
+        "label": "anchor_6",
+        "state_before": {
+          "beta_deg": 90,
+          "outer_axis_body": [
+            0,
+            0,
+            1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              2.465190328815662e-32,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              -2.465190328815662e-32
+            ],
+            [
+              -1.0,
+              0.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 7,
+        "anchor_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_7",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              2.465190328815662e-32,
+              2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              1.0,
+              -2.7369110631344083e-48
+            ],
+            [
+              -2.220446049250313e-16,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 8,
+        "anchor_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_8",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.0,
+              -2.220446049250313e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -2.465190328815662e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 9,
+        "anchor_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "segment_role": "anchor",
+        "label": "anchor_9",
+        "state_before": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              1.0,
+              -7.395570986446986e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              -2.465190328815662e-32,
+              -1.0,
+              2.220446049250313e-16
+            ],
+            [
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 10,
+        "anchor_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_10",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -7.395570986446986e-32,
+              -1.0
+            ],
+            [
+              2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              -2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              6.162975822039155e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 11,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_11",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              6.162975822039155e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 12,
+        "anchor_id": 11,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_inner_open",
+        "label": "yneg_xpair_outerhold_inner_open",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              5.473822126268817e-48
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 13,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          -1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_outer_sweep",
+        "label": "yneg_xpair_outerhold_outer_sweep",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              5.473822126268817e-48
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -1.0,
+              2.220446049250313e-16,
+              2.465190328815662e-32
+            ],
+            [
+              4.930380657631324e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 14,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          -1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_outer_return",
+        "label": "yneg_xpair_outerhold_outer_return",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -1.0,
+              2.220446049250313e-16,
+              2.465190328815662e-32
+            ],
+            [
+              4.930380657631324e-32,
+              1.1102230246251565e-16,
+              1.0
+            ],
+            [
+              2.220446049250313e-16,
+              1.0,
+              -1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 180,
+        "state_after": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              0.0
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 15,
+        "anchor_id": 11,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 180,
+        "segment_role": "motif_inner_close",
+        "label": "yneg_xpair_outerhold_inner_close",
+        "state_before": {
+          "beta_deg": 180,
+          "outer_axis_body": [
+            -1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            2.220446049250313e-16,
+            0.0,
+            -1.0
+          ],
+          "face_name": "-Z",
+          "C": [
+            [
+              -1.0,
+              4.930380657631324e-32,
+              -2.220446049250313e-16
+            ],
+            [
+              4.930380657631324e-32,
+              1.0,
+              0.0
+            ],
+            [
+              2.220446049250313e-16,
+              0.0,
+              -1.0
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 16,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_y_pos",
+        "label": "zquad_y10x2_q1",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -3.697785493223493e-32,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              -1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 17,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_zero_a",
+        "label": "zquad_y10x2_q2",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+Y",
+          "C": [
+            [
+              -3.697785493223493e-32,
+              1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              -1.0,
+              1.1102230246251565e-16,
+              4.930380657631324e-32
+            ],
+            [
+              1.1102230246251565e-16,
+              1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -2.465190328815662e-32,
+              -1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 18,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_y_neg",
+        "label": "zquad_y10x2_q3",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -1.0,
+            2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-X",
+          "C": [
+            [
+              -1.1102230246251565e-16,
+              -2.465190328815662e-32,
+              -1.0
+            ],
+            [
+              -2.220446049250313e-16,
+              -1.0,
+              4.930380657631324e-32
+            ],
+            [
+              -1.0,
+              2.220446049250313e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -3.3306690738754696e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              -3.3306690738754696e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -3.3306690738754696e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 19,
+        "anchor_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "segment_role": "motif_zero_b",
+        "label": "zquad_y10x2_q4",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            -3.3306690738754696e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "-Y",
+          "C": [
+            [
+              1.232595164407831e-32,
+              -1.1102230246251565e-16,
+              -1.0
+            ],
+            [
+              1.0,
+              -3.3306690738754696e-16,
+              4.930380657631324e-32
+            ],
+            [
+              -3.3306690738754696e-16,
+              -1.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": -90,
+        "state_after": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            -4.440892098500626e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              -1.0
+            ],
+            [
+              4.440892098500626e-16,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        }
+      },
+      {
+        "pos_id": 20,
+        "anchor_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "segment_role": "anchor",
+        "label": "anchor_12",
+        "state_before": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            -4.440892098500626e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              -1.0
+            ],
+            [
+              4.440892098500626e-16,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "inner_beta_after_deg": 0,
+        "state_after": {
+          "beta_deg": 0,
+          "outer_axis_body": [
+            1,
+            0,
+            0
+          ],
+          "outer_family": "x",
+          "gravity_body": [
+            0.0,
+            -4.440892098500626e-16,
+            1.0
+          ],
+          "face_name": "+Z",
+          "C": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.440892098500626e-16
+            ],
+            [
+              0.0,
+              -4.440892098500626e-16,
+              1.0
+            ]
+          ]
+        }
+      }
+    ],
+    "all_faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          -2.220446049250313e-16,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          2.220446049250313e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          -1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          2.220446049250313e-16,
+          0.0,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 17,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          2.220446049250313e-16,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 18,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -3.3306690738754696e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 19,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          -4.440892098500626e-16,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 20,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          0.0,
+          -4.440892098500626e-16,
+          1.0
+        ]
+      }
+    ],
+    "continuity_checks": [
+      {
+        "anchor_id": 11,
+        "closure_rule": "exact_same_mechanism_state_before_resume",
+        "state_before_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "state_after_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            -4.440892098500626e-16,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              0.0,
+              -1.0
+            ],
+            [
+              4.440892098500626e-16,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "closure_ok": true,
+        "next_base_action_preview": {
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "state_before": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              -4.440892098500626e-16,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                0.0,
+                -1.0
+              ],
+              [
+                4.440892098500626e-16,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                -4.440892098500626e-16,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after": {
+            "beta_deg": 0,
+            "outer_axis_body": [
+              1,
+              0,
+              0
+            ],
+            "outer_family": "x",
+            "gravity_body": [
+              0.0,
+              -4.440892098500626e-16,
+              1.0
+            ],
+            "face_name": "+Z",
+            "C": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                4.440892098500626e-16
+              ],
+              [
+                0.0,
+                -4.440892098500626e-16,
+                1.0
+              ]
+            ]
+          },
+          "face_after": [
+            0,
+            1,
+            0
+          ]
+        }
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 10.600397933892411,
+        "median_pct_error": 1.3690264061372477,
+        "max_pct_error": 99.67648200707193
+      },
+      "key_param_errors": {
+        "dKa_yy": 87.45798456157996,
+        "dKg_zz": 60.07016635968551,
+        "Ka2_y": 99.67648200707193,
+        "Ka2_z": 1.9243754054656885,
+        "dKg_xz": 0.008612595154540551,
+        "dKa_xz": 0.7015573968242012
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y10_x2_shared_noise0p08_param_errors.json",
+    "delta_vs_faithful": {
+      "mean_pct_error": {
+        "reference": 15.290300274032441,
+        "candidate": 10.600397933892411,
+        "improvement_pct_points": 4.68990234014003,
+        "relative_improvement_pct": 30.672401823951777
+      },
+      "median_pct_error": {
+        "reference": 1.483362834112179,
+        "candidate": 1.3690264061372477,
+        "improvement_pct_points": 0.11433642797493127,
+        "relative_improvement_pct": 7.707920499664117
+      },
+      "max_pct_error": {
+        "reference": 122.58269656383278,
+        "candidate": 99.67648200707193,
+        "improvement_pct_points": 22.906214556760858,
+        "relative_improvement_pct": 18.686335999170037
+      }
+    },
+    "delta_vs_old_best": {
+      "mean_pct_error": {
+        "reference": 11.014162810085333,
+        "candidate": 10.600397933892411,
+        "improvement_pct_points": 0.41376487619292135,
+        "relative_improvement_pct": 3.7566620661721966
+      },
+      "median_pct_error": {
+        "reference": 1.0603379306680452,
+        "candidate": 1.3690264061372477,
+        "improvement_pct_points": -0.30868847546920253,
+        "relative_improvement_pct": -29.112273223567453
+      },
+      "max_pct_error": {
+        "reference": 99.92214937787182,
+        "candidate": 99.67648200707193,
+        "improvement_pct_points": 0.2456673707998931,
+        "relative_improvement_pct": 0.24585877338452966
+      }
+    },
+    "delta_vs_current_faithful_best": {
+      "mean_pct_error": {
+        "reference": 11.767592246509638,
+        "candidate": 10.600397933892411,
+        "improvement_pct_points": 1.1671943126172266,
+        "relative_improvement_pct": 9.918718189470118
+      },
+      "median_pct_error": {
+        "reference": 1.172756377231194,
+        "candidate": 1.3690264061372477,
+        "improvement_pct_points": -0.19627002890605372,
+        "relative_improvement_pct": -16.735788669888564
+      },
+      "max_pct_error": {
+        "reference": 99.7669122147695,
+        "candidate": 99.67648200707193,
+        "improvement_pct_points": 0.09043020769757959,
+        "relative_improvement_pct": 0.09064148192028769
+      }
+    },
+    "delta_vs_default18": {
+      "mean_pct_error": {
+        "reference": 1.5563790869355025,
+        "candidate": 10.600397933892411,
+        "improvement_pct_points": -9.04401884695691,
+        "relative_improvement_pct": -581.0935730808685
+      },
+      "median_pct_error": {
+        "reference": 0.812799823665583,
+        "candidate": 1.3690264061372477,
+        "improvement_pct_points": -0.5562265824716647,
+        "relative_improvement_pct": -68.43340343790695
+      },
+      "max_pct_error": {
+        "reference": 14.713291940947315,
+        "candidate": 99.67648200707193,
+        "improvement_pct_points": -84.96319006612461,
+        "relative_improvement_pct": -577.458738718225
+      }
+    }
+  },
+  "best_max_candidate": {
+    "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y8_x0",
+    "rationale": "Same four-quarter-turn z-cycle, but slightly lighter ±Y dwell to see whether the ceiling falls further when the cycle is tightened.",
+    "total_time_s": 1276.0,
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 10.817494466541048,
+        "median_pct_error": 1.3882811626223275,
+        "max_pct_error": 99.60869757240562
+      },
+      "key_param_errors": {
+        "dKa_yy": 87.82361635753065,
+        "dKg_zz": 62.6296124281052,
+        "Ka2_y": 99.60869757240562,
+        "Ka2_z": 2.3461725907033997,
+        "dKg_xz": 0.21289852015167768,
+        "dKa_xz": 0.5515686971948209
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_late11_yneg_xpair_outerhold_then_zquad_y8_x0_shared_noise0p08_param_errors.json",
+    "delta_vs_faithful": {
+      "mean_pct_error": {
+        "reference": 15.290300274032441,
+        "candidate": 10.817494466541048,
+        "improvement_pct_points": 4.472805807491394,
+        "relative_improvement_pct": 29.25257010869546
+      },
+      "median_pct_error": {
+        "reference": 1.483362834112179,
+        "candidate": 1.3882811626223275,
+        "improvement_pct_points": 0.09508167148985147,
+        "relative_improvement_pct": 6.409872844546472
+      },
+      "max_pct_error": {
+        "reference": 122.58269656383278,
+        "candidate": 99.60869757240562,
+        "improvement_pct_points": 22.973998991427166,
+        "relative_improvement_pct": 18.74163290204981
+      }
+    },
+    "delta_vs_old_best": {
+      "mean_pct_error": {
+        "reference": 11.014162810085333,
+        "candidate": 10.817494466541048,
+        "improvement_pct_points": 0.1966683435442853,
+        "relative_improvement_pct": 1.7855950282866901
+      },
+      "median_pct_error": {
+        "reference": 1.0603379306680452,
+        "candidate": 1.3882811626223275,
+        "improvement_pct_points": -0.3279432319542823,
+        "relative_improvement_pct": -30.92818076852802
+      },
+      "max_pct_error": {
+        "reference": 99.92214937787182,
+        "candidate": 99.60869757240562,
+        "improvement_pct_points": 0.313451805466201,
+        "relative_improvement_pct": 0.31369601976918265
+      }
+    },
+    "delta_vs_current_faithful_best": {
+      "mean_pct_error": {
+        "reference": 11.767592246509638,
+        "candidate": 10.817494466541048,
+        "improvement_pct_points": 0.9500977799685906,
+        "relative_improvement_pct": 8.073850283607483
+      },
+      "median_pct_error": {
+        "reference": 1.172756377231194,
+        "candidate": 1.3882811626223275,
+        "improvement_pct_points": -0.2155247853911335,
+        "relative_improvement_pct": -18.377626383066392
+      },
+      "max_pct_error": {
+        "reference": 99.7669122147695,
+        "candidate": 99.60869757240562,
+        "improvement_pct_points": 0.1582146423638875,
+        "relative_improvement_pct": 0.15858428295675506
+      }
+    },
+    "delta_vs_default18": {
+      "mean_pct_error": {
+        "reference": 1.5563790869355025,
+        "candidate": 10.817494466541048,
+        "improvement_pct_points": -9.261115379605545,
+        "relative_improvement_pct": -595.0423940635571
+      },
+      "median_pct_error": {
+        "reference": 0.812799823665583,
+        "candidate": 1.3882811626223275,
+        "improvement_pct_points": -0.5754813389567445,
+        "relative_improvement_pct": -70.80234544852946
+      },
+      "max_pct_error": {
+        "reference": 14.713291940947315,
+        "candidate": 99.60869757240562,
+        "improvement_pct_points": -84.8954056314583,
+        "relative_improvement_pct": -576.9980366881261
+      }
+    }
+  },
+  "comparison_rows": [
+    {
+      "label": "faithful12 baseline",
+      "note": "original faithful chapter-3 12-position path",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 15.290300274032441,
+          "median_pct_error": 1.483362834112179,
+          "max_pct_error": 122.58269656383278
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.58269656383278,
+          "dKg_zz": 85.57075351197156,
+          "Ka2_y": 99.94129544126406,
+          "Ka2_z": 64.70431004852547,
+          "dKg_xz": 18.68063496921905,
+          "dKa_xz": 18.85408106874926
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 15.288687861181792,
+          "median_pct_error": 1.4837439708458107,
+          "max_pct_error": 122.5882646997851
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.5882646997851,
+          "dKg_zz": 85.57095512255164,
+          "Ka2_y": 99.94128958152183,
+          "Ka2_z": 64.68594016040949,
+          "dKg_xz": 18.674921597907467,
+          "dKa_xz": 18.84829522348288
+        }
+      }
+    },
+    {
+      "label": "previous faithful12-base best",
+      "note": "late11_yneg_xpair_outerhold_then_zpair_pos_med",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.767592246509638,
+          "median_pct_error": 1.172756377231194,
+          "max_pct_error": 99.7669122147695
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75138201135951,
+          "dKg_zz": 95.64478653087211,
+          "Ka2_y": 99.7669122147695,
+          "Ka2_z": 1.8953781041161446,
+          "dKg_xz": 0.4918971121523441,
+          "dKa_xz": 0.4310277201788655
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.769134789568334,
+          "median_pct_error": 1.1727867413063198,
+          "max_pct_error": 99.76690609562479
+        },
+        "key_param_errors": {
+          "dKa_yy": 91.75418151865216,
+          "dKg_zz": 95.64679662296489,
+          "Ka2_y": 99.76690609562479,
+          "Ka2_z": 1.8943915113063445,
+          "dKg_xz": 0.49165114197850907,
+          "dKa_xz": 0.4313058883087202
+        }
+      }
+    },
+    {
+      "label": "new overall-best faithful12-base",
+      "note": "late11_yneg_xpair_outerhold_then_zquad_y10_x2",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 10.600397933892411,
+          "median_pct_error": 1.3690264061372477,
+          "max_pct_error": 99.67648200707193
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.45798456157996,
+          "dKg_zz": 60.07016635968551,
+          "Ka2_y": 99.67648200707193,
+          "Ka2_z": 1.9243754054656885,
+          "dKg_xz": 0.008612595154540551,
+          "dKa_xz": 0.7015573968242012
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 10.601893794793817,
+          "median_pct_error": 1.3690910074536475,
+          "max_pct_error": 99.67647653394202
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.46085290381036,
+          "dKg_zz": 60.0724696268921,
+          "Ka2_y": 99.67647653394202,
+          "Ka2_z": 1.9232529777421639,
+          "dKg_xz": 0.00887452955469623,
+          "dKa_xz": 0.7018479504627129
+        }
+      }
+    },
+    {
+      "label": "new max-opt faithful12-base sibling",
+      "note": "late11_yneg_xpair_outerhold_then_zquad_y8_x0",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 10.817494466541048,
+          "median_pct_error": 1.3882811626223275,
+          "max_pct_error": 99.60869757240562
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.82361635753065,
+          "dKg_zz": 62.6296124281052,
+          "Ka2_y": 99.60869757240562,
+          "Ka2_z": 2.3461725907033997,
+          "dKg_xz": 0.21289852015167768,
+          "dKa_xz": 0.5515686971948209
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 10.819071127056656,
+          "median_pct_error": 1.3883241163339106,
+          "max_pct_error": 99.60869188473094
+        },
+        "key_param_errors": {
+          "dKa_yy": 87.82602830372898,
+          "dKg_zz": 62.631748588242864,
+          "Ka2_y": 99.60869188473094,
+          "Ka2_z": 2.3451358853802704,
+          "dKg_xz": 0.21266643507353672,
+          "dKa_xz": 0.5517995063305143
+        }
+      }
+    },
+    {
+      "label": "old best legal non-faithful-base",
+      "note": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.014162810085333,
+          "median_pct_error": 1.0603379306680452,
+          "max_pct_error": 99.92214937787182
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.77132397757674,
+          "dKg_zz": 76.46895197802066,
+          "Ka2_y": 99.92214937787182,
+          "Ka2_z": 3.8821190036200264,
+          "dKg_xz": 0.43475000616637505,
+          "dKa_xz": 0.14567951573398194
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.014092121257267,
+          "median_pct_error": 1.0602406508286844,
+          "max_pct_error": 99.92213961977083
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.76480779442812,
+          "dKg_zz": 76.46961291525153,
+          "Ka2_y": 99.92213961977083,
+          "Ka2_z": 3.8809407722658174,
+          "dKg_xz": 0.4344164417122317,
+          "dKa_xz": 0.14535565627381575
+        }
+      }
+    },
+    {
+      "label": "default18 reference",
+      "note": "non-faithful strong reference",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9477898404987541,
+          "dKg_zz": 0.851304114610006,
+          "Ka2_y": 1.9994816607900874,
+          "Ka2_z": 1.2883358751632203,
+          "dKg_xz": 0.3510978642553199,
+          "dKa_xz": 0.3274679937728792
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9476606704907313,
+          "dKg_zz": 0.8522121112508451,
+          "Ka2_y": 2.0007501033211734,
+          "Ka2_z": 1.2888876792064823,
+          "dKg_xz": 0.35109847596388216,
+          "dKa_xz": 0.3275370623000178
+        }
+      }
+    }
+  ],
+  "bottom_line": {
+    "previous_faithful_best_max": 99.7669122147695,
+    "new_overall_best_max": 99.67648200707193,
+    "new_max_optimized_max": 99.60869757240562,
+    "default18_max": 14.713291940947315,
+    "gap_to_default18_before": 85.05362027382219,
+    "gap_to_default18_after_overall_best": 84.96319006612461,
+    "gap_to_default18_after_max_opt": 84.8954056314583,
+    "ceiling_verdict": "yes locally, but not fundamentally: the branch lowered the overall-best Ka2_y/max from 99.767 to 99.676, and the max-optimized sibling reached 99.609; however the gap to default18 max remains enormous (84.895 still open after only 0.158 points of closure)."
+  },
+  "scientific_conclusion": "The focused late11 Ka2_y attack succeeded scientifically in two ways: (1) it found a new faithful12-base continuity-safe winner (late11_yneg_xpair_outerhold_then_zquad_y10_x2) at 10.600 / 1.369 / 99.676, which beats the old best legal non-faithful-base mean by 0.414 points; and (2) it lowered the Ka2_y ceiling modestly, with the max-optimized sibling reaching 99.609. But the ceiling is not truly broken: Ka2_y still remains the max channel and is still far above the default18 regime.",
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_closedloop_late11_ka2y_attack_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_closedloop_late11_ka2y_attack_2026-04-01.md"
+  }
+}

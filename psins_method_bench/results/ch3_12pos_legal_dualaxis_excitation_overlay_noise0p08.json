@@ -1,0 +1,2149 @@
+{
+  "experiment": "ch3_12pos_legal_dualaxis_excitation_overlay",
+  "report_date": "2026-03-31",
+  "noise_scale": 0.08,
+  "hard_constraints": {
+    "anchor_skeleton": "faithful chapter-3 12-position face sequence fixed",
+    "anchor_faces_changed": false,
+    "overlay_only": true,
+    "inner_axis": "body y only",
+    "outer_axis": "x/z family determined by inner attitude",
+    "time_budget_policy": "primary <=1200 s branch only in this pass",
+    "total_time_s": 1200.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "references": {
+    "faithful12": {
+      "candidate_name": "legal_base_faithful12",
+      "anchor_face_sequence": [
+        "+Y",
+        "-Z",
+        "+X",
+        "+Y",
+        "-X",
+        "+Z",
+        "-Y",
+        "-Z",
+        "-X",
+        "-Y",
+        "+X",
+        "+Z"
+      ],
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        }
+      ],
+      "action_sequence": [
+        {
+          "pos_id": 1,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 2,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 3,
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 4,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            0,
+            1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 5,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            0,
+            1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 6,
+          "kind": "inner",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 7,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 8,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 9,
+          "kind": "inner",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 10,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            0,
+            -1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 11,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            0,
+            -1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 12,
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": 0
+        }
+      ],
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 15.290300274032441,
+          "median_pct_error": 1.483362834112179,
+          "max_pct_error": 122.58269656383278
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.58269656383278,
+          "dKg_zz": 85.57075351197156,
+          "Ka2_y": 99.94129544126406,
+          "Ka2_z": 64.70431004852547,
+          "dKg_xz": 18.68063496921905,
+          "dKa_xz": 18.85408106874926
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 15.288687861181792,
+          "median_pct_error": 1.4837439708458107,
+          "max_pct_error": 122.5882646997851
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.5882646997851,
+          "dKg_zz": 85.57095512255164,
+          "Ka2_y": 99.94128958152183,
+          "Ka2_z": 64.68594016040949,
+          "dKg_xz": 18.674921597907467,
+          "dKa_xz": 18.84829522348288
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    "incumbent": {
+      "candidate_name": "legal_flip_8_11_12",
+      "equivalent_prior_result": "coupled_flip_8_11_12",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        }
+      ],
+      "action_sequence": [
+        {
+          "pos_id": 1,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 2,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 3,
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 4,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            0,
+            1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 5,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            0,
+            1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 90
+        },
+        {
+          "pos_id": 6,
+          "kind": "inner",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 90,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 7,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 8,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            1,
+            0,
+            0
+          ],
+          "outer_mode": "x",
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": 0
+        },
+        {
+          "pos_id": 9,
+          "kind": "inner",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": 0,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 10,
+          "kind": "outer",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            0,
+            -1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 11,
+          "kind": "outer",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            0,
+            -1
+          ],
+          "outer_mode": "z",
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": -90
+        },
+        {
+          "pos_id": 12,
+          "kind": "inner",
+          "motor_angle_deg": -90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "inner_beta_before_deg": -90,
+          "inner_beta_after_deg": 180
+        }
+      ],
+      "anchor_face_sequence": [
+        "+Y",
+        "-Z",
+        "+X",
+        "+Y",
+        "-X",
+        "+Z",
+        "-Y",
+        "+Z",
+        "+X",
+        "+Y",
+        "+X",
+        "-Z"
+      ],
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.875950916036986,
+          "median_pct_error": 1.238236491695687,
+          "max_pct_error": 99.97405349340134
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.80235296251372,
+          "dKg_zz": 76.15214117154267,
+          "Ka2_y": 99.97405349340134,
+          "Ka2_z": 2.8166161819960265,
+          "dKg_xz": 0.22730412851634743,
+          "dKa_xz": 0.30869972611459023
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/markov42_noisy_coupled_flip_8_11_12_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.87552189523086,
+          "median_pct_error": 1.2381497605995055,
+          "max_pct_error": 99.97404143518949
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.7968560795649,
+          "dKg_zz": 76.15316244719929,
+          "Ka2_y": 99.97404143518949,
+          "Ka2_z": 2.815429188733571,
+          "dKg_xz": 0.22746517199909796,
+          "dKa_xz": 0.30902496368750226
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/kf36_noisy_coupled_flip_8_11_12_shared_noise0p08_param_errors.json"
+    },
+    "default18": {
+      "candidate_name": "default18_reference",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9477898404987541,
+          "dKg_zz": 0.851304114610006,
+          "Ka2_y": 1.9994816607900874,
+          "Ka2_z": 1.2883358751632203,
+          "dKg_xz": 0.3510978642553199,
+          "dKa_xz": 0.3274679937728792
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9476606704907313,
+          "dKg_zz": 0.8522121112508451,
+          "Ka2_y": 2.0007501033211734,
+          "Ka2_z": 1.2888876792064823,
+          "dKg_xz": 0.35109847596388216,
+          "dKa_xz": 0.3275370623000178
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+    }
+  },
+  "candidate_specs": [
+    {
+      "name": "overlay_outer_tail10_11_pos",
+      "direction": "overlay",
+      "family": "outer_excitation_return_pair",
+      "burst_kind": "outer",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Keep faithful12 anchors unchanged; add short legal outer +90/-90 burst after the late weak block anchors 10 and 11."
+    },
+    {
+      "name": "overlay_outer_tail10_11_neg",
+      "direction": "overlay",
+      "family": "outer_excitation_return_pair",
+      "burst_kind": "outer",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": -90,
+      "rationale": "Same as outer tail overlay, but reverse burst direction to test the opposite dynamic sweep while still returning to the same anchors."
+    },
+    {
+      "name": "overlay_inner_tail10_11_pos",
+      "direction": "overlay",
+      "family": "inner_excitation_return_pair",
+      "burst_kind": "inner",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Keep faithful12 anchors unchanged; add short legal inner +90/-90 burst after anchors 10 and 11 to inject y-axis dynamic excitation."
+    },
+    {
+      "name": "overlay_inner_tail10_11_neg",
+      "direction": "overlay",
+      "family": "inner_excitation_return_pair",
+      "burst_kind": "inner",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": -90,
+      "rationale": "Reverse-direction inner burst after anchors 10 and 11, preserving the same 12 anchors and total time."
+    },
+    {
+      "name": "overlay_outer_early4_5_pos",
+      "direction": "overlay",
+      "family": "outer_excitation_return_pair",
+      "burst_kind": "outer",
+      "target_anchor_nodes": [
+        4,
+        5
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Add short outer excitation-return bursts on the early z-family block (anchors 4 and 5) while preserving the original anchor face sequence."
+    },
+    {
+      "name": "overlay_inner_early4_5_pos",
+      "direction": "overlay",
+      "family": "inner_excitation_return_pair",
+      "burst_kind": "inner",
+      "target_anchor_nodes": [
+        4,
+        5
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Add short inner excitation-return bursts on the early block (anchors 4 and 5), keeping anchors unchanged and total time at 1200 s."
+    }
+  ],
+  "markov42_rows": [
+    {
+      "candidate_name": "overlay_inner_early4_5_pos",
+      "direction": "overlay",
+      "family": "inner_excitation_return_pair",
+      "burst_kind": "inner",
+      "target_anchor_nodes": [
+        4,
+        5
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Add short inner excitation-return bursts on the early block (anchors 4 and 5), keeping anchors unchanged and total time at 1200 s.",
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 20.85938048316656,
+          "median_pct_error": 4.864593742495007,
+          "max_pct_error": 115.31186869636909
+        },
+        "key_param_errors": {
+          "dKa_yy": 105.3632368734959,
+          "dKg_zz": 70.91118930127148,
+          "Ka2_y": 99.94066367912099,
+          "Ka2_z": 42.15022550563129,
+          "dKg_xz": 13.902448368776724,
+          "dKa_xz": 14.40564824417723
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3overlay_overlay_inner_early4_5_pos_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 20.85938048316656,
+          "improvement_pct_points": -8.983429567129575,
+          "relative_improvement_pct": -75.64387585164718
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 4.864593742495007,
+          "improvement_pct_points": -3.62635725079932,
+          "relative_improvement_pct": -292.86467287305123
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 115.31186869636909,
+          "improvement_pct_points": -15.337815202967747,
+          "relative_improvement_pct": -15.341795863043703
+        }
+      }
+    },
+    {
+      "candidate_name": "overlay_outer_tail10_11_pos",
+      "direction": "overlay",
+      "family": "outer_excitation_return_pair",
+      "burst_kind": "outer",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Keep faithful12 anchors unchanged; add short legal outer +90/-90 burst after the late weak block anchors 10 and 11.",
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 20.991301052861097,
+          "median_pct_error": 2.006188441414838,
+          "max_pct_error": 112.50075050750337
+        },
+        "key_param_errors": {
+          "dKa_yy": 112.50075050750337,
+          "dKg_zz": 87.08972162030373,
+          "Ka2_y": 99.9700987586104,
+          "Ka2_z": 55.467537683095834,
+          "dKg_xz": 17.19939502199966,
+          "dKa_xz": 16.094206456683725
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3overlay_overlay_outer_tail10_11_pos_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 20.991301052861097,
+          "improvement_pct_points": -9.11535013682411,
+          "relative_improvement_pct": -76.75469696085531
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 2.006188441414838,
+          "improvement_pct_points": -0.7679519497191509,
+          "relative_improvement_pct": -62.01981244047242
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 112.50075050750337,
+          "improvement_pct_points": -12.526697014102027,
+          "relative_improvement_pct": -12.529948097912062
+        }
+      }
+    },
+    {
+      "candidate_name": "overlay_outer_tail10_11_neg",
+      "direction": "overlay",
+      "family": "outer_excitation_return_pair",
+      "burst_kind": "outer",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": -90,
+      "rationale": "Same as outer tail overlay, but reverse burst direction to test the opposite dynamic sweep while still returning to the same anchors.",
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 22.495416908311054,
+          "median_pct_error": 3.7936175129714176,
+          "max_pct_error": 111.66424605020013
+        },
+        "key_param_errors": {
+          "dKa_yy": 103.01452481254714,
+          "dKg_zz": 88.26067396650143,
+          "Ka2_y": 99.99478059404964,
+          "Ka2_z": 60.01126662077976,
+          "dKg_xz": 18.521564393915078,
+          "dKa_xz": 17.49406045751762
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3overlay_overlay_outer_tail10_11_neg_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 22.495416908311054,
+          "improvement_pct_points": -10.619465992274067,
+          "relative_improvement_pct": -89.4199215486299
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 3.7936175129714176,
+          "improvement_pct_points": -2.5553810212757306,
+          "relative_improvement_pct": -206.37261447337067
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 111.66424605020013,
+          "improvement_pct_points": -11.690192556798792,
+          "relative_improvement_pct": -11.693226540594743
+        }
+      }
+    },
+    {
+      "candidate_name": "overlay_outer_early4_5_pos",
+      "direction": "overlay",
+      "family": "outer_excitation_return_pair",
+      "burst_kind": "outer",
+      "target_anchor_nodes": [
+        4,
+        5
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Add short outer excitation-return bursts on the early z-family block (anchors 4 and 5) while preserving the original anchor face sequence.",
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 22.536918281906942,
+          "median_pct_error": 3.9985208303861777,
+          "max_pct_error": 105.42415852775919
+        },
+        "key_param_errors": {
+          "dKa_yy": 102.85507627428562,
+          "dKg_zz": 92.18476729900163,
+          "Ka2_y": 99.95346087970083,
+          "Ka2_z": 69.56751315083878,
+          "dKg_xz": 20.67482134588402,
+          "dKa_xz": 20.51887597942108
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3overlay_overlay_outer_early4_5_pos_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 22.536918281906942,
+          "improvement_pct_points": -10.660967365869956,
+          "relative_improvement_pct": -89.76937881642516
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 3.9985208303861777,
+          "improvement_pct_points": -2.7602843386904907,
+          "relative_improvement_pct": -222.92060985139076
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 105.42415852775919,
+          "improvement_pct_points": -5.450105034357847,
+          "relative_improvement_pct": -5.451519513228074
+        }
+      }
+    },
+    {
+      "candidate_name": "overlay_inner_tail10_11_pos",
+      "direction": "overlay",
+      "family": "inner_excitation_return_pair",
+      "burst_kind": "inner",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": 90,
+      "rationale": "Keep faithful12 anchors unchanged; add short legal inner +90/-90 burst after anchors 10 and 11 to inject y-axis dynamic excitation.",
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 24.484958908228545,
+          "median_pct_error": 5.6763043295895175,
+          "max_pct_error": 115.97843715341023
+        },
+        "key_param_errors": {
+          "dKa_yy": 105.2882090034681,
+          "dKg_zz": 115.97843715341023,
+          "Ka2_y": 99.96056998269628,
+          "Ka2_z": 103.86817848140623,
+          "dKg_xz": 30.896808901284317,
+          "dKa_xz": 30.587419115921417
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3overlay_overlay_inner_tail10_11_pos_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 24.484958908228545,
+          "improvement_pct_points": -12.60900799219156,
+          "relative_improvement_pct": -106.17261793465877
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 5.6763043295895175,
+          "improvement_pct_points": -4.438067837893831,
+          "relative_improvement_pct": -358.4184336076363
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 115.97843715341023,
+          "improvement_pct_points": -16.004383660008884,
+          "relative_improvement_pct": -16.00853731619998
+        }
+      }
+    },
+    {
+      "candidate_name": "overlay_inner_tail10_11_neg",
+      "direction": "overlay",
+      "family": "inner_excitation_return_pair",
+      "burst_kind": "inner",
+      "target_anchor_nodes": [
+        10,
+        11
+      ],
+      "burst_angle_deg": -90,
+      "rationale": "Reverse-direction inner burst after anchors 10 and 11, preserving the same 12 anchors and total time.",
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 33.75739883965441,
+          "median_pct_error": 4.552562944485796,
+          "max_pct_error": 224.73753769283314
+        },
+        "key_param_errors": {
+          "dKa_yy": 109.56062400080546,
+          "dKg_zz": 115.20477891519543,
+          "Ka2_y": 99.94586160101782,
+          "Ka2_z": 54.12801626854933,
+          "dKg_xz": 15.411197204698174,
+          "dKa_xz": 15.13666829016637
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3overlay_overlay_inner_tail10_11_neg_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 33.75739883965441,
+          "improvement_pct_points": -21.881447923617422,
+          "relative_improvement_pct": -184.2500704012616
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 4.552562944485796,
+          "improvement_pct_points": -3.3143264527901093,
+          "relative_improvement_pct": -267.6650603513831
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 224.73753769283314,
+          "improvement_pct_points": -124.7634841994318,
+          "relative_improvement_pct": -124.79586436661454
+        }
+      }
+    }
+  ],
+  "best_overlay": {
+    "candidate_name": "overlay_inner_early4_5_pos",
+    "direction": "overlay",
+    "family": "inner_excitation_return_pair",
+    "rationale": "Add short inner excitation-return bursts on the early block (anchors 4 and 5), keeping anchors unchanged and total time at 1200 s.",
+    "burst_kind": "inner",
+    "target_anchor_nodes": [
+      4,
+      5
+    ],
+    "burst_angle_deg": 90,
+    "anchor_face_sequence": [
+      "+Y",
+      "-Z",
+      "+X",
+      "+Y",
+      "-X",
+      "+Z",
+      "-Y",
+      "-Z",
+      "-X",
+      "-Y",
+      "+X",
+      "+Z"
+    ],
+    "all_rows": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 1,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 2,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 3,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 72.0,
+        "node_total_s": 92.0,
+        "anchor_id": 4,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 2.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 2.0,
+        "node_total_s": 4.0,
+        "anchor_id": 4,
+        "segment_role": "burst_out"
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 2.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 2.0,
+        "node_total_s": 4.0,
+        "anchor_id": 4,
+        "segment_role": "burst_return"
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 72.0,
+        "node_total_s": 92.0,
+        "anchor_id": 5,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 2.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 2.0,
+        "node_total_s": 4.0,
+        "anchor_id": 5,
+        "segment_role": "burst_out"
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 2.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 2.0,
+        "node_total_s": 4.0,
+        "anchor_id": 5,
+        "segment_role": "burst_return"
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 6,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 7,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 8,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 9,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 10,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 11,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 12,
+        "segment_role": "anchor"
+      }
+    ],
+    "all_actions": [
+      {
+        "pos_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 1,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 2,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 3,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 4,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 5,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 180,
+        "anchor_id": 4,
+        "segment_role": "burst_out"
+      },
+      {
+        "pos_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 180,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 4,
+        "segment_role": "burst_return"
+      },
+      {
+        "pos_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 5,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 8,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 180,
+        "anchor_id": 5,
+        "segment_role": "burst_out"
+      },
+      {
+        "pos_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 180,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 5,
+        "segment_role": "burst_return"
+      },
+      {
+        "pos_id": 10,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 6,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 7,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 12,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 8,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 13,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 9,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 14,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 10,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 15,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 11,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 16,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 12,
+        "segment_role": "anchor"
+      }
+    ],
+    "all_faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.1102230246251564e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.1102230246251564e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.0,
+          1.232595164407831e-32,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "-X",
+        "face_key": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          1.232595164407831e-32,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.0,
+          1.232595164407831e-32,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "-X",
+        "face_key": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          1.232595164407831e-32,
+          1.0
+        ],
+        "face_name": "+Z",
+        "face_key": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-Y",
+        "face_key": [
+          0,
+          -1,
+          0
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.0,
+          -2.220446049250313e-16,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-X",
+        "face_key": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.1102230246251565e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-Y",
+        "face_key": [
+          0,
+          -1,
+          0
+        ]
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "face_name": "+Z",
+        "face_key": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 20.85938048316656,
+        "median_pct_error": 4.864593742495007,
+        "max_pct_error": 115.31186869636909
+      },
+      "key_param_errors": {
+        "dKa_yy": 105.3632368734959,
+        "dKg_zz": 70.91118930127148,
+        "Ka2_y": 99.94066367912099,
+        "Ka2_z": 42.15022550563129,
+        "dKg_xz": 13.902448368776724,
+        "dKa_xz": 14.40564824417723
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3overlay_overlay_inner_early4_5_pos_shared_noise0p08_param_errors.json",
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 20.858062366492618,
+        "median_pct_error": 4.86280175601649,
+        "max_pct_error": 115.30224595709697
+      },
+      "key_param_errors": {
+        "dKa_yy": 105.36930769289863,
+        "dKg_zz": 70.91196413554228,
+        "Ka2_y": 99.9406548232148,
+        "Ka2_z": 42.15068984967083,
+        "dKg_xz": 13.902289505567333,
+        "dKa_xz": 14.405526896528853
+      }
+    },
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3overlay_overlay_inner_early4_5_pos_shared_noise0p08_param_errors.json",
+    "kf36_status": "rerun",
+    "delta_vs_faithful_markov42": {
+      "mean_pct_error": {
+        "base": 15.290300274032441,
+        "candidate": 20.85938048316656,
+        "improvement_pct_points": -5.569080209134119,
+        "relative_improvement_pct": -36.422307667770944
+      },
+      "median_pct_error": {
+        "base": 1.483362834112179,
+        "candidate": 4.864593742495007,
+        "improvement_pct_points": -3.381230908382828,
+        "relative_improvement_pct": -227.94361774653464
+      },
+      "max_pct_error": {
+        "base": 122.58269656383278,
+        "candidate": 115.31186869636909,
+        "improvement_pct_points": 7.270827867463694,
+        "relative_improvement_pct": 5.931365577096388
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 122.58269656383278,
+          "candidate": 105.3632368734959,
+          "improvement_pct_points": 17.21945969033689
+        },
+        "dKg_zz": {
+          "base": 85.57075351197156,
+          "candidate": 70.91118930127148,
+          "improvement_pct_points": 14.659564210700083
+        },
+        "Ka2_y": {
+          "base": 99.94129544126406,
+          "candidate": 99.94066367912099,
+          "improvement_pct_points": 0.0006317621430724785
+        },
+        "Ka2_z": {
+          "base": 64.70431004852547,
+          "candidate": 42.15022550563129,
+          "improvement_pct_points": 22.55408454289418
+        },
+        "dKg_xz": {
+          "base": 18.68063496921905,
+          "candidate": 13.902448368776724,
+          "improvement_pct_points": 4.778186600442325
+        },
+        "dKa_xz": {
+          "base": 18.85408106874926,
+          "candidate": 14.40564824417723,
+          "improvement_pct_points": 4.448432824572029
+        }
+      }
+    },
+    "delta_vs_incumbent": {
+      "mean_pct_error": {
+        "incumbent": 11.875950916036986,
+        "candidate": 20.85938048316656,
+        "improvement_pct_points": -8.983429567129575,
+        "relative_improvement_pct": -75.64387585164718
+      },
+      "median_pct_error": {
+        "incumbent": 1.238236491695687,
+        "candidate": 4.864593742495007,
+        "improvement_pct_points": -3.62635725079932,
+        "relative_improvement_pct": -292.86467287305123
+      },
+      "max_pct_error": {
+        "incumbent": 99.97405349340134,
+        "candidate": 115.31186869636909,
+        "improvement_pct_points": -15.337815202967747,
+        "relative_improvement_pct": -15.341795863043703
+      }
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": {
+        "base": 1.5563790869355025,
+        "candidate": 20.85938048316656,
+        "improvement_pct_points": -19.303001396231057,
+        "relative_improvement_pct": -1240.2506277720877
+      },
+      "median_pct_error": {
+        "base": 0.812799823665583,
+        "candidate": 4.864593742495007,
+        "improvement_pct_points": -4.051793918829424,
+        "relative_improvement_pct": -498.49837572018066
+      },
+      "max_pct_error": {
+        "base": 14.713291940947315,
+        "candidate": 115.31186869636909,
+        "improvement_pct_points": -100.59857675542177,
+        "relative_improvement_pct": -683.7258253229817
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 0.9477898404987541,
+          "candidate": 105.3632368734959,
+          "improvement_pct_points": -104.41544703299714
+        },
+        "dKg_zz": {
+          "base": 0.851304114610006,
+          "candidate": 70.91118930127148,
+          "improvement_pct_points": -70.05988518666148
+        },
+        "Ka2_y": {
+          "base": 1.9994816607900874,
+          "candidate": 99.94066367912099,
+          "improvement_pct_points": -97.9411820183309
+        },
+        "Ka2_z": {
+          "base": 1.2883358751632203,
+          "candidate": 42.15022550563129,
+          "improvement_pct_points": -40.86188963046807
+        },
+        "dKg_xz": {
+          "base": 0.3510978642553199,
+          "candidate": 13.902448368776724,
+          "improvement_pct_points": -13.551350504521405
+        },
+        "dKa_xz": {
+          "base": 0.3274679937728792,
+          "candidate": 14.40564824417723,
+          "improvement_pct_points": -14.078180250404351
+        }
+      }
+    }
+  },
+  "material_improvement_over_incumbent": false,
+  "bottom_line": "No. Under the user-suggested excitation-overlay branch, the best <=1200 s overlay candidate is overlay_inner_early4_5_pos, but it does not materially beat legal_flip_8_11_12 on the shared Markov42 metric.",
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_legal_dualaxis_excitation_overlay_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_legal_dualaxis_excitation_overlay_2026-03-31.md"
+  }
+}

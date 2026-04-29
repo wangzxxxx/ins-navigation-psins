@@ -1,0 +1,95 @@
+{
+  "baseline": {
+    "name": "markov42_baseline",
+    "overall": {
+      "mean_pct_error": 1.9544212948566337,
+      "median_pct_error": 0.43062068381890417,
+      "max_pct_error": 15.12164342723992
+    },
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json"
+  },
+  "candidates": [
+    {
+      "name": "aux_blend_ka2_0p25_lever_0p00",
+      "overall": {
+        "mean_pct_error": 1.9922301668221998,
+        "median_pct_error": 0.6433124589275216,
+        "max_pct_error": 15.121562764354021
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -0.03780887196556604,
+        "median_pct_error": -0.21269177510861748,
+        "max_pct_error": 8.066288589958504e-05
+      },
+      "verdict_vs_baseline": "mixed",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/AUX42_markov_aux_blend_ka2_0p25_lever_0p00_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "aux_blend_ka2_0p50_lever_0p00",
+      "overall": {
+        "mean_pct_error": 2.0300390387877645,
+        "median_pct_error": 0.6433124589275216,
+        "max_pct_error": 15.12148210146812
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -0.07561774393113074,
+        "median_pct_error": -0.21269177510861748,
+        "max_pct_error": 0.00016132577180094643
+      },
+      "verdict_vs_baseline": "mixed",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/AUX42_markov_aux_blend_ka2_0p50_lever_0p00_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "aux_blend_ka2_0p25_lever_0p25",
+      "overall": {
+        "mean_pct_error": 1.9922340947411155,
+        "median_pct_error": 0.643336361589316,
+        "max_pct_error": 15.121562764354021
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -0.03781279988448172,
+        "median_pct_error": -0.21271567777041178,
+        "max_pct_error": 8.066288589958504e-05
+      },
+      "verdict_vs_baseline": "mixed",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/AUX42_markov_aux_blend_ka2_0p25_lever_0p25_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "aux_blend_ka2_0p50_lever_0p25",
+      "overall": {
+        "mean_pct_error": 2.03004296670668,
+        "median_pct_error": 0.643336361589316,
+        "max_pct_error": 15.12148210146812
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -0.0756216718500462,
+        "median_pct_error": -0.21271567777041178,
+        "max_pct_error": 0.00016132577180094643
+      },
+      "verdict_vs_baseline": "mixed",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/AUX42_markov_aux_blend_ka2_0p50_lever_0p25_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "aux_full_ka2_lever",
+      "overall": {
+        "mean_pct_error": 2.105672494394559,
+        "median_pct_error": 0.6434080695746816,
+        "max_pct_error": 15.121320775696331
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -0.1512511995379251,
+        "median_pct_error": -0.21278738575577738,
+        "max_pct_error": 0.00032265154358945836
+      },
+      "verdict_vs_baseline": "mixed",
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/AUX42_markov_aux_full_ka2_lever_ch3faithful12_shared_noise0p08_param_errors.json"
+    }
+  ],
+  "best_candidate": "aux_blend_ka2_0p25_lever_0p00",
+  "noise_scale": 0.08,
+  "att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

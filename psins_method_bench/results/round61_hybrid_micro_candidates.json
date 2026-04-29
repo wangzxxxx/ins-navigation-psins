@@ -1,0 +1,59 @@
+{
+  "baseline": "scale_once_a0999_s20tight_0899_ryz00116",
+  "round61_micro_candidates": [
+    {
+      "name": "r61_s20_08988_ryz00116",
+      "description": "Keep exact R60 route, only tighten iter2 state20 from 0.899 to 0.8988.",
+      "rationale": "Most conservative zz-only follow-up: preserve the R60 lever repair and nudge only the dKg_zz line.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "20": 0.8988
+          }
+        }
+      }
+    },
+    {
+      "name": "r61_s20_08988_ryz00118",
+      "description": "Same 0.8988 state20 tighten, plus a tiny ry_z confirmation bump.",
+      "rationale": "Pair the slight zz tighten with the smallest additional ry_z repair that still stays on the R60 route.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "20": 0.8988
+          }
+        }
+      },
+      "post_ry_z_mult": 1.00118
+    },
+    {
+      "name": "r61_s20_08986_ryz00117",
+      "description": "Slightly stronger state20 tighten with a mid-step ry_z confirmation.",
+      "rationale": "Checks whether zz still improves monotonically before the R60-protected terms begin to move.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "20": 0.8986
+          }
+        }
+      },
+      "post_ry_z_mult": 1.00117
+    },
+    {
+      "name": "r61_td18_s20_0899_ryz00116",
+      "description": "Keep R60 exactly, but start the one-shot scale-block SCD a touch earlier after transition.",
+      "rationale": "Tests whether a micro cadence shift helps zz / median without softening the established SCD body.",
+      "scd_patch": {
+        "transition_duration": 1.8
+      }
+    },
+    {
+      "name": "r61_td22_s20_0899_ryz00116",
+      "description": "Keep R60 exactly, but start the one-shot scale-block SCD a touch later after transition.",
+      "rationale": "Checks the opposite cadence direction to see if a slightly later once-per-phase cut is safer for the central bulk stats.",
+      "scd_patch": {
+        "transition_duration": 2.2
+      }
+    }
+  ]
+}

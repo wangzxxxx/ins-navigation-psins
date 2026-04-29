@@ -1,0 +1,80 @@
+{
+  "baseline": "llm_alpha12_plus_lever_plus",
+  "hybrid_candidates": [
+    {
+      "name": "scd_sel_once_a0999_biaslink_commit",
+      "description": "R58 + once-per-static-phase gentle SCD on the five protected/targeted selected scale states during iter2 only.",
+      "rationale": "Safest first hybrid: only trim nav/bias coupling into the exact R58-selected states, once per stop, with optimal-style mild alpha.",
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "selected",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "scd_sel_once_a0998_biaslink_commit",
+      "description": "Same as candidate A, but a notch stronger alpha.",
+      "rationale": "Tests whether R58 still has a little room for dKg_xx/max repair if the selected-state coupling cut is made slightly stronger.",
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.998,
+        "transition_duration": 2.0,
+        "target": "selected",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "scd_sel_once_a0999_navonly_commit",
+      "description": "Same gentle selected-state decay, but preserve bias↔target coupling and only trim nav↔target leakage.",
+      "rationale": "Checks whether the hybrid is safer if it cuts only the ZUPT/nav noise pipeline while leaving bias observability routes untouched.",
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "selected",
+        "bias_to_target": false,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "scd_scale_once_a0999_biaslink_commit",
+      "description": "Expand the once-per-phase cut from selected states to the full dKg/dKa block, still keeping Ka2/lever outside the decay target.",
+      "rationale": "Tests whether the hybrid helps more if the SCD idea covers the whole scale/misalignment block while still protecting the lever terms R58 already holds well.",
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "scale_block",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "scd_sel_repeat_a09998_biaslink_commit",
+      "description": "Ultra-gentle repeated post-transition decay on selected states during iter2 only.",
+      "rationale": "Checks the other transition style: instead of one cut per stop, apply a nearly no-op repeated suppression after the grace period.",
+      "scd": {
+        "mode": "repeat_after_transition",
+        "alpha": 0.9998,
+        "transition_duration": 2.0,
+        "target": "selected",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    }
+  ]
+}

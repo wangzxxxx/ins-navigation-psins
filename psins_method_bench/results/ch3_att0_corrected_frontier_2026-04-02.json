@@ -1,0 +1,340 @@
+{
+  "task": "chapter-3 att0 correction baseline check",
+  "report_date": "2026-04-02",
+  "noise_scale": 0.08,
+  "shared_noise_config": {
+    "arw_dpsh": 0.0004,
+    "vrw_ugpsHz": 0.4,
+    "bi_g_dph": 0.00016,
+    "bi_a_ug": 0.4,
+    "tau_g": 300.0,
+    "tau_a": 300.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "corrected_att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "patch_targets": {
+    "direct_builder_fixes": [
+      "psins_method_bench/scripts/compare_ch3_12pos_path_baselines.py",
+      "psins_method_bench/scripts/compare_ch3_12pos_path_bridge.py",
+      "psins_method_bench/scripts/compare_ch3_current_vs_faithful_whiteonly.py",
+      "psins_method_bench/scripts/diagnose_ch3_12pos_repair.py"
+    ],
+    "transitive_search_dependents_via_compare_ch3_12pos_path_baselines": [
+      "psins_method_bench/scripts/search_ch3_12pos_append_tail.py",
+      "psins_method_bench/scripts/search_ch3_12pos_closedloop_local_insertions.py",
+      "psins_method_bench/scripts/search_ch3_12pos_legal_dualaxis_excitation_overlay.py",
+      "psins_method_bench/scripts/search_ch3_12pos_legal_dualaxis_repairs.py",
+      "psins_method_bench/scripts/search_ch3_12pos_legal_dualaxis_second_layer.py",
+      "psins_method_bench/scripts/benchmark_ch3_12pos_coupled_repairs.py",
+      "psins_method_bench/scripts/benchmark_ch3_12pos_goalA_repairs.py",
+      "psins_method_bench/scripts/probe_ch3_12pos_coupled_repair_search.py"
+    ]
+  },
+  "candidate_set": {
+    "faithful12": {
+      "display_name": "faithful12 baseline",
+      "canonical_name": "faithful12",
+      "updated_result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      }
+    },
+    "anchor5_mainline": {
+      "display_name": "anchor5 far-z unified mainline",
+      "canonical_name": "zseed_l5_neg6_plus_relaymax_unified_l9y2p5",
+      "updated_result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_zseed_l5_neg6_plus_relaymax_unified_l9y2p5_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_zseed_l5_neg6_plus_relaymax_unified_l9y2p5_shared_noise0p08_param_errors.json"
+      }
+    },
+    "entry_frontier": {
+      "display_name": "entry-conditioned relay frontier",
+      "canonical_name": "entryrelay_l8x1_l9y1_unifiedcore",
+      "updated_result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_entryrelay_l8x1_l9y1_unifiedcore_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_entryrelay_l8x1_l9y1_unifiedcore_shared_noise0p08_param_errors.json"
+      }
+    }
+  },
+  "previous_results": {
+    "faithful12": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 15.290300274032441,
+          "median_pct_error": 1.483362834112179,
+          "max_pct_error": 122.58269656383278
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.58269656383278,
+          "dKg_zz": 85.57075351197156,
+          "Ka2_y": 99.94129544126406,
+          "Ka2_z": 64.70431004852547
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 15.288687861181792,
+          "median_pct_error": 1.4837439708458107,
+          "max_pct_error": 122.5882646997851
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.5882646997851,
+          "dKg_zz": 85.57095512255164,
+          "Ka2_y": 99.94128958152183,
+          "Ka2_z": 64.68594016040949
+        }
+      }
+    },
+    "anchor5_mainline": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 9.342834597406075,
+          "median_pct_error": 0.6929017664470851,
+          "max_pct_error": 99.57617664833235
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.4598288924069,
+          "dKg_zz": 32.443839329200934,
+          "Ka2_y": 99.57617664833235,
+          "Ka2_z": 2.8130545886211675
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 9.344106448603865,
+          "median_pct_error": 0.692985874266,
+          "max_pct_error": 99.57616548910508
+        },
+        "key_param_errors": {
+          "dKa_yy": 88.46159315891757,
+          "dKg_zz": 32.44842882539143,
+          "Ka2_y": 99.57616548910508,
+          "Ka2_z": 2.812479456525207
+        }
+      }
+    },
+    "entry_frontier": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 9.6143571701501,
+          "median_pct_error": 1.169495190391975,
+          "max_pct_error": 99.57427203346779
+        },
+        "key_param_errors": {
+          "dKa_yy": 89.80338624999708,
+          "dKg_zz": 58.490455769198014,
+          "Ka2_y": 99.57427203346779,
+          "Ka2_z": 1.6073462042485658
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 9.615324489450005,
+          "median_pct_error": 1.1694934658014238,
+          "max_pct_error": 99.57426594443608
+        },
+        "key_param_errors": {
+          "dKa_yy": 89.80621289336088,
+          "dKg_zz": 58.4944373235435,
+          "Ka2_y": 99.57426594443608,
+          "Ka2_z": 1.6065131987896522
+        }
+      }
+    }
+  },
+  "corrected_results": {
+    "faithful12": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.9544212948566337,
+          "median_pct_error": 0.43062068381890417,
+          "max_pct_error": 15.12164342723992
+        },
+        "key_param_errors": {
+          "dKa_yy": 2.8518392519687805,
+          "dKg_zz": 2.9396081058255543,
+          "Ka2_y": 15.12164342723992,
+          "Ka2_z": 0.3676756547566293
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.9543549309026789,
+          "median_pct_error": 0.43053588431934986,
+          "max_pct_error": 15.121086969267727
+        },
+        "key_param_errors": {
+          "dKa_yy": 2.852321774879297,
+          "dKg_zz": 2.9396315707592544,
+          "Ka2_y": 15.121086969267727,
+          "Ka2_z": 0.36769393779520876
+        }
+      },
+      "delta_vs_previous_markov42": {
+        "mean_pct_error": -13.335878979175808,
+        "median_pct_error": -1.0527421502932748,
+        "max_pct_error": -107.46105313659287
+      },
+      "delta_vs_previous_kf36": {
+        "mean_pct_error": -13.334332930279114,
+        "median_pct_error": -1.0532080865264608,
+        "max_pct_error": -107.46717773051738
+      }
+    },
+    "anchor5_mainline": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.284240404252806,
+          "median_pct_error": 0.690502915951059,
+          "max_pct_error": 6.0889632499570645
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9714741927559221,
+          "dKg_zz": 0.6032836393411775,
+          "Ka2_y": 4.117597831374257,
+          "Ka2_z": 0.3487315050589446
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.2839891070683542,
+          "median_pct_error": 0.6906643122352057,
+          "max_pct_error": 6.086955711714107
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9689296182048581,
+          "dKg_zz": 0.6025666536111305,
+          "Ka2_y": 4.115852838255694,
+          "Ka2_z": 0.34807627991757617
+        }
+      },
+      "delta_vs_previous_markov42": {
+        "mean_pct_error": -8.058594193153269,
+        "median_pct_error": -0.0023988504960261725,
+        "max_pct_error": -93.48721339837529
+      },
+      "delta_vs_previous_kf36": {
+        "mean_pct_error": -8.060117341535511,
+        "median_pct_error": -0.0023215620307942553,
+        "max_pct_error": -93.48920977739097
+      }
+    },
+    "entry_frontier": {
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.083702776059443,
+          "median_pct_error": 0.616727275661396,
+          "max_pct_error": 5.136843058718484
+        },
+        "key_param_errors": {
+          "dKa_yy": 1.639461494893938,
+          "dKg_zz": 0.9083402652273427,
+          "Ka2_y": 2.98309109134045,
+          "Ka2_z": 0.05999472291575868
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.083413120975727,
+          "median_pct_error": 0.6168802563602107,
+          "max_pct_error": 5.137120332477994
+        },
+        "key_param_errors": {
+          "dKa_yy": 1.6368319938326055,
+          "dKg_zz": 0.9076783880076436,
+          "Ka2_y": 2.9811474836972915,
+          "Ka2_z": 0.059358777435327394
+        }
+      },
+      "delta_vs_previous_markov42": {
+        "mean_pct_error": -8.530654394090657,
+        "median_pct_error": -0.5527679147305791,
+        "max_pct_error": -94.43742897474931
+      },
+      "delta_vs_previous_kf36": {
+        "mean_pct_error": -8.531911368474278,
+        "median_pct_error": -0.5526132094412131,
+        "max_pct_error": -94.43714561195809
+      }
+    }
+  },
+  "ranking": {
+    "markov42": {
+      "previous_mean_order": [
+        "anchor5_mainline",
+        "entry_frontier",
+        "faithful12"
+      ],
+      "previous_max_order": [
+        "entry_frontier",
+        "anchor5_mainline",
+        "faithful12"
+      ],
+      "corrected_mean_order": [
+        "entry_frontier",
+        "anchor5_mainline",
+        "faithful12"
+      ],
+      "corrected_max_order": [
+        "entry_frontier",
+        "anchor5_mainline",
+        "faithful12"
+      ],
+      "anchor5_minus_entry_previous": {
+        "mean_pct_error": -0.2715225727440256,
+        "median_pct_error": -0.4765934239448899,
+        "max_pct_error": 0.0019046148645571748
+      },
+      "anchor5_minus_entry_corrected": {
+        "mean_pct_error": 0.20053762819336285,
+        "median_pct_error": 0.07377564028966299,
+        "max_pct_error": 0.9521201912385804
+      }
+    },
+    "kf36": {
+      "previous_mean_order": [
+        "anchor5_mainline",
+        "entry_frontier",
+        "faithful12"
+      ],
+      "previous_max_order": [
+        "entry_frontier",
+        "anchor5_mainline",
+        "faithful12"
+      ],
+      "corrected_mean_order": [
+        "entry_frontier",
+        "anchor5_mainline",
+        "faithful12"
+      ],
+      "corrected_max_order": [
+        "entry_frontier",
+        "anchor5_mainline",
+        "faithful12"
+      ],
+      "anchor5_minus_entry_previous": {
+        "mean_pct_error": -0.27121804084614,
+        "median_pct_error": -0.47650759153542377,
+        "max_pct_error": 0.0018995446690013296
+      },
+      "anchor5_minus_entry_corrected": {
+        "mean_pct_error": 0.20057598609262728,
+        "median_pct_error": 0.07378405587499504,
+        "max_pct_error": 0.9498353792361129
+      }
+    }
+  },
+  "stability_read": {
+    "material_ranking_change": true,
+    "markov42_anchor5_still_best_mean": false,
+    "markov42_entry_still_best_max": true,
+    "kf36_anchor5_still_best_mean": false,
+    "kf36_entry_still_best_max": true
+  },
+  "bottom_line": "Corrected att0=(0,0,0) materially changes at least one saved ordering; prior frontier conclusions must be revised against the new ranking fields above."
+}

@@ -1,0 +1,92 @@
+{
+  "round_name": "Round65_Mainline_ICG",
+  "innovation_direction": "innovation-consistency gated Round61",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "mainline_ladder": [
+    "kf36_noisy",
+    "markov42_noisy",
+    "markov42_plus_scd_baseline",
+    "round61",
+    "round65_candidates"
+  ],
+  "dataset": {
+    "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+    "noise_config": {
+      "noise_scale_tag": "mainline_1x_round53_family",
+      "arw_dpsh": 0.005,
+      "vrw_ugpsHz": 5.0,
+      "bi_g_dph": 0.002,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42
+    },
+    "constraint_note": "ONE fixed noisy dataset / ONE fixed noise strength / ONE fixed seed for all methods in this round"
+  },
+  "round65_candidates": [
+    {
+      "name": "r65_icg_balanced",
+      "description": "Innovation-consistency gate on both trust-feedback and SCD strength with balanced gain.",
+      "rationale": "Core mechanism test: consistency-derived gate controls both internalized feedback aggressiveness and SCD suppression depth.",
+      "innovation_gate": {
+        "target_nis": 1.0,
+        "ema_beta": 0.08,
+        "slope": 1.4,
+        "gate_floor": 0.72,
+        "warmup_static_meas": 8,
+        "feedback_gate_power": 1.0,
+        "feedback_gate_floor": 0.72,
+        "scd_gate_power": 1.0,
+        "scd_gate_floor": 0.76
+      }
+    },
+    {
+      "name": "r65_icg_feedback_priority",
+      "description": "Stronger consistency gating on trust-feedback path; keep SCD path relatively mild.",
+      "rationale": "Ablation-style emphasis: test whether over-correction is mainly from feedback route rather than SCD route.",
+      "innovation_gate": {
+        "target_nis": 1.0,
+        "ema_beta": 0.08,
+        "slope": 1.65,
+        "gate_floor": 0.68,
+        "warmup_static_meas": 8,
+        "feedback_gate_power": 1.25,
+        "feedback_gate_floor": 0.65,
+        "scd_gate_power": 0.7,
+        "scd_gate_floor": 0.84
+      }
+    },
+    {
+      "name": "r65_icg_scd_priority",
+      "description": "Stronger consistency gating on SCD alpha path; keep trust-feedback path relatively mild.",
+      "rationale": "Counter-ablation: test whether mis-match risk is dominated by cross-cov suppression timing/strength.",
+      "innovation_gate": {
+        "target_nis": 1.0,
+        "ema_beta": 0.08,
+        "slope": 1.65,
+        "gate_floor": 0.68,
+        "warmup_static_meas": 8,
+        "feedback_gate_power": 0.72,
+        "feedback_gate_floor": 0.84,
+        "scd_gate_power": 1.3,
+        "scd_gate_floor": 0.64
+      }
+    },
+    {
+      "name": "r65_icg_slow_ema_guarded",
+      "description": "Slower innovation-EMA with moderate gate slope to avoid reacting to transient spikes.",
+      "rationale": "Robustness-style variant: reduce gate jitter and see whether smoother consistency estimate helps protected metrics.",
+      "innovation_gate": {
+        "target_nis": 1.0,
+        "ema_beta": 0.05,
+        "slope": 1.55,
+        "gate_floor": 0.74,
+        "warmup_static_meas": 10,
+        "feedback_gate_power": 1.0,
+        "feedback_gate_floor": 0.74,
+        "scd_gate_power": 1.0,
+        "scd_gate_floor": 0.78
+      }
+    }
+  ]
+}

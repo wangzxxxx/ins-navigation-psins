@@ -1,0 +1,581 @@
+{
+  "task": "corrected faithful12 vs faithful12 + only anchor11 xpair outerhold",
+  "report_date": "2026-04-03",
+  "noise_scale": 0.08,
+  "corrected_att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "hard_constraints": {
+    "keep_original_faithful12_backbone_unchanged": true,
+    "insert_only_anchor11_xpair_outerhold_after_anchor11_before_anchor12": true,
+    "real_dual_axis_legality_only": true,
+    "continuity_safe_execution": true,
+    "same_shared_low_noise_setup": true,
+    "no_other_motifs_mixed": true,
+    "same_base_row_timing_for_original_12_steps": true
+  },
+  "references": {
+    "faithful12": {
+      "label": "corrected faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.9544212948566337,
+          "median_pct_error": 0.43062068381890417,
+          "max_pct_error": 15.12164342723992
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0106503323827263,
+          "eb_x": 14.231617445817285,
+          "Ka2_y": 15.12164342723992,
+          "dKa_xx": 2.326041029798204,
+          "dKg_yy": 2.48950860648218
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.12164342723992
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.9543549309026789,
+          "median_pct_error": 0.43053588431934986,
+          "max_pct_error": 15.121086969267727
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.010211603329637,
+          "eb_x": 14.230670596275147,
+          "Ka2_y": 15.121086969267727,
+          "dKa_xx": 2.32596007677614,
+          "dKg_yy": 2.489406084047194
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.121086969267727
+        }
+      },
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "total_time_s": 1200.0,
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      }
+    }
+  },
+  "candidate": {
+    "candidate_name": "anchor11_xpair_outerhold_only_on_faithful12",
+    "family": "xpair_only_comparison",
+    "hypothesis_id": "X1",
+    "rationale": "Keep the original faithful12 backbone unchanged and insert only the 4-step anchor11 xpair outerhold motif after anchor11 and before anchor12.",
+    "total_time_s": 1240.0,
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.7044663242741402,
+        "median_pct_error": 0.9059329905654856,
+        "max_pct_error": 11.066157414772857
+      },
+      "key_param_errors": {
+        "dKg_xx": 0.7742699159631593,
+        "eb_x": 10.31740327264768,
+        "Ka2_y": 11.066157414772857,
+        "dKa_xx": 2.182902599799861,
+        "dKg_yy": 1.047161911070856
+      },
+      "max_driver": {
+        "name": "Ka2_y",
+        "pct_error": 11.066157414772857
+      }
+    },
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 1.7042663300547296,
+        "median_pct_error": 0.9060116637365607,
+        "max_pct_error": 11.065060786338657
+      },
+      "key_param_errors": {
+        "dKg_xx": 0.7731609386087628,
+        "eb_x": 10.31616639792159,
+        "Ka2_y": 11.065060786338657,
+        "dKa_xx": 2.182764492496489,
+        "dKg_yy": 1.047169882472173
+      },
+      "max_driver": {
+        "name": "Ka2_y",
+        "pct_error": 11.065060786338657
+      }
+    },
+    "continuity_checks": [
+      {
+        "anchor_id": 11,
+        "closure_rule": "exact_same_mechanism_state_before_resume",
+        "state_before_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              0.0,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "state_after_insertion": {
+          "beta_deg": -90,
+          "outer_axis_body": [
+            0,
+            0,
+            -1
+          ],
+          "outer_family": "z",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          "face_name": "+X",
+          "C": [
+            [
+              1.1102230246251565e-16,
+              4.930380657631324e-32,
+              -1.0
+            ],
+            [
+              5.473822126268817e-48,
+              1.0,
+              4.930380657631324e-32
+            ],
+            [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ]
+          ]
+        },
+        "closure_ok": true,
+        "next_base_action_preview": {
+          "kind": "inner",
+          "motor_angle_deg": 90,
+          "effective_body_axis": [
+            0,
+            1,
+            0
+          ],
+          "outer_mode": null,
+          "state_before": {
+            "beta_deg": -90,
+            "outer_axis_body": [
+              0,
+              0,
+              -1
+            ],
+            "outer_family": "z",
+            "gravity_body": [
+              1.0,
+              0.0,
+              1.1102230246251565e-16
+            ],
+            "face_name": "+X",
+            "C": [
+              [
+                1.1102230246251565e-16,
+                4.930380657631324e-32,
+                -1.0
+              ],
+              [
+                5.473822126268817e-48,
+                1.0,
+                4.930380657631324e-32
+              ],
+              [
+                1.0,
+                0.0,
+                1.1102230246251565e-16
+              ]
+            ]
+          },
+          "state_after": {
+            "beta_deg": 0,
+            "outer_axis_body": [
+              1,
+              0,
+              0
+            ],
+            "outer_family": "x",
+            "gravity_body": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "face_name": "+Z",
+            "C": [
+              [
+                1.0,
+                4.930380657631324e-32,
+                0.0
+              ],
+              [
+                -4.930380657631324e-32,
+                1.0,
+                1.0947644252537633e-47
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "face_after": [
+            0,
+            1,
+            0
+          ]
+        }
+      }
+    ],
+    "result_files": {
+      "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_anchor11_xpair_outerhold_only_on_faithful12_shared_noise0p08_param_errors.json",
+      "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_anchor11_xpair_outerhold_only_on_faithful12_shared_noise0p08_param_errors.json"
+    },
+    "result_modes": {
+      "markov42": "rerun",
+      "kf36": "rerun"
+    },
+    "delta_vs_faithful12_markov42": {
+      "mean_pct_error": 0.2499549705824935,
+      "median_pct_error": -0.4753123067465814,
+      "max_pct_error": 4.055486012467064
+    },
+    "delta_vs_faithful12_kf36": {
+      "mean_pct_error": 0.25008860084794926,
+      "median_pct_error": -0.47547577941721086,
+      "max_pct_error": 4.05602618292907
+    },
+    "beats_faithful12_on_markov42_mean_and_max": true,
+    "beats_faithful12_on_kf36_mean_and_max": true
+  },
+  "xpair_only_timing_table": [
+    {
+      "pos_id": 1,
+      "anchor_id": 1,
+      "segment_role": "anchor",
+      "label": "anchor_1",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 2,
+      "anchor_id": 2,
+      "segment_role": "anchor",
+      "label": "anchor_2",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 3,
+      "anchor_id": 3,
+      "segment_role": "anchor",
+      "label": "anchor_3",
+      "motor_action": "I(0→90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 4,
+      "anchor_id": 4,
+      "segment_role": "anchor",
+      "label": "anchor_4",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 5,
+      "anchor_id": 5,
+      "segment_role": "anchor",
+      "label": "anchor_5",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 6,
+      "anchor_id": 6,
+      "segment_role": "anchor",
+      "label": "anchor_6",
+      "motor_action": "I(90→0) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 7,
+      "anchor_id": 7,
+      "segment_role": "anchor",
+      "label": "anchor_7",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 8,
+      "anchor_id": 8,
+      "segment_role": "anchor",
+      "label": "anchor_8",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 9,
+      "anchor_id": 9,
+      "segment_role": "anchor",
+      "label": "anchor_9",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 10,
+      "anchor_id": 10,
+      "segment_role": "anchor",
+      "label": "anchor_10",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 11,
+      "anchor_id": 11,
+      "segment_role": "anchor",
+      "label": "anchor_11",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 12,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_open",
+      "label": "l11_xpair_outerhold_inner_open",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 13,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_sweep",
+      "label": "l11_xpair_outerhold_outer_sweep",
+      "motor_action": "O[-X] +90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 14,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_return",
+      "label": "l11_xpair_outerhold_outer_return",
+      "motor_action": "O[-X] -90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 15,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_close",
+      "label": "l11_xpair_outerhold_inner_close",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 16,
+      "anchor_id": 12,
+      "segment_role": "anchor",
+      "label": "anchor_12",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    }
+  ],
+  "bottom_line": {
+    "markov42_statement": "xpair-only is a genuine improvement over corrected faithful12 on the Markov42 mean+max gate.",
+    "kf36_statement": "KF36 confirms the same mean+max improvement direction.",
+    "overall_statement": "Under the original faithful12 timing convention, adding only the anchor11 xpair outerhold motif is still a clean positive move versus corrected faithful12."
+  },
+  "files": {
+    "report_md": "/root/.openclaw/workspace/reports/psins_ch3_corrected_faithful12_vs_anchor11_xpair_only_2026-04-03.md",
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_corrected_faithful12_vs_anchor11_xpair_only_2026-04-03.json",
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_anchor11_xpair_outerhold_only_on_faithful12_shared_noise0p08_param_errors.json",
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_anchor11_xpair_outerhold_only_on_faithful12_shared_noise0p08_param_errors.json"
+  }
+}

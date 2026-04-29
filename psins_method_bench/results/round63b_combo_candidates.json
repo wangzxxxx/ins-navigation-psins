@@ -1,0 +1,117 @@
+{
+  "round62_reference_winner": "r62_ultralow_guard_soft_neutral",
+  "round63a_reference_winner": "r63a_ul_scd_floor_off",
+  "probe_scales": [
+    1.0,
+    0.1,
+    0.08,
+    0.05,
+    0.03
+  ],
+  "round63b_candidates": [
+    {
+      "name": "r63b_combo_floor_off_r62soft",
+      "description": "Exact Round62 winner plus the Round63-A floor-off rule: below 0.08x disable the iter2 once-per-phase SCD entirely.",
+      "rationale": "Direct combination baseline. Tests whether Round62’s ultra-low alpha-guard is already enough to absorb the SCD-off tradeoff.",
+      "round62_guard": {
+        "apply_policy_names": [
+          "iter2_commit"
+        ],
+        "start_noise_scale": 0.08,
+        "full_noise_scale": 0.03,
+        "power": 2.0,
+        "state_alpha_pull": {
+          "16": 1.0,
+          "21": 1.0
+        },
+        "rx_y_post_pull": 1.0
+      },
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.08,
+        "scd_override": {
+          "apply_policy_names": [],
+          "target_name": "disabled"
+        }
+      }
+    },
+    {
+      "name": "r63b_combo_floor_off_003only",
+      "description": "Keep the Round62 winner intact through 0.05x, and only at 0.03x disable the iter2 once-per-phase SCD.",
+      "rationale": "Weaker floor-off variant. If 0.05x is still in the sweet spot, this localizes the SCD ablation to the deepest ultra-low regime only.",
+      "round62_guard": {
+        "apply_policy_names": [
+          "iter2_commit"
+        ],
+        "start_noise_scale": 0.08,
+        "full_noise_scale": 0.03,
+        "power": 2.0,
+        "state_alpha_pull": {
+          "16": 1.0,
+          "21": 1.0
+        },
+        "rx_y_post_pull": 1.0
+      },
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.05,
+        "scd_override": {
+          "apply_policy_names": [],
+          "target_name": "disabled"
+        }
+      }
+    },
+    {
+      "name": "r63b_combo_alpha09995_r62soft",
+      "description": "Round62 winner plus a milder ultra-low SCD alpha: below 0.08x change once-per-phase SCD alpha from 0.999 to 0.9995.",
+      "rationale": "Alpha-weaken variant from Round63-A. Keeps the SCD body alive, but softens the cut enough that Round62 guard may handle the remaining ultra-low overshoot.",
+      "round62_guard": {
+        "apply_policy_names": [
+          "iter2_commit"
+        ],
+        "start_noise_scale": 0.08,
+        "full_noise_scale": 0.03,
+        "power": 2.0,
+        "state_alpha_pull": {
+          "16": 1.0,
+          "21": 1.0
+        },
+        "rx_y_post_pull": 1.0
+      },
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.08,
+        "scd_override": {
+          "alpha": 0.9995
+        }
+      }
+    },
+    {
+      "name": "r63b_combo_core3_r62soft",
+      "description": "Round62 winner plus a smaller ultra-low SCD target: below 0.08x keep SCD only on the Round61 backbone trio dKg_xx / dKg_xy / dKg_zz.",
+      "rationale": "Target-weaken variant from Round63-A. Keeps the SCD idea only on the three states that still looked structurally helpful, while Round62 guard handles yy / Ka_xx-side overshoot.",
+      "round62_guard": {
+        "apply_policy_names": [
+          "iter2_commit"
+        ],
+        "start_noise_scale": 0.08,
+        "full_noise_scale": 0.03,
+        "power": 2.0,
+        "state_alpha_pull": {
+          "16": 1.0,
+          "21": 1.0
+        },
+        "rx_y_post_pull": 1.0
+      },
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.08,
+        "scd_override": {
+          "target": "custom",
+          "target_name": "selected_core3",
+          "target_indices": [
+            12,
+            15,
+            20
+          ]
+        }
+      }
+    }
+  ]
+}

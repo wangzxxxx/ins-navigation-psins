@@ -1,0 +1,43 @@
+{
+  "noise_scale": 0.08,
+  "baseline": {
+    "name": "markov42_baseline",
+    "overall": {
+      "mean_pct_error": 1.9544212948566337,
+      "median_pct_error": 0.43062068381890417,
+      "max_pct_error": 15.12164342723992
+    }
+  },
+  "freeze": {
+    "name": "freeze_weak_refine",
+    "overall": {
+      "mean_pct_error": 74.78523990142409,
+      "median_pct_error": 11.416987415865394,
+      "max_pct_error": 699.9999999999999
+    }
+  },
+  "delta": {
+    "mean_pct_error": {
+      "baseline": 1.9544212948566337,
+      "freeze": 74.78523990142409,
+      "improvement_pct_points": -72.83081860656746
+    },
+    "median_pct_error": {
+      "baseline": 0.43062068381890417,
+      "freeze": 11.416987415865394,
+      "improvement_pct_points": -10.98636673204649
+    },
+    "max_pct_error": {
+      "baseline": 15.12164342723992,
+      "freeze": 699.9999999999999,
+      "improvement_pct_points": -684.8783565727599
+    }
+  },
+  "verdict": "freeze_worse",
+  "files": {
+    "baseline_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+    "freeze_json": "/root/.openclaw/workspace/psins_method_bench/results/FZ42_markov_weakfreeze_ch3faithful12_shared_noise0p08_param_errors.json",
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_markov_vs_freeze_ch3faithful12_shared_noise0p08.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_markov_vs_freeze_ch3faithful12_2026-04-03.md"
+  }
+}

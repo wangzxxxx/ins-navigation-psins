@@ -1,0 +1,3406 @@
+{
+  "experiment": "benchmark_ch3_12pos_coupled_repairs",
+  "report_date": "2026-03-31",
+  "noise_scale": 0.08,
+  "noise_config": {
+    "arw_dpsh": 0.0004,
+    "vrw_ugpsHz": 0.4,
+    "bi_g_dph": 0.00016,
+    "bi_a_ug": 0.4,
+    "tau_g": 300.0,
+    "tau_a": 300.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "reference_paths": [
+    {
+      "name": "default18_reference",
+      "kind": "reference",
+      "rationale": "Current default 18-position shared benchmark path.",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 70.0,
+          "post_static_s": 70.0,
+          "node_total_s": 149.0
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 13,
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 14,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 15,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 16,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 17,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        },
+        {
+          "pos_id": 18,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 9.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 20.0,
+          "node_total_s": 49.0
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            0.0,
+            -3.3306690738754696e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            0.0,
+            -1.0,
+            -3.3306690738754696e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 13,
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 14,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 15,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 16,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 17,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 18,
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "structural_summary": {
+        "face_sequence": [
+          "-X",
+          "-Z",
+          "+X",
+          "-Z",
+          "-X",
+          "+Z",
+          "+Z",
+          "+Y",
+          "-Z",
+          "-Y",
+          "-Z",
+          "+Y",
+          "+Z",
+          "+Z",
+          "+Z",
+          "+Z",
+          "+Z",
+          "+Z"
+        ],
+        "face_counts": {
+          "-X": 2,
+          "-Z": 4,
+          "+X": 1,
+          "+Z": 8,
+          "+Y": 2,
+          "-Y": 1
+        },
+        "axis_balance": {
+          "X": -1,
+          "Y": 1,
+          "Z": 4
+        },
+        "first_cover_index": {
+          "+X": 3,
+          "-X": 1,
+          "+Y": 8,
+          "-Y": 10,
+          "+Z": 6,
+          "-Z": 2
+        },
+        "full_cover_index": 10,
+        "late_repeat_nodes": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          5,
+          9,
+          11,
+          12,
+          15,
+          16,
+          17,
+          18
+        ],
+        "total_time_s": 982.0
+      }
+    },
+    {
+      "name": "chapter3_original",
+      "kind": "baseline",
+      "rationale": "Faithful chapter-3 12-position reconstruction with [10,10,80] split per node.",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -3.3306690738754696e-16,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            4.440892098500626e-16,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            4.440892098500626e-16,
+            1.0
+          ]
+        }
+      ],
+      "structural_summary": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "-Y",
+          "-Z",
+          "-X",
+          "+Y",
+          "+X",
+          "+Z"
+        ],
+        "face_counts": {
+          "+Y": 3,
+          "-Z": 2,
+          "+X": 2,
+          "-X": 2,
+          "+Z": 2,
+          "-Y": 1
+        },
+        "axis_balance": {
+          "X": 0,
+          "Y": 2,
+          "Z": 0
+        },
+        "first_cover_index": {
+          "+X": 3,
+          "-X": 5,
+          "+Y": 1,
+          "-Y": 7,
+          "+Z": 6,
+          "-Z": 2
+        },
+        "full_cover_index": 7,
+        "late_repeat_nodes": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          8,
+          9,
+          10
+        ],
+        "total_time_s": 1200.0
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "name": "coupled_A_flip10_11_retime",
+      "kind": "local_coupled_late_block",
+      "rationale": "Repair the late harmful block locally: flip old nodes 10 and 11 together to remove the late +Y/+X revisit, then retime both to [10,30,60].",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 1
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 2
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 3
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 4
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 5
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 6
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 7
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 8
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 9
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0,
+          "source_node": 10
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0,
+          "source_node": 11
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 12
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -1.1102230246251565e-16,
+            1.0,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            0.0,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            0.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "structural_summary": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "-Y",
+          "-Z",
+          "-X",
+          "-Y",
+          "+X",
+          "+Z"
+        ],
+        "face_counts": {
+          "+Y": 2,
+          "-Z": 2,
+          "+X": 2,
+          "-X": 2,
+          "+Z": 2,
+          "-Y": 2
+        },
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "first_cover_index": {
+          "+X": 3,
+          "-X": 5,
+          "+Y": 1,
+          "-Y": 7,
+          "+Z": 6,
+          "-Z": 2
+        },
+        "full_cover_index": 7,
+        "late_repeat_nodes": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          8,
+          9
+        ],
+        "total_time_s": 1200.0
+      }
+    },
+    {
+      "name": "coupled_B_move7to4_move12to10",
+      "kind": "two_reorders",
+      "rationale": "Bring old node 7 (-Y source) forward to slot 4 for earlier six-face coverage, and bring old node 12 forward to slot 10 so the tail stops ending with the original 10-11-12 harmful pattern.",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 1
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 2
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 3
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 7
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 4
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 5
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 6
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 8
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 9
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 12
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 10
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 11
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            1.1102230246251568e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -2.465190328815662e-32,
+            1.0,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            1.1102230246251563e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.1102230246251563e-16,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            2.2204460492503128e-16
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            2.220446049250313e-16,
+            -1.0,
+            -1.1102230246251563e-16
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -3.3306690738754696e-16,
+            1.0,
+            2.220446049250313e-16
+          ]
+        }
+      ],
+      "structural_summary": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "-Y",
+          "-Y",
+          "-Y",
+          "-X",
+          "+Y"
+        ],
+        "face_counts": {
+          "+Y": 3,
+          "-Z": 1,
+          "+X": 2,
+          "-X": 2,
+          "+Z": 1,
+          "-Y": 3
+        },
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "first_cover_index": {
+          "+X": 3,
+          "-X": 6,
+          "+Y": 1,
+          "-Y": 8,
+          "+Z": 7,
+          "-Z": 2
+        },
+        "full_cover_index": 8,
+        "late_repeat_nodes": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          5,
+          10
+        ],
+        "total_time_s": 1200.0
+      }
+    },
+    {
+      "name": "coupled_C_move7to4_move12to10_retime",
+      "kind": "two_reorders_plus_retime",
+      "rationale": "Same structure as coupled_B, plus retime old nodes 10 and 11 to [10,30,60] to check whether the residual gap is still dwell-sensitive.",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 1
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 2
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 3
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 7
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 4
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 5
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 6
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 8
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 9
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 12
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0,
+          "source_node": 10
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0,
+          "source_node": 11
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            1.1102230246251568e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -2.465190328815662e-32,
+            1.0,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            1.1102230246251563e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.1102230246251563e-16,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            2.2204460492503128e-16
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            2.220446049250313e-16,
+            -1.0,
+            -1.1102230246251563e-16
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            -1.0,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -3.3306690738754696e-16,
+            1.0,
+            2.220446049250313e-16
+          ]
+        }
+      ],
+      "structural_summary": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "-Y",
+          "-Y",
+          "-Y",
+          "-X",
+          "+Y"
+        ],
+        "face_counts": {
+          "+Y": 3,
+          "-Z": 1,
+          "+X": 2,
+          "-X": 2,
+          "+Z": 1,
+          "-Y": 3
+        },
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "first_cover_index": {
+          "+X": 3,
+          "-X": 6,
+          "+Y": 1,
+          "-Y": 8,
+          "+Z": 7,
+          "-Z": 2
+        },
+        "full_cover_index": 8,
+        "late_repeat_nodes": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          5,
+          10
+        ],
+        "total_time_s": 1200.0
+      }
+    },
+    {
+      "name": "coupled_D_move7to4_move10to8",
+      "kind": "two_reorders",
+      "rationale": "Bring old node 7 (-Y source) forward to slot 4, and move old node 10 forward to slot 8 so the old late harmful block is split before the last quarter of the path.",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 1
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 2
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 3
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 7
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 4
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 5
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 6
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 10
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 8
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 9
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 11
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 12
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            1.1102230246251568e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -2.465190328815662e-32,
+            1.0,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            1.1102230246251563e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.1102230246251563e-16,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            1.1102230246251564e-16,
+            -1.1102230246251564e-16,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251564e-16,
+            -1.0,
+            1.232595164407831e-32
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            2.465190328815662e-32,
+            -1.0,
+            -1.1102230246251564e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            -1.1102230246251568e-16,
+            -1.1102230246251564e-16
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            -1.232595164407831e-32,
+            -1.1102230246251568e-16,
+            -1.0
+          ]
+        }
+      ],
+      "structural_summary": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "+Z",
+          "-Y",
+          "-Y",
+          "-X",
+          "-Z"
+        ],
+        "face_counts": {
+          "+Y": 2,
+          "-Z": 2,
+          "+X": 2,
+          "-X": 2,
+          "+Z": 2,
+          "-Y": 2
+        },
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "first_cover_index": {
+          "+X": 3,
+          "-X": 6,
+          "+Y": 1,
+          "-Y": 9,
+          "+Z": 7,
+          "-Z": 2
+        },
+        "full_cover_index": 9,
+        "late_repeat_nodes": [
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          5,
+          8
+        ],
+        "total_time_s": 1200.0
+      }
+    },
+    {
+      "name": "coupled_E_move7to4_move10to8_retime",
+      "kind": "two_reorders_plus_retime",
+      "rationale": "Same structure as coupled_D, plus retime old nodes 10 and 11 to [10,30,60] so the relocated late block is less post-heavy.",
+      "rows": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 1
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 2
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 3
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 7
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 4
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 5
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 6
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0,
+          "source_node": 10
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 8
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 9
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0,
+          "source_node": 11
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 10.0,
+          "post_static_s": 80.0,
+          "node_total_s": 100.0,
+          "source_node": 12
+        }
+      ],
+      "faces": [
+        {
+          "pos_id": 1,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            0.0,
+            1.0,
+            1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 2,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            0.0,
+            2.220446049250313e-16,
+            -1.0
+          ]
+        },
+        {
+          "pos_id": 3,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            2.220446049250313e-16,
+            -1.1102230246251565e-16
+          ]
+        },
+        {
+          "pos_id": 4,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+X",
+          "gravity_body": [
+            1.0,
+            1.1102230246251568e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 5,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Y",
+          "gravity_body": [
+            -2.465190328815662e-32,
+            1.0,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 6,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            1.1102230246251563e-16,
+            2.220446049250313e-16
+          ]
+        },
+        {
+          "pos_id": 7,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            1.1102230246251565e-16,
+            1.1102230246251563e-16,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 8,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "+Z",
+          "gravity_body": [
+            1.1102230246251564e-16,
+            -1.1102230246251564e-16,
+            1.0
+          ]
+        },
+        {
+          "pos_id": 9,
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            1.1102230246251564e-16,
+            -1.0,
+            1.232595164407831e-32
+          ]
+        },
+        {
+          "pos_id": 10,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": -90.0,
+          "face_name": "-Y",
+          "gravity_body": [
+            2.465190328815662e-32,
+            -1.0,
+            -1.1102230246251564e-16
+          ]
+        },
+        {
+          "pos_id": 11,
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-X",
+          "gravity_body": [
+            -1.0,
+            -1.1102230246251568e-16,
+            -1.1102230246251564e-16
+          ]
+        },
+        {
+          "pos_id": 12,
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "angle_deg": 90.0,
+          "face_name": "-Z",
+          "gravity_body": [
+            -1.232595164407831e-32,
+            -1.1102230246251568e-16,
+            -1.0
+          ]
+        }
+      ],
+      "structural_summary": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "+Z",
+          "-Y",
+          "-Y",
+          "-X",
+          "-Z"
+        ],
+        "face_counts": {
+          "+Y": 2,
+          "-Z": 2,
+          "+X": 2,
+          "-X": 2,
+          "+Z": 2,
+          "-Y": 2
+        },
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "first_cover_index": {
+          "+X": 3,
+          "-X": 6,
+          "+Y": 1,
+          "-Y": 9,
+          "+Z": 7,
+          "-Z": 2
+        },
+        "full_cover_index": 9,
+        "late_repeat_nodes": [
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          5,
+          8
+        ],
+        "total_time_s": 1200.0
+      }
+    }
+  ],
+  "method_summaries": {
+    "markov42_noisy": {
+      "method_key": "markov42_noisy",
+      "ranked": [
+        {
+          "candidate_name": "default18_reference",
+          "method_key": "markov42_noisy",
+          "metrics": {
+            "overall": {
+              "mean_pct_error": 1.5563790869355025,
+              "median_pct_error": 0.812799823665583,
+              "max_pct_error": 14.713291940947315
+            },
+            "key_param_errors": {
+              "dKa_yy": 0.9477898404987541,
+              "dKg_zz": 0.851304114610006,
+              "Ka2_y": 1.9994816607900874,
+              "Ka2_z": 1.2883358751632203,
+              "dKg_xz": 0.3510978642553199,
+              "dKa_xz": 0.3274679937728792
+            },
+            "top_param": {
+              "name": "eb_x",
+              "pct_error": 14.713291940947315
+            }
+          },
+          "run_source": "reused_verified",
+          "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+          "comparison": {
+            "delta_mean_vs_original": -13.73392118709694,
+            "delta_median_vs_original": -0.6705630104465959,
+            "delta_max_vs_original": -107.86940462288547,
+            "mean_gap_closed_frac": 1.0,
+            "median_gap_closed_frac": 1.0,
+            "max_gap_closed_frac": 1.0,
+            "mean_reduction_vs_original_frac": 0.8982113458177989,
+            "max_reduction_vs_original_frac": 0.8799725217882964
+          }
+        },
+        {
+          "candidate_name": "coupled_E_move7to4_move10to8_retime",
+          "method_key": "markov42_noisy",
+          "metrics": {
+            "overall": {
+              "mean_pct_error": 2.939292630814867,
+              "median_pct_error": 0.6545826666217158,
+              "max_pct_error": 30.934031628600874
+            },
+            "key_param_errors": {
+              "dKa_yy": 0.8418326985495846,
+              "dKg_zz": 2.0834315154593432,
+              "Ka2_y": 3.0254536717647684,
+              "Ka2_z": 1.6595920364191445,
+              "dKg_xz": 0.8838198837352738,
+              "dKa_xz": 0.5072356757251196
+            },
+            "top_param": {
+              "name": "dKa_xx",
+              "pct_error": 30.934031628600874
+            }
+          },
+          "run_source": "rerun",
+          "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3coupledE_move7to4_move10to8_retime_shared_noise0p08_param_errors.json",
+          "comparison": {
+            "delta_mean_vs_original": -12.351007643217574,
+            "delta_median_vs_original": -0.8287801674904631,
+            "delta_max_vs_original": -91.6486649352319,
+            "mean_gap_closed_frac": 0.899306722017699,
+            "median_gap_closed_frac": 1.2359467411399478,
+            "max_gap_closed_frac": 0.8496261312986594,
+            "mean_reduction_vs_original_frac": 0.8077675010865106,
+            "max_reduction_vs_original_frac": 0.7476476493361155
+          }
+        },
+        {
+          "candidate_name": "coupled_D_move7to4_move10to8",
+          "method_key": "markov42_noisy",
+          "metrics": {
+            "overall": {
+              "mean_pct_error": 3.0025617112135934,
+              "median_pct_error": 0.7284595345793392,
+              "max_pct_error": 30.58058295826766
+            },
+            "key_param_errors": {
+              "dKa_yy": 0.7789776107484084,
+              "dKg_zz": 2.1953869544529616,
+              "Ka2_y": 2.1114760371076797,
+              "Ka2_z": 2.088111858311911,
+              "dKg_xz": 0.7931126817448425,
+              "dKa_xz": 0.67794145841027
+            },
+            "top_param": {
+              "name": "dKa_xx",
+              "pct_error": 30.58058295826766
+            }
+          },
+          "run_source": "rerun",
+          "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3coupledD_move7to4_move10to8_shared_noise0p08_param_errors.json",
+          "comparison": {
+            "delta_mean_vs_original": -12.287738562818848,
+            "delta_median_vs_original": -0.7549032995328397,
+            "delta_max_vs_original": -92.00211360556513,
+            "mean_gap_closed_frac": 0.8946999473364691,
+            "median_gap_closed_frac": 1.1257753376973076,
+            "max_gap_closed_frac": 0.8529027663331151,
+            "mean_reduction_vs_original_frac": 0.8036296438002037,
+            "max_reduction_vs_original_frac": 0.7505309981303654
+          }
+        },
+        {
+          "candidate_name": "chapter3_original",
+          "method_key": "markov42_noisy",
+          "metrics": {
+            "overall": {
+              "mean_pct_error": 15.290300274032441,
+              "median_pct_error": 1.483362834112179,
+              "max_pct_error": 122.58269656383278
+            },
+            "key_param_errors": {
+              "dKa_yy": 122.58269656383278,
+              "dKg_zz": 85.57075351197156,
+              "Ka2_y": 99.94129544126406,
+              "Ka2_z": 64.70431004852547,
+              "dKg_xz": 18.68063496921905,
+              "dKa_xz": 18.85408106874926
+            },
+            "top_param": {
+              "name": "dKa_yy",
+              "pct_error": 122.58269656383278
+            }
+          },
+          "run_source": "reused_verified",
+          "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+          "comparison": {
+            "delta_mean_vs_original": 0.0,
+            "delta_median_vs_original": 0.0,
+            "delta_max_vs_original": 0.0,
+            "mean_gap_closed_frac": 0.0,
+            "median_gap_closed_frac": 0.0,
+            "max_gap_closed_frac": 0.0,
+            "mean_reduction_vs_original_frac": 0.0,
+            "max_reduction_vs_original_frac": 0.0
+          }
+        },
+        {
+          "candidate_name": "coupled_C_move7to4_move12to10_retime",
+          "method_key": "markov42_noisy",
+          "metrics": {
+            "overall": {
+              "mean_pct_error": 16.140981064544427,
+              "median_pct_error": 7.644586145529313,
+              "max_pct_error": 95.49843379809147
+            },
+            "key_param_errors": {
+              "dKa_yy": 1.7661438950193997,
+              "dKg_zz": 26.87244201680899,
+              "Ka2_y": 95.49843379809147,
+              "Ka2_z": 21.835851546260105,
+              "dKg_xz": 1.8591688358981788,
+              "dKa_xz": 12.94084627605823
+            },
+            "top_param": {
+              "name": "Ka2_y",
+              "pct_error": 95.49843379809147
+            }
+          },
+          "run_source": "rerun",
+          "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3coupledC_move7to4_move12to10_retime_shared_noise0p08_param_errors.json",
+          "comparison": {
+            "delta_mean_vs_original": 0.8506807905119853,
+            "delta_median_vs_original": 6.161223311417134,
+            "delta_max_vs_original": -27.084262765741315,
+            "mean_gap_closed_frac": -0.061940124668197635,
+            "median_gap_closed_frac": -9.18813476948833,
+            "max_gap_closed_frac": 0.2510838254872053,
+            "mean_reduction_vs_original_frac": -0.05563532273834405,
+            "max_reduction_vs_original_frac": 0.2209468670942286
+          }
+        },
+        {
+          "candidate_name": "coupled_B_move7to4_move12to10",
+          "method_key": "markov42_noisy",
+          "metrics": {
+            "overall": {
+              "mean_pct_error": 16.148402357197586,
+              "median_pct_error": 7.950492258991863,
+              "max_pct_error": 94.81731760992137
+            },
+            "key_param_errors": {
+              "dKa_yy": 1.7626517184714665,
+              "dKg_zz": 27.06182148521259,
+              "Ka2_y": 94.81731760992137,
+              "Ka2_z": 21.804877970131635,
+              "dKg_xz": 1.9322302110363843,
+              "dKa_xz": 13.073519199057529
+            },
+            "top_param": {
+              "name": "Ka2_y",
+              "pct_error": 94.81731760992137
+            }
+          },
+          "run_source": "rerun",
+          "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3coupledB_move7to4_move12to10_shared_noise0p08_param_errors.json",
+          "comparison": {
+            "delta_mean_vs_original": 0.8581020831651447,
+            "delta_median_vs_original": 6.467129424879684,
+            "delta_max_vs_original": -27.76537895391141,
+            "mean_gap_closed_frac": -0.06248048692541896,
+            "median_gap_closed_frac": -9.64432771287603,
+            "max_gap_closed_frac": 0.25739809217432846,
+            "mean_reduction_vs_original_frac": -0.05612068224863195,
+            "max_reduction_vs_original_frac": 0.2265032482741402
+          }
+        },
+        {
+          "candidate_name": "coupled_A_flip10_11_retime",
+          "method_key": "markov42_noisy",
+          "metrics": {
+            "overall": {
+              "mean_pct_error": 16.66132611382786,
+              "median_pct_error": 2.162576574999086,
+              "max_pct_error": 105.55273039437031
+            },
+            "key_param_errors": {
+              "dKa_yy": 105.55273039437031,
+              "dKg_zz": 89.99621438454926,
+              "Ka2_y": 99.94956970196195,
+              "Ka2_z": 69.63973756808515,
+              "dKg_xz": 21.33824023185691,
+              "dKa_xz": 20.61336142197745
+            },
+            "top_param": {
+              "name": "dKa_yy",
+              "pct_error": 105.55273039437031
+            }
+          },
+          "run_source": "reused_verified",
+          "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3coupledA_flip1011_retime_shared_noise0p08_param_errors.json",
+          "comparison": {
+            "delta_mean_vs_original": 1.3710258397954203,
+            "delta_median_vs_original": 0.6792137408869072,
+            "delta_max_vs_original": -17.02996616946247,
+            "mean_gap_closed_frac": -0.09982770551235602,
+            "median_gap_closed_frac": -1.012900697332753,
+            "max_gap_closed_frac": 0.15787577792794646,
+            "mean_reduction_vs_original_frac": -0.0896663777181562,
+            "max_reduction_vs_original_frac": 0.13892634643254412
+          }
+        }
+      ],
+      "best_repair": {
+        "candidate_name": "coupled_E_move7to4_move10to8_retime",
+        "method_key": "markov42_noisy",
+        "metrics": {
+          "overall": {
+            "mean_pct_error": 2.939292630814867,
+            "median_pct_error": 0.6545826666217158,
+            "max_pct_error": 30.934031628600874
+          },
+          "key_param_errors": {
+            "dKa_yy": 0.8418326985495846,
+            "dKg_zz": 2.0834315154593432,
+            "Ka2_y": 3.0254536717647684,
+            "Ka2_z": 1.6595920364191445,
+            "dKg_xz": 0.8838198837352738,
+            "dKa_xz": 0.5072356757251196
+          },
+          "top_param": {
+            "name": "dKa_xx",
+            "pct_error": 30.934031628600874
+          }
+        },
+        "run_source": "rerun",
+        "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3coupledE_move7to4_move10to8_retime_shared_noise0p08_param_errors.json",
+        "comparison": {
+          "delta_mean_vs_original": -12.351007643217574,
+          "delta_median_vs_original": -0.8287801674904631,
+          "delta_max_vs_original": -91.6486649352319,
+          "mean_gap_closed_frac": 0.899306722017699,
+          "median_gap_closed_frac": 1.2359467411399478,
+          "max_gap_closed_frac": 0.8496261312986594,
+          "mean_reduction_vs_original_frac": 0.8077675010865106,
+          "max_reduction_vs_original_frac": 0.7476476493361155
+        }
+      }
+    }
+  },
+  "kf36_recheck": {
+    "rows": [
+      {
+        "candidate_name": "default18_reference",
+        "method_key": "kf36_noisy",
+        "metrics": {
+          "overall": {
+            "mean_pct_error": 1.5564871665384443,
+            "median_pct_error": 0.8131877611261733,
+            "max_pct_error": 14.711353452042115
+          },
+          "key_param_errors": {
+            "dKa_yy": 0.9476606704907313,
+            "dKg_zz": 0.8522121112508451,
+            "Ka2_y": 2.0007501033211734,
+            "Ka2_z": 1.2888876792064823,
+            "dKg_xz": 0.35109847596388216,
+            "dKa_xz": 0.3275370623000178
+          },
+          "top_param": {
+            "name": "eb_x",
+            "pct_error": 14.711353452042115
+          }
+        },
+        "run_source": "reused_verified",
+        "run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+      },
+      {
+        "candidate_name": "chapter3_original",
+        "method_key": "kf36_noisy",
+        "metrics": {
+          "overall": {
+            "mean_pct_error": 15.288687861181792,
+            "median_pct_error": 1.4837439708458107,
+            "max_pct_error": 122.5882646997851
+          },
+          "key_param_errors": {
+            "dKa_yy": 122.5882646997851,
+            "dKg_zz": 85.57095512255164,
+            "Ka2_y": 99.94128958152183,
+            "Ka2_z": 64.68594016040949,
+            "dKg_xz": 18.674921597907467,
+            "dKa_xz": 18.84829522348288
+          },
+          "top_param": {
+            "name": "dKa_yy",
+            "pct_error": 122.5882646997851
+          }
+        },
+        "run_source": "reused_verified",
+        "run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      },
+      {
+        "candidate_name": "coupled_E_move7to4_move10to8_retime",
+        "method_key": "kf36_noisy",
+        "metrics": {
+          "overall": {
+            "mean_pct_error": 2.9389933977602483,
+            "median_pct_error": 0.6546836447326871,
+            "max_pct_error": 30.933911358140616
+          },
+          "key_param_errors": {
+            "dKa_yy": 0.8428501069293501,
+            "dKg_zz": 2.083197558901512,
+            "Ka2_y": 3.0280633289634538,
+            "Ka2_z": 1.6579549758222054,
+            "dKg_xz": 0.8838055240067823,
+            "dKa_xz": 0.5067704834745256
+          },
+          "top_param": {
+            "name": "dKa_xx",
+            "pct_error": 30.933911358140616
+          }
+        },
+        "run_source": "rerun",
+        "run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3coupledE_move7to4_move10to8_retime_shared_noise0p08_param_errors.json"
+      }
+    ],
+    "best_candidate_name": "coupled_E_move7to4_move10to8_retime"
+  },
+  "practical_verdict": {
+    "usable": true,
+    "definition": "Markov42 @ noise0p08 closes >=70% of both mean and max gap vs original relative to default18, with mean <=5% and max <=40%, while preserving 12 nodes / 1200 s."
+  },
+  "overall_conclusion": "yes — a coupled structural repair can make the faithful 12-node path practically usable. The best tested candidate is coupled_E_move7to4_move10to8_retime, which closes about 89.9% of the Markov42 mean gap and 85.0% of the max gap versus default18, while staying at exactly 12 nodes / 1200 s. It is still worse than default18, but it is no longer in the original broken regime.",
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_coupled_repairs_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_coupled_repairs_2026-03-31_noise0p08.md",
+    "script": "/root/.openclaw/workspace/psins_method_bench/scripts/benchmark_ch3_12pos_coupled_repairs.py"
+  }
+}

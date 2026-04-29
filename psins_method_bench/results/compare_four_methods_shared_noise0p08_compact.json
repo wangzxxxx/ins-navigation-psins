@@ -1,0 +1,76 @@
+{
+  "mode": "shared_dataset_apples_to_apples",
+  "noise_scale": 0.08,
+  "noise_scale_tag": "noise0p08",
+  "noise_config": {
+    "arw_dpsh": 0.0004,
+    "vrw_ugpsHz": 0.4,
+    "bi_g_dph": 0.00016,
+    "bi_a_ug": 0.4,
+    "tau_g": 300.0,
+    "tau_a": 300.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "files": {
+    "kf36_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_shared_noise0p08_param_errors.json",
+    "markov_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_shared_noise0p08_param_errors.json",
+    "scd_json": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_markov_neutral_shared_noise0p08_param_errors.json",
+    "round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R61_42state_gm1_round61_h_scd_state20_microtight_commit_shared_noise0p08_param_errors.json",
+    "compare_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_methods_shared_noise0p08.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_four_methods_shared_noise0p08_full_params_2026-03-29.md"
+  },
+  "overall_by_method": {
+    "kf36_noisy": {
+      "mean_pct_error": 1.5564871665384443,
+      "median_pct_error": 0.8131877611261733,
+      "max_pct_error": 14.711353452042115
+    },
+    "markov42_noisy": {
+      "mean_pct_error": 1.5563790869355025,
+      "median_pct_error": 0.812799823665583,
+      "max_pct_error": 14.713291940947315
+    },
+    "scd42_neutral": {
+      "mean_pct_error": 1.5531059338899633,
+      "median_pct_error": 0.7583522538401852,
+      "max_pct_error": 15.265739852473125
+    },
+    "round61": {
+      "mean_pct_error": 1.4442226300343577,
+      "median_pct_error": 0.43846101514601554,
+      "max_pct_error": 15.192360917619022
+    }
+  },
+  "best_by_metric": {
+    "mean_pct_error": {
+      "method": "round61",
+      "value": 1.4442226300343577
+    },
+    "median_pct_error": {
+      "method": "round61",
+      "value": 0.43846101514601554
+    },
+    "max_pct_error": {
+      "method": "kf36_noisy",
+      "value": 14.711353452042115
+    }
+  },
+  "round61_rank": {
+    "mean_pct_error": 1,
+    "median_pct_error": 1,
+    "max_pct_error": 3
+  },
+  "best_param_count": {
+    "kf36_noisy": 2,
+    "markov42_noisy": 4,
+    "scd42_neutral": 12,
+    "round61": 12
+  },
+  "execution": {
+    "kf36_noisy": "reused_verified",
+    "markov42_noisy": "reused_verified",
+    "scd42_neutral": "reused_verified",
+    "round61": "reused_verified"
+  }
+}

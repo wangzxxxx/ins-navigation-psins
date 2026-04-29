@@ -1,0 +1,118 @@
+[
+  {
+    "method": "adaptive_rq",
+    "returncode": 0,
+    "status": "ok",
+    "metrics": {
+      "method": "adaptive_rq",
+      "tuple_len": 5,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry"
+      ],
+      "eb_norm": 1.7053506652439553e-06,
+      "db_norm": 0.003795551707095921,
+      "Ka2_norm": 3.203650182294869e-06,
+      "rx_norm": 0.03626440521589098,
+      "ry_norm": 0.08606957016709159,
+      "p_trace_shape": [
+        14706,
+        36
+      ],
+      "x_trace_shape": [
+        14706,
+        36
+      ],
+      "iter_info_type": "list"
+    },
+    "llm_available": false,
+    "fallback_used": true,
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/adaptive_rq.stderr.txt",
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/adaptive_rq.stdout.txt"
+  },
+  {
+    "method": "huber_robust",
+    "returncode": 0,
+    "status": "ok",
+    "metrics": {
+      "method": "huber_robust",
+      "tuple_len": 5,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry"
+      ],
+      "eb_norm": 1.7831977587010536e-06,
+      "db_norm": 0.0037933748402355027,
+      "Ka2_norm": 3.2290704714191588e-06,
+      "rx_norm": 0.036249518591000576,
+      "ry_norm": 0.08606781879429408,
+      "p_trace_shape": [
+        24510,
+        36
+      ],
+      "x_trace_shape": [
+        24510,
+        36
+      ],
+      "iter_info_type": "list"
+    },
+    "llm_available": false,
+    "fallback_used": true,
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/huber_robust.stderr.txt",
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/huber_robust.stdout.txt"
+  },
+  {
+    "method": "innovation_gating",
+    "returncode": 0,
+    "status": "ok",
+    "metrics": {
+      "method": "innovation_gating",
+      "tuple_len": 5,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry"
+      ],
+      "eb_norm": 1.7831977587038743e-06,
+      "db_norm": 0.00379337484023264,
+      "Ka2_norm": 3.2290704714467843e-06,
+      "rx_norm": 0.0362495185910445,
+      "ry_norm": 0.08606781879430186,
+      "p_trace_shape": [
+        24510,
+        36
+      ],
+      "x_trace_shape": [
+        24510,
+        36
+      ],
+      "iter_info_type": "list"
+    },
+    "llm_available": false,
+    "fallback_used": true,
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/innovation_gating.stderr.txt",
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/innovation_gating.stdout.txt"
+  },
+  {
+    "method": "attention_inflation",
+    "returncode": -9,
+    "status": "killed_timeout",
+    "notes": "43-state KF + ShadowSimulationManager + LLM API. Timed out >15 min. Structurally different (clbtkfinit 43-state vs clbtkfinit_36 36-state, dual baseline/shadow KF loops).",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/attention_inflation.stderr.txt",
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/attention_inflation.stdout.txt"
+  }
+]

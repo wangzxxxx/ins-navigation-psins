@@ -1,0 +1,530 @@
+{
+  "round_name": "Round65C_SplitPoint_Search",
+  "round_type": "repair-axis search",
+  "innovation_direction": "dual-channel split-point search on feedback-vs-SCD axis",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "same_dataset_round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_round61_param_errors.json",
+  "same_dataset_round65_reference": {
+    "name": "r65_icg_feedback_priority",
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_icg_r65_icg_feedback_priority_param_errors.json"
+  },
+  "dataset": {
+    "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+    "source_trajectory_reference": "method_42state_gm1_round53_internalized_trustcov_release.py::_build_dataset",
+    "noise_config": {
+      "noise_scale_tag": "mainline_1x_round53_family",
+      "arw_dpsh": 0.005,
+      "vrw_ugpsHz": 5.0,
+      "bi_g_dph": 0.002,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42
+    },
+    "constraint_note": "Use exactly the same fixed noisy dataset/noise strength/seed as Round65 mainline"
+  },
+  "search_axis": {
+    "definition": "gap = feedback_floor - scd_floor",
+    "avg_floor_fixed": 0.755,
+    "gap_values": [
+      -0.24,
+      -0.18,
+      -0.12,
+      -0.06,
+      0.0,
+      0.06,
+      0.12,
+      0.18,
+      0.24,
+      0.32,
+      0.4
+    ]
+  },
+  "protected_metrics": [
+    "dKg_xy",
+    "dKg_yy",
+    "dKa_xx",
+    "rx_y",
+    "ry_z"
+  ],
+  "repair_metrics": [
+    "dKg_yy",
+    "dKa_xx",
+    "rx_y"
+  ],
+  "round65c_candidates": [
+    {
+      "name": "r65c_split_gap_m24",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=-0.24 -> feedback_floor=0.635, scd_floor=0.875.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": -0.24,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.635,
+        "apply_floor": 0.635
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.875,
+        "apply_floor": 0.875
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_m18",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=-0.18 -> feedback_floor=0.665, scd_floor=0.845.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": -0.18,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.665,
+        "apply_floor": 0.665
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.845,
+        "apply_floor": 0.845
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_m12",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=-0.12 -> feedback_floor=0.695, scd_floor=0.815.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": -0.12,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.6950000000000001,
+        "apply_floor": 0.6950000000000001
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.815,
+        "apply_floor": 0.815
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_m06",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=-0.06 -> feedback_floor=0.725, scd_floor=0.785.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": -0.06,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.725,
+        "apply_floor": 0.725
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.785,
+        "apply_floor": 0.785
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_p00",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=+0.00 -> feedback_floor=0.755, scd_floor=0.755.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": 0.0,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.755,
+        "apply_floor": 0.755
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.755,
+        "apply_floor": 0.755
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_p06",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=+0.06 -> feedback_floor=0.785, scd_floor=0.725.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": 0.06,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.785,
+        "apply_floor": 0.785
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.725,
+        "apply_floor": 0.725
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_p12",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=+0.12 -> feedback_floor=0.815, scd_floor=0.695.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": 0.12,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.815,
+        "apply_floor": 0.815
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.6950000000000001,
+        "apply_floor": 0.6950000000000001
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_p18",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=+0.18 -> feedback_floor=0.845, scd_floor=0.665.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": 0.18,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.845,
+        "apply_floor": 0.845
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.665,
+        "apply_floor": 0.665
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_p24",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=+0.24 -> feedback_floor=0.875, scd_floor=0.635.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": 0.24,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.875,
+        "apply_floor": 0.875
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.635,
+        "apply_floor": 0.635
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_p32",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=+0.32 -> feedback_floor=0.915, scd_floor=0.595.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": 0.32,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.915,
+        "apply_floor": 0.915
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.595,
+        "apply_floor": 0.595
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65c_split_gap_p40",
+      "description": "1D split-point sweep on the dual-channel axis with fixed average floor 0.755; gap=+0.40 -> feedback_floor=0.955, scd_floor=0.555.",
+      "rationale": "Hold the dual-channel skeleton fixed and search only the feedback-vs-SCD floor separation, so the optimum really answers where the split point should sit on this mechanism axis.",
+      "gap": 0.4,
+      "avg_floor": 0.755,
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "gate_floor": 0.9550000000000001,
+        "apply_floor": 0.9550000000000001
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "gate_floor": 0.5549999999999999,
+        "apply_floor": 0.5549999999999999
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "baseline": {
+    "overall": {
+      "mean_pct_error": 1.9544212948566337,
+      "median_pct_error": 0.43062068381890417,
+      "max_pct_error": 15.12164342723992
+    },
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+    "base_ka2y": -1.7356957196991969e-06
+  },
+  "proxy_scan": [
+    {
+      "factor": 0.7,
+      "ka2y_candidate": -1.2149870037894377e-06,
+      "proxy_obj": 1.4778188826755922
+    },
+    {
+      "factor": 0.8,
+      "ka2y_candidate": -1.3885565757593577e-06,
+      "proxy_obj": 1.4778160098595283
+    },
+    {
+      "factor": 0.9,
+      "ka2y_candidate": -1.5621261477292773e-06,
+      "proxy_obj": 1.4778144801746835
+    },
+    {
+      "factor": 0.95,
+      "ka2y_candidate": -1.648910933714237e-06,
+      "proxy_obj": 1.4778142190064707
+    },
+    {
+      "factor": 1.0,
+      "ka2y_candidate": -1.7356957196991969e-06,
+      "proxy_obj": 1.4778142936210645
+    },
+    {
+      "factor": 1.05,
+      "ka2y_candidate": -1.8224805056841568e-06,
+      "proxy_obj": 1.477814704018452
+    },
+    {
+      "factor": 1.1,
+      "ka2y_candidate": -1.9092652916691167e-06,
+      "proxy_obj": 1.4778154501986565
+    },
+    {
+      "factor": 1.15,
+      "ka2y_candidate": -1.996050077654076e-06,
+      "proxy_obj": 1.4778165321616596
+    },
+    {
+      "factor": 1.2,
+      "ka2y_candidate": -2.082834863639036e-06,
+      "proxy_obj": 1.4778179499074706
+    },
+    {
+      "factor": 1.3,
+      "ka2y_candidate": -2.256404435608956e-06,
+      "proxy_obj": 1.4778217927475032
+    }
+  ],
+  "best_candidate": {
+    "name": "ka2y_plus20pct",
+    "ka2y_factor": 1.2,
+    "overall": {
+      "mean_pct_error": 1.5121674435257055,
+      "median_pct_error": 0.43062068381890417,
+      "max_pct_error": 14.231617445817285
+    },
+    "delta_vs_baseline": {
+      "mean_pct_error": 0.4422538513309282,
+      "median_pct_error": 0.0,
+      "max_pct_error": 0.8900259814226352
+    },
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/KA2Y42_markov_ka2y_plus20pct_ch3faithful12_shared_noise0p08_param_errors.json"
+  },
+  "all_candidates": [
+    {
+      "name": "ka2y_proxy_best",
+      "ka2y_factor": 0.95,
+      "overall": {
+        "mean_pct_error": 2.0958852224779005,
+        "median_pct_error": 0.43062068381890417,
+        "max_pct_error": 19.365561255877928
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": -0.1414639276212668,
+        "median_pct_error": 0.0,
+        "max_pct_error": -4.243917828638008
+      },
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/KA2Y42_markov_ka2y_proxy_best_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "ka2y_plus10pct",
+      "ka2y_factor": 1.1,
+      "overall": {
+        "mean_pct_error": 1.6714934396140997,
+        "median_pct_error": 0.43062068381890417,
+        "max_pct_error": 14.231617445817285
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": 0.28292785524253405,
+        "median_pct_error": 0.0,
+        "max_pct_error": 0.8900259814226352
+      },
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/KA2Y42_markov_ka2y_plus10pct_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "ka2y_plus15pct",
+      "ka2y_factor": 1.15,
+      "overall": {
+        "mean_pct_error": 1.5300295119928333,
+        "median_pct_error": 0.43062068381890417,
+        "max_pct_error": 14.231617445817285
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": 0.4243917828638004,
+        "median_pct_error": 0.0,
+        "max_pct_error": 0.8900259814226352
+      },
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/KA2Y42_markov_ka2y_plus15pct_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    {
+      "name": "ka2y_plus20pct",
+      "ka2y_factor": 1.2,
+      "overall": {
+        "mean_pct_error": 1.5121674435257055,
+        "median_pct_error": 0.43062068381890417,
+        "max_pct_error": 14.231617445817285
+      },
+      "delta_vs_baseline": {
+        "mean_pct_error": 0.4422538513309282,
+        "median_pct_error": 0.0,
+        "max_pct_error": 0.8900259814226352
+      },
+      "json_path": "/root/.openclaw/workspace/psins_method_bench/results/KA2Y42_markov_ka2y_plus20pct_ch3faithful12_shared_noise0p08_param_errors.json"
+    }
+  ]
+}

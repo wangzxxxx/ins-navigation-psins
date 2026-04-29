@@ -1,0 +1,173 @@
+{
+  "task": "resume faithful12-base two-anchor frontier",
+  "report_date": "2026-04-01",
+  "status": {
+    "used_existing_artifacts_only": true,
+    "pending_task_state": "can_close",
+    "active_search_process_detected_in_artifacts": false,
+    "materially_better_strategy_beyond_current_twoanchor_frontier_found": false
+  },
+  "inspected_inputs": {
+    "pending": "/root/.openclaw/workspace/PENDING.md",
+    "late11_local_limit_report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_closedloop_zquad_followup_2026-04-01.md",
+    "late11_local_limit_json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_closedloop_zquad_followup_noise0p08.json",
+    "whiteonly_report": "/root/.openclaw/workspace/reports/psins_ch3_current_vs_faithful_whiteonly_2026-04-01.md",
+    "whiteonly_json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_current_vs_faithful_whiteonly_noise0p08.json",
+    "twoanchor_markov_jsons": [
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_ypair_neg4_plus_l11_bestmean_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_ypair_neg4_plus_l11_maxbest_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_ypair_neg6_plus_l11_bestmean_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_ypair_neg8_l11_zquad_y8_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg2_plus_l11_bestmean_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_asym_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_bestmean_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_maxbest_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_y9x1_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg6_plus_l11_bestmean_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_pos4_plus_l11_bestmean_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_pos4_plus_l11_maxbest_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_pos8_l11_zquad_y8_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zquad_x6_l11_zquad_y8_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zquad_x8_l11_zquad_y10_shared_noise0p08_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zquad_x8_l11_zquad_y8_shared_noise0p08_param_errors.json"
+    ]
+  },
+  "candidate_count": 16,
+  "late11_references": {
+    "overall_best": {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y10_x2",
+      "mean_pct_error": 10.600398,
+      "median_pct_error": 1.369026,
+      "max_pct_error": 99.676482
+    },
+    "max_best": {
+      "candidate_name": "late11_yneg_xpair_outerhold_then_zquad_y8_x0",
+      "mean_pct_error": 10.817494,
+      "median_pct_error": 1.388281,
+      "max_pct_error": 99.608698
+    }
+  },
+  "twoanchor_frontier_endpoints_from_pending": {
+    "best_mean": {
+      "candidate_name": "twoanchor_l10_zpair_neg6_plus_l11_bestmean",
+      "mean_pct_error": 10.183116,
+      "median_pct_error": 1.110646,
+      "max_pct_error": 99.713865,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg6_plus_l11_bestmean_shared_noise0p08_param_errors.json",
+      "delta_vs_late11_overall": {
+        "mean_gain": 0.417282,
+        "max_gain": -0.037383
+      }
+    },
+    "best_max": {
+      "candidate_name": "twoanchor_l10_ypair_neg4_plus_l11_maxbest",
+      "mean_pct_error": 11.550426,
+      "median_pct_error": 1.356568,
+      "max_pct_error": 99.587186,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_ypair_neg4_plus_l11_maxbest_shared_noise0p08_param_errors.json",
+      "delta_vs_late11_max": {
+        "mean_gain": -0.732932,
+        "max_gain": 0.021511
+      }
+    }
+  },
+  "pareto_frontier_within_twoanchor": [
+    {
+      "candidate_name": "twoanchor_l10_zpair_neg6_plus_l11_bestmean",
+      "mean_pct_error": 10.183116,
+      "median_pct_error": 1.110646,
+      "max_pct_error": 99.713865,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg6_plus_l11_bestmean_shared_noise0p08_param_errors.json"
+    },
+    {
+      "candidate_name": "twoanchor_l10_zpair_neg4_plus_l11_maxbest",
+      "mean_pct_error": 10.36447,
+      "median_pct_error": 1.228551,
+      "max_pct_error": 99.674293,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_maxbest_shared_noise0p08_param_errors.json"
+    },
+    {
+      "candidate_name": "twoanchor_l10_zpair_pos4_plus_l11_maxbest",
+      "mean_pct_error": 10.56085,
+      "median_pct_error": 1.201071,
+      "max_pct_error": 99.622096,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_pos4_plus_l11_maxbest_shared_noise0p08_param_errors.json"
+    },
+    {
+      "candidate_name": "twoanchor_l10_ypair_neg4_plus_l11_maxbest",
+      "mean_pct_error": 11.550426,
+      "median_pct_error": 1.356568,
+      "max_pct_error": 99.587186,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_ypair_neg4_plus_l11_maxbest_shared_noise0p08_param_errors.json"
+    }
+  ],
+  "single_compromise_candidates_that_dominate_late11_overall": [
+    {
+      "candidate_name": "twoanchor_l10_zpair_neg4_plus_l11_maxbest",
+      "mean_pct_error": 10.36447,
+      "max_pct_error": 99.674293,
+      "mean_gain_vs_late11_overall": 0.235928,
+      "max_gain_vs_late11_overall": 0.002189
+    },
+    {
+      "candidate_name": "twoanchor_l10_zpair_pos4_plus_l11_maxbest",
+      "mean_pct_error": 10.56085,
+      "max_pct_error": 99.622096,
+      "mean_gain_vs_late11_overall": 0.039548,
+      "max_gain_vs_late11_overall": 0.054386
+    }
+  ],
+  "latest_followups": [
+    {
+      "candidate_name": "twoanchor_l10_zpair_neg4_plus_l11_maxbest",
+      "mean_pct_error": 10.36447,
+      "median_pct_error": 1.228551,
+      "max_pct_error": 99.674293,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_maxbest_shared_noise0p08_param_errors.json",
+      "note": "frontier point"
+    },
+    {
+      "candidate_name": "twoanchor_l10_zpair_neg4_plus_l11_y9x1",
+      "mean_pct_error": 10.482598,
+      "median_pct_error": 1.238774,
+      "max_pct_error": 99.684675,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_y9x1_shared_noise0p08_param_errors.json",
+      "note": "dominated by twoanchor_l10_zpair_neg4_plus_l11_maxbest on both mean and max"
+    },
+    {
+      "candidate_name": "twoanchor_l10_zpair_neg4_plus_l11_asym",
+      "mean_pct_error": 10.49501,
+      "median_pct_error": 1.233812,
+      "max_pct_error": 99.684589,
+      "source_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_twoanchor_l10_zpair_neg4_plus_l11_asym_shared_noise0p08_param_errors.json",
+      "note": "dominated by twoanchor_l10_zpair_neg4_plus_l11_maxbest on both mean and max"
+    }
+  ],
+  "whiteonly_recheck": {
+    "faithful12_original": {
+      "mean_pct_error": 16.448827,
+      "median_pct_error": 1.910297,
+      "max_pct_error": 102.444291
+    },
+    "current_twoanchor_bestmean": {
+      "candidate_name": "twoanchor_l10_zpair_neg6_plus_l11_bestmean",
+      "mean_pct_error": 9.536378,
+      "median_pct_error": 0.651129,
+      "max_pct_error": 99.713539
+    },
+    "delta_vs_faithful12_original": {
+      "mean_gain": 6.912448,
+      "median_gain": 1.259168,
+      "max_gain": 2.730752
+    }
+  },
+  "conclusion": {
+    "summary": "The two-anchor branch materially improved the faithful12-base search beyond the late11 zquad local basin, but the final saved probes do not move the frontier past the current two endpoint winners. The branch appears exhausted and the pending task can be closed.",
+    "best_single_compromise_inside_existing_frontier": "twoanchor_l10_zpair_neg4_plus_l11_maxbest",
+    "why_not_new_branch": "It is already part of the current two-anchor frontier; later y9x1/asym follow-ups regressed, and no newer saved two-anchor search artifacts appear after those runs."
+  },
+  "outputs": {
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_twoanchor_frontier_resume_2026-04-01.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_ch3_twoanchor_frontier_resume_2026-04-01.md"
+  }
+}

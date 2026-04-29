@@ -1,0 +1,66 @@
+{
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "probe_scales": [
+    1.0,
+    0.1,
+    0.08,
+    0.05,
+    0.03
+  ],
+  "round62_candidates": [
+    {
+      "name": "r62_ultralow_guard_soft_neutral",
+      "description": "Ultra-low-only neutralizer: leave 1x/0.10x/0.08x untouched, and below 0.08x smoothly pull the iter2 dKg_yy / dKa_xx alphas back toward 1.0 while fading out the tiny rx_y post-confirmation.",
+      "rationale": "Smallest regime-aware fix consistent with the latest analysis: the main Round61 gains come from xx/xy/zz, so only yy / Ka_xx / rx_y should be softened when the shared-noise regime is very small.",
+      "round62_guard": {
+        "apply_policy_names": [
+          "iter2_commit"
+        ],
+        "start_noise_scale": 0.08,
+        "full_noise_scale": 0.03,
+        "power": 2.0,
+        "state_alpha_pull": {
+          "16": 1.0,
+          "21": 1.0
+        },
+        "rx_y_post_pull": 1.0
+      }
+    },
+    {
+      "name": "r62_ultralow_guard_yy_heavier",
+      "description": "Same ultra-low regime gate, but pull dKg_yy a little harder than dKa_xx and let rx_y confirmation fade slightly past neutral at the floor.",
+      "rationale": "The 0.03x failure is dominated by dKg_yy, so this candidate checks whether a slightly stronger yy-only anti-overshoot is enough without touching the Round61 xx/xy/zz core.",
+      "round62_guard": {
+        "apply_policy_names": [
+          "iter2_commit"
+        ],
+        "start_noise_scale": 0.08,
+        "full_noise_scale": 0.03,
+        "power": 2.0,
+        "state_alpha_pull": {
+          "16": 1.35,
+          "21": 1.1
+        },
+        "rx_y_post_pull": 1.1
+      }
+    },
+    {
+      "name": "r62_ultralow_guard_late_onset",
+      "description": "Later-onset ultra-low gate: stay fully inert through 0.08x, intervene mainly at 0.05x/0.03x, and keep the sweet spot almost exactly Round61-shaped.",
+      "rationale": "If 0.05x still benefits from the Round61 aggressiveness, the safer move is to localize the repair even more tightly around the deepest ultra-low regime.",
+      "round62_guard": {
+        "apply_policy_names": [
+          "iter2_commit"
+        ],
+        "start_noise_scale": 0.07,
+        "full_noise_scale": 0.03,
+        "power": 2.0,
+        "state_alpha_pull": {
+          "16": 1.3,
+          "21": 1.05
+        },
+        "rx_y_post_pull": 1.0
+      }
+    }
+  ]
+}

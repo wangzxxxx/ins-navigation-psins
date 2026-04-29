@@ -1,0 +1,133 @@
+{
+  "experiment": "pure_scd_sym20_focused_eval_2026_04_05",
+  "noise_scale": 0.12,
+  "noise_config": {
+    "arw_dpsh": 0.0006,
+    "vrw_ugpsHz": 0.6,
+    "bi_g_dph": 0.00024,
+    "bi_a_ug": 0.6,
+    "tau_g": 300.0,
+    "tau_a": 300.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "path_case": {
+    "case_key": "symmetric20",
+    "case_tag": "ch3corrected_symmetric20_att0zero_1200s",
+    "display_name": "20-position corrected symmetric scheme",
+    "att0_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_motion_rows": 20,
+    "claimed_position_count": 20,
+    "total_time_s": 1200.0,
+    "timing_note": "uniform 20 × 60 s = 1200 s, row split 6 / 6 / 48 s",
+    "source_builder": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_ch3_corrected_symmetric20_front2_back11.py",
+    "source_reference": "anchor2_zpair_anchor11_xpair_symmetric20_60s",
+    "builder_method_tag": "ch3closedloop_anchor2_zpair_anchor11_xpair_symmetric20_60s"
+  },
+  "execution": "rerun",
+  "pure_scd": {
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/G4_pure_scd_neutral_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p12_param_errors.json",
+    "overall": {
+      "mean_pct_error": 0.8709020677020928,
+      "median_pct_error": 0.4875138875935058,
+      "max_pct_error": 4.3392119380937135
+    },
+    "focus_scale_pct": {
+      "dKg_xx": 3.4583263664058355,
+      "dKg_xy": 0.9069490303172056,
+      "dKg_yy": 0.6054021067785683,
+      "dKg_zz": 1.1663934936429587,
+      "dKa_xx": 4.221764441389226
+    },
+    "lever_guard_pct": {
+      "rx_y": 0.2416977037883461,
+      "ry_z": 0.202523401331145
+    }
+  },
+  "g3": {
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p12_param_errors.json",
+    "overall": {
+      "mean_pct_error": 0.8635092356514139,
+      "median_pct_error": 0.456621051385936,
+      "max_pct_error": 4.337295383400988
+    }
+  },
+  "best_g4": {
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_scale_once_a0999_biaslink_commit_shared_noise0p12_param_errors.json",
+    "overall": {
+      "mean_pct_error": 0.9868073619304258,
+      "median_pct_error": 0.4694474274082392,
+      "max_pct_error": 4.3738707972097
+    }
+  },
+  "comparisons": {
+    "vs_g3": {
+      "reference_label": "g3_markov20",
+      "wins_count": 0,
+      "beats_all_overall_metrics": false,
+      "beats_mean_metric": false,
+      "metrics": {
+        "mean_pct_error": {
+          "pure_scd": 0.8709020677020928,
+          "reference": 0.8635092356514139,
+          "improvement_pct_points": -0.007392832050678866,
+          "pure_scd_better": false
+        },
+        "median_pct_error": {
+          "pure_scd": 0.4875138875935058,
+          "reference": 0.456621051385936,
+          "improvement_pct_points": -0.030892836207569774,
+          "pure_scd_better": false
+        },
+        "max_pct_error": {
+          "pure_scd": 4.3392119380937135,
+          "reference": 4.337295383400988,
+          "improvement_pct_points": -0.0019165546927251143,
+          "pure_scd_better": false
+        }
+      }
+    },
+    "vs_best_g4": {
+      "reference_label": "g4_best_retune",
+      "wins_count": 2,
+      "beats_all_overall_metrics": false,
+      "beats_mean_metric": true,
+      "metrics": {
+        "mean_pct_error": {
+          "pure_scd": 0.8709020677020928,
+          "reference": 0.9868073619304258,
+          "improvement_pct_points": 0.11590529422833307,
+          "pure_scd_better": true
+        },
+        "median_pct_error": {
+          "pure_scd": 0.4875138875935058,
+          "reference": 0.4694474274082392,
+          "improvement_pct_points": -0.018066460185266586,
+          "pure_scd_better": false
+        },
+        "max_pct_error": {
+          "pure_scd": 4.3392119380937135,
+          "reference": 4.3738707972097,
+          "improvement_pct_points": 0.03465885911598665,
+          "pure_scd_better": true
+        }
+      }
+    }
+  },
+  "decision": {
+    "pure_scd_beats_g3_all3": false,
+    "pure_scd_beats_g3_mean": false,
+    "pure_scd_beats_best_g4_all3": false,
+    "pure_scd_beats_best_g4_mean": true
+  },
+  "code_fixes_needed": "none",
+  "files": {
+    "pure_scd_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_pure_scd_neutral_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p12_param_errors.json",
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/pure_scd_sym20_focused_compare_vs_g3_bestg4_noise0p12_2026-04-05.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_pure_scd_sym20_vs_g3_bestg4_2026-04-05_noise0p12.md"
+  }
+}

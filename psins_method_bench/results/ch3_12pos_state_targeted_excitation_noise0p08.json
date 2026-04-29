@@ -1,0 +1,1715 @@
+{
+  "experiment": "ch3_12pos_state_targeted_excitation",
+  "report_date": "2026-03-31",
+  "noise_scale": 0.08,
+  "hard_constraints": {
+    "fixed_12_anchor_skeleton": true,
+    "real_dual_axis_rule": {
+      "inner_axis": "body y only",
+      "outer_axis": "x/z family determined by inner attitude"
+    },
+    "excitation_form": "legal leave-and-return bursts around same anchor only",
+    "time_budget_s": 1200.0,
+    "seed": 42
+  },
+  "references": {
+    "faithful12": {
+      "name": "faithful12",
+      "overall": {
+        "mean_pct_error": 15.290300274032441,
+        "median_pct_error": 1.483362834112179,
+        "max_pct_error": 122.58269656383278
+      },
+      "key_params": {
+        "dKa_yy": 122.58269656383278,
+        "dKg_zz": 85.57075351197156,
+        "Ka2_y": 99.94129544126406,
+        "Ka2_z": 64.70431004852547,
+        "dKg_xz": 18.68063496921905,
+        "dKa_xz": 18.85408106874926
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    "incumbent": {
+      "name": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "overall": {
+        "mean_pct_error": 11.014162810085333,
+        "median_pct_error": 1.0603379306680452,
+        "max_pct_error": 99.92214937787182
+      },
+      "key_params": {
+        "dKa_yy": 84.77132397757674,
+        "dKg_zz": 76.46895197802066,
+        "Ka2_y": 99.92214937787182,
+        "Ka2_z": 3.8821190036200264,
+        "dKg_xz": 0.43475000616637505,
+        "dKa_xz": 0.14567951573398194
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json"
+    }
+  },
+  "selected_candidates": {
+    "best_overall_targeted": {
+      "name": "ch3targeted_z11_large_pos",
+      "label": "best_overall_targeted",
+      "overall": {
+        "mean_pct_error": 10.737617897675639,
+        "median_pct_error": 0.8207162143546751,
+        "max_pct_error": 99.93638436607415
+      },
+      "key_params": {
+        "dKa_yy": 85.44045052063858,
+        "dKg_zz": 76.51531922880032,
+        "Ka2_y": 99.93638436607415,
+        "Ka2_z": 3.1471270668977986,
+        "dKg_xz": 0.2063738741084484,
+        "dKa_xz": 0.06977726216401162
+      },
+      "delta_vs_incumbent": {
+        "mean_pct_error": 0.2765449124096939,
+        "median_pct_error": 0.23962171631337004,
+        "max_pct_error": -0.014234988202332488
+      },
+      "weak_param_delta_vs_incumbent": {
+        "dKa_yy": -0.6691265430618358,
+        "dKg_zz": -0.0463672507796673,
+        "Ka2_y": -0.014234988202332488,
+        "Ka2_z": 0.7349919367222277,
+        "dKg_xz": 0.22837613205792665,
+        "dKa_xz": 0.07590225356997032
+      },
+      "delta_vs_faithful_overall": {
+        "mean_pct_error": 4.5526823763568025,
+        "median_pct_error": 0.6626466197575038,
+        "max_pct_error": 22.646312197758633
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z11_large_pos_shared_noise0p08_param_errors.json"
+    },
+    "best_weak_guardsafe_runner_up": {
+      "name": "ch3targeted_z5_small_neg",
+      "label": "best_weak_guardsafe_runner_up",
+      "overall": {
+        "mean_pct_error": 11.192122641168707,
+        "median_pct_error": 0.8586789687745711,
+        "max_pct_error": 99.93971541243958
+      },
+      "key_params": {
+        "dKa_yy": 84.2067098654466,
+        "dKg_zz": 72.68547985945303,
+        "Ka2_y": 99.93971541243958,
+        "Ka2_z": 3.543031051977065,
+        "dKg_xz": 0.49751407331100833,
+        "dKa_xz": 0.33664379188391874
+      },
+      "delta_vs_incumbent": {
+        "mean_pct_error": -0.1779598310833741,
+        "median_pct_error": 0.2016589618934741,
+        "max_pct_error": -0.017566034567764177
+      },
+      "weak_param_delta_vs_incumbent": {
+        "dKa_yy": 0.564614112130144,
+        "dKg_zz": 3.78347211856763,
+        "Ka2_y": -0.017566034567764177,
+        "Ka2_z": 0.33908795164296146,
+        "dKg_xz": -0.06276406714463328,
+        "dKa_xz": -0.1909642761499368
+      },
+      "delta_vs_faithful_overall": {
+        "mean_pct_error": 4.0981776328637345,
+        "median_pct_error": 0.6246838653376079,
+        "max_pct_error": 22.6429811513932
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z5_small_neg_shared_noise0p08_param_errors.json"
+    },
+    "y_burst_rejected_example": {
+      "name": "ch3targeted_y7_large_neg",
+      "label": "y_burst_rejected_example",
+      "overall": {
+        "mean_pct_error": 13.739429215230826,
+        "median_pct_error": 1.4122004809628916,
+        "max_pct_error": 99.90808773068733
+      },
+      "key_params": {
+        "dKa_yy": 86.26826868243485,
+        "dKg_zz": 66.55271519667824,
+        "Ka2_y": 99.90808773068733,
+        "Ka2_z": 5.903191482808112,
+        "dKg_xz": 0.6346407699324884,
+        "dKa_xz": 0.7080465528840011
+      },
+      "delta_vs_incumbent": {
+        "mean_pct_error": -2.7252664051454936,
+        "median_pct_error": -0.3518625502948465,
+        "max_pct_error": 0.014061647184490766
+      },
+      "weak_param_delta_vs_incumbent": {
+        "dKa_yy": -1.4969447048581088,
+        "dKg_zz": 9.91623678134242,
+        "Ka2_y": 0.014061647184490766,
+        "Ka2_z": -2.021072479188086,
+        "dKg_xz": -0.19989076376611337,
+        "dKa_xz": -0.5623670371500191
+      },
+      "delta_vs_faithful_overall": {
+        "mean_pct_error": 1.550871058801615,
+        "median_pct_error": 0.07116235314928732,
+        "max_pct_error": 22.674608833145456
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_neg_shared_noise0p08_param_errors.json"
+    },
+    "hybrid_rejected_example": {
+      "name": "ch3targeted_y7_large_pos_z5_small_neg",
+      "label": "hybrid_rejected_example",
+      "overall": {
+        "mean_pct_error": 14.107459188581295,
+        "median_pct_error": 1.2270953185546396,
+        "max_pct_error": 99.93744660829597
+      },
+      "key_params": {
+        "dKa_yy": 83.8639450011774,
+        "dKg_zz": 60.863952595687344,
+        "Ka2_y": 99.93744660829597,
+        "Ka2_z": 5.184973241944828,
+        "dKg_xz": 0.6834592630520183,
+        "dKa_xz": 0.8462399254927144
+      },
+      "delta_vs_incumbent": {
+        "mean_pct_error": -3.093296378495962,
+        "median_pct_error": -0.16675738788659444,
+        "max_pct_error": -0.015297230424152986
+      },
+      "weak_param_delta_vs_incumbent": {
+        "dKa_yy": 0.9073789763993432,
+        "dKg_zz": 15.604999382333311,
+        "Ka2_y": -0.015297230424152986,
+        "Ka2_z": -1.3028542383248016,
+        "dKg_xz": -0.24870925688564327,
+        "dKa_xz": -0.7005604097587325
+      },
+      "delta_vs_faithful_overall": {
+        "mean_pct_error": 1.1828410854511464,
+        "median_pct_error": 0.25626751555753935,
+        "max_pct_error": 22.645249955536812
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_z5_small_neg_shared_noise0p08_param_errors.json"
+    }
+  },
+  "full_markov42_ranking": [
+    {
+      "candidate_name": "ch3targeted_z11_large_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z11_large_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.737617897675639,
+        "median_pct_error": 0.8207162143546751,
+        "max_pct_error": 99.93638436607415
+      },
+      "key_params": {
+        "dKa_yy": 85.44045052063858,
+        "dKg_zz": 76.51531922880032,
+        "Ka2_y": 99.93638436607415,
+        "Ka2_z": 3.1471270668977986,
+        "dKg_xz": 0.2063738741084484,
+        "dKa_xz": 0.06977726216401162
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -0.6691265430618358,
+        "dKg_zz": -0.0463672507796673,
+        "Ka2_y": -0.014234988202332488,
+        "Ka2_z": 0.7349919367222277,
+        "dKg_xz": 0.22837613205792665,
+        "dKa_xz": 0.07590225356997032
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.2765449124096939,
+        "median_pct_error": 0.23962171631337004,
+        "max_pct_error": -0.014234988202332488
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z11_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z11_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.744071151399096,
+        "median_pct_error": 0.7174502734795493,
+        "max_pct_error": 99.96131435403137
+      },
+      "key_params": {
+        "dKa_yy": 81.6908207328675,
+        "dKg_zz": 78.64354869405388,
+        "Ka2_y": 99.96131435403137,
+        "Ka2_z": 4.256140752902688,
+        "dKg_xz": 0.7171168846450695,
+        "dKa_xz": 0.22389950524040594
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 3.0805032447092486,
+        "dKg_zz": -2.1745967160332214,
+        "Ka2_y": -0.0391649761595545,
+        "Ka2_z": -0.37402174928266163,
+        "dKg_xz": -0.28236687847869446,
+        "dKa_xz": -0.078219989506424
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.27009165868623697,
+        "median_pct_error": 0.3428876571884959,
+        "max_pct_error": -0.0391649761595545
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z11_med_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z11_med_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.769526194697455,
+        "median_pct_error": 0.8541550932213058,
+        "max_pct_error": 99.94866057847021
+      },
+      "key_params": {
+        "dKa_yy": 85.64021689297137,
+        "dKg_zz": 76.45146550130957,
+        "Ka2_y": 99.94866057847021,
+        "Ka2_z": 3.249440123774041,
+        "dKg_xz": 0.2970882103259777,
+        "dKa_xz": 0.06214953892108708
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -0.8688929153946248,
+        "dKg_zz": 0.01748647671108472,
+        "Ka2_y": -0.026511200598392293,
+        "Ka2_z": 0.6326788798459853,
+        "dKg_xz": 0.13766179584039734,
+        "dKa_xz": 0.08352997681289487
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.2446366153878774,
+        "median_pct_error": 0.20618283744673938,
+        "max_pct_error": -0.026511200598392293
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z11_small_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z11_small_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.844937472214308,
+        "median_pct_error": 1.0401225951438056,
+        "max_pct_error": 99.9483906315743
+      },
+      "key_params": {
+        "dKa_yy": 86.01787950637542,
+        "dKg_zz": 76.39470748672495,
+        "Ka2_y": 99.9483906315743,
+        "Ka2_z": 3.696276451429531,
+        "dKg_xz": 0.5625857935094496,
+        "dKa_xz": 0.09132694299397154
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -1.2465555287986803,
+        "dKg_zz": 0.07424449129570121,
+        "Ka2_y": -0.026241253702480094,
+        "Ka2_z": 0.18584255219049517,
+        "dKg_xz": -0.12783578734307455,
+        "dKa_xz": 0.0543525727400104
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.16922533787102445,
+        "median_pct_error": 0.020215335524239597,
+        "max_pct_error": -0.026241253702480094
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z11_med_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z11_med_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.894922357991407,
+        "median_pct_error": 0.8532354184435654,
+        "max_pct_error": 99.96721708081905
+      },
+      "key_params": {
+        "dKa_yy": 83.14936761058556,
+        "dKg_zz": 78.0368728755825,
+        "Ka2_y": 99.96721708081905,
+        "Ka2_z": 4.412334908603801,
+        "dKg_xz": 0.7329461896662555,
+        "dKa_xz": 0.2956464714083567
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 1.621956366991185,
+        "dKg_zz": -1.567920897561848,
+        "Ka2_y": -0.045067702947235944,
+        "Ka2_z": -0.5302159049837742,
+        "dKg_xz": -0.2981961834998804,
+        "dKa_xz": -0.14996695567437476
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.11924045209392631,
+        "median_pct_error": 0.20710251222447973,
+        "max_pct_error": -0.045067702947235944
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z11_large_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z11_large_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.903251069295854,
+        "median_pct_error": 0.8279074066238721,
+        "max_pct_error": 99.96811197813904
+      },
+      "key_params": {
+        "dKa_yy": 82.6406623060389,
+        "dKg_zz": 77.35090197401881,
+        "Ka2_y": 99.96811197813904,
+        "Ka2_z": 4.266496239904439,
+        "dKg_xz": 0.6357737213268146,
+        "dKa_xz": 0.2620499946395725
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 2.130661671537837,
+        "dKg_zz": -0.8819499959981556,
+        "Ka2_y": -0.04596260026721666,
+        "Ka2_z": -0.3843772362844122,
+        "dKg_xz": -0.2010237151604396,
+        "dKa_xz": -0.11637047890559057
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.1109117407894793,
+        "median_pct_error": 0.23243052404417308,
+        "max_pct_error": -0.04596260026721666
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z10_small_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z10_small_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.932494606991193,
+        "median_pct_error": 0.960480484382616,
+        "max_pct_error": 99.95283420205261
+      },
+      "key_params": {
+        "dKa_yy": 85.44424267833753,
+        "dKg_zz": 79.85260638579719,
+        "Ka2_y": 99.95283420205261,
+        "Ka2_z": 3.4891279380766638,
+        "dKg_xz": 0.558164611041211,
+        "dKa_xz": 0.06923995194713782
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -0.6729187007607891,
+        "dKg_zz": -3.3836544077765325,
+        "Ka2_y": -0.030684824180795545,
+        "Ka2_z": 0.3929910655433626,
+        "dKg_xz": -0.12341460487483591,
+        "dKa_xz": 0.07643956378684412
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.08166820309413936,
+        "median_pct_error": 0.09985744628542914,
+        "max_pct_error": -0.030684824180795545
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z10_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z10_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 10.994933265144875,
+        "median_pct_error": 0.8793649508153509,
+        "max_pct_error": 99.93088720509907
+      },
+      "key_params": {
+        "dKa_yy": 85.02551111669133,
+        "dKg_zz": 76.73222175511077,
+        "Ka2_y": 99.93088720509907,
+        "Ka2_z": 4.560658588110576,
+        "dKg_xz": 0.7070826929281413,
+        "dKa_xz": 0.2200311873537791
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -0.2541871391145918,
+        "dKg_zz": -0.263269777090116,
+        "Ka2_y": -0.00873782722725025,
+        "Ka2_z": -0.67853958449055,
+        "dKg_xz": -0.27233268676176625,
+        "dKa_xz": -0.07435167161979717
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": 0.019229544940458254,
+        "median_pct_error": 0.18097297985269423,
+        "max_pct_error": -0.00873782722725025
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z5_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z5_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 11.192122641168707,
+        "median_pct_error": 0.8586789687745711,
+        "max_pct_error": 99.93971541243958
+      },
+      "key_params": {
+        "dKa_yy": 84.2067098654466,
+        "dKg_zz": 72.68547985945303,
+        "Ka2_y": 99.93971541243958,
+        "Ka2_z": 3.543031051977065,
+        "dKg_xz": 0.49751407331100833,
+        "dKa_xz": 0.33664379188391874
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 0.564614112130144,
+        "dKg_zz": 3.78347211856763,
+        "Ka2_y": -0.017566034567764177,
+        "Ka2_z": 0.33908795164296146,
+        "dKg_xz": -0.06276406714463328,
+        "dKa_xz": -0.1909642761499368
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -0.1779598310833741,
+        "median_pct_error": 0.2016589618934741,
+        "max_pct_error": -0.017566034567764177
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_z5_small_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_z5_small_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 11.427235150804846,
+        "median_pct_error": 0.910069112993525,
+        "max_pct_error": 99.92718530538211
+      },
+      "key_params": {
+        "dKa_yy": 83.55704496579267,
+        "dKg_zz": 77.90255877055914,
+        "Ka2_y": 99.92718530538211,
+        "Ka2_z": 4.05427202740409,
+        "dKg_xz": 0.5036027261765492,
+        "dKa_xz": 0.3656349627775824
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 1.2142790117840718,
+        "dKg_zz": -1.4336067925384839,
+        "Ka2_y": -0.0050359275102920265,
+        "Ka2_z": -0.17215302378406339,
+        "dKg_xz": -0.06885272001017417,
+        "dKa_xz": -0.21995544704360045
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -0.4130723407195127,
+        "median_pct_error": 0.15026881767452016,
+        "max_pct_error": -0.0050359275102920265
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 13.739429215230826,
+        "median_pct_error": 1.4122004809628916,
+        "max_pct_error": 99.90808773068733
+      },
+      "key_params": {
+        "dKa_yy": 86.26826868243485,
+        "dKg_zz": 66.55271519667824,
+        "Ka2_y": 99.90808773068733,
+        "Ka2_z": 5.903191482808112,
+        "dKg_xz": 0.6346407699324884,
+        "dKa_xz": 0.7080465528840011
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -1.4969447048581088,
+        "dKg_zz": 9.91623678134242,
+        "Ka2_y": 0.014061647184490766,
+        "Ka2_z": -2.021072479188086,
+        "dKg_xz": -0.19989076376611337,
+        "dKa_xz": -0.5623670371500191
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -2.7252664051454936,
+        "median_pct_error": -0.3518625502948465,
+        "max_pct_error": 0.014061647184490766
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_pos_z11_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_z11_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 13.76695199863795,
+        "median_pct_error": 0.9339010048100143,
+        "max_pct_error": 99.95409990501797
+      },
+      "key_params": {
+        "dKa_yy": 81.1276225003731,
+        "dKg_zz": 66.83096441960026,
+        "Ka2_y": 99.95409990501797,
+        "Ka2_z": 5.746938410143393,
+        "dKg_xz": 0.9032973046854647,
+        "dKa_xz": 0.7295764558503968
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 3.643701477203635,
+        "dKg_zz": 9.637987558420392,
+        "Ka2_y": -0.031950527146150876,
+        "Ka2_z": -1.8648194065233668,
+        "dKg_xz": -0.4685472985190896,
+        "dKa_xz": -0.5838969401164148
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -2.752789188552617,
+        "median_pct_error": 0.1264369258580309,
+        "max_pct_error": -0.031950527146150876
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_pos_z11_small_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_z11_small_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 13.773314665216857,
+        "median_pct_error": 1.2546440545565125,
+        "max_pct_error": 99.93946475409378
+      },
+      "key_params": {
+        "dKa_yy": 85.4042952263246,
+        "dKg_zz": 64.52213819901844,
+        "Ka2_y": 99.93946475409378,
+        "Ka2_z": 5.234378700113055,
+        "dKg_xz": 0.729958660549939,
+        "dKa_xz": 0.5827129459349059
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -0.6329712487478645,
+        "dKg_zz": 11.946813779002213,
+        "Ka2_y": -0.017315376221958445,
+        "Ka2_z": -1.3522596964930287,
+        "dKg_xz": -0.2952086543835639,
+        "dKa_xz": -0.4370334302009239
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -2.759151855131524,
+        "median_pct_error": -0.19430612388846735,
+        "max_pct_error": -0.017315376221958445
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_pos_z11_large_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_z11_large_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 13.858954622125767,
+        "median_pct_error": 1.2752800859945086,
+        "max_pct_error": 99.96206859651735
+      },
+      "key_params": {
+        "dKa_yy": 82.23045252323084,
+        "dKg_zz": 66.00552038647388,
+        "Ka2_y": 99.96206859651735,
+        "Ka2_z": 5.666228370564805,
+        "dKg_xz": 0.7405701889329455,
+        "dKa_xz": 0.6756259008708558
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 2.540871454345904,
+        "dKg_zz": 10.46343159154678,
+        "Ka2_y": -0.0399192186455366,
+        "Ka2_z": -1.7841093669447785,
+        "dKg_xz": -0.3058201827665704,
+        "dKa_xz": -0.5299463851368739
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -2.844791812040434,
+        "median_pct_error": -0.21494215532646344,
+        "max_pct_error": -0.0399192186455366
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_pos_z11_med_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_z11_med_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 13.880825520202658,
+        "median_pct_error": 1.2741930973819597,
+        "max_pct_error": 99.96077221287591
+      },
+      "key_params": {
+        "dKa_yy": 82.54462410420342,
+        "dKg_zz": 66.37427492523032,
+        "Ka2_y": 99.96077221287591,
+        "Ka2_z": 5.8417337231983195,
+        "dKg_xz": 0.8506369000057465,
+        "dKa_xz": 0.7296385736492023
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 2.2266998733733203,
+        "dKg_zz": 10.094677052790331,
+        "Ka2_y": -0.038622835004090916,
+        "Ka2_z": -1.9596147195782931,
+        "dKg_xz": -0.4158868938393715,
+        "dKa_xz": -0.5839590579152203
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -2.8666627101173248,
+        "median_pct_error": -0.21385516671391458,
+        "max_pct_error": -0.038622835004090916
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 13.9204174620948,
+        "median_pct_error": 1.4337067090347073,
+        "max_pct_error": 101.67850073840779
+      },
+      "key_params": {
+        "dKa_yy": 84.12364426105181,
+        "dKg_zz": 64.62552646585516,
+        "Ka2_y": 99.91178481678432,
+        "Ka2_z": 5.3872783734698,
+        "dKg_xz": 0.540745860951272,
+        "dKa_xz": 0.5788491394527895
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 0.6476797165249337,
+        "dKg_zz": 11.843425512165496,
+        "Ka2_y": 0.010364561087499169,
+        "Ka2_z": -1.5051593698497738,
+        "dKg_xz": -0.10599585478489693,
+        "dKa_xz": -0.4331696237188075
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -2.9062546520094674,
+        "median_pct_error": -0.37336877836666216,
+        "max_pct_error": -1.756351360535973
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_pos_z5_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_z5_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.107459188581295,
+        "median_pct_error": 1.2270953185546396,
+        "max_pct_error": 99.93744660829597
+      },
+      "key_params": {
+        "dKa_yy": 83.8639450011774,
+        "dKg_zz": 60.863952595687344,
+        "Ka2_y": 99.93744660829597,
+        "Ka2_z": 5.184973241944828,
+        "dKg_xz": 0.6834592630520183,
+        "dKa_xz": 0.8462399254927144
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 0.9073789763993432,
+        "dKg_zz": 15.604999382333311,
+        "Ka2_y": -0.015297230424152986,
+        "Ka2_z": -1.3028542383248016,
+        "dKg_xz": -0.24870925688564327,
+        "dKa_xz": -0.7005604097587325
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.093296378495962,
+        "median_pct_error": -0.16675738788659444,
+        "max_pct_error": -0.015297230424152986
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_large_pos_z10_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_large_pos_z10_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.114589799879445,
+        "median_pct_error": 1.3306775674911016,
+        "max_pct_error": 104.1442285026083
+      },
+      "key_params": {
+        "dKa_yy": 84.37934446539506,
+        "dKg_zz": 64.86981543786946,
+        "Ka2_y": 99.92132602190784,
+        "Ka2_z": 6.254648269910536,
+        "dKg_xz": 0.8898111990703873,
+        "dKa_xz": 0.7319391913791458
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 0.3919795121816776,
+        "dKg_zz": 11.599136540151193,
+        "Ka2_y": 0.0008233559639734267,
+        "Ka2_z": -2.3725292662905098,
+        "dKg_xz": -0.45506119290401226,
+        "dKa_xz": -0.5862596756451638
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.100426989794112,
+        "median_pct_error": -0.2703396368230564,
+        "max_pct_error": -4.2220791247364815
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_small_neg_z11_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_small_neg_z11_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.46349492277899,
+        "median_pct_error": 1.3308435465474506,
+        "max_pct_error": 101.02452189399327
+      },
+      "key_params": {
+        "dKa_yy": 83.17116095771246,
+        "dKg_zz": 66.9440273482494,
+        "Ka2_y": 99.94922801640767,
+        "Ka2_z": 7.071927350598115,
+        "dKg_xz": 1.1665722604449202,
+        "dKa_xz": 1.1239413203365611
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 1.6001630198642829,
+        "dKg_zz": 9.524924629771249,
+        "Ka2_y": -0.027078638535854793,
+        "Ka2_z": -3.1898083469780882,
+        "dKg_xz": -0.7318222542785452,
+        "dKa_xz": -0.9782618046025792
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.449332112693657,
+        "median_pct_error": -0.27050561587940547,
+        "max_pct_error": -1.1023725161214486
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.529856177928597,
+        "median_pct_error": 1.4691953360566297,
+        "max_pct_error": 104.62320566720793
+      },
+      "key_params": {
+        "dKa_yy": 86.45853726332544,
+        "dKg_zz": 64.55622833713826,
+        "Ka2_y": 99.90610847521921,
+        "Ka2_z": 6.561072864546137,
+        "dKg_xz": 0.862168568854432,
+        "dKa_xz": 1.0374381433793636
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -1.6872132857486974,
+        "dKg_zz": 11.91272364088239,
+        "Ka2_y": 0.016040902652605382,
+        "Ka2_z": -2.6789538609261108,
+        "dKg_xz": -0.427418562688057,
+        "dKa_xz": -0.8917586276453816
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.515693367843264,
+        "median_pct_error": -0.4088574053885845,
+        "max_pct_error": -4.701056289336108
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_med_neg_z11_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_med_neg_z11_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.681425942271863,
+        "median_pct_error": 1.3631102927897776,
+        "max_pct_error": 109.85820221681746
+      },
+      "key_params": {
+        "dKa_yy": 83.11315747125417,
+        "dKg_zz": 65.66818474261063,
+        "Ka2_y": 99.94796775532777,
+        "Ka2_z": 7.150814861460384,
+        "dKg_xz": 1.0241120374302553,
+        "dKa_xz": 1.0153810119751683
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 1.6581665063225728,
+        "dKg_zz": 10.80076723541002,
+        "Ka2_y": -0.025818377455948394,
+        "Ka2_z": -3.268695857840358,
+        "dKg_xz": -0.5893620312638802,
+        "dKa_xz": -0.8697014962411863
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.6672631321865303,
+        "median_pct_error": -0.3027723621217324,
+        "max_pct_error": -9.936052838945642
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_med_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_med_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.75670685540705,
+        "median_pct_error": 1.5151194202672125,
+        "max_pct_error": 113.29389669463777
+      },
+      "key_params": {
+        "dKa_yy": 86.4856399911652,
+        "dKg_zz": 63.28395361156495,
+        "Ka2_y": 99.90420503610731,
+        "Ka2_z": 6.639915014758886,
+        "dKg_xz": 0.7523246932150058,
+        "dKa_xz": 0.9621521969377999
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -1.7143160135884585,
+        "dKg_zz": 13.184998366455709,
+        "Ka2_y": 0.017944341764504657,
+        "Ka2_z": -2.7577960111388595,
+        "dKg_xz": -0.3175746870486308,
+        "dKa_xz": -0.8164726812038179
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.7425440453217167,
+        "median_pct_error": -0.4547814895991673,
+        "max_pct_error": -13.371747316765948
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_med_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_med_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.789890436357025,
+        "median_pct_error": 1.4575641745133314,
+        "max_pct_error": 125.07994722800477
+      },
+      "key_params": {
+        "dKa_yy": 83.4099607742998,
+        "dKg_zz": 62.090786051994684,
+        "Ka2_y": 99.90868346588455,
+        "Ka2_z": 6.19163159141992,
+        "dKg_xz": 0.607983606683759,
+        "dKa_xz": 0.8049923410282323
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 1.3613632032769374,
+        "dKg_zz": 14.378165926025972,
+        "Ka2_y": 0.013465911987267987,
+        "Ka2_z": -2.309512587799894,
+        "dKg_xz": -0.1732336005173839,
+        "dKa_xz": -0.6593128252942503
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.775727626271692,
+        "median_pct_error": -0.39722624384528626,
+        "max_pct_error": -25.15779785013295
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_small_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_small_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 14.964570441657818,
+        "median_pct_error": 1.478501214463744,
+        "max_pct_error": 130.78579380547254
+      },
+      "key_params": {
+        "dKa_yy": 83.1116948667722,
+        "dKg_zz": 61.41288972551362,
+        "Ka2_y": 99.90746707732343,
+        "Ka2_z": 6.391424902725737,
+        "dKg_xz": 0.6668059446249754,
+        "dKa_xz": 0.9108672973050387
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 1.659629110804545,
+        "dKg_zz": 15.056062252507033,
+        "Ka2_y": 0.014682300548386706,
+        "Ka2_z": -2.5093058991057102,
+        "dKg_xz": -0.2320559384586004,
+        "dKa_xz": -0.7651877815710567
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -3.950407631572485,
+        "median_pct_error": -0.4181632837956988,
+        "max_pct_error": -30.86364442760072
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_double_small_neg",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_double_small_neg_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 17.38417811677995,
+        "median_pct_error": 1.7387034799446917,
+        "max_pct_error": 170.2636426911241
+      },
+      "key_params": {
+        "dKa_yy": 87.73059414870606,
+        "dKg_zz": 54.992550107038205,
+        "Ka2_y": 99.89346262586503,
+        "Ka2_z": 8.470687765892777,
+        "dKg_xz": 0.9924398399508613,
+        "dKa_xz": 1.5552302404082219
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": -2.959270171129319,
+        "dKg_zz": 21.47640187098245,
+        "Ka2_y": 0.028686752006791494,
+        "Ka2_z": -4.58856876227275,
+        "dKg_xz": -0.5576898337844862,
+        "dKa_xz": -1.40955072467424
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -6.370015306694617,
+        "median_pct_error": -0.6783655492766465,
+        "max_pct_error": -70.34149331325227
+      }
+    },
+    {
+      "candidate_name": "ch3targeted_y7_double_small_pos",
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3targeted_y7_double_small_pos_shared_noise0p08_param_errors.json",
+      "overall": {
+        "mean_pct_error": 17.547036925041997,
+        "median_pct_error": 1.5858478226701196,
+        "max_pct_error": 201.37073903228656
+      },
+      "key_params": {
+        "dKa_yy": 81.87182116417696,
+        "dKg_zz": 51.83743019503384,
+        "Ka2_y": 99.89551718773815,
+        "Ka2_z": 8.364722691982793,
+        "dKg_xz": 0.7525672881752195,
+        "dKa_xz": 1.3981948529428254
+      },
+      "delta_vs_incumbent": {
+        "dKa_yy": 2.899502813399778,
+        "dKg_zz": 24.631521782986816,
+        "Ka2_y": 0.026632190133668132,
+        "Ka2_z": -4.482603688362767,
+        "dKg_xz": -0.3178172820088444,
+        "dKa_xz": -1.2525153372088436
+      },
+      "overall_delta_vs_incumbent": {
+        "mean_pct_error": -6.532874114956664,
+        "median_pct_error": -0.5255098920020744,
+        "max_pct_error": -101.44858965441475
+      }
+    }
+  ],
+  "best_candidate_motion": {
+    "name": "ch3targeted_z11_large_pos",
+    "description": "incumbent skeleton + one localized z-family outer excitation-return burst at anchor 11: outer +90° then outer -90°, each 5 s rotation + 5 s dwell; anchor 11 post-static reduced from 70 s to 50 s to keep total time 1200 s",
+    "rows": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 1,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 2,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 3,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 4,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 5,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 6,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 7,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 20.0,
+        "post_static_s": 70.0,
+        "node_total_s": 100.0,
+        "anchor_id": 8,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 9,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "anchor_id": 10,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 20.0,
+        "post_static_s": 50.0,
+        "node_total_s": 80.0,
+        "anchor_id": 11,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 5.0,
+        "node_total_s": 10.0,
+        "anchor_id": 11,
+        "segment_role": "motif_1"
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 5.0,
+        "pre_static_s": 0.0,
+        "post_static_s": 5.0,
+        "node_total_s": 10.0,
+        "anchor_id": 11,
+        "segment_role": "motif_2"
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 20.0,
+        "post_static_s": 70.0,
+        "node_total_s": 100.0,
+        "anchor_id": 12,
+        "segment_role": "anchor"
+      }
+    ],
+    "actions": [
+      {
+        "pos_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 1,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 2,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 3,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 4,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "anchor_id": 5,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 6,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 7,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "anchor_id": 8,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 9,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 10,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 11,
+        "segment_role": "anchor"
+      },
+      {
+        "pos_id": 12,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 11,
+        "segment_role": "motif_1"
+      },
+      {
+        "pos_id": 13,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "anchor_id": 11,
+        "segment_role": "motif_2"
+      },
+      {
+        "pos_id": 14,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": 180,
+        "anchor_id": 12,
+        "segment_role": "anchor"
+      }
+    ],
+    "faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "-X",
+        "face_key": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ],
+        "face_name": "+Z",
+        "face_key": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-Y",
+        "face_key": [
+          0,
+          -1,
+          0
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ],
+        "face_name": "+Z",
+        "face_key": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.1102230246251565e-16,
+          1.0,
+          3.3306690738754696e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.1102230246251565e-16,
+          1.0,
+          3.3306690738754696e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          4.440892098500626e-16,
+          0.0,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      }
+    ],
+    "anchor_face_sequence": [
+      "+Y",
+      "-Z",
+      "+X",
+      "+Y",
+      "-X",
+      "+Z",
+      "-Y",
+      "+Z",
+      "+X",
+      "+Y",
+      "+X",
+      "-Z"
+    ],
+    "total_time_s": 1200.0
+  },
+  "scientific_bottom_line": {
+    "materially_beat_incumbent": false,
+    "summary": "No. State-targeted legal excitation found a small overall improvement with a localized z11 outer burst, but it did not materially beat the incumbent because the maximum weak channel remained essentially unchanged and the intended weak-state repair (especially Ka2_y and dKg_zz together) did not land.",
+    "promote_candidate": "ch3targeted_z11_large_pos",
+    "promote_reason": "best overall mean/median among targeted legal excitations while preserving already-good xz / Ka2_z channels",
+    "do_not_replace_incumbent_reason": "gain is small (mean -0.277 pct-points, median -0.240), max is slightly worse by 0.014 pct-points, and weak channels remain dominated by Ka2_y ~99.94 and dKg_zz ~76.52"
+  },
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_state_targeted_excitation_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_state_targeted_excitation_2026-03-31.md"
+  }
+}

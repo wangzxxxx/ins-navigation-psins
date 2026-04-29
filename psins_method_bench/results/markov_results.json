@@ -1,0 +1,341 @@
+[
+  {
+    "method_key": "42state_gm1",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_42state_gm1.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_42state_gm1.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_42state_gm1.stderr.txt",
+    "ok": true,
+    "summary": {
+      "method": "42-state GM1",
+      "source": "test_calibration_markov_pruned.py",
+      "family": "pruned_markov",
+      "variant": "42state_gm1_correct_tau",
+      "result_type": "tuple",
+      "tuple_len": 5,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry"
+      ],
+      "eb_norm": 1.6861418057985811e-06,
+      "db_norm": 0.0038833286477516367,
+      "Ka2_norm": 2.820898941166873e-06,
+      "rx_norm": 0.03538919303065465,
+      "ry_norm": 0.08497404716169053,
+      "kf_keys": [
+        "Hk",
+        "I",
+        "Kk",
+        "Phikk_1",
+        "Pxk",
+        "Qk",
+        "Rk",
+        "m",
+        "n",
+        "nts",
+        "rk",
+        "tau_a",
+        "tau_g",
+        "xk"
+      ],
+      "Pxk_shape": [
+        42,
+        42
+      ],
+      "xk_shape": [
+        42
+      ],
+      "p_trace_shape": [
+        14706,
+        42
+      ],
+      "x_trace_shape": [
+        14706,
+        42
+      ],
+      "iter_info_type": "list"
+    }
+  },
+  {
+    "method_key": "48state_gm2",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_48state_gm2.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_48state_gm2.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_48state_gm2.stderr.txt",
+    "ok": true,
+    "summary": {
+      "method": "48-state GM2",
+      "source": "test_calibration_markov_pruned.py",
+      "family": "pruned_markov",
+      "variant": "48state_gm2_correct_tau",
+      "result_type": "tuple",
+      "tuple_len": 5,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry"
+      ],
+      "eb_norm": 1.6913835084915778e-06,
+      "db_norm": 0.003870391396798907,
+      "Ka2_norm": 2.8108091163021374e-06,
+      "rx_norm": 0.03557197630696901,
+      "ry_norm": 0.08500549333472307,
+      "kf_keys": [
+        "Hk",
+        "I",
+        "Kk",
+        "Phikk_1",
+        "Pxk",
+        "Qk",
+        "Rk",
+        "m",
+        "n",
+        "nts",
+        "rk",
+        "tau_a",
+        "tau_g",
+        "xk"
+      ],
+      "Pxk_shape": [
+        48,
+        48
+      ],
+      "xk_shape": [
+        48
+      ],
+      "p_trace_shape": [
+        14706,
+        48
+      ],
+      "x_trace_shape": [
+        14706,
+        48
+      ],
+      "iter_info_type": "list"
+    }
+  },
+  {
+    "method_key": "46state_gm1_correct",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_46state_gm1_correct.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_46state_gm1_correct.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_46state_gm1_correct.stderr.txt",
+    "ok": true,
+    "summary": {
+      "method": "46-state GM1 correct tau",
+      "source": "test_calibration_markov_noise_46state.py",
+      "family": "triangular_ka_markov",
+      "variant": "46state_gm1_correct_tau",
+      "result_type": "tuple",
+      "tuple_len": 2,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry",
+        "rz",
+        "tGA"
+      ],
+      "eb_norm": 1.707857474156594e-06,
+      "db_norm": 0.003878996494606674,
+      "Ka2_norm": 2.838302544733083e-06,
+      "rx_norm": 0.008081201945129027,
+      "ry_norm": 0.045281718784516506,
+      "rz_norm": 0.03980828849985708,
+      "tGA": -0.004990034456285409,
+      "kf_keys": [
+        "Hk",
+        "I",
+        "Kk",
+        "Phikk_1",
+        "Pxk",
+        "Qk",
+        "Rk",
+        "m",
+        "n",
+        "nts",
+        "rk",
+        "tau_a",
+        "tau_g",
+        "use_markov",
+        "xk"
+      ],
+      "Pxk_shape": [
+        46,
+        46
+      ],
+      "xk_shape": [
+        46
+      ]
+    }
+  },
+  {
+    "method_key": "46state_gm1_wrong",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_46state_gm1_wrong.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_46state_gm1_wrong.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_46state_gm1_wrong.stderr.txt",
+    "ok": true,
+    "summary": {
+      "method": "46-state GM1 wrong tau",
+      "source": "test_calibration_markov_noise_46state.py",
+      "family": "triangular_ka_markov",
+      "variant": "46state_gm1_wrong_tau",
+      "result_type": "tuple",
+      "tuple_len": 2,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry",
+        "rz",
+        "tGA"
+      ],
+      "eb_norm": 1.7023317366004495e-06,
+      "db_norm": 0.003919021313329877,
+      "Ka2_norm": 2.6612509706633476e-06,
+      "rx_norm": 0.008313626608134863,
+      "ry_norm": 0.04505268592372561,
+      "rz_norm": 0.039585936954427574,
+      "tGA": -0.004989518679205077,
+      "kf_keys": [
+        "Hk",
+        "I",
+        "Kk",
+        "Phikk_1",
+        "Pxk",
+        "Qk",
+        "Rk",
+        "m",
+        "n",
+        "nts",
+        "rk",
+        "tau_a",
+        "tau_g",
+        "use_markov",
+        "xk"
+      ],
+      "Pxk_shape": [
+        46,
+        46
+      ],
+      "xk_shape": [
+        46
+      ]
+    }
+  },
+  {
+    "method_key": "49state_gm1_correct",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_49state_gm1_correct.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_49state_gm1_correct.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_49state_gm1_correct.stderr.txt",
+    "ok": true,
+    "summary": {
+      "method": "49-state GM1 correct",
+      "source": "test_calibration_markov_noise.py",
+      "family": "full_markov",
+      "variant": "49state_gm1_correct_tau",
+      "result_type": "dict",
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry",
+        "rz",
+        "tGA"
+      ],
+      "eb_norm": 1.737379841543648e-06,
+      "db_norm": 0.003778454958508317,
+      "Ka2_norm": 3.6956980672941457e-06,
+      "rx_norm": 0.03710171337899288,
+      "ry_norm": 0.08754798828006714,
+      "rz_norm": 0.0,
+      "tGA": -0.004997295143524312
+    }
+  },
+  {
+    "method_key": "49state_gm1_wrong",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_49state_gm1_wrong.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_49state_gm1_wrong.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_49state_gm1_wrong.stderr.txt",
+    "ok": true,
+    "summary": {
+      "method": "49-state GM1 wrong tau",
+      "source": "test_calibration_markov_noise.py",
+      "family": "full_markov",
+      "variant": "49state_gm1_wrong_tau",
+      "result_type": "dict",
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry",
+        "rz",
+        "tGA"
+      ],
+      "eb_norm": 1.7373203064926693e-06,
+      "db_norm": 0.003778178504527815,
+      "Ka2_norm": 3.695331854239768e-06,
+      "rx_norm": 0.03709598324910803,
+      "ry_norm": 0.08755147053723432,
+      "rz_norm": 0.0,
+      "tGA": -0.0049972749222064045
+    }
+  },
+  {
+    "method_key": "55state_gm2",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_55state_gm2.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_55state_gm2.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/markov_55state_gm2.stderr.txt",
+    "ok": true,
+    "summary": {
+      "method": "55-state GM2 correct tau",
+      "source": "test_calibration_markov_noise.py",
+      "family": "full_markov",
+      "variant": "55state_gm2_correct_tau",
+      "result_type": "dict",
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry",
+        "rz",
+        "tGA"
+      ],
+      "eb_norm": 1.7369976095860258e-06,
+      "db_norm": 0.0037769951579533856,
+      "Ka2_norm": 3.69360122699956e-06,
+      "rx_norm": 0.037065991703325064,
+      "ry_norm": 0.0875707033953013,
+      "rz_norm": 0.0,
+      "tGA": -0.004997171837453071
+    }
+  }
+]

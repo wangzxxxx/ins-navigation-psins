@@ -1,0 +1,137 @@
+{
+  "round_name": "Round66_SCD_XXZZ_ConsistencyOnly",
+  "round_type": "new mechanism probe",
+  "mechanism": "Freeze Round61 feedback path; apply innovation-consistency adaptation only to SCD xx/zz subpath",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "same_dataset_round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_round61_param_errors.json",
+  "dataset": {
+    "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+    "source_trajectory_reference": "method_42state_gm1_round53_internalized_trustcov_release.py::_build_dataset",
+    "noise_config": {
+      "noise_scale_tag": "mainline_1x_round53_family",
+      "arw_dpsh": 0.005,
+      "vrw_ugpsHz": 5.0,
+      "bi_g_dph": 0.002,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42
+    },
+    "constraint_note": "Use exactly the same fixed noisy dataset/noise strength/seed as Round65 mainline"
+  },
+  "protected_metrics": [
+    "dKg_xy",
+    "dKg_yy",
+    "dKa_xx",
+    "rx_y",
+    "ry_z"
+  ],
+  "clean_win_gate": "mean<0, max<=0, dKg_xx<0 and no hard-protected regression vs Round61",
+  "feedback_freeze": {
+    "target_nis": 1.0,
+    "ema_beta": 0.08,
+    "slope": 1.0,
+    "gate_floor": 1.0,
+    "warmup_static_meas": 0,
+    "power": 1.0,
+    "apply_floor": 1.0
+  },
+  "round66_candidates": [
+    {
+      "name": "r66_scd_xxzz_consis_mild_f90",
+      "description": "Consistency-adaptive SCD only on xx/zz with conservative floor, keeping Round61 feedback fully frozen.",
+      "rationale": "Most conservative new-direction probe: only allow tiny SCD modulation on xx/zz while preserving Round61 feedback body unchanged.",
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.1,
+        "slope": 1.0,
+        "gate_floor": 0.9,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "apply_floor": 0.9
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "r66_scd_xxzz_consis_bal_f82",
+      "description": "Balanced xx/zz-only adaptive SCD with moderate floor and slope.",
+      "rationale": "Test whether moderate SCD-only adaptation can recover dKg_zz without leaking regressions to yy/Ka_xx-protected paths.",
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.09,
+        "slope": 1.45,
+        "gate_floor": 0.82,
+        "warmup_static_meas": 8,
+        "power": 1.2,
+        "apply_floor": 0.82
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9989,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "r66_scd_xxzz_consis_slowema_f85",
+      "description": "xx/zz-only adaptive SCD with slower consistency EMA and higher floor.",
+      "rationale": "Reduce gate jitter to keep mechanism deterministic/interpretable and avoid overreacting to transient innovation fluctuations.",
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.05,
+        "slope": 1.35,
+        "gate_floor": 0.85,
+        "warmup_static_meas": 10,
+        "power": 1.15,
+        "apply_floor": 0.85
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9988,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "r66_scd_xxzz_consis_push_f75",
+      "description": "More aggressive xx/zz-only adaptive SCD gate to stress-test the narrow mechanism limit.",
+      "rationale": "Probe upper bound of narrow SCD-only adaptation strength to check whether a stronger xx/zz correction can beat Round61 cleanly.",
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.1,
+        "slope": 1.8,
+        "gate_floor": 0.75,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "apply_floor": 0.75
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    }
+  ]
+}

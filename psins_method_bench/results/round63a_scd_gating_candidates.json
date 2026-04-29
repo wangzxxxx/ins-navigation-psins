@@ -1,0 +1,64 @@
+{
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "round62_reference_winner": "r62_ultralow_guard_soft_neutral",
+  "probe_scales": [
+    1.0,
+    0.1,
+    0.08,
+    0.05,
+    0.03
+  ],
+  "round63a_candidates": [
+    {
+      "name": "r63a_ul_scd_alpha09995",
+      "description": "Below 0.08x only weaken the once-per-phase SCD alpha from 0.999 to 0.9995; keep cadence/target unchanged.",
+      "rationale": "Pure “too strong” test: if the ultra-low distortion comes from the SCD cut being slightly over-aggressive, the mildest repair is a smaller cross-covariance shrink.",
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.08,
+        "scd_override": {
+          "alpha": 0.9995
+        }
+      }
+    },
+    {
+      "name": "r63a_ul_scd_delay6p0",
+      "description": "Below 0.08x only delay the once-per-phase SCD trigger from 2.0 s to 6.0 s after each rotation stop.",
+      "rationale": "Direct “too early” test: preserve the same alpha and target block, but push the one-shot cut later so the static update settles first.",
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.08,
+        "scd_override": {
+          "transition_duration": 6.0
+        }
+      }
+    },
+    {
+      "name": "r63a_ul_scd_core3_only",
+      "description": "Below 0.08x only shrink the SCD target from the full scale block to the Round61 backbone trio: dKg_xx / dKg_xy / dKg_zz.",
+      "rationale": "Interpretable subset test: keep the ultra-low SCD idea only on the three states that still look structurally helpful, and stop suppressing yy / Ka_xx-side cross-covariances.",
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.08,
+        "scd_override": {
+          "target": "custom",
+          "target_name": "selected_core3",
+          "target_indices": [
+            12,
+            15,
+            20
+          ]
+        }
+      }
+    },
+    {
+      "name": "r63a_ul_scd_floor_off",
+      "description": "Below 0.08x disable the iter2 once-per-phase SCD entirely and keep the rest of Round61 unchanged.",
+      "rationale": "Floor ablation test: checks whether the remaining ultra-low distortion is largely coming from the SCD branch itself, not just from the feedback alpha side.",
+      "round63a_scd_guard": {
+        "active_below_noise_scale": 0.08,
+        "scd_override": {
+          "apply_policy_names": [],
+          "target_name": "disabled"
+        }
+      }
+    }
+  ]
+}

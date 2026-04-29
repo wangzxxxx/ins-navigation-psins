@@ -1,0 +1,1117 @@
+{
+  "task": "chapter-3 corrected terminal x-family pivot batch",
+  "report_date": "2026-04-03",
+  "noise_scale": 0.08,
+  "corrected_att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "references": {
+    "current_leader": {
+      "label": "current corrected leader / relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057061223856136,
+          "median_pct_error": 0.6107914879608048,
+          "max_pct_error": 4.71375006474353
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.71375006474353,
+          "eb_x": 4.57033221551275,
+          "Ka2_y": 2.832591244946224,
+          "dKa_xx": 2.5107008594485913,
+          "dKg_yy": 2.4546934956879305
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.71375006474353
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0567915141378126,
+          "median_pct_error": 0.610720244961116,
+          "max_pct_error": 4.713960072310424
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.713960072310424,
+          "eb_x": 4.5682794025537055,
+          "Ka2_y": 2.830686460074407,
+          "dKa_xx": 2.5095605382777633,
+          "dKg_yy": 2.454444318342507
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.713960072310424
+        }
+      },
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "kf36_triplet": "1.057 / 0.611 / 4.714",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "prior_leader": {
+      "label": "prior corrected leader / relay_l9y0p75_l12y0p25_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0628330299996445,
+          "median_pct_error": 0.614884789415418,
+          "max_pct_error": 4.725238024216171
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.725238024216171,
+          "eb_x": 4.637090047239685,
+          "Ka2_y": 2.8604546299145586,
+          "dKa_xx": 2.528409498448308,
+          "dKg_yy": 2.443111498104721
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.725238024216171
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0625646738983392,
+          "median_pct_error": 0.6148208149509837,
+          "max_pct_error": 4.725432373197525
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.725432373197525,
+          "eb_x": 4.635012547828279,
+          "Ka2_y": 2.858531817421764,
+          "dKa_xx": 2.5272717307904364,
+          "dKg_yy": 2.442860859705797
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.725432373197525
+        }
+      },
+      "markov42_triplet": "1.063 / 0.615 / 4.725",
+      "kf36_triplet": "1.063 / 0.615 / 4.725",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l9y0p75_l12y0p25_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l9y0p75_l12y0p25_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "faithful12": {
+      "label": "corrected faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.9544212948566337,
+          "median_pct_error": 0.43062068381890417,
+          "max_pct_error": 15.12164342723992
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0106503323827263,
+          "eb_x": 14.231617445817285,
+          "Ka2_y": 15.12164342723992,
+          "dKa_xx": 2.326041029798204,
+          "dKg_yy": 2.48950860648218
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.12164342723992
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.9543549309026789,
+          "median_pct_error": 0.43053588431934986,
+          "max_pct_error": 15.121086969267727
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.010211603329637,
+          "eb_x": 14.230670596275147,
+          "Ka2_y": 15.121086969267727,
+          "dKa_xx": 2.32596007677614,
+          "dKg_yy": 2.489406084047194
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.121086969267727
+        }
+      },
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      }
+    },
+    "default18": {
+      "label": "default18",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0808366935504474,
+          "eb_x": 14.713291940947315,
+          "Ka2_y": 1.9994816607900874,
+          "dKa_xx": 3.2547206718784216,
+          "dKg_yy": 1.272677074280863
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.713291940947315
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0818904661751674,
+          "eb_x": 14.711353452042115,
+          "Ka2_y": 2.0007501033211734,
+          "dKa_xx": 3.253999899547709,
+          "dKg_yy": 1.2732158843885046
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.711353452042115
+        }
+      },
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "kf36_triplet": "1.556 / 0.813 / 14.711",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+      }
+    }
+  },
+  "hypotheses_tested": [
+    {
+      "id": "X1",
+      "family": "terminal_x_bookend_after_leader",
+      "summary": "Keep the corrected leader intact, then append a tiny outer-axis x-family closed pair at anchor12 after the existing terminal y reclosure has already returned to beta=0. This is the cleanest x-targeted terminal probe against dKg_xx / eb_x without grinding the old y ridge.",
+      "candidate_names": [
+        "relay_xpost_pos0p5_on_entry",
+        "relay_xpost_pos1_on_entry",
+        "relay_xpost_neg1_on_entry"
+      ]
+    },
+    {
+      "id": "X2",
+      "family": "terminal_xy_ordered_orthogonal_mix",
+      "summary": "Insert a small x-family terminal bookend first at anchor12, then run the leader’s original y reclosure. This is an orthogonal x/y mixed terminal family rather than a scalar y-duration tweak.",
+      "candidate_names": [
+        "relay_xpre_pos1_then_y0p125_on_entry"
+      ]
+    }
+  ],
+  "tested_candidates": [
+    "relay_xpost_pos0p5_on_entry",
+    "relay_xpost_pos1_on_entry",
+    "relay_xpost_neg1_on_entry",
+    "relay_xpre_pos1_then_y0p125_on_entry"
+  ],
+  "rows_sorted": [
+    {
+      "candidate_name": "relay_xpost_pos1_on_entry",
+      "family": "terminal_x_bookend_after_leader",
+      "hypothesis_id": "X1",
+      "rationale": "Dose-up positive-sign terminal x bookend after the full corrected leader, testing whether x-side residual suppression needs more than the minimal 0.5 s dwell.",
+      "total_time_s": 1359.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_xpost_pos1_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0704078269236041,
+          "median_pct_error": 0.525944288212048,
+          "max_pct_error": 5.030262514327943
+        },
+        "key_param_errors": {
+          "dKg_xx": 5.030262514327943,
+          "eb_x": 4.4909880749398035,
+          "Ka2_y": 3.0757261092654264,
+          "dKa_xx": 2.65954127943824,
+          "dKg_yy": 1.8577660793032431
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 5.030262514327943
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.013346603067468044,
+        "median_pct_error": 0.08484719974875687,
+        "max_pct_error": -0.3165124495844136
+      },
+      "delta_vs_prior_leader_markov42": {
+        "mean_pct_error": -0.007574796923959681,
+        "median_pct_error": 0.08894050120337005,
+        "max_pct_error": -0.305024490111772
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8840134679330296,
+        "median_pct_error": -0.0953236043931438,
+        "max_pct_error": 10.091380912911976
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4859712600118984,
+        "median_pct_error": 0.28685553545353504,
+        "max_pct_error": 9.68302942661937
+      }
+    },
+    {
+      "candidate_name": "relay_xpost_neg1_on_entry",
+      "family": "terminal_x_bookend_after_leader",
+      "hypothesis_id": "X1",
+      "rationale": "Negative-sign control for the same terminal x bookend family. This checks whether any useful x-side effect is directional rather than just extra end-state dwell.",
+      "total_time_s": 1359.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_xpost_neg1_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0704078269236041,
+          "median_pct_error": 0.525944288212048,
+          "max_pct_error": 5.030262514327943
+        },
+        "key_param_errors": {
+          "dKg_xx": 5.030262514327943,
+          "eb_x": 4.4909880749398035,
+          "Ka2_y": 3.0757261092654264,
+          "dKa_xx": 2.65954127943824,
+          "dKg_yy": 1.8577660793032431
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 5.030262514327943
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.013346603067468044,
+        "median_pct_error": 0.08484719974875687,
+        "max_pct_error": -0.3165124495844136
+      },
+      "delta_vs_prior_leader_markov42": {
+        "mean_pct_error": -0.007574796923959681,
+        "median_pct_error": 0.08894050120337005,
+        "max_pct_error": -0.305024490111772
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8840134679330296,
+        "median_pct_error": -0.0953236043931438,
+        "max_pct_error": 10.091380912911976
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4859712600118984,
+        "median_pct_error": 0.28685553545353504,
+        "max_pct_error": 9.68302942661937
+      }
+    },
+    {
+      "candidate_name": "relay_xpre_pos1_then_y0p125_on_entry",
+      "family": "terminal_xy_ordered_orthogonal_mix",
+      "hypothesis_id": "X2",
+      "rationale": "Run a positive-sign terminal x bookend first at anchor12 and only then execute the original 0.125 s terminal y closure. This is the minimal ordered x/y orthogonal mix around the corrected leader.",
+      "total_time_s": 1359.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_xpre_pos1_then_y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0704078269236041,
+          "median_pct_error": 0.525944288212048,
+          "max_pct_error": 5.030262514327943
+        },
+        "key_param_errors": {
+          "dKg_xx": 5.030262514327943,
+          "eb_x": 4.4909880749398035,
+          "Ka2_y": 3.0757261092654264,
+          "dKa_xx": 2.65954127943824,
+          "dKg_yy": 1.8577660793032431
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 5.030262514327943
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.013346603067468044,
+        "median_pct_error": 0.08484719974875687,
+        "max_pct_error": -0.3165124495844136
+      },
+      "delta_vs_prior_leader_markov42": {
+        "mean_pct_error": -0.007574796923959681,
+        "median_pct_error": 0.08894050120337005,
+        "max_pct_error": -0.305024490111772
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8840134679330296,
+        "median_pct_error": -0.0953236043931438,
+        "max_pct_error": 10.091380912911976
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4859712600118984,
+        "median_pct_error": 0.28685553545353504,
+        "max_pct_error": 9.68302942661937
+      }
+    },
+    {
+      "candidate_name": "relay_xpost_pos0p5_on_entry",
+      "family": "terminal_x_bookend_after_leader",
+      "hypothesis_id": "X1",
+      "rationale": "Append the smallest positive-sign x-family terminal bookend after the corrected leader has fully closed. This isolates whether a very light final x excursion trims dKg_xx / eb_x without reopening the y ridge.",
+      "total_time_s": 1358.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_xpost_pos0p5_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0708613822088224,
+          "median_pct_error": 0.536988203390324,
+          "max_pct_error": 5.099994816483051
+        },
+        "key_param_errors": {
+          "dKg_xx": 5.099994816483051,
+          "eb_x": 4.463705195569746,
+          "Ka2_y": 3.039784906737286,
+          "dKa_xx": 2.6592341584429366,
+          "dKg_yy": 1.933690997877611
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 5.099994816483051
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.013800158352686331,
+        "median_pct_error": 0.0738032845704808,
+        "max_pct_error": -0.3862447517395209
+      },
+      "delta_vs_prior_leader_markov42": {
+        "mean_pct_error": -0.008028352209177969,
+        "median_pct_error": 0.07789658602509397,
+        "max_pct_error": -0.3747567922668793
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8835599126478113,
+        "median_pct_error": -0.10636751957141988,
+        "max_pct_error": 10.02164861075687
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4855177047266801,
+        "median_pct_error": 0.27581162027525896,
+        "max_pct_error": 9.613297124464264
+      }
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "relay_xpost_pos1_on_entry",
+    "family": "terminal_x_bookend_after_leader",
+    "hypothesis_id": "X1",
+    "rationale": "Dose-up positive-sign terminal x bookend after the full corrected leader, testing whether x-side residual suppression needs more than the minimal 0.5 s dwell.",
+    "total_time_s": 1359.875,
+    "result_files": {
+      "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_xpost_pos1_on_entry_shared_noise0p08_param_errors.json"
+    },
+    "result_modes": {
+      "markov42": "rerun"
+    },
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.0704078269236041,
+        "median_pct_error": 0.525944288212048,
+        "max_pct_error": 5.030262514327943
+      },
+      "key_param_errors": {
+        "dKg_xx": 5.030262514327943,
+        "eb_x": 4.4909880749398035,
+        "Ka2_y": 3.0757261092654264,
+        "dKa_xx": 2.65954127943824,
+        "dKg_yy": 1.8577660793032431
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 5.030262514327943
+      }
+    },
+    "delta_vs_leader_markov42": {
+      "mean_pct_error": -0.013346603067468044,
+      "median_pct_error": 0.08484719974875687,
+      "max_pct_error": -0.3165124495844136
+    },
+    "delta_vs_prior_leader_markov42": {
+      "mean_pct_error": -0.007574796923959681,
+      "median_pct_error": 0.08894050120337005,
+      "max_pct_error": -0.305024490111772
+    },
+    "delta_vs_faithful12_markov42": {
+      "mean_pct_error": 0.8840134679330296,
+      "median_pct_error": -0.0953236043931438,
+      "max_pct_error": 10.091380912911976
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": 0.4859712600118984,
+      "median_pct_error": 0.28685553545353504,
+      "max_pct_error": 9.68302942661937
+    }
+  },
+  "best_candidate_timing_table": [
+    {
+      "pos_id": 1,
+      "anchor_id": 1,
+      "segment_role": "anchor",
+      "label": "anchor_1",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 2,
+      "anchor_id": 2,
+      "segment_role": "anchor",
+      "label": "anchor_2",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 3,
+      "anchor_id": 3,
+      "segment_role": "anchor",
+      "label": "anchor_3",
+      "motor_action": "I(0→90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 4,
+      "anchor_id": 4,
+      "segment_role": "anchor",
+      "label": "anchor_4",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 5,
+      "anchor_id": 5,
+      "segment_role": "anchor",
+      "label": "anchor_5",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 6,
+      "anchor_id": 6,
+      "segment_role": "anchor",
+      "label": "anchor_6",
+      "motor_action": "I(90→0) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 7,
+      "anchor_id": 7,
+      "segment_role": "anchor",
+      "label": "anchor_7",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 8,
+      "anchor_id": 8,
+      "segment_role": "anchor",
+      "label": "anchor_8",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 9,
+      "anchor_id": 8,
+      "segment_role": "motif_out",
+      "label": "l8_x1_out",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 10,
+      "anchor_id": 8,
+      "segment_role": "motif_return",
+      "label": "l8_x1_return",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 11,
+      "anchor_id": 9,
+      "segment_role": "anchor",
+      "label": "anchor_9",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 12,
+      "anchor_id": 9,
+      "segment_role": "motif_out",
+      "label": "l9_ypair_neg0p8125_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 13,
+      "anchor_id": 9,
+      "segment_role": "motif_return",
+      "label": "l9_ypair_neg0p8125_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 14,
+      "anchor_id": 10,
+      "segment_role": "anchor",
+      "label": "anchor_10",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 15,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_zpair_neg5_out",
+      "motor_action": "O[-Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 16,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_zpair_neg5_return",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 17,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_ypair_neg1_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 18,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_ypair_neg1_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 19,
+      "anchor_id": 11,
+      "segment_role": "anchor",
+      "label": "anchor_11",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 20,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_open",
+      "label": "l11_xpair_outerhold_inner_open",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 21,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_sweep",
+      "label": "l11_xpair_outerhold_outer_sweep",
+      "motor_action": "O[-X] +90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 22,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_return",
+      "label": "l11_xpair_outerhold_outer_return",
+      "motor_action": "O[-X] -90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 23,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_close",
+      "label": "l11_xpair_outerhold_inner_close",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 24,
+      "anchor_id": 11,
+      "segment_role": "motif_y_pos",
+      "label": "l11_zquad_y10x0back2_q1",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 25,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_a",
+      "label": "l11_zquad_y10x0back2_q2",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 26,
+      "anchor_id": 11,
+      "segment_role": "motif_y_neg",
+      "label": "l11_zquad_y10x0back2_q3",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 27,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_b",
+      "label": "l11_zquad_y10x0back2_q4",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 2.0,
+      "node_total_s": 7.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 28,
+      "anchor_id": 12,
+      "segment_role": "anchor",
+      "label": "anchor_12",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 29,
+      "anchor_id": 12,
+      "segment_role": "motif_out",
+      "label": "l12_yneg0p125_out",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 30,
+      "anchor_id": 12,
+      "segment_role": "motif_return",
+      "label": "l12_yneg0p125_return",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 31,
+      "anchor_id": 12,
+      "segment_role": "motif_out",
+      "label": "l12_xpair_pos1_post_out",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 32,
+      "anchor_id": 12,
+      "segment_role": "motif_return",
+      "label": "l12_xpair_pos1_post_return",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    }
+  ],
+  "kf36_rechecked_candidates": [],
+  "kf36_gate_reason": "Best Markov42 x-targeted candidate relay_xpost_pos1_on_entry = 1.070 / 0.526 / 5.030 did not satisfy the competitive gate (need Δmax > 0 and Δmean > -0.010 vs current leader).",
+  "required_comparison_rows": [
+    {
+      "label": "current corrected leader / relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "kf36_triplet": "1.057 / 0.611 / 4.714",
+      "note": "current corrected leader to beat",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": -0.013346603067468044,
+        "median_pct_error": 0.08484719974875687,
+        "max_pct_error": -0.3165124495844136
+      }
+    },
+    {
+      "label": "prior corrected leader / relay_l9y0p75_l12y0p25_on_entry",
+      "markov42_triplet": "1.063 / 0.615 / 4.725",
+      "kf36_triplet": "1.063 / 0.615 / 4.725",
+      "note": "prior accepted leader before the current corrected leader",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": -0.007574796923959681,
+        "median_pct_error": 0.08894050120337005,
+        "max_pct_error": -0.305024490111772
+      }
+    },
+    {
+      "label": "faithful12",
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "note": "corrected faithful12 reference",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.8840134679330296,
+        "median_pct_error": -0.0953236043931438,
+        "max_pct_error": 10.091380912911976
+      }
+    },
+    {
+      "label": "default18",
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "kf36_triplet": "1.556 / 0.813 / 14.711",
+      "note": "default 18-position reference",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.4859712600118984,
+        "median_pct_error": 0.28685553545353504,
+        "max_pct_error": 9.68302942661937
+      }
+    },
+    {
+      "label": "batch-best candidate / relay_xpost_pos1_on_entry",
+      "markov42_triplet": "1.070 / 0.526 / 5.030",
+      "kf36_triplet": "not rerun",
+      "note": "best point found inside this x-targeted pivot batch",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.0,
+        "median_pct_error": 0.0,
+        "max_pct_error": 0.0
+      }
+    }
+  ],
+  "near_tradeoffs": [],
+  "bottom_line": {
+    "beat_current_leader": "NO",
+    "statement": "The corrected leader remains better than every tested terminal x-family variant; this pivot did not beat the current leader and instead confirms that simple terminal x bookends are weaker than the existing corrected frontier."
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "task": "compare_g1g2_singleaxis_noscale_alignment_arcsec_2026_04_07",
+  "reference_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_group_alignment_arcsec_2026-04-05.json",
+  "variation_note": "Only G1/G2 were rerun. Truth injection dKg/dKa were set to zero. eb/db/web/wdb, seeds, single-axis trajectory, phi0, and filter configs were kept unchanged. G2 still keeps scale states active.",
+  "metric_definition": "pitch mean abs / yaw abs mean / norm mean in arcsec",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "summary_rows": [
+    {
+      "group_key": "g1_plain12_singleaxis_noscale",
+      "display": "G1 普通模型(12-state) @ 单轴旋转对准（去掉 truth 比例误差）",
+      "pitch_mean_abs_arcsec": 46.137624545470366,
+      "yaw_abs_mean_arcsec": 10032.611549803143,
+      "norm_mean_arcsec": 10035.306188732746,
+      "yaw_abs_median_arcsec": 10026.67682523937,
+      "yaw_abs_max_arcsec": 10047.426565059754,
+      "baseline_pitch_mean_abs_arcsec": 47.85193954160471,
+      "baseline_yaw_abs_mean_arcsec": 10241.279172302613,
+      "baseline_norm_mean_arcsec": 10243.961534966915,
+      "delta_pitch_mean_abs_arcsec": 1.7143149961343411,
+      "delta_yaw_abs_mean_arcsec": 208.66762249946987,
+      "delta_norm_mean_arcsec": 208.65534623416897
+    },
+    {
+      "group_key": "g2_markov_singleaxis_noscale",
+      "display": "G2 GM-family plain24 @ 单轴旋转对准（去掉 truth 比例误差）",
+      "pitch_mean_abs_arcsec": 28.20519438678316,
+      "yaw_abs_mean_arcsec": 5566.989346661579,
+      "norm_mean_arcsec": 5567.061734601882,
+      "yaw_abs_median_arcsec": 5567.90355331682,
+      "yaw_abs_max_arcsec": 5584.665705368213,
+      "baseline_pitch_mean_abs_arcsec": 28.15591453077689,
+      "baseline_yaw_abs_mean_arcsec": 5571.797342997723,
+      "baseline_norm_mean_arcsec": 5571.869381318616,
+      "delta_pitch_mean_abs_arcsec": -0.04927985600626883,
+      "delta_yaw_abs_mean_arcsec": 4.807996336144242,
+      "delta_norm_mean_arcsec": 4.80764671673478
+    }
+  ],
+  "groups": {
+    "g1_plain12_singleaxis_noscale": {
+      "pitch_mean_abs_arcsec": 46.137624545470366,
+      "yaw_abs_mean_arcsec": 10032.611549803143,
+      "norm_mean_arcsec": 10035.306188732746,
+      "yaw_abs_median_arcsec": 10026.67682523937,
+      "yaw_abs_max_arcsec": 10047.426565059754,
+      "mean_signed_arcsec": [
+        -227.9190006741183,
+        -46.137624545470366,
+        10032.611549803143
+      ],
+      "mean_abs_arcsec": [
+        227.9190006741183,
+        46.137624545470366,
+        10032.611549803143
+      ],
+      "per_seed_final_yaw_abs_arcsec": [
+        10025.224582592047,
+        10023.584561552976,
+        10047.426565059754,
+        10040.14521457157,
+        10026.67682523937
+      ],
+      "per_seed_final_norm_arcsec": [
+        10027.920772989373,
+        10026.281889188722,
+        10050.117574036929,
+        10042.83919550912,
+        10029.371511939582
+      ],
+      "per_seed": [
+        {
+          "group_key": "g1_plain12_singleaxis_noscale",
+          "seed": 0,
+          "final_att_err_arcsec": [
+            -227.90751481230308,
+            -46.10057088567233,
+            10025.224582592047
+          ],
+          "final_att_err_abs_arcsec": [
+            227.90751481230308,
+            46.10057088567233,
+            10025.224582592047
+          ],
+          "final_att_err_norm_arcsec": 10027.920772989373,
+          "final_yaw_abs_arcsec": 10025.224582592047
+        },
+        {
+          "group_key": "g1_plain12_singleaxis_noscale",
+          "seed": 1,
+          "final_att_err_arcsec": [
+            -227.9300969313037,
+            -46.1403270847842,
+            10023.584561552976
+          ],
+          "final_att_err_abs_arcsec": [
+            227.9300969313037,
+            46.1403270847842,
+            10023.584561552976
+          ],
+          "final_att_err_norm_arcsec": 10026.281889188722,
+          "final_yaw_abs_arcsec": 10023.584561552976
+        },
+        {
+          "group_key": "g1_plain12_singleaxis_noscale",
+          "seed": 2,
+          "final_att_err_arcsec": [
+            -227.92029336957322,
+            -46.20618538453397,
+            10047.426565059754
+          ],
+          "final_att_err_abs_arcsec": [
+            227.92029336957322,
+            46.20618538453397,
+            10047.426565059754
+          ],
+          "final_att_err_norm_arcsec": 10050.117574036929,
+          "final_yaw_abs_arcsec": 10047.426565059754
+        },
+        {
+          "group_key": "g1_plain12_singleaxis_noscale",
+          "seed": 3,
+          "final_att_err_arcsec": [
+            -227.98505641855073,
+            -46.108472319873776,
+            10040.14521457157
+          ],
+          "final_att_err_abs_arcsec": [
+            227.98505641855073,
+            46.108472319873776,
+            10040.14521457157
+          ],
+          "final_att_err_norm_arcsec": 10042.83919550912,
+          "final_yaw_abs_arcsec": 10040.14521457157
+        },
+        {
+          "group_key": "g1_plain12_singleaxis_noscale",
+          "seed": 4,
+          "final_att_err_arcsec": [
+            -227.85204183886086,
+            -46.132567052487566,
+            10026.67682523937
+          ],
+          "final_att_err_abs_arcsec": [
+            227.85204183886086,
+            46.132567052487566,
+            10026.67682523937
+          ],
+          "final_att_err_norm_arcsec": 10029.371511939582,
+          "final_yaw_abs_arcsec": 10026.67682523937
+        }
+      ]
+    },
+    "g2_markov_singleaxis_noscale": {
+      "pitch_mean_abs_arcsec": 28.20519438678316,
+      "yaw_abs_mean_arcsec": 5566.989346661579,
+      "norm_mean_arcsec": 5567.061734601882,
+      "yaw_abs_median_arcsec": 5567.90355331682,
+      "yaw_abs_max_arcsec": 5584.665705368213,
+      "mean_signed_arcsec": [
+        -3.229296090145494,
+        -28.20519438678316,
+        5566.989346661579
+      ],
+      "mean_abs_arcsec": [
+        3.229296090145494,
+        28.20519438678316,
+        5566.989346661579
+      ],
+      "per_seed_final_yaw_abs_arcsec": [
+        5554.803147547643,
+        5567.90355331682,
+        5570.075965859373,
+        5584.665705368213,
+        5557.498361215842
+      ],
+      "per_seed_final_norm_arcsec": [
+        5554.8755105577175,
+        5567.976383971005,
+        5570.148021729987,
+        5584.738176849845,
+        5557.570579900853
+      ],
+      "per_seed": [
+        {
+          "group_key": "g2_markov_singleaxis_noscale",
+          "seed": 0,
+          "final_att_err_arcsec": [
+            -3.159574375324357,
+            -28.17706298450374,
+            5554.803147547643
+          ],
+          "final_att_err_abs_arcsec": [
+            3.159574375324357,
+            28.17706298450374,
+            5554.803147547643
+          ],
+          "final_att_err_norm_arcsec": 5554.8755105577175,
+          "final_yaw_abs_arcsec": 5554.803147547643
+        },
+        {
+          "group_key": "g2_markov_singleaxis_noscale",
+          "seed": 1,
+          "final_att_err_arcsec": [
+            -3.2142224711126937,
+            -28.29668168997563,
+            5567.90355331682
+          ],
+          "final_att_err_abs_arcsec": [
+            3.2142224711126937,
+            28.29668168997563,
+            5567.90355331682
+          ],
+          "final_att_err_norm_arcsec": 5567.976383971005,
+          "final_yaw_abs_arcsec": 5567.90355331682
+        },
+        {
+          "group_key": "g2_markov_singleaxis_noscale",
+          "seed": 2,
+          "final_att_err_arcsec": [
+            -3.209382947388164,
+            -28.149927164316853,
+            5570.075965859373
+          ],
+          "final_att_err_abs_arcsec": [
+            3.209382947388164,
+            28.149927164316853,
+            5570.075965859373
+          ],
+          "final_att_err_norm_arcsec": 5570.148021729987,
+          "final_yaw_abs_arcsec": 5570.075965859373
+        },
+        {
+          "group_key": "g2_markov_singleaxis_noscale",
+          "seed": 3,
+          "final_att_err_arcsec": [
+            -3.3965657390436395,
+            -28.247594401597418,
+            5584.665705368213
+          ],
+          "final_att_err_abs_arcsec": [
+            3.3965657390436395,
+            28.247594401597418,
+            5584.665705368213
+          ],
+          "final_att_err_norm_arcsec": 5584.738176849845,
+          "final_yaw_abs_arcsec": 5584.665705368213
+        },
+        {
+          "group_key": "g2_markov_singleaxis_noscale",
+          "seed": 4,
+          "final_att_err_arcsec": [
+            -3.166734917858615,
+            -28.154705693522153,
+            5557.498361215842
+          ],
+          "final_att_err_abs_arcsec": [
+            3.166734917858615,
+            28.154705693522153,
+            5557.498361215842
+          ],
+          "final_att_err_norm_arcsec": 5557.570579900853,
+          "final_yaw_abs_arcsec": 5557.498361215842
+        }
+      ]
+    }
+  },
+  "deltas_vs_baseline": {
+    "g1_plain12_singleaxis_noscale": {
+      "baseline_group_key": "g1_plain12_singleaxis",
+      "pitch_mean_abs_arcsec_delta": 1.7143149961343411,
+      "yaw_abs_mean_arcsec_delta": 208.66762249946987,
+      "norm_mean_arcsec_delta": 208.65534623416897,
+      "pitch_improved": true,
+      "yaw_improved": true,
+      "norm_improved": true
+    },
+    "g2_markov_singleaxis_noscale": {
+      "baseline_group_key": "g2_markov_singleaxis",
+      "pitch_mean_abs_arcsec_delta": -0.04927985600626883,
+      "yaw_abs_mean_arcsec_delta": 4.807996336144242,
+      "norm_mean_arcsec_delta": 4.80764671673478,
+      "pitch_improved": false,
+      "yaw_improved": true,
+      "norm_improved": true
+    }
+  }
+}

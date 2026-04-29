@@ -1,0 +1,582 @@
+{
+  "task": "four_group_alignment_arcsec_2026_04_05",
+  "metric_definition": "pitch mean abs / yaw abs mean / norm mean in arcsec",
+  "group_mapping_note": "G1=12-state plain alignvn on single-axis baseline; G2=24-state plain24 on same single-axis baseline; G3=24-state plain24 on old Chapter-4 dual-axis rotation strategy; G4=24-state pure-SCD on the same dual-axis rotation strategy",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "summary_rows": [
+    {
+      "group_key": "g1_plain12_singleaxis",
+      "display": "G1 普通模型(12-state) @ 单轴旋转对准",
+      "pitch_mean_abs_arcsec": 47.85193954160471,
+      "yaw_abs_mean_arcsec": 10241.279172302613,
+      "norm_mean_arcsec": 10243.961534966915,
+      "yaw_abs_median_arcsec": 10235.34363679599,
+      "yaw_abs_max_arcsec": 10256.114834660744
+    },
+    {
+      "group_key": "g2_markov_singleaxis",
+      "display": "G2 Markov/GM-family plain24 @ 单轴旋转对准",
+      "pitch_mean_abs_arcsec": 28.15591453077689,
+      "yaw_abs_mean_arcsec": 5571.797342997723,
+      "norm_mean_arcsec": 5571.869381318616,
+      "yaw_abs_median_arcsec": 5572.711418331981,
+      "yaw_abs_max_arcsec": 5589.473709290754
+    },
+    {
+      "group_key": "g3_markov_rotation",
+      "display": "G3 Markov/GM-family plain24 @ 双轴旋转对准策略",
+      "pitch_mean_abs_arcsec": 0.06414558157565987,
+      "yaw_abs_mean_arcsec": 17.585627840803717,
+      "norm_mean_arcsec": 17.587669032787083,
+      "yaw_abs_median_arcsec": 21.61498672756743,
+      "yaw_abs_max_arcsec": 29.75738536492402
+    },
+    {
+      "group_key": "g4_scd_rotation",
+      "display": "G4 Markov + SCD @ 双轴旋转对准策略",
+      "pitch_mean_abs_arcsec": 0.04888129293772076,
+      "yaw_abs_mean_arcsec": 15.198020636547408,
+      "norm_mean_arcsec": 15.200065024826737,
+      "yaw_abs_median_arcsec": 18.963264193299498,
+      "yaw_abs_max_arcsec": 26.837630126341583
+    }
+  ],
+  "progression": {
+    "pitch_mean_abs_arcsec": {
+      "strict_progression": true,
+      "best_group": "g4_scd_rotation",
+      "steps": [
+        {
+          "from_group": "g1_plain12_singleaxis",
+          "to_group": "g2_markov_singleaxis",
+          "delta": 19.696025010827817,
+          "improved": true
+        },
+        {
+          "from_group": "g2_markov_singleaxis",
+          "to_group": "g3_markov_rotation",
+          "delta": 28.09176894920123,
+          "improved": true
+        },
+        {
+          "from_group": "g3_markov_rotation",
+          "to_group": "g4_scd_rotation",
+          "delta": 0.015264288637939112,
+          "improved": true
+        }
+      ]
+    },
+    "yaw_abs_mean_arcsec": {
+      "strict_progression": true,
+      "best_group": "g4_scd_rotation",
+      "steps": [
+        {
+          "from_group": "g1_plain12_singleaxis",
+          "to_group": "g2_markov_singleaxis",
+          "delta": 4669.48182930489,
+          "improved": true
+        },
+        {
+          "from_group": "g2_markov_singleaxis",
+          "to_group": "g3_markov_rotation",
+          "delta": 5554.211715156919,
+          "improved": true
+        },
+        {
+          "from_group": "g3_markov_rotation",
+          "to_group": "g4_scd_rotation",
+          "delta": 2.387607204256309,
+          "improved": true
+        }
+      ]
+    },
+    "norm_mean_arcsec": {
+      "strict_progression": true,
+      "best_group": "g4_scd_rotation",
+      "steps": [
+        {
+          "from_group": "g1_plain12_singleaxis",
+          "to_group": "g2_markov_singleaxis",
+          "delta": 4672.092153648298,
+          "improved": true
+        },
+        {
+          "from_group": "g2_markov_singleaxis",
+          "to_group": "g3_markov_rotation",
+          "delta": 5554.28171228583,
+          "improved": true
+        },
+        {
+          "from_group": "g3_markov_rotation",
+          "to_group": "g4_scd_rotation",
+          "delta": 2.3876040079603467,
+          "improved": true
+        }
+      ]
+    }
+  },
+  "groups": {
+    "g1_plain12_singleaxis": {
+      "pitch_mean_abs_arcsec": 47.85193954160471,
+      "yaw_abs_mean_arcsec": 10241.279172302613,
+      "norm_mean_arcsec": 10243.961534966915,
+      "yaw_abs_median_arcsec": 10235.34363679599,
+      "yaw_abs_max_arcsec": 10256.114834660744,
+      "mean_signed_arcsec": [
+        -229.47548144073932,
+        -47.85193954160471,
+        10241.279172302613
+      ],
+      "mean_abs_arcsec": [
+        229.47548144073932,
+        47.85193954160471,
+        10241.279172302613
+      ],
+      "per_seed_final_yaw_abs_arcsec": [
+        10233.890243173519,
+        10232.229973237758,
+        10256.114834660744,
+        10248.817173645059,
+        10235.34363679599
+      ],
+      "per_seed_final_norm_arcsec": [
+        10236.574106479346,
+        10234.914976093765,
+        10258.79367499823,
+        10251.49889039421,
+        10238.026026869024
+      ],
+      "per_seed": [
+        {
+          "group_key": "g1_plain12_singleaxis",
+          "seed": 0,
+          "final_att_err_arcsec": [
+            -229.4639589060456,
+            -47.81442966764774,
+            10233.890243173519
+          ],
+          "final_att_err_abs_arcsec": [
+            229.4639589060456,
+            47.81442966764774,
+            10233.890243173519
+          ],
+          "final_att_err_norm_arcsec": 10236.574106479346,
+          "final_yaw_abs_arcsec": 10233.890243173519
+        },
+        {
+          "group_key": "g1_plain12_singleaxis",
+          "seed": 1,
+          "final_att_err_arcsec": [
+            -229.48703917823354,
+            -47.85437798657186,
+            10232.229973237758
+          ],
+          "final_att_err_abs_arcsec": [
+            229.48703917823354,
+            47.85437798657186,
+            10232.229973237758
+          ],
+          "final_att_err_norm_arcsec": 10234.914976093765,
+          "final_yaw_abs_arcsec": 10232.229973237758
+        },
+        {
+          "group_key": "g1_plain12_singleaxis",
+          "seed": 2,
+          "final_att_err_arcsec": [
+            -229.4770435245924,
+            -47.92129934268861,
+            10256.114834660744
+          ],
+          "final_att_err_abs_arcsec": [
+            229.4770435245924,
+            47.92129934268861,
+            10256.114834660744
+          ],
+          "final_att_err_norm_arcsec": 10258.79367499823,
+          "final_yaw_abs_arcsec": 10256.114834660744
+        },
+        {
+          "group_key": "g1_plain12_singleaxis",
+          "seed": 3,
+          "final_att_err_arcsec": [
+            -229.541012919389,
+            -47.822215964745766,
+            10248.817173645059
+          ],
+          "final_att_err_abs_arcsec": [
+            229.541012919389,
+            47.822215964745766,
+            10248.817173645059
+          ],
+          "final_att_err_norm_arcsec": 10251.49889039421,
+          "final_yaw_abs_arcsec": 10248.817173645059
+        },
+        {
+          "group_key": "g1_plain12_singleaxis",
+          "seed": 4,
+          "final_att_err_arcsec": [
+            -229.40835267543594,
+            -47.84737474636956,
+            10235.34363679599
+          ],
+          "final_att_err_abs_arcsec": [
+            229.40835267543594,
+            47.84737474636956,
+            10235.34363679599
+          ],
+          "final_att_err_norm_arcsec": 10238.026026869024,
+          "final_yaw_abs_arcsec": 10235.34363679599
+        }
+      ]
+    },
+    "g2_markov_singleaxis": {
+      "pitch_mean_abs_arcsec": 28.15591453077689,
+      "yaw_abs_mean_arcsec": 5571.797342997723,
+      "norm_mean_arcsec": 5571.869381318616,
+      "yaw_abs_median_arcsec": 5572.711418331981,
+      "yaw_abs_max_arcsec": 5589.473709290754,
+      "mean_signed_arcsec": [
+        -3.163198119991778,
+        -28.15591453077689,
+        5571.797342997723
+      ],
+      "mean_abs_arcsec": [
+        3.163198119991778,
+        28.15591453077689,
+        5571.797342997723
+      ],
+      "per_seed_final_yaw_abs_arcsec": [
+        5559.611269657878,
+        5572.711418331981,
+        5574.883716955297,
+        5589.473709290754,
+        5562.306600752705
+      ],
+      "per_seed_final_norm_arcsec": [
+        5559.683283328142,
+        5572.783898341794,
+        5574.955424292245,
+        5589.545830051899,
+        5562.378470578999
+      ],
+      "per_seed": [
+        {
+          "group_key": "g2_markov_singleaxis",
+          "seed": 0,
+          "final_att_err_arcsec": [
+            -3.093489226836221,
+            -28.127771612928075,
+            5559.611269657878
+          ],
+          "final_att_err_abs_arcsec": [
+            3.093489226836221,
+            28.127771612928075,
+            5559.611269657878
+          ],
+          "final_att_err_norm_arcsec": 5559.683283328142,
+          "final_yaw_abs_arcsec": 5559.611269657878
+        },
+        {
+          "group_key": "g2_markov_singleaxis",
+          "seed": 1,
+          "final_att_err_arcsec": [
+            -3.1481372427003524,
+            -28.247386460161696,
+            5572.711418331981
+          ],
+          "final_att_err_abs_arcsec": [
+            3.1481372427003524,
+            28.247386460161696,
+            5572.711418331981
+          ],
+          "final_att_err_norm_arcsec": 5572.783898341794,
+          "final_yaw_abs_arcsec": 5572.711418331981
+        },
+        {
+          "group_key": "g2_markov_singleaxis",
+          "seed": 2,
+          "final_att_err_arcsec": [
+            -3.143277768462077,
+            -28.100624140425666,
+            5574.883716955297
+          ],
+          "final_att_err_abs_arcsec": [
+            3.143277768462077,
+            28.100624140425666,
+            5574.883716955297
+          ],
+          "final_att_err_norm_arcsec": 5574.955424292245,
+          "final_yaw_abs_arcsec": 5574.883716955297
+        },
+        {
+          "group_key": "g2_markov_singleaxis",
+          "seed": 3,
+          "final_att_err_arcsec": [
+            -3.3304767923646996,
+            -28.198356731696922,
+            5589.473709290754
+          ],
+          "final_att_err_abs_arcsec": [
+            3.3304767923646996,
+            28.198356731696922,
+            5589.473709290754
+          ],
+          "final_att_err_norm_arcsec": 5589.545830051899,
+          "final_yaw_abs_arcsec": 5589.473709290754
+        },
+        {
+          "group_key": "g2_markov_singleaxis",
+          "seed": 4,
+          "final_att_err_arcsec": [
+            -3.1006095695955387,
+            -28.105433708672102,
+            5562.306600752705
+          ],
+          "final_att_err_abs_arcsec": [
+            3.1006095695955387,
+            28.105433708672102,
+            5562.306600752705
+          ],
+          "final_att_err_norm_arcsec": 5562.378470578999,
+          "final_yaw_abs_arcsec": 5562.306600752705
+        }
+      ]
+    },
+    "g3_markov_rotation": {
+      "pitch_mean_abs_arcsec": 0.06414558157565987,
+      "yaw_abs_mean_arcsec": 17.585627840803717,
+      "norm_mean_arcsec": 17.587669032787083,
+      "yaw_abs_median_arcsec": 21.61498672756743,
+      "yaw_abs_max_arcsec": 29.75738536492402,
+      "mean_signed_arcsec": [
+        0.029110485897362204,
+        0.03916545447913585,
+        -17.585627840803717
+      ],
+      "mean_abs_arcsec": [
+        0.08112013709486314,
+        0.06414558157565987,
+        17.585627840803717
+      ],
+      "per_seed_final_yaw_abs_arcsec": [
+        25.64515469220551,
+        21.61498672756743,
+        29.75738536492402,
+        1.6216348032510515,
+        9.288977616070582
+      ],
+      "per_seed_final_norm_arcsec": [
+        25.645158837026415,
+        21.61579807699019,
+        29.757596881724204,
+        1.6304702371986741,
+        9.289321130995914
+      ],
+      "per_seed": [
+        {
+          "group_key": "g3_markov_rotation",
+          "seed": 0,
+          "final_att_err_arcsec": [
+            -0.014439585631962317,
+            -0.0020217642124995073,
+            -25.64515469220551
+          ],
+          "final_att_err_abs_arcsec": [
+            0.014439585631962317,
+            0.0020217642124995073,
+            25.64515469220551
+          ],
+          "final_att_err_norm_arcsec": 25.645158837026415,
+          "final_yaw_abs_arcsec": 25.64515469220551
+        },
+        {
+          "group_key": "g3_markov_rotation",
+          "seed": 1,
+          "final_att_err_arcsec": [
+            0.17726720569516338,
+            -0.06042855352881053,
+            -21.61498672756743
+          ],
+          "final_att_err_abs_arcsec": [
+            0.17726720569516338,
+            0.06042855352881053,
+            21.61498672756743
+          ],
+          "final_att_err_norm_arcsec": 21.61579807699019,
+          "final_yaw_abs_arcsec": 21.61498672756743
+        },
+        {
+          "group_key": "g3_markov_rotation",
+          "seed": 2,
+          "final_att_err_arcsec": [
+            0.09830935178539997,
+            0.054071156447105216,
+            -29.75738536492402
+          ],
+          "final_att_err_abs_arcsec": [
+            0.09830935178539997,
+            0.054071156447105216,
+            29.75738536492402
+          ],
+          "final_att_err_norm_arcsec": 29.757596881724204,
+          "final_yaw_abs_arcsec": 29.75738536492402
+        },
+        {
+          "group_key": "g3_markov_rotation",
+          "seed": 3,
+          "final_att_err_arcsec": [
+            -0.047275328977026215,
+            0.1627845279679177,
+            -1.6216348032510515
+          ],
+          "final_att_err_abs_arcsec": [
+            0.047275328977026215,
+            0.1627845279679177,
+            1.6216348032510515
+          ],
+          "final_att_err_norm_arcsec": 1.6304702371986741,
+          "final_yaw_abs_arcsec": 1.6216348032510515
+        },
+        {
+          "group_key": "g3_markov_rotation",
+          "seed": 4,
+          "final_att_err_arcsec": [
+            -0.0683092133847638,
+            0.04142190572196639,
+            -9.288977616070582
+          ],
+          "final_att_err_abs_arcsec": [
+            0.0683092133847638,
+            0.04142190572196639,
+            9.288977616070582
+          ],
+          "final_att_err_norm_arcsec": 9.289321130995914,
+          "final_yaw_abs_arcsec": 9.288977616070582
+        }
+      ]
+    },
+    "g4_scd_rotation": {
+      "pitch_mean_abs_arcsec": 0.04888129293772076,
+      "yaw_abs_mean_arcsec": 15.198020636547408,
+      "norm_mean_arcsec": 15.200065024826737,
+      "yaw_abs_median_arcsec": 18.963264193299498,
+      "yaw_abs_max_arcsec": 26.837630126341583,
+      "mean_signed_arcsec": [
+        0.004967340998316719,
+        0.021657233011262857,
+        -14.662917100783693
+      ],
+      "mean_abs_arcsec": [
+        0.08644284533515731,
+        0.04888129293772076,
+        15.198020636547408
+      ],
+      "per_seed_final_yaw_abs_arcsec": [
+        22.62050055318948,
+        18.963264193299498,
+        26.837630126341583,
+        1.337758839409285,
+        6.230949470497196
+      ],
+      "per_seed_final_norm_arcsec": [
+        22.620550824845136,
+        18.963937516763796,
+        26.83776057817033,
+        1.3464311111041911,
+        6.2316450932502185
+      ],
+      "per_seed": [
+        {
+          "group_key": "g4_scd_rotation",
+          "seed": 0,
+          "final_att_err_arcsec": [
+            -0.039388327101395976,
+            -0.026886841477560066,
+            -22.62050055318948
+          ],
+          "final_att_err_abs_arcsec": [
+            0.039388327101395976,
+            0.026886841477560066,
+            22.62050055318948
+          ],
+          "final_att_err_norm_arcsec": 22.620550824845136,
+          "final_yaw_abs_arcsec": 22.62050055318948
+        },
+        {
+          "group_key": "g4_scd_rotation",
+          "seed": 1,
+          "final_att_err_arcsec": [
+            0.15440865755225383,
+            -0.04117330833858469,
+            -18.963264193299498
+          ],
+          "final_att_err_abs_arcsec": [
+            0.15440865755225383,
+            0.04117330833858469,
+            18.963264193299498
+          ],
+          "final_att_err_norm_arcsec": 18.963937516763796,
+          "final_yaw_abs_arcsec": 18.963264193299498
+        },
+        {
+          "group_key": "g4_scd_rotation",
+          "seed": 2,
+          "final_att_err_arcsec": [
+            0.07411680828143125,
+            0.03884265189456315,
+            -26.837630126341583
+          ],
+          "final_att_err_abs_arcsec": [
+            0.07411680828143125,
+            0.03884265189456315,
+            26.837630126341583
+          ],
+          "final_att_err_norm_arcsec": 26.83776057817033,
+          "final_yaw_abs_arcsec": 26.837630126341583
+        },
+        {
+          "group_key": "g4_scd_rotation",
+          "seed": 3,
+          "final_att_err_arcsec": [
+            -0.07122727013102767,
+            0.13492479579851646,
+            1.337758839409285
+          ],
+          "final_att_err_abs_arcsec": [
+            0.07122727013102767,
+            0.13492479579851646,
+            1.337758839409285
+          ],
+          "final_att_err_norm_arcsec": 1.3464311111041911,
+          "final_yaw_abs_arcsec": 1.337758839409285
+        },
+        {
+          "group_key": "g4_scd_rotation",
+          "seed": 4,
+          "final_att_err_arcsec": [
+            -0.09307316360967784,
+            0.0025788671793794326,
+            -6.230949470497196
+          ],
+          "final_att_err_abs_arcsec": [
+            0.09307316360967784,
+            0.0025788671793794326,
+            6.230949470497196
+          ],
+          "final_att_err_norm_arcsec": 6.2316450932502185,
+          "final_yaw_abs_arcsec": 6.230949470497196
+        }
+      ]
+    }
+  },
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/compare_four_group_alignment_arcsec_2026-04-05.json",
+    "md": "/root/.openclaw/workspace/reports/psins_four_group_alignment_arcsec_2026-04-05.md"
+  }
+}

@@ -1,0 +1,207 @@
+"""
+Quick noise sweep diagnostic for test_system_calibration_19pos_hybrid.py
+Runs calibration with three different noise levels to isolate the noise impact.
+"""
+import numpy as np
+import sys
+import os
+import math
+import copy
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from psins_py.nav_utils import glv, posset, Earth
+from psins_py.imu_utils import attrottt, avp2imu, imuclbt, imudot, cnscl, imulvS, imuadderr
+from psins_py.kf_utils import clbtkfinit, kfupdate, clbtkffeedback, getFt, alignsb, nnts
+from psins_py.math_utils import q2mat, q2att, qmulv, qupdt2, rotv
+
+def get_default_clbt():
+    Kg_mat = np.eye(3) - np.diag([10., 20., 30.]) * glv.ppm + \
+             np.array([[0., 10., 20.], [30., 0., 40.], [50., 60., 0.]]) * glv.sec
+    Ka_mat = np.eye(3) - np.diag([10., 20., 30.]) * glv.ppm + \
+             np.array([[0., 0., 0.], [10., 0., 0.], [20., 30., 0.]]) * glv.sec
+    return {
+        'sf': np.ones(6),
+        'Kg': Kg_mat, 'Ka': Ka_mat,
+        'eb': np.array([0.1, 0.2, 0.3]) * glv.dph,
+        'db': np.array([100.0, 200.0, 300.0]) * glv.ug,
+        'Ka2': np.array([10.0, 20.0, 30.0]) * glv.ugpg2,
+        'rx': np.array([1.0, 2.0, 3.0]) / 100.0,
+        'ry': np.array([4.0, 5.0, 6.0]) / 100.0,
+        'rz': np.zeros(3), 'tGA': 0.005
+    }
+
+def run_calibration(web_scale, wdb_scale, clbt_truth, imu_clean, pos0, ts):
+    """Run one calibration pass with given noise level. Returns clbt estimate."""
+    imu1 = np.copy(imu_clean)
+    if web_scale > 0 or wdb_scale > 0:
+        imuerr_wn = {
+            'web': np.array([web_scale, web_scale, web_scale]) * glv.dpsh,
+            'wdb': np.array([wdb_scale, wdb_scale, wdb_scale]) * glv.ugpsHz
+        }
+        imu1 = imuadderr(imu1, imuerr_wn)
+
+    eth = Earth(pos0)
+    wnie = glv.wie * np.array([0, math.cos(pos0[0]), math.sin(pos0[0])])
+    gn = np.array([0, 0, -eth.g])
+
+    Cba = np.eye(3)
+    nn, _, nts, _ = nnts(2, ts)
+    frq2 = int(1 / ts / 2) - 1
+
+    k = frq2
+    for k in range(frq2, min(5*60*2*frq2, len(imu1)), 2*frq2):
+        ww = np.mean(imu1[k-frq2:k+frq2+1, 0:3], axis=0)
+        if np.linalg.norm(ww) / ts > 30 * glv.dph:
+            break
+    kstatic = k - 3 * frq2
+
+    clbt = {'Kg': np.eye(3), 'Ka': np.eye(3), 'Ka2': np.zeros(3),
+            'eb': np.zeros(3), 'db': np.zeros(3),
+            'rx': np.zeros(3), 'ry': np.zeros(3), 'rz': np.zeros(3), 'tGA': 0.0}
+
+    length = len(imu1)
+    dotwf = imudot(imu1, 5.0)
+    iterations = 3
+
+    def apply_clbt(imu_s, c):
+        res = np.copy(imu_s)
+        for i in range(len(res)):
+            res[i, 0:3] = c['Kg'] @ res[i, 0:3] - c['eb'] * ts
+            res[i, 3:6] = c['Ka'] @ res[i, 3:6] - c['db'] * ts
+        return res
+
+    for it in range(iterations):
+        kf = clbtkfinit(nts)
+        if it == iterations - 1:
+            kf['Pxk'] = kf['Pxk'] * 100
+            kf['Pxk'][:, 2] = 0; kf['Pxk'][2, :] = 0
+            kf['xk'] = np.zeros(43)
+
+        imu_align = apply_clbt(imu1[frq2:kstatic, :], clbt)
+        _, _, _, qnb = alignsb(imu_align, pos0)
+
+        vn = np.zeros(3)
+        t1s = 0.0
+
+        for k in range(2 * frq2, length - frq2, nn):
+            k1 = k + nn - 1
+            wm = imu1[k:k1+1, 0:3]
+            vm = imu1[k:k1+1, 3:6]
+            dwb = np.mean(dotwf[k:k1+1, 0:3], axis=0)
+
+            phim, dvbm = cnscl(np.hstack((wm, vm)))
+            phim = clbt['Kg'] @ phim - clbt['eb'] * nts
+            dvbm = clbt['Ka'] @ dvbm - clbt['db'] * nts
+            wb = phim / nts
+            fb = dvbm / nts
+
+            SS = imulvS(wb, dwb, Cba)
+            fL = SS @ np.concatenate((clbt['rx'], clbt['ry'], clbt['rz']))
+            fn = qmulv(qnb, fb - clbt['Ka2'] * (fb**2) - fL - clbt['tGA'] * np.cross(wb, fb))
+            vn = vn + (rotv(-wnie * nts / 2, fn) + gn) * nts
+            qnb = qupdt2(qnb, phim, wnie * nts)
+
+            t1s += nts
+            Ft = getFt(fb, wb, q2mat(qnb), wnie, SS)
+            kf['Phikk_1'] = np.eye(43) + Ft * nts
+            kf = kfupdate(kf, TimeMeasBoth='T')
+
+            if t1s > (0.2 - ts / 2):
+                t1s = 0.0
+                ww = np.mean(imu1[k-frq2:k+frq2+1, 0:3], axis=0)
+                if np.linalg.norm(ww) / ts < 30 * glv.dph:
+                    kf = kfupdate(kf, yk=vn, TimeMeasBoth='M')
+
+        if it != iterations - 1:
+            clbt = clbtkffeedback(kf, clbt)
+
+    return clbt
+
+
+def main():
+    ts = 0.01
+    att0 = np.array([1.0, -91.0, -91.0]) * glv.deg
+    pos0 = posset(34.0, 0.0, 0.0)
+
+    paras = np.array([
+        [1,    0, 1, 0,  90, 9, 70, 20],
+        [2,    0, 1, 0,  90, 9, 20, 20],
+        [3,    0, 1, 0,  90, 9, 20, 20],
+        [4,    0, 1, 0, -90, 9, 20, 20],
+        [5,    0, 1, 0, -90, 9, 20, 20],
+        [6,    0, 1, 0, -90, 9, 20, 20],
+        [7,    0, 0, 1,  90, 9, 20, 20],
+        [8,    1, 0, 0,  90, 9, 20, 20],
+        [9,    1, 0, 0,  90, 9, 20, 20],
+        [10,   1, 0, 0,  90, 9, 20, 20],
+        [11,  -1, 0, 0,  90, 9, 20, 20],
+        [12,  -1, 0, 0,  90, 9, 20, 20],
+        [13,  -1, 0, 0,  90, 9, 20, 20],
+        [14,   0, 0, 1,  90, 9, 20, 20],
+        [15,   0, 0, 1,  90, 9, 20, 20],
+        [16,   0, 0,-1,  90, 9, 20, 20],
+        [17,   0, 0,-1,  90, 9, 20, 20],
+        [18,   0, 0,-1,  90, 9, 20, 20]
+    ], dtype=float)
+    paras[:, 4] = paras[:, 4] * glv.deg
+
+    print("Generating common IMU data (once)...")
+    att = attrottt(att0, paras, ts)
+    imu, _ = avp2imu(att, pos0)
+    clbt_truth = get_default_clbt()
+    imu_clean = imuclbt(imu, clbt_truth)
+    print(f"Total IMU samples: {len(imu_clean)}\n")
+
+    noise_configs = [
+        (0.0,    0.0,    "No Noise (baseline)"),
+        (0.001,  1.0,    "0.001 dpsh / 1.0 ug/√Hz (very low)"),
+        (0.01,   10.0,   "0.01 dpsh / 10.0 ug/√Hz (navigation grade)"),
+        (0.05,   50.0,   "0.05 dpsh / 50.0 ug/√Hz (hi-grade tactical)"),
+    ]
+
+    # Key params to compare
+    results = []
+    for (web, wdb, label) in noise_configs:
+        print(f"Testing: {label}")
+        est = run_calibration(web, wdb, clbt_truth, imu_clean, pos0, ts)
+        results.append((label, est))
+
+    print("\n\n" + "="*110)
+    print("NOISE SWEEP RESULTS - Key Parameter Errors")
+    print("="*110)
+    header = f"{'Parameter':<14}" + "".join([f"  {label[:18]:<20}" for (label,_) in results])
+    print(header)
+    print("-"*110)
+
+    def fmt_row(name, true_val, ests):
+        row = f"{name:<14}"
+        for (label, est_clbt) in ests:
+            est = 0.0
+            if name.startswith("eb_"):
+                i = ['eb_x','eb_y','eb_z'].index(name)
+                est = -est_clbt['eb'][i]
+            elif name.startswith("db_"):
+                i = ['db_x','db_y','db_z'].index(name)
+                est = -est_clbt['db'][i]
+            elif name == "rx":
+                est = -est_clbt['rx'][0]
+            elif name == "ry":
+                est = -est_clbt['ry'][0]
+            elif name == "tGA":
+                est = -est_clbt['tGA']
+            err_pct = (abs(true_val - est) / abs(true_val)) * 100 if abs(true_val) > 1e-15 else 0.0
+            row += f"  {err_pct:>8.2f}% ({abs(true_val-est):.1e})   "
+        print(row)
+
+    fmt_row("eb_x", clbt_truth['eb'][0], results)
+    fmt_row("eb_y", clbt_truth['eb'][1], results)
+    fmt_row("eb_z", clbt_truth['eb'][2], results)
+    fmt_row("db_x", clbt_truth['db'][0], results)
+    fmt_row("db_y", clbt_truth['db'][1], results)
+    fmt_row("rx",   clbt_truth['rx'][0], results)
+    fmt_row("ry",   clbt_truth['ry'][0], results)
+    fmt_row("tGA",  clbt_truth['tGA'],   results)
+
+if __name__ == "__main__":
+    main()

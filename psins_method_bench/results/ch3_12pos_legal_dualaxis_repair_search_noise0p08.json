@@ -1,0 +1,1794 @@
+{
+  "experiment": "ch3_12pos_legal_dualaxis_repair_search",
+  "report_date": "2026-03-31",
+  "noise_scale": 0.08,
+  "timing": {
+    "per_node_total_s": 100.0,
+    "rotation_time_s": 10.0,
+    "pre_static_s": 10.0,
+    "post_static_s": 80.0,
+    "total_time_s": 1200.0
+  },
+  "search_space": {
+    "description": "faithful 12-node OOI scaffold with legal sign-repair only",
+    "n_legal_sequences": 4096,
+    "n_seeded_valid_candidates": 3,
+    "template": [
+      {
+        "idx": 1,
+        "kind": "outer",
+        "base_angle_deg": 90
+      },
+      {
+        "idx": 2,
+        "kind": "outer",
+        "base_angle_deg": 90
+      },
+      {
+        "idx": 3,
+        "kind": "inner",
+        "base_angle_deg": 90
+      },
+      {
+        "idx": 4,
+        "kind": "outer",
+        "base_angle_deg": -90
+      },
+      {
+        "idx": 5,
+        "kind": "outer",
+        "base_angle_deg": -90
+      },
+      {
+        "idx": 6,
+        "kind": "inner",
+        "base_angle_deg": -90
+      },
+      {
+        "idx": 7,
+        "kind": "outer",
+        "base_angle_deg": -90
+      },
+      {
+        "idx": 8,
+        "kind": "outer",
+        "base_angle_deg": -90
+      },
+      {
+        "idx": 9,
+        "kind": "inner",
+        "base_angle_deg": -90
+      },
+      {
+        "idx": 10,
+        "kind": "outer",
+        "base_angle_deg": 90
+      },
+      {
+        "idx": 11,
+        "kind": "outer",
+        "base_angle_deg": 90
+      },
+      {
+        "idx": 12,
+        "kind": "inner",
+        "base_angle_deg": 90
+      }
+    ]
+  },
+  "invalid_unconstrained_prior_paths": [
+    "coupled_B_move7to4_move12to10",
+    "coupled_C_move7to4_move12to10_retime",
+    "coupled_D_move7to4_move10to8",
+    "coupled_E_move7to4_move10to8_retime"
+  ],
+  "valid_prior_sign_only_paths": [
+    "coupled_flip_10_11",
+    "coupled_flip_10_12",
+    "coupled_flip_8_11_12"
+  ],
+  "faithful_baseline": {
+    "candidate_name": "legal_base_faithful12",
+    "flips": [],
+    "action_sequence": [
+      {
+        "pos_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": 0
+      }
+    ],
+    "rows": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      }
+    ],
+    "faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          -2.220446049250313e-16,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 15.290300274032441,
+        "median_pct_error": 1.483362834112179,
+        "max_pct_error": 122.58269656383278
+      },
+      "key_param_errors": {
+        "dKa_yy": 122.58269656383278,
+        "dKg_zz": 85.57075351197156,
+        "Ka2_y": 99.94129544126406,
+        "Ka2_z": 64.70431004852547,
+        "dKg_xz": 18.68063496921905,
+        "dKa_xz": 18.85408106874926
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 15.288687861181792,
+        "median_pct_error": 1.4837439708458107,
+        "max_pct_error": 122.5882646997851
+      },
+      "key_param_errors": {
+        "dKa_yy": 122.5882646997851,
+        "dKg_zz": 85.57095512255164,
+        "Ka2_y": 99.94128958152183,
+        "Ka2_z": 64.68594016040949,
+        "dKg_xz": 18.674921597907467,
+        "dKa_xz": 18.84829522348288
+      }
+    },
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+  },
+  "structural_shortlist": [
+    {
+      "name": "legal_flip_2_8",
+      "flips": [
+        2,
+        8
+      ],
+      "penalty": 39,
+      "face_sequence": [
+        "+Y",
+        "+Z",
+        "-X",
+        "-Y",
+        "+X",
+        "-Z",
+        "+Y",
+        "-Z",
+        "-X",
+        "-Y",
+        "+X",
+        "+Z"
+      ],
+      "equivalent_prior_result": null
+    },
+    {
+      "name": "legal_flip_1_2_8",
+      "flips": [
+        1,
+        2,
+        8
+      ],
+      "penalty": 39,
+      "face_sequence": [
+        "-Y",
+        "-Z",
+        "+X",
+        "+Y",
+        "-X",
+        "+Z",
+        "-Y",
+        "+Z",
+        "+X",
+        "+Y",
+        "-X",
+        "-Z"
+      ],
+      "equivalent_prior_result": null
+    },
+    {
+      "name": "legal_flip_2_7_8",
+      "flips": [
+        2,
+        7,
+        8
+      ],
+      "penalty": 39,
+      "face_sequence": [
+        "+Y",
+        "+Z",
+        "-X",
+        "-Y",
+        "+X",
+        "-Z",
+        "-Y",
+        "+Z",
+        "+X",
+        "+Y",
+        "-X",
+        "-Z"
+      ],
+      "equivalent_prior_result": null
+    },
+    {
+      "name": "legal_flip_2_10_11",
+      "flips": [
+        2,
+        10,
+        11
+      ],
+      "penalty": 39,
+      "face_sequence": [
+        "+Y",
+        "+Z",
+        "-X",
+        "-Y",
+        "+X",
+        "-Z",
+        "+Y",
+        "+Z",
+        "+X",
+        "-Y",
+        "-X",
+        "-Z"
+      ],
+      "equivalent_prior_result": null
+    },
+    {
+      "name": "legal_flip_4_5_8",
+      "flips": [
+        4,
+        5,
+        8
+      ],
+      "penalty": 39,
+      "face_sequence": [
+        "+Y",
+        "-Z",
+        "+X",
+        "-Y",
+        "-X",
+        "+Z",
+        "-Y",
+        "+Z",
+        "+X",
+        "+Y",
+        "-X",
+        "-Z"
+      ],
+      "equivalent_prior_result": null
+    },
+    {
+      "name": "legal_flip_1_2_7_8",
+      "flips": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "penalty": 39,
+      "face_sequence": [
+        "-Y",
+        "-Z",
+        "+X",
+        "+Y",
+        "-X",
+        "+Z",
+        "+Y",
+        "-Z",
+        "-X",
+        "-Y",
+        "+X",
+        "+Z"
+      ],
+      "equivalent_prior_result": null
+    }
+  ],
+  "benchmarked_candidates": [
+    {
+      "candidate_name": "legal_flip_8_11_12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "status": "reused_verified_oldvalid",
+      "equivalent_prior_result": "coupled_flip_8_11_12"
+    },
+    {
+      "candidate_name": "legal_flip_10_12",
+      "flips": [
+        10,
+        12
+      ],
+      "status": "reused_verified_oldvalid",
+      "equivalent_prior_result": "coupled_flip_10_12"
+    },
+    {
+      "candidate_name": "legal_flip_4_5_8",
+      "flips": [
+        4,
+        5,
+        8
+      ],
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_10_11",
+      "flips": [
+        10,
+        11
+      ],
+      "status": "reused_verified_oldvalid",
+      "equivalent_prior_result": "coupled_flip_10_11"
+    },
+    {
+      "candidate_name": "legal_flip_2_7_8",
+      "flips": [
+        2,
+        7,
+        8
+      ],
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_1_2_7_8",
+      "flips": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_2_8",
+      "flips": [
+        2,
+        8
+      ],
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_1_2_8",
+      "flips": [
+        1,
+        2,
+        8
+      ],
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_2_10_11",
+      "flips": [
+        2,
+        10,
+        11
+      ],
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    }
+  ],
+  "markov42_rows": [
+    {
+      "candidate_name": "legal_flip_8_11_12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.875950916036986,
+          "median_pct_error": 1.238236491695687,
+          "max_pct_error": 99.97405349340134
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.80235296251372,
+          "dKg_zz": 76.15214117154267,
+          "Ka2_y": 99.97405349340134,
+          "Ka2_z": 2.8166161819960265,
+          "dKg_xz": 0.22730412851634743,
+          "dKa_xz": 0.30869972611459023
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/markov42_noisy_coupled_flip_8_11_12_shared_noise0p08_param_errors.json",
+      "status": "reused_verified_oldvalid",
+      "equivalent_prior_result": "coupled_flip_8_11_12"
+    },
+    {
+      "candidate_name": "legal_flip_10_12",
+      "flips": [
+        10,
+        12
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 12.124037553296166,
+          "median_pct_error": 0.9558219219232131,
+          "max_pct_error": 124.97889060701641
+        },
+        "key_param_errors": {
+          "dKa_yy": 124.97889060701641,
+          "dKg_zz": 90.24148323126344,
+          "Ka2_y": 99.93745924079404,
+          "Ka2_z": 2.621112008584026,
+          "dKg_xz": 0.4333198565999381,
+          "dKa_xz": 0.6661925025655882
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/markov42_noisy_coupled_flip_10_12_shared_noise0p08_param_errors.json",
+      "status": "reused_verified_oldvalid",
+      "equivalent_prior_result": "coupled_flip_10_12"
+    },
+    {
+      "candidate_name": "legal_flip_4_5_8",
+      "flips": [
+        4,
+        5,
+        8
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 15.552268023976286,
+          "median_pct_error": 4.404593187454886,
+          "max_pct_error": 100.01195967045892
+        },
+        "key_param_errors": {
+          "dKa_yy": 54.28117341438454,
+          "dKg_zz": 76.16063248808148,
+          "Ka2_y": 100.01195967045892,
+          "Ka2_z": 66.93540351641269,
+          "dKg_xz": 20.37831726709295,
+          "dKa_xz": 20.425527784192337
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual_flip_4_5_8_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_10_11",
+      "flips": [
+        10,
+        11
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 16.55350896806142,
+          "median_pct_error": 2.4637113777046356,
+          "max_pct_error": 105.1594119643232
+        },
+        "key_param_errors": {
+          "dKa_yy": 105.1594119643232,
+          "dKg_zz": 91.07810451388615,
+          "Ka2_y": 99.9474293886167,
+          "Ka2_z": 68.59104785783995,
+          "dKg_xz": 20.734097830747864,
+          "dKa_xz": 20.17135920290153
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/markov42_noisy_coupled_flip_10_11_shared_noise0p08_param_errors.json",
+      "status": "reused_verified_oldvalid",
+      "equivalent_prior_result": "coupled_flip_10_11"
+    },
+    {
+      "candidate_name": "legal_flip_2_7_8",
+      "flips": [
+        2,
+        7,
+        8
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.35781463674517,
+          "median_pct_error": 4.115171665959506,
+          "max_pct_error": 118.76519067809048
+        },
+        "key_param_errors": {
+          "dKa_yy": 64.28172636901108,
+          "dKg_zz": 84.80687777005127,
+          "Ka2_y": 100.019367100848,
+          "Ka2_z": 53.32417974979779,
+          "dKg_xz": 17.120411965542477,
+          "dKa_xz": 16.208161244090768
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual_flip_2_7_8_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_1_2_7_8",
+      "flips": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.94095996313518,
+          "median_pct_error": 4.426224451126727,
+          "max_pct_error": 110.38490396048229
+        },
+        "key_param_errors": {
+          "dKa_yy": 107.70180847652686,
+          "dKg_zz": 110.38490396048229,
+          "Ka2_y": 100.02279702153747,
+          "Ka2_z": 69.10094171345827,
+          "dKg_xz": 20.73622067085789,
+          "dKa_xz": 20.223148514475756
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual_flip_1_2_7_8_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_2_8",
+      "flips": [
+        2,
+        8
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 18.959455913356848,
+          "median_pct_error": 3.7055898031886296,
+          "max_pct_error": 118.02657476521074
+        },
+        "key_param_errors": {
+          "dKa_yy": 96.016900403188,
+          "dKg_zz": 113.77773558280269,
+          "Ka2_y": 99.99087563480143,
+          "Ka2_z": 53.58823488339044,
+          "dKg_xz": 16.645780863439676,
+          "dKa_xz": 16.134205032372122
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual_flip_2_8_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_1_2_8",
+      "flips": [
+        1,
+        2,
+        8
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 19.693761148844416,
+          "median_pct_error": 4.145262937554831,
+          "max_pct_error": 128.55281220583655
+        },
+        "key_param_errors": {
+          "dKa_yy": 103.78106678244517,
+          "dKg_zz": 77.74125586915282,
+          "Ka2_y": 100.06653784465833,
+          "Ka2_z": 64.30055844431695,
+          "dKg_xz": 20.676801284862314,
+          "dKa_xz": 19.632784067184446
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual_flip_1_2_8_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    },
+    {
+      "candidate_name": "legal_flip_2_10_11",
+      "flips": [
+        2,
+        10,
+        11
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 20.074903593766425,
+          "median_pct_error": 5.430113165486488,
+          "max_pct_error": 124.57868625347122
+        },
+        "key_param_errors": {
+          "dKa_yy": 124.57868625347122,
+          "dKg_zz": 107.89088284455532,
+          "Ka2_y": 99.97461784199994,
+          "Ka2_z": 58.175622379250626,
+          "dKg_xz": 17.94393664183392,
+          "dKa_xz": 17.931559562627346
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual_flip_2_10_11_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "legal_flip_8_11_12",
+    "flips": [
+      8,
+      11,
+      12
+    ],
+    "equivalent_prior_result": "coupled_flip_8_11_12",
+    "action_sequence": [
+      {
+        "pos_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": 180
+      }
+    ],
+    "rows": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      }
+    ],
+    "faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          1.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          4.440892098500626e-16,
+          0.0,
+          -1.0
+        ]
+      }
+    ],
+    "structural": {
+      "face_sequence": [
+        "+Y",
+        "-Z",
+        "+X",
+        "+Y",
+        "-X",
+        "+Z",
+        "-Y",
+        "+Z",
+        "+X",
+        "+Y",
+        "+X",
+        "-Z"
+      ],
+      "face_counts": {
+        "+Y": 3,
+        "-Z": 2,
+        "+X": 3,
+        "-X": 1,
+        "+Z": 2,
+        "-Y": 1
+      },
+      "axis_balance": {
+        "X": 2,
+        "Y": 2,
+        "Z": 0
+      },
+      "first_cover_index": {
+        "+X": 3,
+        "-X": 5,
+        "+Y": 1,
+        "-Y": 7,
+        "+Z": 6,
+        "-Z": 2
+      },
+      "full_cover_index": 7,
+      "late_repeat_nodes": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "repeat_and_worsen_target_nodes": [
+        4,
+        8,
+        9,
+        10,
+        11
+      ],
+      "total_time_s": 1200.0
+    },
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 11.875950916036986,
+        "median_pct_error": 1.238236491695687,
+        "max_pct_error": 99.97405349340134
+      },
+      "key_param_errors": {
+        "dKa_yy": 84.80235296251372,
+        "dKg_zz": 76.15214117154267,
+        "Ka2_y": 99.97405349340134,
+        "Ka2_z": 2.8166161819960265,
+        "dKg_xz": 0.22730412851634743,
+        "dKa_xz": 0.30869972611459023
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/markov42_noisy_coupled_flip_8_11_12_shared_noise0p08_param_errors.json",
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 11.87552189523086,
+        "median_pct_error": 1.2381497605995055,
+        "max_pct_error": 99.97404143518949
+      },
+      "key_param_errors": {
+        "dKa_yy": 84.7968560795649,
+        "dKg_zz": 76.15316244719929,
+        "Ka2_y": 99.97404143518949,
+        "Ka2_z": 2.815429188733571,
+        "dKg_xz": 0.22746517199909796,
+        "dKa_xz": 0.30902496368750226
+      }
+    },
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/kf36_noisy_coupled_flip_8_11_12_shared_noise0p08_param_errors.json",
+    "delta_vs_faithful_markov42": {
+      "mean_pct_error": {
+        "base": 15.290300274032441,
+        "candidate": 11.875950916036986,
+        "improvement_pct_points": 3.414349357995455,
+        "relative_improvement_pct": 22.330165508875282
+      },
+      "median_pct_error": {
+        "base": 1.483362834112179,
+        "candidate": 1.238236491695687,
+        "improvement_pct_points": 0.245126342416492,
+        "relative_improvement_pct": 16.52504274607937
+      },
+      "max_pct_error": {
+        "base": 122.58269656383278,
+        "candidate": 99.97405349340134,
+        "improvement_pct_points": 22.60864307043144,
+        "relative_improvement_pct": 18.443584375432945
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 122.58269656383278,
+          "candidate": 84.80235296251372,
+          "improvement_pct_points": 37.78034360131906
+        },
+        "dKg_zz": {
+          "base": 85.57075351197156,
+          "candidate": 76.15214117154267,
+          "improvement_pct_points": 9.418612340428894
+        },
+        "Ka2_y": {
+          "base": 99.94129544126406,
+          "candidate": 99.97405349340134,
+          "improvement_pct_points": -0.032758052137282334
+        },
+        "Ka2_z": {
+          "base": 64.70431004852547,
+          "candidate": 2.8166161819960265,
+          "improvement_pct_points": 61.887693866529446
+        },
+        "dKg_xz": {
+          "base": 18.68063496921905,
+          "candidate": 0.22730412851634743,
+          "improvement_pct_points": 18.4533308407027
+        },
+        "dKa_xz": {
+          "base": 18.85408106874926,
+          "candidate": 0.30869972611459023,
+          "improvement_pct_points": 18.54538134263467
+        }
+      }
+    },
+    "delta_vs_faithful_kf36": {
+      "mean_pct_error": {
+        "base": 15.288687861181792,
+        "candidate": 11.87552189523086,
+        "improvement_pct_points": 3.413165965950933,
+        "relative_improvement_pct": 22.32478023583052
+      },
+      "median_pct_error": {
+        "base": 1.4837439708458107,
+        "candidate": 1.2381497605995055,
+        "improvement_pct_points": 0.24559421024630512,
+        "relative_improvement_pct": 16.552330797765855
+      },
+      "max_pct_error": {
+        "base": 122.5882646997851,
+        "candidate": 99.97404143518949,
+        "improvement_pct_points": 22.61422326459561,
+        "relative_improvement_pct": 18.447298621917152
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 122.5882646997851,
+          "candidate": 84.7968560795649,
+          "improvement_pct_points": 37.791408620220196
+        },
+        "dKg_zz": {
+          "base": 85.57095512255164,
+          "candidate": 76.15316244719929,
+          "improvement_pct_points": 9.417792675352345
+        },
+        "Ka2_y": {
+          "base": 99.94128958152183,
+          "candidate": 99.97404143518949,
+          "improvement_pct_points": -0.03275185366766209
+        },
+        "Ka2_z": {
+          "base": 64.68594016040949,
+          "candidate": 2.815429188733571,
+          "improvement_pct_points": 61.87051097167591
+        },
+        "dKg_xz": {
+          "base": 18.674921597907467,
+          "candidate": 0.22746517199909796,
+          "improvement_pct_points": 18.44745642590837
+        },
+        "dKa_xz": {
+          "base": 18.84829522348288,
+          "candidate": 0.30902496368750226,
+          "improvement_pct_points": 18.539270259795376
+        }
+      }
+    }
+  },
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_legal_dualaxis_repair_search_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_legal_dualaxis_repair_search_2026-03-31.md"
+  }
+}

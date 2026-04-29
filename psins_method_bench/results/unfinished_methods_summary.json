@@ -1,0 +1,184 @@
+{
+  "scan_root": "/root/.openclaw/workspace/psins_method_bench",
+  "updated_by": "subagent psins-remaining-b",
+  "summary_files_basis": [
+    "results/metrics.json",
+    "results/markov_results.json",
+    "results/adaptive_robust_results.json",
+    "results/shadow_hybrid_results.json",
+    "results/*.stdout.txt",
+    "results/*.stderr.txt",
+    "results/*.json",
+    "methods/**/method_*.py"
+  ],
+  "counts": {
+    "total_entry_methods": 26,
+    "successful": 19,
+    "attempted_but_failed_or_blocked": 7,
+    "unfinished_total": 7
+  },
+  "unfinished_methods": [
+    {
+      "method": "attention_inflation",
+      "path": "methods/adaptive_robust/method_attention_inflation.py",
+      "category": "attempted_but_failed",
+      "status": "long_running_unverified",
+      "evidence": {
+        "older_summary_json": "results/adaptive_robust_results.json",
+        "concurrent_runner_json": "results/attention_inflation.json",
+        "direct_runner_json": "results/attention_inflation_direct.json (not yet materialized at snapshot time)",
+        "stdout_file": "results/attention_inflation.stdout.txt",
+        "stderr_file": "results/attention_inflation.stderr.txt"
+      },
+      "failure_reason": "Earlier benchmark marked it killed_timeout (-9). In this subagent pass, a direct 20s sanity run produced no stdout/stderr before timeout, and separate longer direct/concurrent runs were still compute-active on the machine. The concurrent lightweight JSON with returncode=2/runtime_sec=0 is runner-level and not trustworthy as a method failure signal.",
+      "actionable_next_fixes": [
+        "Treat as heavy long-running method, not immediate crash.",
+        "Run standalone on a quieter machine or after killing competing PSINS jobs.",
+        "Add stage logs before/after 43-state init, baseline loop, shadow loop, and each LLM trigger window.",
+        "Temporarily disable/mock LLM calls to separate compute cost from network latency."
+      ]
+    },
+    {
+      "method": "hyperparam_tuner",
+      "path": "methods/llm_tuning/method_hyperparam_tuner.py",
+      "category": "attempted_but_unverified",
+      "status": "heavy_startup_or_longrun",
+      "evidence": {
+        "runner_json": "results/hyperparam_tuner.json",
+        "stdout_file": "results/hyperparam_tuner.stdout.txt",
+        "stderr_file": "results/hyperparam_tuner.stderr.txt"
+      },
+      "failure_reason": "Runner-produced JSON says returncode=2/runtime_sec=0, but direct standalone sanity execution for 20s produced no stdout/stderr and simply timed out, so the runner JSON is likely a wrapper/path artifact rather than a real method exception.",
+      "actionable_next_fixes": [
+        "Use a correct dedicated runner that records full command line and absolute script path.",
+        "Give it a longer standalone timeout budget and progress logs.",
+        "Capture whether outer-loop LLM access is reachable from the environment."
+      ]
+    },
+    {
+      "method": "llm_assisted_19pos",
+      "path": "methods/llm_tuning/method_llm_assisted_19pos.py",
+      "category": "attempted_but_unverified",
+      "status": "heavy_startup_or_longrun",
+      "evidence": {
+        "runner_json": "results/llm_assisted_19pos.json",
+        "stdout_file": "results/llm_assisted_19pos.stdout.txt",
+        "stderr_file": "results/llm_assisted_19pos.stderr.txt"
+      },
+      "failure_reason": "Runner-produced JSON says returncode=2/runtime_sec=0, but direct 20s sanity execution produced no stdout/stderr and timed out instead of failing immediately. This indicates the script is actually entering a heavy run path rather than crashing at import/startup.",
+      "actionable_next_fixes": [
+        "Run standalone with a longer timeout on an unloaded host.",
+        "Add early progress prints around data generation, alignment, filter loop, and LLM trigger points.",
+        "Record LLM connection/fallback status explicitly in result JSON."
+      ]
+    },
+    {
+      "method": "path_optimizer",
+      "path": "methods/llm_tuning/method_path_optimizer.py",
+      "category": "attempted_but_unverified",
+      "status": "heavy_startup_or_longrun",
+      "evidence": {
+        "runner_json": "results/path_optimizer.json (missing at snapshot time)",
+        "stdout_file": "results/path_optimizer.stdout.txt",
+        "stderr_file": "results/path_optimizer.stderr.txt"
+      },
+      "failure_reason": "No final JSON was present at snapshot time, but direct 20s sanity execution of calibration_path_optimizer_llm.py produced no stdout/stderr and timed out. That points to a long-running compute path, not an immediate syntax/import failure.",
+      "actionable_next_fixes": [
+        "Run with a longer timeout and periodic progress logging.",
+        "Ensure the benchmark runner writes a final JSON artifact for this method."
+      ]
+    },
+    {
+      "method": "q_tuning",
+      "path": "methods/llm_tuning/method_q_tuning.py",
+      "category": "attempted_but_unverified",
+      "status": "heavy_startup_or_longrun",
+      "evidence": {
+        "runner_json": "results/q_tuning.json",
+        "stdout_file": "results/q_tuning.stdout.txt",
+        "stderr_file": "results/q_tuning.stderr.txt"
+      },
+      "failure_reason": "Runner-produced JSON says returncode=2/runtime_sec=0, but direct standalone sanity execution for 20s produced no stdout/stderr and timed out. So current evidence does not support an immediate code exception; it looks like a long-running LLM/optimization workflow.",
+      "actionable_next_fixes": [
+        "Run with longer budget and explicit phase logging.",
+        "Fix the wrapper so runner-level path errors cannot masquerade as method failures."
+      ]
+    },
+    {
+      "method": "rl_train",
+      "path": "methods/rl/method_rl_train.py",
+      "category": "attempted_but_failed",
+      "status": "dependency_missing",
+      "evidence": {
+        "result_json": "results/rl_train.json",
+        "stderr_file": "results/rl_train.stderr.txt"
+      },
+      "failure_reason": "Direct execution fails immediately with ModuleNotFoundError: No module named 'gymnasium'.",
+      "actionable_next_fixes": [
+        "Install gymnasium into /root/.openclaw/workspace/.venv_psins.",
+        "Likely also verify stable-baselines3 and torch compatibility after gymnasium install."
+      ]
+    },
+    {
+      "method": "rl_evaluate",
+      "path": "methods/rl/method_rl_evaluate.py",
+      "category": "attempted_but_failed",
+      "status": "dependency_missing",
+      "evidence": {
+        "result_json": "results/rl_evaluate.json",
+        "stderr_file": "results/rl_evaluate.stderr.txt"
+      },
+      "failure_reason": "Direct execution fails immediately with ModuleNotFoundError: No module named 'stable_baselines3'.",
+      "actionable_next_fixes": [
+        "Install stable-baselines3 into /root/.openclaw/workspace/.venv_psins.",
+        "After training works, verify presence of dual_axis_calib_ppo.zip before rerunning evaluation."
+      ]
+    },
+    {
+      "method": "rl_progress_plot",
+      "path": "methods/rl/method_rl_progress_plot.py",
+      "category": "attempted_but_failed",
+      "status": "dependency_missing",
+      "evidence": {
+        "result_json": "results/rl_progress_plot.json",
+        "stderr_file": "results/rl_progress_plot.stderr.txt"
+      },
+      "failure_reason": "Direct execution fails immediately with ModuleNotFoundError: No module named 'tensorboard'.",
+      "actionable_next_fixes": [
+        "Install tensorboard into /root/.openclaw/workspace/.venv_psins.",
+        "Also fix the hard-coded Windows default logdir in plot_rl_progress.py before relying on it in benchmark automation."
+      ]
+    },
+    {
+      "method": "hybrid_direct_verify",
+      "path": "tmp_psins_py/psins_py/test_system_calibration_19pos_hybrid.py",
+      "category": "verification_attempt",
+      "status": "timeout_or_killed",
+      "evidence": {
+        "result_json": "results/hybrid_direct_verify.json",
+        "stdout_file": "results/hybrid_direct_verify.stdout.txt",
+        "stderr_file": "results/hybrid_direct_verify.stderr.txt"
+      },
+      "failure_reason": "A fresh direct verification run of the hybrid script consumed the full 480s budget and was killed with returncode 137, with no early stderr/stdout. Process inspection showed it was CPU-active rather than immediately blocked on import or syntax failure.",
+      "actionable_next_fixes": [
+        "If trigger verification is required, instrument the script with early flush=True progress prints around trigger windows or reduce dataset length for a verification-only run.",
+        "Run on a quieter machine; concurrent PSINS jobs were already saturating CPU during this pass."
+      ]
+    }
+  ],
+  "successful_method_count_by_group": {
+    "correlation_decay_extracted": 3,
+    "adaptive_robust": 3,
+    "markov": 7,
+    "schmidt_shadow": 3,
+    "hybrid_staged": 2,
+    "llm_tuning": 0,
+    "rl": 0
+  },
+  "notes": [
+    "Existing successful shadow/hybrid result files already show completed runs for shadow_hybrid_update and hybrid_shadow_kf, but the fresh direct verification rerun could not complete within the subagent budget.",
+    "Existing llm_staged_graduation stdout shows LLM client initialization succeeded but each review round hit connection error, so staged logic ran in fallback/no-graduation behavior.",
+    "During this subagent pass, other PSINS jobs were already running concurrently on the host, including attention/LLM-tuning runs, which likely reduced reproducibility and throughput."
+  ],
+  "saved_markdown": "/root/.openclaw/workspace/psins_method_bench/results/unfinished_methods_summary.md"
+}

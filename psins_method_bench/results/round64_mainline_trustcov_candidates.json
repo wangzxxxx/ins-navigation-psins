@@ -1,0 +1,70 @@
+{
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "round64_candidates": [
+    {
+      "name": "r64_trust_scorelean_softcov",
+      "description": "Iter2 trust-map rebalance: shift alpha mapping toward score signal (less covariance-dominant), keep SCD and per-state alpha multipliers unchanged.",
+      "rationale": "New 1x-mainline direction: instead of ultra-low gating, retune trust-map shape so selected-state feedback is decided more by x/sqrt(P) and less by pure covariance shrink.",
+      "iter_patches": {
+        "1": {
+          "trust_mix": 0.64,
+          "trust_score_soft": 1.95,
+          "trust_cov_soft": 0.52,
+          "selected_alpha_floor": 0.958,
+          "selected_alpha_span": 0.126
+        }
+      }
+    },
+    {
+      "name": "r64_trust_span_up",
+      "description": "Iter2 trust-map contrast increase: slightly lower floor and larger span while softening covariance contribution.",
+      "rationale": "Checks whether a wider trust-map dynamic range can improve dKg_xx/max without touching the Round61 SCD cadence or ultra-low branch logic.",
+      "iter_patches": {
+        "1": {
+          "trust_mix": 0.62,
+          "trust_score_soft": 2.0,
+          "trust_cov_soft": 0.5,
+          "selected_alpha_floor": 0.954,
+          "selected_alpha_span": 0.132
+        }
+      }
+    },
+    {
+      "name": "r64_cov_sched_static_meas_plus",
+      "description": "Iter2 covariance/measurement schedule rebalance: slightly more selected-state process mobility and slightly stronger static/late measurement weight.",
+      "rationale": "Orthogonal mainline test: leave trust-map structure mostly intact and probe a tiny Q/R schedule rebalance to improve calibration on 1x.",
+      "iter_patches": {
+        "1": {
+          "selected_q_static_scale": 0.795,
+          "selected_q_dynamic_scale": 1.01,
+          "selected_q_late_mult": 1.3,
+          "static_r_scale": 1.02,
+          "dynamic_r_scale": 0.998,
+          "late_r_mult": 0.992,
+          "late_release_frac": 0.575
+        }
+      }
+    },
+    {
+      "name": "r64_combo_trust_cov_narrow",
+      "description": "Narrow combo: mild trust-map score-lean + mild iter2 Q/R schedule rebalance in one deterministic patch.",
+      "rationale": "Carefully combined route to test whether trust-map and schedule adjustments can cohere on 1x without the Round62/63 ultra-low gate path.",
+      "iter_patches": {
+        "1": {
+          "trust_mix": 0.62,
+          "trust_score_soft": 1.98,
+          "trust_cov_soft": 0.5,
+          "selected_alpha_floor": 0.956,
+          "selected_alpha_span": 0.128,
+          "selected_q_static_scale": 0.79,
+          "selected_q_dynamic_scale": 1.006,
+          "selected_q_late_mult": 1.292,
+          "static_r_scale": 1.022,
+          "late_r_mult": 0.993,
+          "late_release_frac": 0.576
+        }
+      }
+    }
+  ],
+  "direction": "mainline trust-map / covariance-schedule rebalance at 1x"
+}

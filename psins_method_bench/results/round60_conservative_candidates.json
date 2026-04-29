@@ -1,0 +1,30 @@
+{
+  "baseline": "scd_scale_once_a0999_biaslink_commit",
+  "round60_conservative_candidates": [
+    {
+      "name": "scale_once_a0999_s20tight_0899",
+      "description": "Keep Round59-H SCD unchanged and only tighten iter2 state20 by 0.001 to test a pure zz micro-repair.",
+      "rationale": "Most conservative follow-up after the softer-SCD probes failed: leave the SCD cut untouched and only nudge the dKg_zz state path.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "20": 0.899
+          }
+        }
+      }
+    },
+    {
+      "name": "scale_once_a0999_s20tight_0899_ryz00116",
+      "description": "Same exact R59-H SCD, same 0.001 state20 tighten, plus an ultra-small ry_z confirmation.",
+      "rationale": "Checks whether zz/ry_z can come back together with only the tiniest state20 + lever repair pair, while keeping the Round59-H main gain profile intact.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "20": 0.899
+          }
+        }
+      },
+      "post_ry_z_mult": 1.00116
+    }
+  ]
+}

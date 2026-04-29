@@ -1,0 +1,266 @@
+{
+  "experiment": "sym20_llm_scd_vs_pure_highnoise_2026_04_06",
+  "report_date": "2026-04-06",
+  "noise_scales": [
+    1.0,
+    2.0
+  ],
+  "candidate_family_source": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_llm_scd_only_clean.py",
+  "selection_rule": "best LLM-guided candidate selected by minimum overall mean_pct_error at each noise scale",
+  "scale_results": [
+    {
+      "noise_scale": 1.0,
+      "noise_tag": "noise1x",
+      "noise_config": {
+        "arw_dpsh": 0.005,
+        "vrw_ugpsHz": 5.0,
+        "bi_g_dph": 0.002,
+        "bi_a_ug": 5.0,
+        "tau_g": 300.0,
+        "tau_a": 300.0,
+        "seed": 42,
+        "base_family": "round53_round61_shared"
+      },
+      "path_case": {
+        "case_key": "symmetric20",
+        "case_tag": "ch3corrected_symmetric20_att0zero_1200s",
+        "display_name": "20-position corrected symmetric scheme",
+        "att0_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "n_motion_rows": 20,
+        "claimed_position_count": 20,
+        "total_time_s": 1200.0,
+        "timing_note": "uniform 20 × 60 s = 1200 s, row split 6 / 6 / 48 s",
+        "source_builder": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_ch3_corrected_symmetric20_front2_back11.py",
+        "source_reference": "anchor2_zpair_anchor11_xpair_symmetric20_60s",
+        "builder_method_tag": "ch3closedloop_anchor2_zpair_anchor11_xpair_symmetric20_60s"
+      },
+      "pure_scd_overall": {
+        "mean_pct_error": 10.926053430261735,
+        "median_pct_error": 5.994315646759101,
+        "max_pct_error": 72.97717770227047
+      },
+      "best_llm_guided_scd": {
+        "candidate_name": "candidate_B",
+        "candidate_label": "B",
+        "candidate_description": "scale_block scope, once_per_phase, alpha=0.9995, transition_duration=2.0, bias_to_target=True",
+        "candidate_scd_cfg": {
+          "mode": "once_per_phase",
+          "alpha": 0.9995,
+          "transition_duration": 2.0,
+          "target": "scale_block",
+          "bias_to_target": true,
+          "apply_policy_names": [
+            "iter2_commit"
+          ]
+        },
+        "overall": {
+          "mean_pct_error": 10.861807945670604,
+          "median_pct_error": 5.949204171870777,
+          "max_pct_error": 69.31030231891913
+        }
+      },
+      "delta_vs_pure": {
+        "metrics": {
+          "mean": {
+            "pure_value": 10.926053430261735,
+            "llm_value": 10.861807945670604,
+            "improvement_pct_points": 0.06424548459113133,
+            "llm_better": true
+          },
+          "median": {
+            "pure_value": 5.994315646759101,
+            "llm_value": 5.949204171870777,
+            "improvement_pct_points": 0.04511147488832368,
+            "llm_better": true
+          },
+          "max": {
+            "pure_value": 72.97717770227047,
+            "llm_value": 69.31030231891913,
+            "improvement_pct_points": 3.6668753833513392,
+            "llm_better": true
+          }
+        },
+        "beats_mean": true,
+        "beats_median": true,
+        "beats_max": true,
+        "beats_all_three": true
+      },
+      "all_llm_candidates_overall": {
+        "candidate_A": {
+          "mean_pct_error": 11.017297158353262,
+          "median_pct_error": 5.772803462566966,
+          "max_pct_error": 73.57975002764319
+        },
+        "candidate_B": {
+          "mean_pct_error": 10.861807945670604,
+          "median_pct_error": 5.949204171870777,
+          "max_pct_error": 69.31030231891913
+        },
+        "candidate_C": {
+          "mean_pct_error": 10.932573391764802,
+          "median_pct_error": 6.0206404827238105,
+          "max_pct_error": 72.78789141784522
+        },
+        "candidate_D": {
+          "mean_pct_error": 80.53341917543062,
+          "median_pct_error": 5.467034956513453,
+          "max_pct_error": 1058.0638845506944
+        }
+      },
+      "execution": {
+        "pure_scd": "rerun",
+        "llm_candidates": {
+          "candidate_A": "rerun",
+          "candidate_B": "rerun",
+          "candidate_C": "rerun",
+          "candidate_D": "rerun"
+        }
+      },
+      "files": {
+        "pure_scd_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_pure_scd_neutral_ch3corrected_symmetric20_att0zero_1200s_shared_noise1x_param_errors.json",
+        "llm_candidate_jsons": {
+          "candidate_A": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_A_ch3corrected_symmetric20_att0zero_1200s_shared_noise1x_param_errors.json",
+          "candidate_B": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_B_ch3corrected_symmetric20_att0zero_1200s_shared_noise1x_param_errors.json",
+          "candidate_C": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_C_ch3corrected_symmetric20_att0zero_1200s_shared_noise1x_param_errors.json",
+          "candidate_D": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_D_ch3corrected_symmetric20_att0zero_1200s_shared_noise1x_param_errors.json"
+        }
+      }
+    },
+    {
+      "noise_scale": 2.0,
+      "noise_tag": "noise2p0",
+      "noise_config": {
+        "arw_dpsh": 0.01,
+        "vrw_ugpsHz": 10.0,
+        "bi_g_dph": 0.004,
+        "bi_a_ug": 10.0,
+        "tau_g": 300.0,
+        "tau_a": 300.0,
+        "seed": 42,
+        "base_family": "round53_round61_shared"
+      },
+      "path_case": {
+        "case_key": "symmetric20",
+        "case_tag": "ch3corrected_symmetric20_att0zero_1200s",
+        "display_name": "20-position corrected symmetric scheme",
+        "att0_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "n_motion_rows": 20,
+        "claimed_position_count": 20,
+        "total_time_s": 1200.0,
+        "timing_note": "uniform 20 × 60 s = 1200 s, row split 6 / 6 / 48 s",
+        "source_builder": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_ch3_corrected_symmetric20_front2_back11.py",
+        "source_reference": "anchor2_zpair_anchor11_xpair_symmetric20_60s",
+        "builder_method_tag": "ch3closedloop_anchor2_zpair_anchor11_xpair_symmetric20_60s"
+      },
+      "pure_scd_overall": {
+        "mean_pct_error": 23.430151531202338,
+        "median_pct_error": 13.201320977053035,
+        "max_pct_error": 151.2331211657391
+      },
+      "best_llm_guided_scd": {
+        "candidate_name": "candidate_B",
+        "candidate_label": "B",
+        "candidate_description": "scale_block scope, once_per_phase, alpha=0.9995, transition_duration=2.0, bias_to_target=True",
+        "candidate_scd_cfg": {
+          "mode": "once_per_phase",
+          "alpha": 0.9995,
+          "transition_duration": 2.0,
+          "target": "scale_block",
+          "bias_to_target": true,
+          "apply_policy_names": [
+            "iter2_commit"
+          ]
+        },
+        "overall": {
+          "mean_pct_error": 23.26942632924331,
+          "median_pct_error": 13.174057301506917,
+          "max_pct_error": 143.19083122503403
+        }
+      },
+      "delta_vs_pure": {
+        "metrics": {
+          "mean": {
+            "pure_value": 23.430151531202338,
+            "llm_value": 23.26942632924331,
+            "improvement_pct_points": 0.1607252019590284,
+            "llm_better": true
+          },
+          "median": {
+            "pure_value": 13.201320977053035,
+            "llm_value": 13.174057301506917,
+            "improvement_pct_points": 0.027263675546118193,
+            "llm_better": true
+          },
+          "max": {
+            "pure_value": 151.2331211657391,
+            "llm_value": 143.19083122503403,
+            "improvement_pct_points": 8.042289940705075,
+            "llm_better": true
+          }
+        },
+        "beats_mean": true,
+        "beats_median": true,
+        "beats_max": true,
+        "beats_all_three": true
+      },
+      "all_llm_candidates_overall": {
+        "candidate_A": {
+          "mean_pct_error": 23.51685573795847,
+          "median_pct_error": 12.678767001211941,
+          "max_pct_error": 151.7657018230946
+        },
+        "candidate_B": {
+          "mean_pct_error": 23.26942632924331,
+          "median_pct_error": 13.174057301506917,
+          "max_pct_error": 143.19083122503403
+        },
+        "candidate_C": {
+          "mean_pct_error": 23.43813769963612,
+          "median_pct_error": 13.268121315964088,
+          "max_pct_error": 150.77391592412732
+        },
+        "candidate_D": {
+          "mean_pct_error": 43.39839792691953,
+          "median_pct_error": 12.13014441411233,
+          "max_pct_error": 452.9674104679158
+        }
+      },
+      "execution": {
+        "pure_scd": "rerun",
+        "llm_candidates": {
+          "candidate_A": "rerun",
+          "candidate_B": "rerun",
+          "candidate_C": "rerun",
+          "candidate_D": "rerun"
+        }
+      },
+      "files": {
+        "pure_scd_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_pure_scd_neutral_ch3corrected_symmetric20_att0zero_1200s_shared_noise2p0_param_errors.json",
+        "llm_candidate_jsons": {
+          "candidate_A": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_A_ch3corrected_symmetric20_att0zero_1200s_shared_noise2p0_param_errors.json",
+          "candidate_B": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_B_ch3corrected_symmetric20_att0zero_1200s_shared_noise2p0_param_errors.json",
+          "candidate_C": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_C_ch3corrected_symmetric20_att0zero_1200s_shared_noise2p0_param_errors.json",
+          "candidate_D": "/root/.openclaw/workspace/psins_method_bench/results/SCD42_llm_clean_candidate_D_ch3corrected_symmetric20_att0zero_1200s_shared_noise2p0_param_errors.json"
+        }
+      }
+    }
+  ],
+  "helps_scales_all_three": [
+    1.0,
+    2.0
+  ],
+  "conclusion": "LLM-guided SCD still helps under high noise on sym20, with all-three-metric wins at both 1.0 and 2.0.",
+  "code_fixes_needed": "none",
+  "files": {
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/compare_sym20_llm_scd_vs_pure_highnoise_2026-04-06.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_sym20_llm_scd_vs_pure_highnoise_2026-04-06.md"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "round_name": "Round68_Global_Family_Balanced",
+  "round_type": "new mechanism probe",
+  "mechanism_axis": "global family-balanced calibration / grouped reconciliation on top of Round61 backbone",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "same_dataset_round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_round61_param_errors.json",
+  "dataset": {
+    "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+    "source_trajectory_reference": "method_42state_gm1_round53_internalized_trustcov_release.py::_build_dataset",
+    "noise_config": {
+      "noise_scale_tag": "mainline_1x_round53_family",
+      "arw_dpsh": 0.005,
+      "vrw_ugpsHz": 5.0,
+      "bi_g_dph": 0.002,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42
+    },
+    "constraint_note": "Use exactly the same fixed noisy dataset/noise strength/seed as Round65/66/67 mainline"
+  },
+  "global_objective": {
+    "primary": [
+      "mean_pct_error",
+      "median_pct_error",
+      "max_pct_error",
+      "dKg_xx"
+    ],
+    "family_balance_metric": "family_dispersion",
+    "diagnostics_guard": [
+      "dKg_xy",
+      "dKg_yy",
+      "dKa_xx",
+      "rx_y",
+      "ry_z"
+    ]
+  },
+  "clean_win_gate": "mean<0, median<=0, max<=0, dKg_xx<0, family_dispersion_delta<=0, protected_peak_regression<=0.15",
+  "round68_candidates": [
+    {
+      "name": "r68_balanced_iso_mild",
+      "description": "Round61 backbone + mild family-balanced isotropic reconciliation across all parameter families.",
+      "rationale": "最小改动验证：先看统一 family 归一化目标是否能在不破坏主干的前提下提升全局误差形态。",
+      "family_balance": {
+        "gamma": 0.14,
+        "blend": 0.72,
+        "mult_min": 0.92,
+        "mult_max": 1.1,
+        "weak_consensus_blend": 0.22,
+        "weights": {
+          "kg_diag": 1.0,
+          "kg_offdiag": 1.0,
+          "ka_diag": 1.0,
+          "ka_offdiag": 1.0,
+          "gyro_bias": 1.0,
+          "acc_bias": 1.0,
+          "ka2": 0.9,
+          "lever": 0.9
+        }
+      }
+    },
+    {
+      "name": "r68_balanced_strong_anchor",
+      "description": "Family-balanced reconciliation with stronger anchor on strong families (Kg/Ka/bias), weak families gently co-moved.",
+      "rationale": "把全局目标优先放在强可观参数家族，避免“只修弱参数外观”造成的伪全局改进。",
+      "family_balance": {
+        "gamma": 0.18,
+        "blend": 0.78,
+        "mult_min": 0.9,
+        "mult_max": 1.12,
+        "weak_consensus_blend": 0.35,
+        "weights": {
+          "kg_diag": 1.15,
+          "kg_offdiag": 1.15,
+          "ka_diag": 1.1,
+          "ka_offdiag": 1.1,
+          "gyro_bias": 1.05,
+          "acc_bias": 1.05,
+          "ka2": 0.75,
+          "lever": 0.7
+        }
+      }
+    },
+    {
+      "name": "r68_balanced_weak_consensus",
+      "description": "Family-balanced reconciliation with consensus-style weak-family freeze/refine coupling.",
+      "rationale": "把 weak families（Ka2/lever）与强家族一致性绑定，测试“全局协调 + 冻结弱扰动”是否更稳。",
+      "family_balance": {
+        "gamma": 0.2,
+        "blend": 0.8,
+        "mult_min": 0.88,
+        "mult_max": 1.14,
+        "weak_consensus_blend": 0.55,
+        "weights": {
+          "kg_diag": 1.1,
+          "kg_offdiag": 1.05,
+          "ka_diag": 1.1,
+          "ka_offdiag": 1.05,
+          "gyro_bias": 1.0,
+          "acc_bias": 1.0,
+          "ka2": 0.85,
+          "lever": 0.8
+        }
+      }
+    },
+    {
+      "name": "r68_balanced_tightcap",
+      "description": "Two-stage family reconciliation with tighter multipliers to emphasize deterministic global shape control.",
+      "rationale": "以更紧的乘子上限约束全局重分配，验证“窄幅但系统化”的 family 归一是否更可靠。",
+      "family_balance": {
+        "gamma": 0.16,
+        "blend": 0.68,
+        "mult_min": 0.95,
+        "mult_max": 1.06,
+        "weak_consensus_blend": 0.28,
+        "weights": {
+          "kg_diag": 1.0,
+          "kg_offdiag": 1.0,
+          "ka_diag": 1.0,
+          "ka_offdiag": 1.0,
+          "gyro_bias": 0.95,
+          "acc_bias": 0.95,
+          "ka2": 0.85,
+          "lever": 0.85
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "round_name": "Round65B_DualGate_Repair",
+  "round_type": "repair branch",
+  "innovation_direction": "dual-channel innovation-consistency gated Round61 repair",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "same_dataset_round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_round61_param_errors.json",
+  "same_dataset_round65_reference": {
+    "name": "r65_icg_feedback_priority",
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_icg_r65_icg_feedback_priority_param_errors.json"
+  },
+  "dataset": {
+    "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+    "source_trajectory_reference": "method_42state_gm1_round53_internalized_trustcov_release.py::_build_dataset",
+    "noise_config": {
+      "noise_scale_tag": "mainline_1x_round53_family",
+      "arw_dpsh": 0.005,
+      "vrw_ugpsHz": 5.0,
+      "bi_g_dph": 0.002,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42
+    },
+    "constraint_note": "Use exactly the same fixed noisy dataset/noise strength/seed as Round65 mainline"
+  },
+  "protected_metrics": [
+    "dKg_xy",
+    "dKg_yy",
+    "dKa_xx",
+    "rx_y",
+    "ry_z"
+  ],
+  "repair_metrics": [
+    "dKg_yy",
+    "dKa_xx",
+    "rx_y"
+  ],
+  "round65b_candidates": [
+    {
+      "name": "r65b_split_xxzz_fb92_guard",
+      "description": "Dual-channel split gate: high-floor feedback gate with yy/Ka_xx local guard, while SCD gate stays adaptive on xx/zz only.",
+      "rationale": "First repair move: decouple channels and keep feedback close to Round61 on protected paths; reserve adaptation mainly for xx/zz SCD suppression.",
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.04,
+        "slope": 1.1,
+        "gate_floor": 0.92,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "apply_floor": 0.92
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 1.9,
+        "gate_floor": 0.6,
+        "warmup_static_meas": 8,
+        "power": 1.2,
+        "apply_floor": 0.6
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9988,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.01,
+            "21": 1.008
+          }
+        }
+      }
+    },
+    {
+      "name": "r65b_split_xxzz_fb96_frozen",
+      "description": "More frozen feedback channel (floor=0.96) with stronger adaptive xx/zz SCD gate.",
+      "rationale": "Stress-test whether most regressions came from feedback-path gate drift; keep feedback near baseline and move adaptation burden to xx/zz SCD only.",
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.03,
+        "slope": 1.0,
+        "gate_floor": 0.96,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "apply_floor": 0.96
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.12,
+        "slope": 2.1,
+        "gate_floor": 0.55,
+        "warmup_static_meas": 8,
+        "power": 1.35,
+        "apply_floor": 0.55
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9987,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.014,
+            "21": 1.012
+          }
+        }
+      }
+    },
+    {
+      "name": "r65b_split_xxzz_fb94_rxguard",
+      "description": "Split gate with moderate feedback floor plus a narrow rx_y post-guard.",
+      "rationale": "Keep split-gate body unchanged and test whether a minimal lever post-guard can repair rx_y without broad retuning.",
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.04,
+        "slope": 1.2,
+        "gate_floor": 0.94,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "apply_floor": 0.94
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.11,
+        "slope": 1.95,
+        "gate_floor": 0.58,
+        "warmup_static_meas": 8,
+        "power": 1.25,
+        "apply_floor": 0.58
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9988,
+        "transition_duration": 2.0,
+        "target": "xxzz_pair",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.012,
+            "21": 1.01
+          }
+        }
+      },
+      "post_rx_y_mult": 1.00045
+    },
+    {
+      "name": "r65b_split_scale_navonly_guarded",
+      "description": "Feedback guard kept, SCD remains adaptive but expanded to scale-block nav-only suppression.",
+      "rationale": "Ablation-style check: if xx/zz-only SCD is too narrow, test a bounded scale-block/nav-only version without reopening bias coupling.",
+      "feedback_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.04,
+        "slope": 1.18,
+        "gate_floor": 0.94,
+        "warmup_static_meas": 8,
+        "power": 1.0,
+        "apply_floor": 0.94
+      },
+      "scd_channel": {
+        "target_nis": 1.0,
+        "ema_beta": 0.11,
+        "slope": 1.7,
+        "gate_floor": 0.62,
+        "warmup_static_meas": 8,
+        "power": 1.2,
+        "apply_floor": 0.62
+      },
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "scale_block",
+        "bias_to_target": false,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      },
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.012,
+            "21": 1.012
+          }
+        }
+      }
+    }
+  ]
+}

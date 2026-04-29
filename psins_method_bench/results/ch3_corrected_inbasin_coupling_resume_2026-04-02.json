@@ -1,0 +1,1074 @@
+{
+  "task": "chapter-3 corrected-basis in-basin coupling resume",
+  "report_date": "2026-04-02",
+  "source_summary": "/root/.openclaw/workspace/psins_method_bench/results/ch3_corrected_frontier_relaunch_batch3_2026-04-02.json",
+  "selection_rule": "Filter the same-day verified relaunch batch to the requested in-basin l9/l12 compatibility coupling family only; use pure terminal-split line only as comparison, not as the decision rule.",
+  "hard_constraints": {
+    "att0_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "real_dual_axis_legality_only": true,
+    "continuity_safe": true,
+    "faithful12_backbone": true,
+    "theory_guided_only": true
+  },
+  "current_leader": {
+    "candidate_name": "relay_l9y0p75_l12y0p25_on_entry",
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.0628330299996445,
+        "median_pct_error": 0.614884789415418,
+        "max_pct_error": 4.725238024216171
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.725238024216171,
+        "eb_x": 4.637090047239685,
+        "Ka2_y": 2.8604546299145586,
+        "dKa_xx": 2.528409498448308,
+        "dKg_yy": 2.443111498104721
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.725238024216171
+      }
+    },
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 1.0625646738983392,
+        "median_pct_error": 0.6148208149509837,
+        "max_pct_error": 4.725432373197525
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.725432373197525,
+        "eb_x": 4.635012547828279,
+        "Ka2_y": 2.858531817421764,
+        "dKa_xx": 2.5272717307904364,
+        "dKg_yy": 2.442860859705797
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.725432373197525
+      }
+    },
+    "markov42_triplet": "1.063 / 0.615 / 4.725",
+    "kf36_triplet": "1.063 / 0.615 / 4.725"
+  },
+  "recent_near_tie": {
+    "candidate_name": "relay_r3_l9y0p75_l12split375_125_on_entry",
+    "family": "terminal_y_reclosure_micro_ridge_around_batch2_incumbent",
+    "hypothesis_id": "A",
+    "rationale": "Keep the total terminal dwell equal to the incumbent (0.5 s total), but front-load it on the outgoing l12 leg (0.375 / 0.125). This checks whether the useful terminal information is concentrated before exact closure rather than after it.",
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.0631870715362586,
+        "median_pct_error": 0.6160285492138386,
+        "max_pct_error": 4.7264246949778315
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.7264246949778315,
+        "eb_x": 4.639732557220497,
+        "Ka2_y": 2.860997285346984,
+        "dKa_xx": 2.530860770966619,
+        "dKg_yy": 2.4426539829678346
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.7264246949778315
+      }
+    },
+    "markov42_triplet": "1.063 / 0.616 / 4.726",
+    "delta_vs_current_leader_markov42": {
+      "mean_pct_error": -0.00035404153661411364,
+      "median_pct_error": -0.0011437597984206294,
+      "max_pct_error": -0.0011866707616601246
+    },
+    "delta_vs_faithful12_markov42": {
+      "mean_pct_error": 0.8912342233203752,
+      "median_pct_error": -0.18540786539493448,
+      "max_pct_error": 10.395218732262089
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": 0.49319201539924395,
+      "median_pct_error": 0.19677127445174436,
+      "max_pct_error": 9.986867245969483
+    }
+  },
+  "coupling_rows": [
+    {
+      "candidate_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Coupled higher-l9 / lighter-l12 variant: if later l9 already supplies more y-information, the terminal closure may need to back off proportionally.",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057061223856136,
+          "median_pct_error": 0.6107914879608048,
+          "max_pct_error": 4.71375006474353
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.71375006474353,
+          "eb_x": 4.57033221551275,
+          "Ka2_y": 2.832591244946224,
+          "dKa_xx": 2.5107008594485913,
+          "dKg_yy": 2.4546934956879305
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.71375006474353
+        }
+      },
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "delta_vs_current_leader_markov42": {
+        "mean_pct_error": 0.005771806143508362,
+        "median_pct_error": 0.004093301454613174,
+        "max_pct_error": 0.011487959472641585
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8973600710004976,
+        "median_pct_error": -0.18017080414190068,
+        "max_pct_error": 10.407893362496392
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49931786307936643,
+        "median_pct_error": 0.20200833570477816,
+        "max_pct_error": 9.999541876203786
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0567915141378126,
+          "median_pct_error": 0.610720244961116,
+          "max_pct_error": 4.713960072310424
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.713960072310424,
+          "eb_x": 4.5682794025537055,
+          "Ka2_y": 2.830686460074407,
+          "dKa_xx": 2.5095605382777633,
+          "dKg_yy": 2.454444318342507
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.713960072310424
+        }
+      },
+      "kf36_triplet": "1.057 / 0.611 / 4.714"
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p8125_l12y0p25_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Raise the l9 gate slightly above 0.75 s while keeping the incumbent l12 = 0.25 s, to test the upper side of the same compatibility ridge.",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057835822250634,
+          "median_pct_error": 0.6081732654754177,
+          "max_pct_error": 4.700816728119583
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.700816728119583,
+          "eb_x": 4.5676057923606574,
+          "Ka2_y": 2.8461130967200803,
+          "dKa_xx": 2.5238032919209736,
+          "dKg_yy": 2.455183431557582
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.700816728119583
+        }
+      },
+      "markov42_triplet": "1.058 / 0.608 / 4.701",
+      "delta_vs_current_leader_markov42": {
+        "mean_pct_error": 0.004997207749010357,
+        "median_pct_error": 0.006711523940000297,
+        "max_pct_error": 0.024421296096588385
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8965854726059996,
+        "median_pct_error": -0.17755258165651355,
+        "max_pct_error": 10.420826699120337
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4985432646848684,
+        "median_pct_error": 0.2046265581901653,
+        "max_pct_error": 10.01247521282773
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0575698289015967,
+          "median_pct_error": 0.6081083712060551,
+          "max_pct_error": 4.701025623243005
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.701025623243005,
+          "eb_x": 4.565556320548499,
+          "Ka2_y": 2.8442132884685134,
+          "dKa_xx": 2.52266930790317,
+          "dKg_yy": 2.4549314953079424
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.701025623243005
+        }
+      },
+      "kf36_triplet": "1.058 / 0.608 / 4.701"
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p6875_l12y0p25_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Lower the l9 gate slightly below 0.75 s while keeping the incumbent l12 = 0.25 s, to test whether the coarse-grid optimum is drifting mildly downward.",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0589857210378786,
+          "median_pct_error": 0.572285921390433,
+          "max_pct_error": 4.846338564923188
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.846338564923188,
+          "eb_x": 4.77400927170259,
+          "Ka2_y": 3.1074559871950815,
+          "dKa_xx": 2.3258167336609836,
+          "dKg_yy": 2.041995524335772
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.846338564923188
+        }
+      },
+      "markov42_triplet": "1.059 / 0.572 / 4.846",
+      "delta_vs_current_leader_markov42": {
+        "mean_pct_error": 0.003847308961765883,
+        "median_pct_error": 0.042598868024985026,
+        "max_pct_error": -0.12110054070701626
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8954355738187552,
+        "median_pct_error": -0.14166523757152882,
+        "max_pct_error": 10.275304862316734
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49739336589762395,
+        "median_pct_error": 0.24051390227515002,
+        "max_pct_error": 9.866953376024128
+      }
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p6875_l12y0p375_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Coupled lower-l9 / heavier-l12 variant: if earlier l9 closure slightly under-excites the terminal correction, a somewhat stronger l12 reclosure may compensate.",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0599112875375387,
+          "median_pct_error": 0.5732644933910784,
+          "max_pct_error": 4.830592205151476
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.830592205151476,
+          "eb_x": 4.766156194722567,
+          "Ka2_y": 3.0993059275298585,
+          "dKa_xx": 2.343321076081046,
+          "dKg_yy": 2.0484663726373973
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.830592205151476
+        }
+      },
+      "markov42_triplet": "1.060 / 0.573 / 4.831",
+      "delta_vs_current_leader_markov42": {
+        "mean_pct_error": 0.0029217424621057475,
+        "median_pct_error": 0.04162029602433959,
+        "max_pct_error": -0.10535418093530424
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.894510007319095,
+        "median_pct_error": -0.14264380957217426,
+        "max_pct_error": 10.291051222088445
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4964677993979638,
+        "median_pct_error": 0.23953533027450458,
+        "max_pct_error": 9.882699735795839
+      }
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+    "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+    "hypothesis_id": "B",
+    "rationale": "Coupled higher-l9 / lighter-l12 variant: if later l9 already supplies more y-information, the terminal closure may need to back off proportionally.",
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.057061223856136,
+        "median_pct_error": 0.6107914879608048,
+        "max_pct_error": 4.71375006474353
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.71375006474353,
+        "eb_x": 4.57033221551275,
+        "Ka2_y": 2.832591244946224,
+        "dKa_xx": 2.5107008594485913,
+        "dKg_yy": 2.4546934956879305
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.71375006474353
+      }
+    },
+    "markov42_triplet": "1.057 / 0.611 / 4.714",
+    "delta_vs_current_leader_markov42": {
+      "mean_pct_error": 0.005771806143508362,
+      "median_pct_error": 0.004093301454613174,
+      "max_pct_error": 0.011487959472641585
+    },
+    "delta_vs_faithful12_markov42": {
+      "mean_pct_error": 0.8973600710004976,
+      "median_pct_error": -0.18017080414190068,
+      "max_pct_error": 10.407893362496392
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": 0.49931786307936643,
+      "median_pct_error": 0.20200833570477816,
+      "max_pct_error": 9.999541876203786
+    },
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 1.0567915141378126,
+        "median_pct_error": 0.610720244961116,
+        "max_pct_error": 4.713960072310424
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.713960072310424,
+        "eb_x": 4.5682794025537055,
+        "Ka2_y": 2.830686460074407,
+        "dKa_xx": 2.5095605382777633,
+        "dKg_yy": 2.454444318342507
+      },
+      "max_driver": {
+        "name": "dKg_xx",
+        "pct_error": 4.713960072310424
+      }
+    },
+    "kf36_triplet": "1.057 / 0.611 / 4.714"
+  },
+  "best_candidate_timing_table": [
+    {
+      "pos_id": 1,
+      "anchor_id": 1,
+      "segment_role": "anchor",
+      "label": "anchor_1",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 2,
+      "anchor_id": 2,
+      "segment_role": "anchor",
+      "label": "anchor_2",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 3,
+      "anchor_id": 3,
+      "segment_role": "anchor",
+      "label": "anchor_3",
+      "motor_action": "I(0→90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 4,
+      "anchor_id": 4,
+      "segment_role": "anchor",
+      "label": "anchor_4",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 5,
+      "anchor_id": 5,
+      "segment_role": "anchor",
+      "label": "anchor_5",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 6,
+      "anchor_id": 6,
+      "segment_role": "anchor",
+      "label": "anchor_6",
+      "motor_action": "I(90→0) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 7,
+      "anchor_id": 7,
+      "segment_role": "anchor",
+      "label": "anchor_7",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 8,
+      "anchor_id": 8,
+      "segment_role": "anchor",
+      "label": "anchor_8",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 9,
+      "anchor_id": 8,
+      "segment_role": "motif_out",
+      "label": "l8_x1_out",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 10,
+      "anchor_id": 8,
+      "segment_role": "motif_return",
+      "label": "l8_x1_return",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 11,
+      "anchor_id": 9,
+      "segment_role": "anchor",
+      "label": "anchor_9",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 12,
+      "anchor_id": 9,
+      "segment_role": "motif_out",
+      "label": "l9_ypair_neg0p8125_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 13,
+      "anchor_id": 9,
+      "segment_role": "motif_return",
+      "label": "l9_ypair_neg0p8125_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 14,
+      "anchor_id": 10,
+      "segment_role": "anchor",
+      "label": "anchor_10",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 15,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_zpair_neg5_out",
+      "motor_action": "O[-Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 16,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_zpair_neg5_return",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 17,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_ypair_neg1_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 18,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_ypair_neg1_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 19,
+      "anchor_id": 11,
+      "segment_role": "anchor",
+      "label": "anchor_11",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 20,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_open",
+      "label": "l11_xpair_outerhold_inner_open",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 21,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_sweep",
+      "label": "l11_xpair_outerhold_outer_sweep",
+      "motor_action": "O[-X] +90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 22,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_return",
+      "label": "l11_xpair_outerhold_outer_return",
+      "motor_action": "O[-X] -90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 23,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_close",
+      "label": "l11_xpair_outerhold_inner_close",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 24,
+      "anchor_id": 11,
+      "segment_role": "motif_y_pos",
+      "label": "l11_zquad_y10x0back2_q1",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 25,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_a",
+      "label": "l11_zquad_y10x0back2_q2",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 26,
+      "anchor_id": 11,
+      "segment_role": "motif_y_neg",
+      "label": "l11_zquad_y10x0back2_q3",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 27,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_b",
+      "label": "l11_zquad_y10x0back2_q4",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 2.0,
+      "node_total_s": 7.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 28,
+      "anchor_id": 12,
+      "segment_role": "anchor",
+      "label": "anchor_12",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 29,
+      "anchor_id": 12,
+      "segment_role": "motif_out",
+      "label": "l12_yneg0p125_out",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 30,
+      "anchor_id": 12,
+      "segment_role": "motif_return",
+      "label": "l12_yneg0p125_return",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    }
+  ],
+  "best_vs_recent_near_tie_markov42": {
+    "mean_pct_error": 0.006125847680122476,
+    "median_pct_error": 0.005237061253033803,
+    "max_pct_error": 0.01267463023430171
+  },
+  "kf36_rechecks": [
+    {
+      "candidate_name": "relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Coupled higher-l9 / lighter-l12 variant: if later l9 already supplies more y-information, the terminal closure may need to back off proportionally.",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057061223856136,
+          "median_pct_error": 0.6107914879608048,
+          "max_pct_error": 4.71375006474353
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.71375006474353,
+          "eb_x": 4.57033221551275,
+          "Ka2_y": 2.832591244946224,
+          "dKa_xx": 2.5107008594485913,
+          "dKg_yy": 2.4546934956879305
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.71375006474353
+        }
+      },
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "delta_vs_current_leader_markov42": {
+        "mean_pct_error": 0.005771806143508362,
+        "median_pct_error": 0.004093301454613174,
+        "max_pct_error": 0.011487959472641585
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8973600710004976,
+        "median_pct_error": -0.18017080414190068,
+        "max_pct_error": 10.407893362496392
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49931786307936643,
+        "median_pct_error": 0.20200833570477816,
+        "max_pct_error": 9.999541876203786
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0567915141378126,
+          "median_pct_error": 0.610720244961116,
+          "max_pct_error": 4.713960072310424
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.713960072310424,
+          "eb_x": 4.5682794025537055,
+          "Ka2_y": 2.830686460074407,
+          "dKa_xx": 2.5095605382777633,
+          "dKg_yy": 2.454444318342507
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.713960072310424
+        }
+      },
+      "kf36_triplet": "1.057 / 0.611 / 4.714"
+    },
+    {
+      "candidate_name": "relay_r3_l9y0p8125_l12y0p25_on_entry",
+      "family": "minimal_l9_l12_compatibility_tweaks_around_batch2_incumbent",
+      "hypothesis_id": "B",
+      "rationale": "Raise the l9 gate slightly above 0.75 s while keeping the incumbent l12 = 0.25 s, to test the upper side of the same compatibility ridge.",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057835822250634,
+          "median_pct_error": 0.6081732654754177,
+          "max_pct_error": 4.700816728119583
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.700816728119583,
+          "eb_x": 4.5676057923606574,
+          "Ka2_y": 2.8461130967200803,
+          "dKa_xx": 2.5238032919209736,
+          "dKg_yy": 2.455183431557582
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.700816728119583
+        }
+      },
+      "markov42_triplet": "1.058 / 0.608 / 4.701",
+      "delta_vs_current_leader_markov42": {
+        "mean_pct_error": 0.004997207749010357,
+        "median_pct_error": 0.006711523940000297,
+        "max_pct_error": 0.024421296096588385
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8965854726059996,
+        "median_pct_error": -0.17755258165651355,
+        "max_pct_error": 10.420826699120337
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4985432646848684,
+        "median_pct_error": 0.2046265581901653,
+        "max_pct_error": 10.01247521282773
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0575698289015967,
+          "median_pct_error": 0.6081083712060551,
+          "max_pct_error": 4.701025623243005
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.701025623243005,
+          "eb_x": 4.565556320548499,
+          "Ka2_y": 2.8442132884685134,
+          "dKa_xx": 2.52266930790317,
+          "dKg_yy": 2.4549314953079424
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.701025623243005
+        }
+      },
+      "kf36_triplet": "1.058 / 0.608 / 4.701"
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "current leader / relay_l9y0p75_l12y0p25_on_entry",
+      "markov42_triplet": "1.063 / 0.615 / 4.725",
+      "kf36_triplet": "1.063 / 0.615 / 4.725",
+      "delta_vs_best_markov42": {
+        "mean_pct_error": 0.005771806143508362,
+        "median_pct_error": 0.004093301454613174,
+        "max_pct_error": 0.011487959472641585
+      },
+      "note": "accepted corrected leader to beat"
+    },
+    {
+      "label": "recent near-tie / relay_r3_l9y0p75_l12split375_125_on_entry",
+      "markov42_triplet": "1.063 / 0.616 / 4.726",
+      "kf36_triplet": "n/a",
+      "delta_vs_best_markov42": {
+        "mean_pct_error": 0.006125847680122476,
+        "median_pct_error": 0.005237061253033803,
+        "max_pct_error": 0.01267463023430171
+      },
+      "note": "last pure terminal-split near-tie from the prior batch"
+    },
+    {
+      "label": "faithful12",
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "delta_vs_best_markov42": {
+        "mean_pct_error": 0.8973600710004976,
+        "median_pct_error": -0.18017080414190068,
+        "max_pct_error": 10.407893362496392
+      },
+      "note": "corrected faithful 12-position reference"
+    },
+    {
+      "label": "default18",
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "kf36_triplet": "1.556 / 0.813 / 14.711",
+      "delta_vs_best_markov42": {
+        "mean_pct_error": 0.49931786307936643,
+        "median_pct_error": 0.20200833570477816,
+        "max_pct_error": 9.999541876203786
+      },
+      "note": "default 18-position reference"
+    }
+  ],
+  "bottom_line": {
+    "beat_official_leader": "YES",
+    "statement": "Yes. The in-basin compatibility coupling clearly beats the official corrected leader: a slightly higher l9 soft gate (0.8125 s) paired with a lighter l12 terminal closure (0.125 s) improves both mean and max, and KF36 preserves the gain."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "experiment": "clean_scd_only_llm_guidance",
+  "constraint_note": "LLM is allowed to modify only SCD on top of neutral Markov+SCD baseline. No state_alpha_mult/state_prior_diag_mult/state_q_* changes. No post_rx_y_mult/post_ry_z_mult.",
+  "baseline": "neutral_markov42_plus_scd_baseline",
+  "scales": [
+    0.08,
+    1.0,
+    2.0
+  ],
+  "candidates": [
+    {
+      "name": "candidate_A",
+      "label": "A",
+      "description": "selected scope, once_per_phase, alpha=0.999, transition_duration=2.0, bias_to_target=True",
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "selected",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "candidate_B",
+      "label": "B",
+      "description": "scale_block scope, once_per_phase, alpha=0.9995, transition_duration=2.0, bias_to_target=True",
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.9995,
+        "transition_duration": 2.0,
+        "target": "scale_block",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "candidate_C",
+      "label": "C",
+      "description": "scale_block scope, once_per_phase, alpha=0.999, transition_duration=4.0, bias_to_target=True",
+      "scd": {
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 4.0,
+        "target": "scale_block",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    },
+    {
+      "name": "candidate_D",
+      "label": "D",
+      "description": "selected scope, repeat_after_transition, alpha=0.9998, transition_duration=2.0, bias_to_target=True",
+      "scd": {
+        "mode": "repeat_after_transition",
+        "alpha": 0.9998,
+        "transition_duration": 2.0,
+        "target": "selected",
+        "bias_to_target": true,
+        "apply_policy_names": [
+          "iter2_commit"
+        ]
+      }
+    }
+  ]
+}

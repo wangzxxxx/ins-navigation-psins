@@ -1,0 +1,2316 @@
+{
+  "experiment": "ch3_12pos_legal_dualaxis_second_layer",
+  "report_date": "2026-03-31",
+  "noise_scale": 0.08,
+  "hard_constraints": {
+    "representation": "legal motor-action sequence only",
+    "inner_axis": "body y only",
+    "outer_axis": "x/z family determined by inner attitude",
+    "prefer_exact_12_nodes": true,
+    "total_time_s_max": 1200.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "references": {
+    "faithful12": {
+      "candidate_name": "legal_base_faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 15.290300274032441,
+          "median_pct_error": 1.483362834112179,
+          "max_pct_error": 122.58269656383278
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.58269656383278,
+          "dKg_zz": 85.57075351197156,
+          "Ka2_y": 99.94129544126406,
+          "Ka2_z": 64.70431004852547,
+          "dKg_xz": 18.68063496921905,
+          "dKa_xz": 18.85408106874926
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 15.288687861181792,
+          "median_pct_error": 1.4837439708458107,
+          "max_pct_error": 122.5882646997851
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.5882646997851,
+          "dKg_zz": 85.57095512255164,
+          "Ka2_y": 99.94128958152183,
+          "Ka2_z": 64.68594016040949,
+          "dKg_xz": 18.674921597907467,
+          "dKa_xz": 18.84829522348288
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+    },
+    "default18": {
+      "candidate_name": "default18_reference",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9477898404987541,
+          "dKg_zz": 0.851304114610006,
+          "Ka2_y": 1.9994816607900874,
+          "Ka2_z": 1.2883358751632203,
+          "dKg_xz": 0.3510978642553199,
+          "dKa_xz": 0.3274679937728792
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKa_yy": 0.9476606704907313,
+          "dKg_zz": 0.8522121112508451,
+          "Ka2_y": 2.0007501033211734,
+          "Ka2_z": 1.2888876792064823,
+          "dKg_xz": 0.35109847596388216,
+          "dKa_xz": 0.3275370623000178
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+    }
+  },
+  "incumbent": {
+    "candidate_name": "legal_flip_8_11_12",
+    "flips": [
+      8,
+      11,
+      12
+    ],
+    "equivalent_prior_result": "coupled_flip_8_11_12",
+    "action_sequence": [
+      {
+        "pos_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": 180
+      }
+    ],
+    "rows": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      }
+    ],
+    "faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          1.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          4.440892098500626e-16,
+          0.0,
+          -1.0
+        ]
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 11.875950916036986,
+        "median_pct_error": 1.238236491695687,
+        "max_pct_error": 99.97405349340134
+      },
+      "key_param_errors": {
+        "dKa_yy": 84.80235296251372,
+        "dKg_zz": 76.15214117154267,
+        "Ka2_y": 99.97405349340134,
+        "Ka2_z": 2.8166161819960265,
+        "dKg_xz": 0.22730412851634743,
+        "dKa_xz": 0.30869972611459023
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/markov42_noisy_coupled_flip_8_11_12_shared_noise0p08_param_errors.json",
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 11.87552189523086,
+        "median_pct_error": 1.2381497605995055,
+        "max_pct_error": 99.97404143518949
+      },
+      "key_param_errors": {
+        "dKa_yy": 84.7968560795649,
+        "dKg_zz": 76.15316244719929,
+        "Ka2_y": 99.97404143518949,
+        "Ka2_z": 2.815429188733571,
+        "dKg_xz": 0.22746517199909796,
+        "dKa_xz": 0.30902496368750226
+      }
+    },
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/kf36_noisy_coupled_flip_8_11_12_shared_noise0p08_param_errors.json"
+  },
+  "direction_a_candidates": [
+    {
+      "name": "legal_flip_1_2_10_11",
+      "family": "one_flip_structural_neighbor",
+      "note": "one legal sign toggle at node 1 from seed [2, 10, 11]",
+      "base_reference": "legal shortlist neighbor",
+      "flips": [
+        1,
+        2,
+        10,
+        11
+      ],
+      "structural": {
+        "face_sequence": [
+          "-Y",
+          "-Z",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "-Y",
+          "-Z",
+          "-X",
+          "+Y",
+          "+X",
+          "+Z"
+        ],
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "late_repeat_nodes": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      "name": "legal_flip_1_4_5_8",
+      "family": "one_flip_structural_neighbor",
+      "note": "one legal sign toggle at node 1 from seed [4, 5, 8]",
+      "base_reference": "legal shortlist neighbor",
+      "flips": [
+        1,
+        4,
+        5,
+        8
+      ],
+      "structural": {
+        "face_sequence": [
+          "-Y",
+          "+Z",
+          "-X",
+          "+Y",
+          "+X",
+          "-Z",
+          "+Y",
+          "-Z",
+          "-X",
+          "-Y",
+          "+X",
+          "+Z"
+        ],
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "late_repeat_nodes": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      "name": "legal_flip_2_7_10_11",
+      "family": "one_flip_structural_neighbor",
+      "note": "one legal sign toggle at node 7 from seed [2, 10, 11]",
+      "base_reference": "legal shortlist neighbor",
+      "flips": [
+        2,
+        7,
+        10,
+        11
+      ],
+      "structural": {
+        "face_sequence": [
+          "+Y",
+          "+Z",
+          "-X",
+          "-Y",
+          "+X",
+          "-Z",
+          "-Y",
+          "-Z",
+          "-X",
+          "+Y",
+          "+X",
+          "+Z"
+        ],
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "late_repeat_nodes": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      "name": "legal_flip_4_5_7_8",
+      "family": "one_flip_structural_neighbor",
+      "note": "one legal sign toggle at node 7 from seed [4, 5, 8]",
+      "base_reference": "legal shortlist neighbor",
+      "flips": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "structural": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "-Y",
+          "-X",
+          "+Z",
+          "+Y",
+          "-Z",
+          "-X",
+          "-Y",
+          "+X",
+          "+Z"
+        ],
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "late_repeat_nodes": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      "name": "legal_flip_8_10_11",
+      "family": "one_flip_structural_neighbor",
+      "note": "one legal sign toggle at node 8 from seed [10, 11]",
+      "base_reference": "legal shortlist neighbor",
+      "flips": [
+        8,
+        10,
+        11
+      ],
+      "structural": {
+        "face_sequence": [
+          "+Y",
+          "-Z",
+          "+X",
+          "+Y",
+          "-X",
+          "+Z",
+          "-Y",
+          "+Z",
+          "+X",
+          "-Y",
+          "-X",
+          "-Z"
+        ],
+        "axis_balance": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "late_repeat_nodes": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          4,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      "name": "legal_flip_2_10_12",
+      "family": "one_flip_structural_neighbor",
+      "note": "one legal sign toggle at node 2 from seed [10, 12]",
+      "base_reference": "legal shortlist neighbor",
+      "flips": [
+        2,
+        10,
+        12
+      ],
+      "structural": {
+        "face_sequence": [
+          "+Y",
+          "+Z",
+          "-X",
+          "-Y",
+          "+X",
+          "-Z",
+          "+Y",
+          "+Z",
+          "+X",
+          "-Y",
+          "+X",
+          "-Z"
+        ],
+        "axis_balance": {
+          "X": 2,
+          "Y": 0,
+          "Z": 0
+        },
+        "late_repeat_nodes": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "repeat_and_worsen_target_nodes": [
+          7,
+          8,
+          9,
+          11
+        ]
+      }
+    }
+  ],
+  "direction_b_candidates": [
+    {
+      "name": "legal_flip_8_11_12_retime_tail10_12_pre20_post70",
+      "family": "incumbent_retime",
+      "note": "same legal motor sequence; move 10 s of dwell from post to pre on tail nodes 10-12",
+      "base_reference": "legal_flip_8_11_12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "retimed_nodes": [
+        10,
+        11,
+        12
+      ],
+      "timing_rows": [
+        {
+          "pos_id": 10,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 70.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 70.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 70.0,
+          "node_total_s": 100.0
+        }
+      ]
+    },
+    {
+      "name": "legal_flip_8_11_12_retime_tail10_12_pre30_post60",
+      "family": "incumbent_retime",
+      "note": "same legal motor sequence; stronger pre-static shift on tail nodes 10-12",
+      "base_reference": "legal_flip_8_11_12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "retimed_nodes": [
+        10,
+        11,
+        12
+      ],
+      "timing_rows": [
+        {
+          "pos_id": 10,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0
+        }
+      ]
+    },
+    {
+      "name": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "family": "incumbent_retime",
+      "note": "same legal motor sequence; earlier dwell only on the three flipped nodes 8/11/12",
+      "base_reference": "legal_flip_8_11_12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "retimed_nodes": [
+        8,
+        11,
+        12
+      ],
+      "timing_rows": [
+        {
+          "pos_id": 8,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 70.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 70.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 20.0,
+          "post_static_s": 70.0,
+          "node_total_s": 100.0
+        }
+      ]
+    },
+    {
+      "name": "legal_flip_8_11_12_retime_flipnodes_pre30_post60",
+      "family": "incumbent_retime",
+      "note": "same legal motor sequence; stronger earlier dwell on the three flipped nodes 8/11/12",
+      "base_reference": "legal_flip_8_11_12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "retimed_nodes": [
+        8,
+        11,
+        12
+      ],
+      "timing_rows": [
+        {
+          "pos_id": 8,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 11,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0
+        },
+        {
+          "pos_id": 12,
+          "rotation_time_s": 10.0,
+          "pre_static_s": 30.0,
+          "post_static_s": 60.0,
+          "node_total_s": 100.0
+        }
+      ]
+    }
+  ],
+  "markov42_rows": [
+    {
+      "candidate_name": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "direction": "B",
+      "family": "incumbent_retime",
+      "base_reference": "legal_flip_8_11_12",
+      "note": "same legal motor sequence; earlier dwell only on the three flipped nodes 8/11/12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.014162810085333,
+          "median_pct_error": 1.0603379306680452,
+          "max_pct_error": 99.92214937787182
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.77132397757674,
+          "dKg_zz": 76.46895197802066,
+          "Ka2_y": 99.92214937787182,
+          "Ka2_z": 3.8821190036200264,
+          "dKg_xz": 0.43475000616637505,
+          "dKa_xz": 0.14567951573398194
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": "coupled_flip_8_11_12",
+      "target_nodes": [
+        8,
+        11,
+        12
+      ],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 11.014162810085333,
+          "improvement_pct_points": 0.8617881059516534,
+          "relative_improvement_pct": 7.256581911162301
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 1.0603379306680452,
+          "improvement_pct_points": 0.1778985610276418,
+          "relative_improvement_pct": 14.367090795718749
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 99.92214937787182,
+          "improvement_pct_points": 0.05190411552952412,
+          "relative_improvement_pct": 0.05191758632948696
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_8_11_12_retime_flipnodes_pre30_post60",
+      "direction": "B",
+      "family": "incumbent_retime",
+      "base_reference": "legal_flip_8_11_12",
+      "note": "same legal motor sequence; stronger earlier dwell on the three flipped nodes 8/11/12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.140723171035985,
+          "median_pct_error": 1.261503987936381,
+          "max_pct_error": 99.92353564947626
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.73033354430689,
+          "dKg_zz": 75.77367357576085,
+          "Ka2_y": 99.92353564947626,
+          "Ka2_z": 3.826575440453566,
+          "dKg_xz": 0.595328888148843,
+          "dKa_xz": 0.22785877471426888
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre30_post60_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": "coupled_flip_8_11_12",
+      "target_nodes": [
+        8,
+        11,
+        12
+      ],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 11.140723171035985,
+          "improvement_pct_points": 0.7352277450010014,
+          "relative_improvement_pct": 6.190895787622095
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 1.261503987936381,
+          "improvement_pct_points": -0.02326749624069402,
+          "relative_improvement_pct": -1.8790833897029353
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 99.92353564947626,
+          "improvement_pct_points": 0.05051784392507841,
+          "relative_improvement_pct": 0.050530954942636964
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_8_11_12_retime_tail10_12_pre20_post70",
+      "direction": "B",
+      "family": "incumbent_retime",
+      "base_reference": "legal_flip_8_11_12",
+      "note": "same legal motor sequence; move 10 s of dwell from post to pre on tail nodes 10-12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.148565720794323,
+          "median_pct_error": 1.113139775250675,
+          "max_pct_error": 99.92918545836085
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.48546421557668,
+          "dKg_zz": 76.41602682043079,
+          "Ka2_y": 99.92918545836085,
+          "Ka2_z": 4.343841396747221,
+          "dKg_xz": 0.5804109220679858,
+          "dKa_xz": 0.24263941851285503
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_tail10_12_pre20_post70_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": "coupled_flip_8_11_12",
+      "target_nodes": [
+        10,
+        11,
+        12
+      ],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 11.148565720794323,
+          "improvement_pct_points": 0.7273851952426629,
+          "relative_improvement_pct": 6.124858551414356
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 1.113139775250675,
+          "improvement_pct_points": 0.12509671644501186,
+          "relative_improvement_pct": 10.102812934684211
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 99.92918545836085,
+          "improvement_pct_points": 0.04486803504049419,
+          "relative_improvement_pct": 0.04487967974956187
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_8_11_12_retime_tail10_12_pre30_post60",
+      "direction": "B",
+      "family": "incumbent_retime",
+      "base_reference": "legal_flip_8_11_12",
+      "note": "same legal motor sequence; stronger pre-static shift on tail nodes 10-12",
+      "flips": [
+        8,
+        11,
+        12
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 11.21472118395008,
+          "median_pct_error": 1.2625088854204938,
+          "max_pct_error": 99.92517796344332
+        },
+        "key_param_errors": {
+          "dKa_yy": 83.51090394478874,
+          "dKg_zz": 75.64518141736598,
+          "Ka2_y": 99.92517796344332,
+          "Ka2_z": 4.535800085271364,
+          "dKg_xz": 0.6690847986860295,
+          "dKa_xz": 0.3179724505088739
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_tail10_12_pre30_post60_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": "coupled_flip_8_11_12",
+      "target_nodes": [
+        10,
+        11,
+        12
+      ],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 11.21472118395008,
+          "improvement_pct_points": 0.6612297320869054,
+          "relative_improvement_pct": 5.567804521606749
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 1.2625088854204938,
+          "improvement_pct_points": -0.02427239372480683,
+          "relative_improvement_pct": -1.9602389275062724
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 99.92517796344332,
+          "improvement_pct_points": 0.0488755299580248,
+          "relative_improvement_pct": 0.04888821474188877
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_2_10_12",
+      "direction": "A",
+      "family": "one_flip_structural_neighbor",
+      "base_reference": "legal shortlist neighbor",
+      "note": "one legal sign toggle at node 2 from seed [10, 12]",
+      "flips": [
+        2,
+        10,
+        12
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 14.443658144881562,
+          "median_pct_error": 1.2935751068468333,
+          "max_pct_error": 128.8511243423373
+        },
+        "key_param_errors": {
+          "dKa_yy": 128.8511243423373,
+          "dKg_zz": 104.1507468417947,
+          "Ka2_y": 99.95446645465331,
+          "Ka2_z": 3.5818833409003026,
+          "dKg_xz": 0.7894917839357876,
+          "dKa_xz": 1.3733492662625493
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_2_10_12_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": null,
+      "target_nodes": [],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 14.443658144881562,
+          "improvement_pct_points": -2.5677072288445757,
+          "relative_improvement_pct": -21.621066363428703
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 1.2935751068468333,
+          "improvement_pct_points": -0.05533861515114635,
+          "relative_improvement_pct": -4.469147495028483
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 128.8511243423373,
+          "improvement_pct_points": -28.877070848935958,
+          "relative_improvement_pct": -28.884565384599465
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_8_10_11",
+      "direction": "A",
+      "family": "one_flip_structural_neighbor",
+      "base_reference": "legal shortlist neighbor",
+      "note": "one legal sign toggle at node 8 from seed [10, 11]",
+      "flips": [
+        8,
+        10,
+        11
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 16.457469055093743,
+          "median_pct_error": 2.5937185292770515,
+          "max_pct_error": 99.98259261217056
+        },
+        "key_param_errors": {
+          "dKa_yy": 95.102128418361,
+          "dKg_zz": 97.5134729061426,
+          "Ka2_y": 99.98259261217056,
+          "Ka2_z": 69.25320806995047,
+          "dKg_xz": 20.967368281141834,
+          "dKa_xz": 21.03201494914564
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_10_11_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": null,
+      "target_nodes": [],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 16.457469055093743,
+          "improvement_pct_points": -4.581518139056756,
+          "relative_improvement_pct": -38.57811615632386
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 2.5937185292770515,
+          "improvement_pct_points": -1.3554820375813645,
+          "relative_improvement_pct": -109.46875226759931
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 99.98259261217056,
+          "improvement_pct_points": -0.008539118769220977,
+          "relative_improvement_pct": -0.00854133494725668
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_1_4_5_8",
+      "direction": "A",
+      "family": "one_flip_structural_neighbor",
+      "base_reference": "legal shortlist neighbor",
+      "note": "one legal sign toggle at node 1 from seed [4, 5, 8]",
+      "flips": [
+        1,
+        4,
+        5,
+        8
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.175111902763135,
+          "median_pct_error": 2.1200777391753536,
+          "max_pct_error": 100.02751488092115
+        },
+        "key_param_errors": {
+          "dKa_yy": 73.86293408843498,
+          "dKg_zz": 82.23228032592195,
+          "Ka2_y": 100.02751488092115,
+          "Ka2_z": 48.010717768105266,
+          "dKg_xz": 14.162905478963161,
+          "dKa_xz": 14.38464441053649
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_1_4_5_8_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null,
+      "target_nodes": [],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 17.175111902763135,
+          "improvement_pct_points": -5.299160986726148,
+          "relative_improvement_pct": -44.620940455136896
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 2.1200777391753536,
+          "improvement_pct_points": -0.8818412474796666,
+          "relative_improvement_pct": -71.21751405275099
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 100.02751488092115,
+          "improvement_pct_points": -0.05346138751980334,
+          "relative_improvement_pct": -0.05347526248231196
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_2_7_10_11",
+      "direction": "A",
+      "family": "one_flip_structural_neighbor",
+      "base_reference": "legal shortlist neighbor",
+      "note": "one legal sign toggle at node 7 from seed [2, 10, 11]",
+      "flips": [
+        2,
+        7,
+        10,
+        11
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 18.698265580808904,
+          "median_pct_error": 3.850456955527166,
+          "max_pct_error": 122.96435815851055
+        },
+        "key_param_errors": {
+          "dKa_yy": 102.89896404326015,
+          "dKg_zz": 89.50906065904157,
+          "Ka2_y": 99.95597806794322,
+          "Ka2_z": 49.12690297092607,
+          "dKg_xz": 15.045958573531976,
+          "dKa_xz": 14.915027853401819
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_2_7_10_11_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": null,
+      "target_nodes": [],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 18.698265580808904,
+          "improvement_pct_points": -6.822314664771918,
+          "relative_improvement_pct": -57.44647071216197
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 3.850456955527166,
+          "improvement_pct_points": -2.612220463831479,
+          "relative_improvement_pct": -210.9629688149642
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 122.96435815851055,
+          "improvement_pct_points": -22.990304665109207,
+          "relative_improvement_pct": -22.996271394183946
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_4_5_7_8",
+      "direction": "A",
+      "family": "one_flip_structural_neighbor",
+      "base_reference": "legal shortlist neighbor",
+      "note": "one legal sign toggle at node 7 from seed [4, 5, 8]",
+      "flips": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 20.512203172755367,
+          "median_pct_error": 6.224739247819551,
+          "max_pct_error": 99.99125694679579
+        },
+        "key_param_errors": {
+          "dKa_yy": 59.27000809196793,
+          "dKg_zz": 96.56634646812319,
+          "Ka2_y": 99.99125694679579,
+          "Ka2_z": 70.54484769681866,
+          "dKg_xz": 20.338535469778467,
+          "dKa_xz": 21.077528821360612
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_4_5_7_8_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "equivalent_prior_result": null,
+      "target_nodes": [],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 20.512203172755367,
+          "improvement_pct_points": -8.63625225671838,
+          "relative_improvement_pct": -72.7205115428374
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 6.224739247819551,
+          "improvement_pct_points": -4.986502756123864,
+          "relative_improvement_pct": -402.7100468744191
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 99.99125694679579,
+          "improvement_pct_points": -0.017203453394444068,
+          "relative_improvement_pct": -0.0172079182480878
+        }
+      }
+    },
+    {
+      "candidate_name": "legal_flip_1_2_10_11",
+      "direction": "A",
+      "family": "one_flip_structural_neighbor",
+      "base_reference": "legal shortlist neighbor",
+      "note": "one legal sign toggle at node 1 from seed [2, 10, 11]",
+      "flips": [
+        1,
+        2,
+        10,
+        11
+      ],
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 22.84991632031648,
+          "median_pct_error": 3.86938375079206,
+          "max_pct_error": 175.0691512377918
+        },
+        "key_param_errors": {
+          "dKa_yy": 143.01636186583443,
+          "dKg_zz": 100.52026084588623,
+          "Ka2_y": 99.97858335874432,
+          "Ka2_z": 66.60092877216171,
+          "dKg_xz": 18.31892108247447,
+          "dKa_xz": 18.80271988531237
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_1_2_10_11_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "equivalent_prior_result": null,
+      "target_nodes": [],
+      "delta_vs_incumbent": {
+        "mean_pct_error": {
+          "incumbent": 11.875950916036986,
+          "candidate": 22.84991632031648,
+          "improvement_pct_points": -10.973965404279495,
+          "relative_improvement_pct": -92.40494072319319
+        },
+        "median_pct_error": {
+          "incumbent": 1.238236491695687,
+          "candidate": 3.86938375079206,
+          "improvement_pct_points": -2.631147259096373,
+          "relative_improvement_pct": -212.4914971204881
+        },
+        "max_pct_error": {
+          "incumbent": 99.97405349340134,
+          "candidate": 175.0691512377918,
+          "improvement_pct_points": -75.09509774439046,
+          "relative_improvement_pct": -75.11458735575528
+        }
+      }
+    }
+  ],
+  "best_of_relaunch": {
+    "candidate_name": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+    "direction": "B",
+    "family": "incumbent_retime",
+    "base_reference": "legal_flip_8_11_12",
+    "note": "same legal motor sequence; earlier dwell only on the three flipped nodes 8/11/12",
+    "flips": [
+      8,
+      11,
+      12
+    ],
+    "action_sequence": [
+      {
+        "pos_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90
+      },
+      {
+        "pos_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0
+      },
+      {
+        "pos_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90
+      },
+      {
+        "pos_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": 180
+      }
+    ],
+    "rows": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 20.0,
+        "post_static_s": 70.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 20.0,
+        "post_static_s": 70.0,
+        "node_total_s": 100.0
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 20.0,
+        "post_static_s": 70.0,
+        "node_total_s": 100.0
+      }
+    ],
+    "faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-X",
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Y",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Z",
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "face_name": "+Y",
+        "gravity_body": [
+          1.1102230246251565e-16,
+          1.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": -90.0,
+        "face_name": "+X",
+        "gravity_body": [
+          1.0,
+          0.0,
+          3.3306690738754696e-16
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "face_name": "-Z",
+        "gravity_body": [
+          4.440892098500626e-16,
+          0.0,
+          -1.0
+        ]
+      }
+    ],
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 11.014162810085333,
+        "median_pct_error": 1.0603379306680452,
+        "max_pct_error": 99.92214937787182
+      },
+      "key_param_errors": {
+        "dKa_yy": 84.77132397757674,
+        "dKg_zz": 76.46895197802066,
+        "Ka2_y": 99.92214937787182,
+        "Ka2_z": 3.8821190036200264,
+        "dKg_xz": 0.43475000616637505,
+        "dKa_xz": 0.14567951573398194
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json",
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 11.014092121257267,
+        "median_pct_error": 1.0602406508286844,
+        "max_pct_error": 99.92213961977083
+      },
+      "key_param_errors": {
+        "dKa_yy": 84.76480779442812,
+        "dKg_zz": 76.46961291525153,
+        "Ka2_y": 99.92213961977083,
+        "Ka2_z": 3.8809407722658174,
+        "dKg_xz": 0.4344164417122317,
+        "dKa_xz": 0.14535565627381575
+      }
+    },
+    "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json",
+    "kf36_status": "rerun",
+    "delta_vs_incumbent": {
+      "mean_pct_error": {
+        "incumbent": 11.875950916036986,
+        "candidate": 11.014162810085333,
+        "improvement_pct_points": 0.8617881059516534,
+        "relative_improvement_pct": 7.256581911162301
+      },
+      "median_pct_error": {
+        "incumbent": 1.238236491695687,
+        "candidate": 1.0603379306680452,
+        "improvement_pct_points": 0.1778985610276418,
+        "relative_improvement_pct": 14.367090795718749
+      },
+      "max_pct_error": {
+        "incumbent": 99.97405349340134,
+        "candidate": 99.92214937787182,
+        "improvement_pct_points": 0.05190411552952412,
+        "relative_improvement_pct": 0.05191758632948696
+      }
+    },
+    "delta_vs_faithful_markov42": {
+      "mean_pct_error": {
+        "base": 15.290300274032441,
+        "candidate": 11.014162810085333,
+        "improvement_pct_points": 4.276137463947109,
+        "relative_improvement_pct": 27.96634066898794
+      },
+      "median_pct_error": {
+        "base": 1.483362834112179,
+        "candidate": 1.0603379306680452,
+        "improvement_pct_points": 0.4230249034441338,
+        "relative_improvement_pct": 28.51796564643756
+      },
+      "max_pct_error": {
+        "base": 122.58269656383278,
+        "candidate": 99.92214937787182,
+        "improvement_pct_points": 22.660547185960965,
+        "relative_improvement_pct": 18.485926497922065
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 122.58269656383278,
+          "candidate": 84.77132397757674,
+          "improvement_pct_points": 37.81137258625604
+        },
+        "dKg_zz": {
+          "base": 85.57075351197156,
+          "candidate": 76.46895197802066,
+          "improvement_pct_points": 9.101801533950905
+        },
+        "Ka2_y": {
+          "base": 99.94129544126406,
+          "candidate": 99.92214937787182,
+          "improvement_pct_points": 0.019146063392241786
+        },
+        "Ka2_z": {
+          "base": 64.70431004852547,
+          "candidate": 3.8821190036200264,
+          "improvement_pct_points": 60.822191044905445
+        },
+        "dKg_xz": {
+          "base": 18.68063496921905,
+          "candidate": 0.43475000616637505,
+          "improvement_pct_points": 18.245884963052674
+        },
+        "dKa_xz": {
+          "base": 18.85408106874926,
+          "candidate": 0.14567951573398194,
+          "improvement_pct_points": 18.70840155301528
+        }
+      }
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": {
+        "base": 1.5563790869355025,
+        "candidate": 11.014162810085333,
+        "improvement_pct_points": -9.45778372314983,
+        "relative_improvement_pct": -607.678669196984
+      },
+      "median_pct_error": {
+        "base": 0.812799823665583,
+        "candidate": 1.0603379306680452,
+        "improvement_pct_points": -0.24753810700246215,
+        "relative_improvement_pct": -30.454990244228796
+      },
+      "max_pct_error": {
+        "base": 14.713291940947315,
+        "candidate": 99.92214937787182,
+        "improvement_pct_points": -85.2088574369245,
+        "relative_improvement_pct": -579.1284355595974
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 0.9477898404987541,
+          "candidate": 84.77132397757674,
+          "improvement_pct_points": -83.82353413707798
+        },
+        "dKg_zz": {
+          "base": 0.851304114610006,
+          "candidate": 76.46895197802066,
+          "improvement_pct_points": -75.61764786341065
+        },
+        "Ka2_y": {
+          "base": 1.9994816607900874,
+          "candidate": 99.92214937787182,
+          "improvement_pct_points": -97.92266771708174
+        },
+        "Ka2_z": {
+          "base": 1.2883358751632203,
+          "candidate": 3.8821190036200264,
+          "improvement_pct_points": -2.5937831284568063
+        },
+        "dKg_xz": {
+          "base": 0.3510978642553199,
+          "candidate": 0.43475000616637505,
+          "improvement_pct_points": -0.08365214191105513
+        },
+        "dKa_xz": {
+          "base": 0.3274679937728792,
+          "candidate": 0.14567951573398194,
+          "improvement_pct_points": 0.18178847803889728
+        }
+      }
+    }
+  },
+  "material_improvement_over_incumbent": false,
+  "incumbent_vs_faithful": {
+    "mean_pct_error": {
+      "base": 15.290300274032441,
+      "candidate": 11.875950916036986,
+      "improvement_pct_points": 3.414349357995455,
+      "relative_improvement_pct": 22.330165508875282
+    },
+    "median_pct_error": {
+      "base": 1.483362834112179,
+      "candidate": 1.238236491695687,
+      "improvement_pct_points": 0.245126342416492,
+      "relative_improvement_pct": 16.52504274607937
+    },
+    "max_pct_error": {
+      "base": 122.58269656383278,
+      "candidate": 99.97405349340134,
+      "improvement_pct_points": 22.60864307043144,
+      "relative_improvement_pct": 18.443584375432945
+    },
+    "key_params": {
+      "dKa_yy": {
+        "base": 122.58269656383278,
+        "candidate": 84.80235296251372,
+        "improvement_pct_points": 37.78034360131906
+      },
+      "dKg_zz": {
+        "base": 85.57075351197156,
+        "candidate": 76.15214117154267,
+        "improvement_pct_points": 9.418612340428894
+      },
+      "Ka2_y": {
+        "base": 99.94129544126406,
+        "candidate": 99.97405349340134,
+        "improvement_pct_points": -0.032758052137282334
+      },
+      "Ka2_z": {
+        "base": 64.70431004852547,
+        "candidate": 2.8166161819960265,
+        "improvement_pct_points": 61.887693866529446
+      },
+      "dKg_xz": {
+        "base": 18.68063496921905,
+        "candidate": 0.22730412851634743,
+        "improvement_pct_points": 18.4533308407027
+      },
+      "dKa_xz": {
+        "base": 18.85408106874926,
+        "candidate": 0.30869972611459023,
+        "improvement_pct_points": 18.54538134263467
+      }
+    }
+  },
+  "verdict": "The relaunched narrowed second layer found legal_flip_8_11_12_retime_flipnodes_pre20_post70 as the best new narrow candidate, but the gain over legal_flip_8_11_12 is not material under the shared Markov42 metric.",
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_legal_dualaxis_second_layer_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_legal_dualaxis_second_layer_2026-03-31.md"
+  }
+}

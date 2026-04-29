@@ -1,0 +1,560 @@
+{
+  "variant": "42state_gm1_round50_internalized_iterfeedback_refine",
+  "method_file": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_42state_gm1_round50_internalized_iterfeedback_refine.py",
+  "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+  "param_order": [
+    "eb_x",
+    "eb_y",
+    "eb_z",
+    "db_x",
+    "db_y",
+    "db_z",
+    "dKg_xx",
+    "dKg_yx",
+    "dKg_zx",
+    "dKg_xy",
+    "dKg_yy",
+    "dKg_zy",
+    "dKg_xz",
+    "dKg_yz",
+    "dKg_zz",
+    "dKa_xx",
+    "dKa_xy",
+    "dKa_xz",
+    "dKa_yy",
+    "dKa_yz",
+    "dKa_zz",
+    "Ka2_x",
+    "Ka2_y",
+    "Ka2_z",
+    "rx_x",
+    "rx_y",
+    "rx_z",
+    "ry_x",
+    "ry_y",
+    "ry_z"
+  ],
+  "param_errors": {
+    "eb_x": {
+      "true": 4.84813681109536e-07,
+      "est": 4.676798307878716e-07,
+      "abs_error": 1.7133850321664453e-08,
+      "pct_error": 3.5341103168648678
+    },
+    "eb_y": {
+      "true": 9.69627362219072e-07,
+      "est": 8.997454558589681e-07,
+      "abs_error": 6.988190636010395e-08,
+      "pct_error": 7.207088937772285
+    },
+    "eb_z": {
+      "true": 1.4544410433286078e-06,
+      "est": 1.3720407330814899e-06,
+      "abs_error": 8.240031024711795e-08,
+      "pct_error": 5.665428009274138
+    },
+    "db_x": {
+      "true": 0.00097803267715,
+      "est": 0.0010040217599028172,
+      "abs_error": 2.598908275281732e-05,
+      "pct_error": 2.6572816389478775
+    },
+    "db_y": {
+      "true": 0.0019560653543,
+      "est": 0.0020084477178150544,
+      "abs_error": 5.238236351505455e-05,
+      "pct_error": 2.6779454684324784
+    },
+    "db_z": {
+      "true": 0.00293409803145,
+      "est": 0.003050882225067584,
+      "abs_error": 0.00011678419361758376,
+      "pct_error": 3.9802417085522617
+    },
+    "dKg_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -5.857368496675619e-06,
+      "abs_error": 4.142631503278871e-06,
+      "pct_error": 41.42631503297724
+    },
+    "dKg_yx": {
+      "true": 0.0001454441043328608,
+      "est": 0.00014219536987356574,
+      "abs_error": 3.2487344592950517e-06,
+      "pct_error": 2.233665279315864
+    },
+    "dKg_zx": {
+      "true": 0.00024240684055476798,
+      "est": 0.00024806759376627436,
+      "abs_error": 5.660753211506373e-06,
+      "pct_error": 2.335228328767981
+    },
+    "dKg_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.341917291390535e-05,
+      "abs_error": 5.062195197048249e-06,
+      "pct_error": 10.441527115041389
+    },
+    "dKg_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -1.718137364981054e-05,
+      "abs_error": 2.8186263502094633e-06,
+      "pct_error": 14.093131751033223
+    },
+    "dKg_zy": {
+      "true": 0.0002908882086657216,
+      "est": 0.0002924195818994417,
+      "abs_error": 1.531373233720117e-06,
+      "pct_error": 0.5264473389087823
+    },
+    "dKg_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.419090661982688e-05,
+      "abs_error": 2.7718296020803147e-06,
+      "pct_error": 2.858654479115312
+    },
+    "dKg_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.00019151458792265636,
+      "abs_error": 2.410884521158031e-06,
+      "pct_error": 1.2432015716019624
+    },
+    "dKg_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -3.272323784808684e-05,
+      "abs_error": 2.7232378481123476e-06,
+      "pct_error": 9.077459493715544
+    },
+    "dKa_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -8.317553422898527e-06,
+      "abs_error": 1.6824465770559627e-06,
+      "pct_error": 16.824465770636195
+    },
+    "dKa_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.64675797549564e-05,
+      "abs_error": 2.0137883559971987e-06,
+      "pct_error": 4.153736650724209
+    },
+    "dKa_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.18654426941153e-05,
+      "abs_error": 5.097293527791898e-06,
+      "pct_error": 5.256961309472871
+    },
+    "dKa_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -2.0456815618796753e-05,
+      "abs_error": 4.5681561877675136e-07,
+      "pct_error": 2.2840780938814724
+    },
+    "dKa_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.00019180470798966945,
+      "abs_error": 2.1207644541449376e-06,
+      "pct_error": 1.0935976730748367
+    },
+    "dKa_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -2.7816102782463048e-05,
+      "abs_error": 2.1838972175114435e-06,
+      "pct_error": 7.279657391711002
+    },
+    "Ka2_x": {
+      "true": 1.0224607248440952e-06,
+      "est": 8.118018868225585e-07,
+      "abs_error": 2.106588380215367e-07,
+      "pct_error": 20.603122731551174
+    },
+    "Ka2_y": {
+      "true": 2.0449214496881904e-06,
+      "est": 1.7803656026874414e-06,
+      "abs_error": 2.64555847000749e-07,
+      "pct_error": 12.937213164891418
+    },
+    "Ka2_z": {
+      "true": 3.0673821745322856e-06,
+      "est": 2.5898674322988734e-06,
+      "abs_error": 4.775147422334122e-07,
+      "pct_error": 15.56750072417121
+    },
+    "rx_x": {
+      "true": 0.01,
+      "est": 0.009880105853934519,
+      "abs_error": 0.00011989414606548149,
+      "pct_error": 1.1989414606548148
+    },
+    "rx_y": {
+      "true": 0.02,
+      "est": 0.01888045698376437,
+      "abs_error": 0.0011195430162356315,
+      "pct_error": 5.5977150811781575
+    },
+    "rx_z": {
+      "true": 0.03,
+      "est": 0.029407460320148425,
+      "abs_error": 0.0005925396798515739,
+      "pct_error": 1.9751322661719133
+    },
+    "ry_x": {
+      "true": 0.04,
+      "est": 0.03907131410978538,
+      "abs_error": 0.0009286858902146228,
+      "pct_error": 2.321714725536557
+    },
+    "ry_y": {
+      "true": 0.05,
+      "est": 0.04960707676863285,
+      "abs_error": 0.000392923231367151,
+      "pct_error": 0.785846462734302
+    },
+    "ry_z": {
+      "true": 0.06,
+      "est": 0.05862830420386902,
+      "abs_error": 0.0013716957961309797,
+      "pct_error": 2.2861596602182996
+    }
+  },
+  "focus_scale_pct": {
+    "dKg_xx": 41.42631503297724,
+    "dKg_xy": 10.441527115041389,
+    "dKg_yy": 14.093131751033223,
+    "dKg_zz": 9.077459493715544,
+    "dKa_xx": 16.824465770636195
+  },
+  "lever_guard_pct": {
+    "rx_y": 5.5977150811781575,
+    "ry_z": 2.2861596602182996
+  },
+  "overall": {
+    "mean_pct_error": 7.004118987897655,
+    "median_pct_error": 3.7571760127085647,
+    "max_pct_error": 41.42631503297724
+  },
+  "extra": {
+    "candidate_key": "v1_softer",
+    "candidate_name": "v1_softer_even_closer_to_one",
+    "candidate_description": "Softer micro-step: reduce beta another notch so state12/state21 stay very close to baseline feedback while state16 keeps only a faint positive preference.",
+    "iter_bounds": [
+      4902,
+      9804,
+      14706
+    ],
+    "selected_state_labels": {
+      "12": "dKg_xx",
+      "15": "dKg_xy",
+      "16": "dKg_yy",
+      "20": "dKg_zz",
+      "21": "dKa_xx"
+    },
+    "round46_reference": {
+      "profile": {
+        "12": -2.6,
+        "15": 1.058,
+        "16": 1.36,
+        "20": -2.14,
+        "21": -2.8
+      },
+      "rx_y_guard_mult": 1.03965,
+      "ry_z_guard_mult": 1.00255,
+      "focus_scale_pct": {
+        "dKg_xx": 26.207788487326006,
+        "dKg_xy": 9.4608962857751,
+        "dKg_yy": 3.863028720775242,
+        "dKg_zz": 4.947673729957194,
+        "dKa_xx": 3.1587419358080107
+      },
+      "lever_guard_pct": {
+        "rx_y": 1.847018500732514,
+        "ry_z": 2.036495885962591
+      },
+      "overall": {
+        "mean_pct_error": 5.401466965348962,
+        "median_pct_error": 3.010228394442245,
+        "max_pct_error": 26.207788487326006
+      }
+    },
+    "round49_reference": {
+      "focus_scale_pct": {
+        "dKg_xx": 61.981388791714295,
+        "dKg_xy": 10.492825560440522,
+        "dKg_yy": 13.383154742738707,
+        "dKg_zz": 8.47574033477145,
+        "dKa_xx": 36.066598868731255
+      },
+      "lever_guard_pct": {
+        "rx_y": 5.646448889853519,
+        "ry_z": 2.2889069852440973
+      },
+      "overall": {
+        "mean_pct_error": 8.26099924756764,
+        "median_pct_error": 3.763538648139577,
+        "max_pct_error": 61.981388791714295
+      }
+    },
+    "candidate_catalog": {
+      "main": {
+        "name": "main_weak_bias121621",
+        "description": "Primary Round50 refinement: keep the internalized route but weaken both iterative betas sharply versus Round49, while giving state16 a slightly stronger positive continuation and easing state12/state21 attenuation.",
+        "iteration_policies": [
+          {
+            "name": "iter1_signsafe_micro_seed",
+            "profile_blend_beta": 0.018,
+            "gain_clip": [
+              0.9,
+              1.05
+            ],
+            "state_beta_scale": {
+              "12": 0.65,
+              "16": 1.2,
+              "21": 0.6
+            }
+          },
+          {
+            "name": "iter2_signsafe_micro_commit",
+            "profile_blend_beta": 0.032,
+            "gain_clip": [
+              0.84,
+              1.08
+            ],
+            "state_beta_scale": {
+              "12": 0.72,
+              "16": 1.25,
+              "21": 0.66
+            }
+          },
+          {
+            "name": "iter3_readout_only",
+            "profile_blend_beta": 0.0,
+            "gain_clip": [
+              1.0,
+              1.0
+            ],
+            "state_beta_scale": {}
+          }
+        ]
+      },
+      "v1_softer": {
+        "name": "v1_softer_even_closer_to_one",
+        "description": "Softer micro-step: reduce beta another notch so state12/state21 stay very close to baseline feedback while state16 keeps only a faint positive preference.",
+        "iteration_policies": [
+          {
+            "name": "iter1_signsafe_ultrasoft_seed",
+            "profile_blend_beta": 0.014,
+            "gain_clip": [
+              0.92,
+              1.04
+            ],
+            "state_beta_scale": {
+              "12": 0.6,
+              "16": 1.18,
+              "21": 0.56
+            }
+          },
+          {
+            "name": "iter2_signsafe_ultrasoft_commit",
+            "profile_blend_beta": 0.026,
+            "gain_clip": [
+              0.88,
+              1.07
+            ],
+            "state_beta_scale": {
+              "12": 0.66,
+              "16": 1.22,
+              "21": 0.6
+            }
+          },
+          {
+            "name": "iter3_readout_only",
+            "profile_blend_beta": 0.0,
+            "gain_clip": [
+              1.0,
+              1.0
+            ],
+            "state_beta_scale": {}
+          }
+        ]
+      },
+      "v2_firmer": {
+        "name": "v2_firmer_state16_push",
+        "description": "Still weak but slightly firmer: keep state12/state21 attenuated much less than Round49, while giving state16 one extra notch of internalized gain to test whether dKg_yy can move down faster without reopening instability.",
+        "iteration_policies": [
+          {
+            "name": "iter1_signsafe_light_seed",
+            "profile_blend_beta": 0.022,
+            "gain_clip": [
+              0.89,
+              1.06
+            ],
+            "state_beta_scale": {
+              "12": 0.7,
+              "16": 1.25,
+              "21": 0.62
+            }
+          },
+          {
+            "name": "iter2_signsafe_light_commit",
+            "profile_blend_beta": 0.038,
+            "gain_clip": [
+              0.82,
+              1.09
+            ],
+            "state_beta_scale": {
+              "12": 0.78,
+              "16": 1.3,
+              "21": 0.68
+            }
+          },
+          {
+            "name": "iter3_readout_only",
+            "profile_blend_beta": 0.0,
+            "gain_clip": [
+              1.0,
+              1.0
+            ],
+            "state_beta_scale": {}
+          }
+        ]
+      }
+    },
+    "iteration_policies": [
+      {
+        "name": "iter1_signsafe_ultrasoft_seed",
+        "profile_blend_beta": 0.014,
+        "gain_clip": [
+          0.92,
+          1.04
+        ],
+        "state_beta_scale": {
+          "12": 0.6,
+          "16": 1.18,
+          "21": 0.56
+        }
+      },
+      {
+        "name": "iter2_signsafe_ultrasoft_commit",
+        "profile_blend_beta": 0.026,
+        "gain_clip": [
+          0.88,
+          1.07
+        ],
+        "state_beta_scale": {
+          "12": 0.66,
+          "16": 1.22,
+          "21": 0.6
+        }
+      },
+      {
+        "name": "iter3_readout_only",
+        "profile_blend_beta": 0.0,
+        "gain_clip": [
+          1.0,
+          1.0
+        ],
+        "state_beta_scale": {}
+      }
+    ],
+    "feedback_log": [
+      {
+        "policy_name": "iter1_signsafe_ultrasoft_seed",
+        "profile_blend_beta": 0.014,
+        "gain_clip": [
+          0.92,
+          1.04
+        ],
+        "state_beta_scale": {
+          "12": 0.6,
+          "16": 1.18,
+          "21": 0.56
+        },
+        "selected_state_labels": {
+          "12": "dKg_xx",
+          "15": "dKg_xy",
+          "16": "dKg_yy",
+          "20": "dKg_zz",
+          "21": "dKa_xx"
+        },
+        "selected_effective_betas": {
+          "12": 0.0084,
+          "15": 0.014,
+          "16": 0.01652,
+          "20": 0.014,
+          "21": 0.007840000000000001
+        },
+        "selected_gains": {
+          "12": 0.96976,
+          "15": 1.000812,
+          "16": 1.0059472,
+          "20": 0.95604,
+          "21": 0.970208
+        },
+        "selected_xk": {
+          "12": -3.372589167390745e-06,
+          "15": 4.5854105617557565e-05,
+          "16": -1.3152256467057115e-05,
+          "20": -3.229426385662463e-05,
+          "21": -8.233764976453558e-06
+        },
+        "selected_feedback": {
+          "12": -3.2706020709688487e-06,
+          "15": 4.5891339151319026e-05,
+          "16": -1.3230475566717998e-05,
+          "20": -3.0874608017487415e-05,
+          "21": -7.988464650275054e-06
+        },
+        "note": "Round50 keeps the internalized route but shrinks the selective-gain betas heavily versus Round49; state16 gets a slightly stronger continuation while state12/state21 stay closer to unity feedback for sign safety."
+      },
+      {
+        "policy_name": "iter2_signsafe_ultrasoft_commit",
+        "profile_blend_beta": 0.026,
+        "gain_clip": [
+          0.88,
+          1.07
+        ],
+        "state_beta_scale": {
+          "12": 0.66,
+          "16": 1.22,
+          "21": 0.6
+        },
+        "selected_state_labels": {
+          "12": "dKg_xx",
+          "15": "dKg_xy",
+          "16": "dKg_yy",
+          "20": "dKg_zz",
+          "21": "dKa_xx"
+        },
+        "selected_effective_betas": {
+          "12": 0.01716,
+          "15": 0.026,
+          "16": 0.03172,
+          "20": 0.026,
+          "21": 0.0156
+        },
+        "selected_gains": {
+          "12": 0.938224,
+          "15": 1.001508,
+          "16": 1.0114192,
+          "20": 0.91836,
+          "21": 0.94072
+        },
+        "selected_xk": {
+          "12": -2.7569361341940686e-06,
+          "15": -2.4679925713286447e-06,
+          "16": -3.90646880409662e-06,
+          "20": -2.012447896456686e-06,
+          "21": -3.498236924385924e-07
+        },
+        "selected_feedback": {
+          "12": -2.5866236475680955e-06,
+          "15": -2.4717143041262085e-06,
+          "16": -3.95107755266436e-06,
+          "20": -1.848151650189962e-06,
+          "21": -3.2908614395083263e-07
+        },
+        "note": "Round50 keeps the internalized route but shrinks the selective-gain betas heavily versus Round49; state16 gets a slightly stronger continuation while state12/state21 stay closer to unity feedback for sign safety."
+      }
+    ],
+    "policy": "Round50 continues the sign-safe internalized route only. Compared with Round49, both iterative betas are reduced sharply and the only relative preference change is to keep state12/state21 closer to unity feedback while letting state16 retain a slightly stronger positive continuation. No post-run clbt surgery is applied after completion."
+  }
+}

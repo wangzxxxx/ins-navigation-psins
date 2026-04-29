@@ -1,0 +1,164 @@
+{
+  "round_name": "Round69_Global_Family_Balanced",
+  "round_type": "repair branch",
+  "mechanism_axis": "global family-balanced calibration / grouped reconciliation continuation",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "base_round68_candidate": "r68_balanced_iso_mild",
+  "same_dataset_round61_json": "/root/.openclaw/workspace/psins_method_bench/results/R65_mainline_round61_param_errors.json",
+  "same_dataset_round68_best_json": "/root/.openclaw/workspace/psins_method_bench/results/R68_global_family_r68_balanced_iso_mild_param_errors.json",
+  "dataset": {
+    "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+    "source_trajectory_reference": "method_42state_gm1_round53_internalized_trustcov_release.py::_build_dataset",
+    "noise_config": {
+      "noise_scale_tag": "mainline_1x_round53_family",
+      "arw_dpsh": 0.005,
+      "vrw_ugpsHz": 5.0,
+      "bi_g_dph": 0.002,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 42
+    },
+    "constraint_note": "Use exactly the same fixed noisy dataset/noise strength/seed as Round65/66/67/68 mainline"
+  },
+  "round69_objective": {
+    "preserve_round68_signal": [
+      "dKg_xx",
+      "dKg_yy",
+      "dKa_xx",
+      "max_pct_error",
+      "family_dispersion"
+    ],
+    "repair_overpull": [
+      "dKg_xy",
+      "dKg_zz",
+      "rx_y",
+      "ry_z"
+    ],
+    "diagnostics_guard": [
+      "dKg_xy",
+      "dKg_yy",
+      "dKa_xx",
+      "rx_y",
+      "ry_z"
+    ]
+  },
+  "sweep_knobs": [
+    "weak_consensus_blend",
+    "mult_min/mult_max envelope",
+    "tiny family weight trim (optional)"
+  ],
+  "clean_win_gate": "same-dataset vs Round61: mean<0, median<=0, max<=0, dKg_xx<0, family_dispersion_delta<=0, protected_peak_regression<=0.15",
+  "round69_candidates": [
+    {
+      "name": "r69_iso_ref_anchor",
+      "description": "Exact carry-over of Round68 best for centered narrow sweep anchoring.",
+      "rationale": "以 Round68 best (r68_balanced_iso_mild) 作为中心锚点，确保 Round69 是延续而非换轴。",
+      "family_balance": {
+        "gamma": 0.14,
+        "blend": 0.72,
+        "mult_min": 0.92,
+        "mult_max": 1.1,
+        "weak_consensus_blend": 0.22,
+        "weights": {
+          "kg_diag": 1.0,
+          "kg_offdiag": 1.0,
+          "ka_diag": 1.0,
+          "ka_offdiag": 1.0,
+          "gyro_bias": 1.0,
+          "acc_bias": 1.0,
+          "ka2": 0.9,
+          "lever": 0.9
+        }
+      }
+    },
+    {
+      "name": "r69_wcb012_relax",
+      "description": "Lower weak consensus blend only (0.22 -> 0.12), all else fixed.",
+      "rationale": "只降 weak_consensus_blend，测试是否能减轻 dKg_xy / rx_y / ry_z 过拉。",
+      "family_balance": {
+        "gamma": 0.14,
+        "blend": 0.72,
+        "mult_min": 0.92,
+        "mult_max": 1.1,
+        "weak_consensus_blend": 0.12,
+        "weights": {
+          "kg_diag": 1.0,
+          "kg_offdiag": 1.0,
+          "ka_diag": 1.0,
+          "ka_offdiag": 1.0,
+          "gyro_bias": 1.0,
+          "acc_bias": 1.0,
+          "ka2": 0.9,
+          "lever": 0.9
+        }
+      }
+    },
+    {
+      "name": "r69_wcb006_relax_more",
+      "description": "Further lower weak consensus blend (0.22 -> 0.06), all else fixed.",
+      "rationale": "继续单旋钮降低 weak_consensus_blend，观察过拉指标是否继续回落。",
+      "family_balance": {
+        "gamma": 0.14,
+        "blend": 0.72,
+        "mult_min": 0.92,
+        "mult_max": 1.1,
+        "weak_consensus_blend": 0.06,
+        "weights": {
+          "kg_diag": 1.0,
+          "kg_offdiag": 1.0,
+          "ka_diag": 1.0,
+          "ka_offdiag": 1.0,
+          "gyro_bias": 1.0,
+          "acc_bias": 1.0,
+          "ka2": 0.9,
+          "lever": 0.9
+        }
+      }
+    },
+    {
+      "name": "r69_cap108_wcb012",
+      "description": "Narrow envelope cap (0.92~1.10 -> 0.94~1.08) with weak_consensus_blend=0.12.",
+      "rationale": "同步小幅收紧 multiplier envelope，抑制重分配幅度并配合弱一致性放松。",
+      "family_balance": {
+        "gamma": 0.14,
+        "blend": 0.72,
+        "mult_min": 0.94,
+        "mult_max": 1.08,
+        "weak_consensus_blend": 0.12,
+        "weights": {
+          "kg_diag": 1.0,
+          "kg_offdiag": 1.0,
+          "ka_diag": 1.0,
+          "ka_offdiag": 1.0,
+          "gyro_bias": 1.0,
+          "acc_bias": 1.0,
+          "ka2": 0.9,
+          "lever": 0.9
+        }
+      }
+    },
+    {
+      "name": "r69_cap106_wcb010_trim",
+      "description": "Tighter envelope + tiny family weight trim (kg_offdiag/lever slight up-weight).",
+      "rationale": "在窄 cap 基础上仅做微小 family 权重修剪，尝试缓和 dKg_xy 与 lever 过拉。",
+      "family_balance": {
+        "gamma": 0.14,
+        "blend": 0.72,
+        "mult_min": 0.95,
+        "mult_max": 1.06,
+        "weak_consensus_blend": 0.1,
+        "weights": {
+          "kg_diag": 1.0,
+          "kg_offdiag": 1.05,
+          "ka_diag": 1.0,
+          "ka_offdiag": 1.0,
+          "gyro_bias": 1.0,
+          "acc_bias": 1.0,
+          "ka2": 0.9,
+          "lever": 0.95
+        }
+      }
+    }
+  ]
+}

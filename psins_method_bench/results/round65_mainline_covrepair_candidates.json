@@ -1,0 +1,93 @@
+{
+  "standard_kf_baseline_json": "/root/.openclaw/workspace/psins_method_bench/results/A_noisy_baseline_param_errors.json",
+  "base_round61_candidate": "r61_s20_08988_ryz00116",
+  "base_round64_candidate": "r64_cov_sched_static_meas_plus",
+  "round64_base_patch": {
+    "name": "r64_cov_sched_static_meas_plus",
+    "description": "Iter2 covariance/measurement schedule rebalance: slightly more selected-state process mobility and slightly stronger static/late measurement weight.",
+    "rationale": "Orthogonal mainline test: leave trust-map structure mostly intact and probe a tiny Q/R schedule rebalance to improve calibration on 1x.",
+    "iter_patches": {
+      "1": {
+        "selected_q_static_scale": 0.795,
+        "selected_q_dynamic_scale": 1.01,
+        "selected_q_late_mult": 1.3,
+        "static_r_scale": 1.02,
+        "dynamic_r_scale": 0.998,
+        "late_r_mult": 0.992,
+        "late_release_frac": 0.575
+      }
+    }
+  },
+  "round65_candidates": [
+    {
+      "name": "r65_cov_sched_relax_late",
+      "description": "Keep the Round64 schedule direction, but soften the late-stage mobility/measurement push just enough to see if yy and lever settle back.",
+      "rationale": "Pure covariance-schedule repair: back off the Round64 late push before adding any extra per-state or lever surgery.",
+      "iter_patches": {
+        "1": {
+          "selected_q_dynamic_scale": 1.008,
+          "selected_q_late_mult": 1.296,
+          "static_r_scale": 1.019,
+          "dynamic_r_scale": 0.999,
+          "late_r_mult": 0.993,
+          "late_release_frac": 0.576
+        }
+      }
+    },
+    {
+      "name": "r65_cov_sched_rx_postguard",
+      "description": "Hold the exact Round64 schedule patch and only retune the post rx_y confirmation from 1.00047 to 1.00052.",
+      "rationale": "Direct lever repair test: Round64 looked under-pulled on rx_y by about one micro-step, so first check whether the lever regression is mostly a post-confirmation calibration issue.",
+      "post_rx_y_mult": 1.00052
+    },
+    {
+      "name": "r65_cov_sched_state16_microguard",
+      "description": "Hold the exact Round64 schedule patch and add only a tiny iter2 state16 alpha protection bump.",
+      "rationale": "Direct yy repair test: if the Round64 regression is concentrated on dKg_yy, a minimal state16-only protection should be the most interpretable surgical counter-move.",
+      "iter_patches": {
+        "1": {
+          "state_alpha_mult": {
+            "16": 1.009
+          }
+        }
+      }
+    },
+    {
+      "name": "r65_cov_sched_relax_late_rxguard",
+      "description": "Combine the softened late schedule with the tiny rx_y confirmation repair.",
+      "rationale": "Two-knob repair branch: let the schedule back off slightly while also restoring the lever side with the smallest deterministic post guard.",
+      "iter_patches": {
+        "1": {
+          "selected_q_dynamic_scale": 1.008,
+          "selected_q_late_mult": 1.296,
+          "static_r_scale": 1.019,
+          "dynamic_r_scale": 0.999,
+          "late_r_mult": 0.993,
+          "late_release_frac": 0.576
+        }
+      },
+      "post_rx_y_mult": 1.00052
+    },
+    {
+      "name": "r65_cov_sched_full_repair_narrow",
+      "description": "Narrow full repair: slightly less selected-state mobility than Round64, a slightly softer late measurement push, plus the micro yy/rx guard pair.",
+      "rationale": "Most complete narrow repair attempt around the Round64 direction while still avoiding any broad trust-map reshaping or SCD cadence changes.",
+      "iter_patches": {
+        "1": {
+          "selected_q_static_scale": 0.793,
+          "selected_q_dynamic_scale": 1.006,
+          "selected_q_late_mult": 1.294,
+          "static_r_scale": 1.018,
+          "dynamic_r_scale": 0.999,
+          "late_r_mult": 0.994,
+          "late_release_frac": 0.577,
+          "state_alpha_mult": {
+            "16": 1.009
+          }
+        }
+      },
+      "post_rx_y_mult": 1.00052
+    }
+  ],
+  "direction": "repair-style Round64 covariance-schedule follow-up under the same 1x noisy seed=42 benchmark"
+}

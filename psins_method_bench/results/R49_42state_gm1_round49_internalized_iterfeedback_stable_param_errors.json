@@ -1,0 +1,379 @@
+{
+  "variant": "42state_gm1_round49_internalized_iterfeedback_stable",
+  "method_file": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_42state_gm1_round49_internalized_iterfeedback_stable.py",
+  "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+  "param_order": [
+    "eb_x",
+    "eb_y",
+    "eb_z",
+    "db_x",
+    "db_y",
+    "db_z",
+    "dKg_xx",
+    "dKg_yx",
+    "dKg_zx",
+    "dKg_xy",
+    "dKg_yy",
+    "dKg_zy",
+    "dKg_xz",
+    "dKg_yz",
+    "dKg_zz",
+    "dKa_xx",
+    "dKa_xy",
+    "dKa_xz",
+    "dKa_yy",
+    "dKa_yz",
+    "dKa_zz",
+    "Ka2_x",
+    "Ka2_y",
+    "Ka2_z",
+    "rx_x",
+    "rx_y",
+    "rx_z",
+    "ry_x",
+    "ry_y",
+    "ry_z"
+  ],
+  "param_errors": {
+    "eb_x": {
+      "true": 4.84813681109536e-07,
+      "est": 4.676243648716069e-07,
+      "abs_error": 1.7189316237929137e-08,
+      "pct_error": 3.5455509833365197
+    },
+    "eb_y": {
+      "true": 9.69627362219072e-07,
+      "est": 8.997250049324237e-07,
+      "abs_error": 6.990235728664837e-08,
+      "pct_error": 7.209198090972915
+    },
+    "eb_z": {
+      "true": 1.4544410433286078e-06,
+      "est": 1.3720546935563012e-06,
+      "abs_error": 8.238634977230662e-08,
+      "pct_error": 5.664468157730113
+    },
+    "db_x": {
+      "true": 0.00097803267715,
+      "est": 0.001003454328991332,
+      "abs_error": 2.5421651841332077e-05,
+      "pct_error": 2.5992640568422627
+    },
+    "db_y": {
+      "true": 0.0019560653543,
+      "est": 0.0020079343360562087,
+      "abs_error": 5.1868981756208934e-05,
+      "pct_error": 2.651699834168927
+    },
+    "db_z": {
+      "true": 0.00293409803145,
+      "est": 0.0030509199166197138,
+      "abs_error": 0.0001168218851697136,
+      "pct_error": 3.981526312942634
+    },
+    "dKg_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -3.8018611208112674e-06,
+      "abs_error": 6.198138879143222e-06,
+      "pct_error": 61.981388791714295
+    },
+    "dKg_yx": {
+      "true": 0.0001454441043328608,
+      "est": 0.00014212219789537403,
+      "abs_error": 3.32190643748676e-06,
+      "pct_error": 2.2839746256639626
+    },
+    "dKg_zx": {
+      "true": 0.00024240684055476798,
+      "est": 0.00024810322461272296,
+      "abs_error": 5.696384057954975e-06,
+      "pct_error": 2.3499271080462627
+    },
+    "dKg_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.33943027257562e-05,
+      "abs_error": 5.087065385197399e-06,
+      "pct_error": 10.492825560440522
+    },
+    "dKg_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -1.7323369051469584e-05,
+      "abs_error": 2.676630948550418e-06,
+      "pct_error": 13.383154742738707
+    },
+    "dKg_zy": {
+      "true": 0.0002908882086657216,
+      "est": 0.0002924445948481267,
+      "abs_error": 1.5563861824051156e-06,
+      "pct_error": 0.5350461572657486
+    },
+    "dKg_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.420918180875561e-05,
+      "abs_error": 2.7535544131515832e-06,
+      "pct_error": 2.839806837597742
+    },
+    "dKg_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.0001915062791060996,
+      "abs_error": 2.4191933377147937e-06,
+      "pct_error": 1.2474861126950207
+    },
+    "dKg_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -2.7457277899545218e-05,
+      "abs_error": 2.5427221004292733e-06,
+      "pct_error": 8.47574033477145
+    },
+    "dKa_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -6.3933401130977785e-06,
+      "abs_error": 3.6066598868567112e-06,
+      "pct_error": 36.066598868731255
+    },
+    "dKa_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.6541126469645134e-05,
+      "abs_error": 1.9402416413084625e-06,
+      "pct_error": 4.002035662170383
+    },
+    "dKa_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.182993263363982e-05,
+      "abs_error": 5.132803588267371e-06,
+      "pct_error": 5.293583688191852
+    },
+    "dKa_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -2.0454336853381605e-05,
+      "abs_error": 4.5433685336160323e-07,
+      "pct_error": 2.271684266805744
+    },
+    "dKa_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.0001917795491561268,
+      "abs_error": 2.145923287687597e-06,
+      "pct_error": 1.1065711278900356
+    },
+    "dKa_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -2.781705697274539e-05,
+      "abs_error": 2.1829430272291006e-06,
+      "pct_error": 7.276476757436523
+    },
+    "Ka2_x": {
+      "true": 1.0224607248440952e-06,
+      "est": 8.173713110236003e-07,
+      "abs_error": 2.0508941382049496e-07,
+      "pct_error": 20.05841484539829
+    },
+    "Ka2_y": {
+      "true": 2.0449214496881904e-06,
+      "est": 1.7855064490162004e-06,
+      "abs_error": 2.5941500067199e-07,
+      "pct_error": 12.68581738000477
+    },
+    "Ka2_z": {
+      "true": 3.0673821745322856e-06,
+      "est": 2.589325884892279e-06,
+      "abs_error": 4.780562896400065e-07,
+      "pct_error": 15.58515575950038
+    },
+    "rx_x": {
+      "true": 0.01,
+      "est": 0.009878884515896896,
+      "abs_error": 0.00012111548410310459,
+      "pct_error": 1.211154841031046
+    },
+    "rx_y": {
+      "true": 0.02,
+      "est": 0.018870710222029297,
+      "abs_error": 0.0011292897779707038,
+      "pct_error": 5.646448889853519
+    },
+    "rx_z": {
+      "true": 0.03,
+      "est": 0.029409717914638426,
+      "abs_error": 0.000590282085361573,
+      "pct_error": 1.9676069512052432
+    },
+    "ry_x": {
+      "true": 0.04,
+      "est": 0.039066176880658283,
+      "abs_error": 0.0009338231193417174,
+      "pct_error": 2.3345577983542936
+    },
+    "ry_y": {
+      "true": 0.05,
+      "est": 0.04960304705085769,
+      "abs_error": 0.0003969529491423124,
+      "pct_error": 0.7939058982846248
+    },
+    "ry_z": {
+      "true": 0.06,
+      "est": 0.05862665580885354,
+      "abs_error": 0.0013733441911464583,
+      "pct_error": 2.2889069852440973
+    }
+  },
+  "focus_scale_pct": {
+    "dKg_xx": 61.981388791714295,
+    "dKg_xy": 10.492825560440522,
+    "dKg_yy": 13.383154742738707,
+    "dKg_zz": 8.47574033477145,
+    "dKa_xx": 36.066598868731255
+  },
+  "lever_guard_pct": {
+    "rx_y": 5.646448889853519,
+    "ry_z": 2.2889069852440973
+  },
+  "overall": {
+    "mean_pct_error": 8.26099924756764,
+    "median_pct_error": 3.763538648139577,
+    "max_pct_error": 61.981388791714295
+  },
+  "extra": {
+    "iter_bounds": [
+      4902,
+      9804,
+      14706
+    ],
+    "selected_state_labels": {
+      "12": "dKg_xx",
+      "15": "dKg_xy",
+      "16": "dKg_yy",
+      "20": "dKg_zz",
+      "21": "dKa_xx"
+    },
+    "round46_reference": {
+      "profile": {
+        "12": -2.6,
+        "15": 1.058,
+        "16": 1.36,
+        "20": -2.14,
+        "21": -2.8
+      },
+      "rx_y_guard_mult": 1.03965,
+      "ry_z_guard_mult": 1.00255,
+      "focus_scale_pct": {
+        "dKg_xx": 26.207788487326006,
+        "dKg_xy": 9.4608962857751,
+        "dKg_yy": 3.863028720775242,
+        "dKg_zz": 4.947673729957194,
+        "dKa_xx": 3.1587419358080107
+      },
+      "lever_guard_pct": {
+        "rx_y": 1.847018500732514,
+        "ry_z": 2.036495885962591
+      },
+      "overall": {
+        "mean_pct_error": 5.401466965348962,
+        "median_pct_error": 3.010228394442245,
+        "max_pct_error": 26.207788487326006
+      }
+    },
+    "iteration_policies": [
+      {
+        "name": "iter1_signsafe_blend_seed",
+        "profile_blend_beta": 0.1,
+        "gain_clip": [
+          0.55,
+          1.12
+        ]
+      },
+      {
+        "name": "iter2_signsafe_blend_commit",
+        "profile_blend_beta": 0.16,
+        "gain_clip": [
+          0.4,
+          1.18
+        ]
+      },
+      {
+        "name": "iter3_readout_only",
+        "profile_blend_beta": 0.0,
+        "gain_clip": [
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "feedback_log": [
+      {
+        "policy_name": "iter1_signsafe_blend_seed",
+        "profile_blend_beta": 0.1,
+        "gain_clip": [
+          0.55,
+          1.12
+        ],
+        "selected_state_labels": {
+          "12": "dKg_xx",
+          "15": "dKg_xy",
+          "16": "dKg_yy",
+          "20": "dKg_zz",
+          "21": "dKa_xx"
+        },
+        "selected_gains": {
+          "12": 0.6399999999999999,
+          "15": 1.0058,
+          "16": 1.036,
+          "20": 0.6859999999999999,
+          "21": 0.62
+        },
+        "selected_xk": {
+          "12": -3.372589167390745e-06,
+          "15": 4.5854105617557565e-05,
+          "16": -1.3152256467057115e-05,
+          "20": -3.229426385662463e-05,
+          "21": -8.233764976453558e-06
+        },
+        "selected_feedback": {
+          "12": -2.1584570671300767e-06,
+          "15": 4.61200594301394e-05,
+          "16": -1.3625737699871173e-05,
+          "20": -2.2153865005644494e-05,
+          "21": -5.104934285401206e-06
+        },
+        "note": "Only state12/15/16/20/21 use structured selective gains inside the iteration feedback. All other states keep the baseline clbtkffeedback_pruned-equivalent feedback path."
+      },
+      {
+        "policy_name": "iter2_signsafe_blend_commit",
+        "profile_blend_beta": 0.16,
+        "gain_clip": [
+          0.4,
+          1.18
+        ],
+        "selected_state_labels": {
+          "12": "dKg_xx",
+          "15": "dKg_xy",
+          "16": "dKg_yy",
+          "20": "dKg_zz",
+          "21": "dKa_xx"
+        },
+        "selected_gains": {
+          "12": 0.42399999999999993,
+          "15": 1.00928,
+          "16": 1.0576,
+          "20": 0.49759999999999993,
+          "21": 0.4
+        },
+        "selected_xk": {
+          "12": -3.875700081832625e-06,
+          "15": -2.700194364090544e-06,
+          "16": -3.4964237907151535e-06,
+          "20": -1.0656885968151005e-05,
+          "21": -3.2209981265494135e-06
+        },
+        "selected_feedback": {
+          "12": -1.6432968346970327e-06,
+          "15": -2.725252167789304e-06,
+          "16": -3.6978178010603465e-06,
+          "20": -5.302866457751939e-06,
+          "21": -1.2883992506197654e-06
+        },
+        "note": "Only state12/15/16/20/21 use structured selective gains inside the iteration feedback. All other states keep the baseline clbtkffeedback_pruned-equivalent feedback path."
+      }
+    ],
+    "policy": "Internalize the scale-block preference by replacing the end-of-iteration feedback operator itself: state12/15/16/20/21 use a sign-safe blended version of the Round46 profile inside iterations 1-2, while all other states keep the baseline feedback path. No post-run clbt surgery is applied after run completion."
+  }
+}

@@ -1,0 +1,1363 @@
+{
+  "task": "chapter-3 corrected preterminal z-cadence / z-to-y handoff batch",
+  "report_date": "2026-04-03",
+  "noise_scale": 0.08,
+  "corrected_att0_deg": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "references": {
+    "current_leader": {
+      "label": "current corrected leader / relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.057061223856136,
+          "median_pct_error": 0.6107914879608048,
+          "max_pct_error": 4.71375006474353
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.71375006474353,
+          "eb_x": 4.57033221551275,
+          "Ka2_y": 2.832591244946224,
+          "dKa_xx": 2.5107008594485913,
+          "dKg_yy": 2.4546934956879305
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.71375006474353
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0567915141378126,
+          "median_pct_error": 0.610720244961116,
+          "max_pct_error": 4.713960072310424
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.713960072310424,
+          "eb_x": 4.5682794025537055,
+          "Ka2_y": 2.830686460074407,
+          "dKa_xx": 2.5095605382777633,
+          "dKg_yy": 2.454444318342507
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.713960072310424
+        }
+      },
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "kf36_triplet": "1.057 / 0.611 / 4.714",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_r3_l9y0p8125_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      }
+    },
+    "faithful12": {
+      "label": "corrected faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.9544212948566337,
+          "median_pct_error": 0.43062068381890417,
+          "max_pct_error": 15.12164342723992
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0106503323827263,
+          "eb_x": 14.231617445817285,
+          "Ka2_y": 15.12164342723992,
+          "dKa_xx": 2.326041029798204,
+          "dKg_yy": 2.48950860648218
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.12164342723992
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.9543549309026789,
+          "median_pct_error": 0.43053588431934986,
+          "max_pct_error": 15.121086969267727
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.010211603329637,
+          "eb_x": 14.230670596275147,
+          "Ka2_y": 15.121086969267727,
+          "dKa_xx": 2.32596007677614,
+          "dKg_yy": 2.489406084047194
+        },
+        "max_driver": {
+          "name": "Ka2_y",
+          "pct_error": 15.121086969267727
+        }
+      },
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json"
+      }
+    },
+    "default18": {
+      "label": "default18",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.5563790869355025,
+          "median_pct_error": 0.812799823665583,
+          "max_pct_error": 14.713291940947315
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0808366935504474,
+          "eb_x": 14.713291940947315,
+          "Ka2_y": 1.9994816607900874,
+          "dKa_xx": 3.2547206718784216,
+          "dKg_yy": 1.272677074280863
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.713291940947315
+        }
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.5564871665384443,
+          "median_pct_error": 0.8131877611261733,
+          "max_pct_error": 14.711353452042115
+        },
+        "key_param_errors": {
+          "dKg_xx": 3.0818904661751674,
+          "eb_x": 14.711353452042115,
+          "Ka2_y": 2.0007501033211734,
+          "dKa_xx": 3.253999899547709,
+          "dKg_yy": 1.2732158843885046
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 14.711353452042115
+        }
+      },
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "kf36_triplet": "1.556 / 0.813 / 14.711",
+      "files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_default18_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_default18_shared_noise0p08_param_errors.json"
+      }
+    }
+  },
+  "hypotheses_tested": [
+    {
+      "id": "Z1",
+      "family": "post_q4_micro_z_pair_before_terminal_y",
+      "summary": "Keep the corrected leader intact through anchor11 q4, then append one tiny exact-return z-family pair before anchor12. This tests whether the missing gain is a short preterminal z cadence rather than any x-side cue.",
+      "candidate_names": [
+        "relay_l11postz_zneg0p5_l12y0p125_on_entry",
+        "relay_l11postz_zpos0p5_l12y0p125_on_entry",
+        "relay_l11postz_zpos1_l12y0p125_on_entry"
+      ]
+    },
+    {
+      "id": "Z2",
+      "family": "closing_q4_back_dwell_microgrid",
+      "summary": "Do not add any new axis family at all; only retime the anchor11 closing q4 dwell that hands the mechanism from the late z-cycle back into anchor12 inner closure. This is a pure z-cadence / z-to-y handoff probe, distinct from terminal y splitting.",
+      "candidate_names": [
+        "relay_l11back0p5_l12y0p125_on_entry",
+        "relay_l11back1_l12y0p125_on_entry",
+        "relay_l11back3_l12y0p125_on_entry"
+      ]
+    }
+  ],
+  "tested_candidates": [
+    "relay_l11postz_zneg0p5_l12y0p125_on_entry",
+    "relay_l11postz_zpos0p5_l12y0p125_on_entry",
+    "relay_l11postz_zpos1_l12y0p125_on_entry",
+    "relay_l11back0p5_l12y0p125_on_entry",
+    "relay_l11back1_l12y0p125_on_entry",
+    "relay_l11back3_l12y0p125_on_entry"
+  ],
+  "rows_sorted": [
+    {
+      "candidate_name": "relay_l11back0p5_l12y0p125_on_entry",
+      "family": "closing_q4_back_dwell_microgrid",
+      "hypothesis_id": "Z2",
+      "rationale": "Tighten the anchor11 q4 back dwell from 2.0 s down to 0.5 s while leaving q1/q2/q3 and anchor12 untouched. This directly tests whether the current handoff is slightly over-buffered on the +X preterminal landing.",
+      "total_time_s": 1346.375,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified",
+        "kf36": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0565119091331543,
+          "median_pct_error": 0.5883913535584239,
+          "max_pct_error": 4.560198072125949
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.55669140755197,
+          "eb_x": 4.560198072125949,
+          "Ka2_y": 2.7579155183339354,
+          "dKa_xx": 2.5780274903859013,
+          "dKg_yy": 2.477745578153021
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 4.560198072125949
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": 0.0005493147229818085,
+        "median_pct_error": 0.022400134402380978,
+        "max_pct_error": 0.15355199261758035
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8979093857234794,
+        "median_pct_error": -0.1577706697395197,
+        "max_pct_error": 10.561445355113971
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49986717780234824,
+        "median_pct_error": 0.22440847010715914,
+        "max_pct_error": 10.153093868821365
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0562428184101837,
+          "median_pct_error": 0.5883390128999019,
+          "max_pct_error": 4.5581765380700325
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.556861813463574,
+          "eb_x": 4.5581765380700325,
+          "Ka2_y": 2.7560507159814036,
+          "dKa_xx": 2.5768714373548143,
+          "dKg_yy": 2.4775024970422255
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 4.5581765380700325
+        }
+      },
+      "delta_vs_leader_kf36": {
+        "mean_pct_error": 0.000548695727628834,
+        "median_pct_error": 0.022381232061214118,
+        "max_pct_error": 0.15578353424039104
+      }
+    },
+    {
+      "candidate_name": "relay_l11back1_l12y0p125_on_entry",
+      "family": "closing_q4_back_dwell_microgrid",
+      "hypothesis_id": "Z2",
+      "rationale": "Moderately tighten the q4 back dwell from 2.0 s to 1.0 s. This is the gentler version of the same z-to-y handoff hypothesis.",
+      "total_time_s": 1346.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back1_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l11back1_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified",
+        "kf36": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0635487508925887,
+          "median_pct_error": 0.6097456030619728,
+          "max_pct_error": 4.660264475452428
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.660264475452428,
+          "eb_x": 4.578803601842442,
+          "Ka2_y": 2.8474225529414348,
+          "dKa_xx": 2.571144018815352,
+          "dKg_yy": 2.4644857060638126
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.660264475452428
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.006487527036452612,
+        "median_pct_error": 0.0010458848988320613,
+        "max_pct_error": 0.053485589291101476
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.890872543964045,
+        "median_pct_error": -0.17912491924306861,
+        "max_pct_error": 10.461378951787491
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4928303360429138,
+        "median_pct_error": 0.20305422060361022,
+        "max_pct_error": 10.053027465494885
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0632810400486423,
+          "median_pct_error": 0.6097009138613485,
+          "max_pct_error": 4.66043943549888
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.66043943549888,
+          "eb_x": 4.576778531809169,
+          "Ka2_y": 2.845544849637066,
+          "dKa_xx": 2.5699928019157605,
+          "dKg_yy": 2.464251130371609
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.66043943549888
+        }
+      },
+      "delta_vs_leader_kf36": {
+        "mean_pct_error": -0.006489525910829741,
+        "median_pct_error": 0.0010193310997674843,
+        "max_pct_error": 0.05352063681154373
+      }
+    },
+    {
+      "candidate_name": "relay_l11back3_l12y0p125_on_entry",
+      "family": "closing_q4_back_dwell_microgrid",
+      "hypothesis_id": "Z2",
+      "rationale": "Loosen the q4 back dwell to 3.0 s as the opposite-direction control. If the handoff win is real, the heavier buffer should stop helping or reverse.",
+      "total_time_s": 1348.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back3_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0652788189035534,
+          "median_pct_error": 0.6011105542718629,
+          "max_pct_error": 4.778242722624601
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.778242722624601,
+          "eb_x": 4.611505034006359,
+          "Ka2_y": 2.906285943526231,
+          "dKa_xx": 2.5828757832642024,
+          "dKg_yy": 2.461540923867947
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.778242722624601
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.008217595047417259,
+        "median_pct_error": 0.009680933688941962,
+        "max_pct_error": -0.06449265788107095
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8891424759530804,
+        "median_pct_error": -0.17048987045295871,
+        "max_pct_error": 10.34340070461532
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49110026803194917,
+        "median_pct_error": 0.21168926939372013,
+        "max_pct_error": 9.935049218322714
+      }
+    },
+    {
+      "candidate_name": "relay_l11postz_zneg0p5_l12y0p125_on_entry",
+      "family": "post_q4_micro_z_pair_before_terminal_y",
+      "hypothesis_id": "Z1",
+      "rationale": "Append the lightest negative-sign z pair after the full anchor11 q4 closure. This is the sign-control version of the post-q4 micro-cadence idea.",
+      "total_time_s": 1358.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11postz_zneg0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0965275850086413,
+          "median_pct_error": 0.5544500431370492,
+          "max_pct_error": 5.047131491654133
+        },
+        "key_param_errors": {
+          "dKg_xx": 5.047131491654133,
+          "eb_x": 4.584072572811132,
+          "Ka2_y": 2.8793304348083177,
+          "dKa_xx": 3.356100010136484,
+          "dKg_yy": 1.929679661059349
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 5.047131491654133
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.039466361152505236,
+        "median_pct_error": 0.05634144482375569,
+        "max_pct_error": -0.333381426910603
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8578937098479924,
+        "median_pct_error": -0.12382935931814498,
+        "max_pct_error": 10.074511935585788
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4598515019268612,
+        "median_pct_error": 0.25834978052853386,
+        "max_pct_error": 9.666160449293182
+      }
+    },
+    {
+      "candidate_name": "relay_l11postz_zpos0p5_l12y0p125_on_entry",
+      "family": "post_q4_micro_z_pair_before_terminal_y",
+      "hypothesis_id": "Z1",
+      "rationale": "Append a positive-sign 0.5 s z pair after q4, testing whether one extra short z cadence before anchor12 improves the handoff quality.",
+      "total_time_s": 1358.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11postz_zpos0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.1574705533762826,
+          "median_pct_error": 0.5677401619143612,
+          "max_pct_error": 5.109808007850964
+        },
+        "key_param_errors": {
+          "dKg_xx": 5.09792407956777,
+          "eb_x": 5.109808007850964,
+          "Ka2_y": 3.8082704724731617,
+          "dKa_xx": 3.675707692679739,
+          "dKg_yy": 2.2423092776979514
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 5.109808007850964
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.10040932952014647,
+        "median_pct_error": 0.04305132604644368,
+        "max_pct_error": -0.3960579431074338
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.7969507414803512,
+        "median_pct_error": -0.137119478095457,
+        "max_pct_error": 10.011835419388957
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.39890853355921996,
+        "median_pct_error": 0.24505966175122185,
+        "max_pct_error": 9.603483933096351
+      }
+    },
+    {
+      "candidate_name": "relay_l11postz_zpos1_l12y0p125_on_entry",
+      "family": "post_q4_micro_z_pair_before_terminal_y",
+      "hypothesis_id": "Z1",
+      "rationale": "Stronger positive-sign post-q4 z cadence. This checks whether the post-q4 idea is dose-limited rather than structurally absent.",
+      "total_time_s": 1359.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11postz_zpos1_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.1597927306856497,
+          "median_pct_error": 0.5625354364792264,
+          "max_pct_error": 5.13775011116557
+        },
+        "key_param_errors": {
+          "dKg_xx": 5.045390004699481,
+          "eb_x": 5.13775011116557,
+          "Ka2_y": 3.895537847150219,
+          "dKa_xx": 3.666488396242317,
+          "dKg_yy": 2.1826196333596766
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 5.13775011116557
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.1027315068295136,
+        "median_pct_error": 0.04825605148157841,
+        "max_pct_error": -0.4240000464220399
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.794628564170984,
+        "median_pct_error": -0.13191475266032227,
+        "max_pct_error": 9.98389331607435
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.39658635624985283,
+        "median_pct_error": 0.2502643871863566,
+        "max_pct_error": 9.575541829781745
+      }
+    }
+  ],
+  "best_candidate": {
+    "candidate_name": "relay_l11back0p5_l12y0p125_on_entry",
+    "family": "closing_q4_back_dwell_microgrid",
+    "hypothesis_id": "Z2",
+    "rationale": "Tighten the anchor11 q4 back dwell from 2.0 s down to 0.5 s while leaving q1/q2/q3 and anchor12 untouched. This directly tests whether the current handoff is slightly over-buffered on the +X preterminal landing.",
+    "total_time_s": 1346.375,
+    "result_files": {
+      "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+      "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+    },
+    "result_modes": {
+      "markov42": "reused_verified",
+      "kf36": "rerun"
+    },
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 1.0565119091331543,
+        "median_pct_error": 0.5883913535584239,
+        "max_pct_error": 4.560198072125949
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.55669140755197,
+        "eb_x": 4.560198072125949,
+        "Ka2_y": 2.7579155183339354,
+        "dKa_xx": 2.5780274903859013,
+        "dKg_yy": 2.477745578153021
+      },
+      "max_driver": {
+        "name": "eb_x",
+        "pct_error": 4.560198072125949
+      }
+    },
+    "delta_vs_leader_markov42": {
+      "mean_pct_error": 0.0005493147229818085,
+      "median_pct_error": 0.022400134402380978,
+      "max_pct_error": 0.15355199261758035
+    },
+    "delta_vs_faithful12_markov42": {
+      "mean_pct_error": 0.8979093857234794,
+      "median_pct_error": -0.1577706697395197,
+      "max_pct_error": 10.561445355113971
+    },
+    "delta_vs_default18_markov42": {
+      "mean_pct_error": 0.49986717780234824,
+      "median_pct_error": 0.22440847010715914,
+      "max_pct_error": 10.153093868821365
+    },
+    "kf36": {
+      "overall": {
+        "mean_pct_error": 1.0562428184101837,
+        "median_pct_error": 0.5883390128999019,
+        "max_pct_error": 4.5581765380700325
+      },
+      "key_param_errors": {
+        "dKg_xx": 4.556861813463574,
+        "eb_x": 4.5581765380700325,
+        "Ka2_y": 2.7560507159814036,
+        "dKa_xx": 2.5768714373548143,
+        "dKg_yy": 2.4775024970422255
+      },
+      "max_driver": {
+        "name": "eb_x",
+        "pct_error": 4.5581765380700325
+      }
+    },
+    "delta_vs_leader_kf36": {
+      "mean_pct_error": 0.000548695727628834,
+      "median_pct_error": 0.022381232061214118,
+      "max_pct_error": 0.15578353424039104
+    }
+  },
+  "best_candidate_timing_table": [
+    {
+      "pos_id": 1,
+      "anchor_id": 1,
+      "segment_role": "anchor",
+      "label": "anchor_1",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 2,
+      "anchor_id": 2,
+      "segment_role": "anchor",
+      "label": "anchor_2",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 3,
+      "anchor_id": 3,
+      "segment_role": "anchor",
+      "label": "anchor_3",
+      "motor_action": "I(0→90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 4,
+      "anchor_id": 4,
+      "segment_role": "anchor",
+      "label": "anchor_4",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 5,
+      "anchor_id": 5,
+      "segment_role": "anchor",
+      "label": "anchor_5",
+      "motor_action": "O[+Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": 90
+    },
+    {
+      "pos_id": 6,
+      "anchor_id": 6,
+      "segment_role": "anchor",
+      "label": "anchor_6",
+      "motor_action": "I(90→0) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 7,
+      "anchor_id": 7,
+      "segment_role": "anchor",
+      "label": "anchor_7",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 8,
+      "anchor_id": 8,
+      "segment_role": "anchor",
+      "label": "anchor_8",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 9,
+      "anchor_id": 8,
+      "segment_role": "motif_out",
+      "label": "l8_x1_out",
+      "motor_action": "O[+X] +90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 10,
+      "anchor_id": 8,
+      "segment_role": "motif_return",
+      "label": "l8_x1_return",
+      "motor_action": "O[+X] -90°",
+      "effective_body_axis": [
+        1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 11,
+      "anchor_id": 9,
+      "segment_role": "anchor",
+      "label": "anchor_9",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 12,
+      "anchor_id": 9,
+      "segment_role": "motif_out",
+      "label": "l9_ypair_neg0p8125_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 13,
+      "anchor_id": 9,
+      "segment_role": "motif_return",
+      "label": "l9_ypair_neg0p8125_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.8125,
+      "node_total_s": 5.8125,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 14,
+      "anchor_id": 10,
+      "segment_role": "anchor",
+      "label": "anchor_10",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 15,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_zpair_neg5_out",
+      "motor_action": "O[-Z] -90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 16,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_zpair_neg5_return",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 5.0,
+      "node_total_s": 10.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 17,
+      "anchor_id": 10,
+      "segment_role": "motif_out",
+      "label": "l10_ypair_neg1_out",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 18,
+      "anchor_id": 10,
+      "segment_role": "motif_return",
+      "label": "l10_ypair_neg1_return",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 1.0,
+      "node_total_s": 6.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 19,
+      "anchor_id": 11,
+      "segment_role": "anchor",
+      "label": "anchor_11",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 20,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_open",
+      "label": "l11_xpair_outerhold_inner_open",
+      "motor_action": "I(-90→180) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 21,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_sweep",
+      "label": "l11_xpair_outerhold_outer_sweep",
+      "motor_action": "O[-X] +90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 22,
+      "anchor_id": 11,
+      "segment_role": "motif_outer_return",
+      "label": "l11_xpair_outerhold_outer_return",
+      "motor_action": "O[-X] -90°",
+      "effective_body_axis": [
+        -1,
+        0,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Z",
+      "inner_beta_after_deg": 180
+    },
+    {
+      "pos_id": 23,
+      "anchor_id": 11,
+      "segment_role": "motif_inner_close",
+      "label": "l11_xpair_outerhold_inner_close",
+      "motor_action": "I(180→-90) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 24,
+      "anchor_id": 11,
+      "segment_role": "motif_y_pos",
+      "label": "l11_zquad_y10x0back2_q1",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "+Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 25,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_a",
+      "label": "l11_zquad_y10x0back2_q2",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.0,
+      "node_total_s": 5.0,
+      "face_after": "-X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 26,
+      "anchor_id": 11,
+      "segment_role": "motif_y_neg",
+      "label": "l11_zquad_y10x0back2_q3",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 10.0,
+      "node_total_s": 15.0,
+      "face_after": "-Y",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 27,
+      "anchor_id": 11,
+      "segment_role": "motif_zero_b",
+      "label": "l11_zquad_y10x0back0p5_q4",
+      "motor_action": "O[-Z] +90°",
+      "effective_body_axis": [
+        0,
+        0,
+        -1
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.5,
+      "node_total_s": 5.5,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 28,
+      "anchor_id": 12,
+      "segment_role": "anchor",
+      "label": "anchor_12",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 10.0,
+      "pre_static_s": 10.0,
+      "post_static_s": 80.0,
+      "node_total_s": 100.0,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    },
+    {
+      "pos_id": 29,
+      "anchor_id": 12,
+      "segment_role": "motif_out",
+      "label": "l12_yneg0p125_out",
+      "motor_action": "I(0→-90) -90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+X",
+      "inner_beta_after_deg": -90
+    },
+    {
+      "pos_id": 30,
+      "anchor_id": 12,
+      "segment_role": "motif_return",
+      "label": "l12_yneg0p125_return",
+      "motor_action": "I(-90→0) +90°",
+      "effective_body_axis": [
+        0,
+        1,
+        0
+      ],
+      "rotation_time_s": 5.0,
+      "pre_static_s": 0.0,
+      "post_static_s": 0.125,
+      "node_total_s": 5.125,
+      "face_after": "+Z",
+      "inner_beta_after_deg": 0
+    }
+  ],
+  "kf36_rechecked_candidates": [
+    "relay_l11back0p5_l12y0p125_on_entry",
+    "relay_l11back1_l12y0p125_on_entry"
+  ],
+  "kf36_gate_reason": "No z-cadence candidate was close enough to the corrected leader to justify KF36.",
+  "required_comparison_rows": [
+    {
+      "label": "current corrected leader / relay_r3_l9y0p8125_l12y0p125_on_entry",
+      "markov42_triplet": "1.057 / 0.611 / 4.714",
+      "kf36_triplet": "1.057 / 0.611 / 4.714",
+      "note": "current corrected leader to beat",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.0005493147229818085,
+        "median_pct_error": 0.022400134402380978,
+        "max_pct_error": 0.15355199261758035
+      }
+    },
+    {
+      "label": "faithful12",
+      "markov42_triplet": "1.954 / 0.431 / 15.122",
+      "kf36_triplet": "1.954 / 0.431 / 15.121",
+      "note": "corrected faithful12 reference",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.8979093857234794,
+        "median_pct_error": -0.1577706697395197,
+        "max_pct_error": 10.561445355113971
+      }
+    },
+    {
+      "label": "default18",
+      "markov42_triplet": "1.556 / 0.813 / 14.713",
+      "kf36_triplet": "1.556 / 0.813 / 14.711",
+      "note": "default 18-position reference",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.49986717780234824,
+        "median_pct_error": 0.22440847010715914,
+        "max_pct_error": 10.153093868821365
+      }
+    },
+    {
+      "label": "batch-best candidate / relay_l11back0p5_l12y0p125_on_entry",
+      "markov42_triplet": "1.057 / 0.588 / 4.560",
+      "kf36_triplet": "1.056 / 0.588 / 4.558",
+      "note": "best point found inside this z-cadence / handoff batch",
+      "delta_vs_batch_best_markov42": {
+        "mean_pct_error": 0.0,
+        "median_pct_error": 0.0,
+        "max_pct_error": 0.0
+      }
+    }
+  ],
+  "near_tradeoffs": [
+    {
+      "candidate_name": "relay_l11back0p5_l12y0p125_on_entry",
+      "family": "closing_q4_back_dwell_microgrid",
+      "hypothesis_id": "Z2",
+      "rationale": "Tighten the anchor11 q4 back dwell from 2.0 s down to 0.5 s while leaving q1/q2/q3 and anchor12 untouched. This directly tests whether the current handoff is slightly over-buffered on the +X preterminal landing.",
+      "total_time_s": 1346.375,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l11back0p5_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified",
+        "kf36": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0565119091331543,
+          "median_pct_error": 0.5883913535584239,
+          "max_pct_error": 4.560198072125949
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.55669140755197,
+          "eb_x": 4.560198072125949,
+          "Ka2_y": 2.7579155183339354,
+          "dKa_xx": 2.5780274903859013,
+          "dKg_yy": 2.477745578153021
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 4.560198072125949
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": 0.0005493147229818085,
+        "median_pct_error": 0.022400134402380978,
+        "max_pct_error": 0.15355199261758035
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8979093857234794,
+        "median_pct_error": -0.1577706697395197,
+        "max_pct_error": 10.561445355113971
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49986717780234824,
+        "median_pct_error": 0.22440847010715914,
+        "max_pct_error": 10.153093868821365
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0562428184101837,
+          "median_pct_error": 0.5883390128999019,
+          "max_pct_error": 4.5581765380700325
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.556861813463574,
+          "eb_x": 4.5581765380700325,
+          "Ka2_y": 2.7560507159814036,
+          "dKa_xx": 2.5768714373548143,
+          "dKg_yy": 2.4775024970422255
+        },
+        "max_driver": {
+          "name": "eb_x",
+          "pct_error": 4.5581765380700325
+        }
+      },
+      "delta_vs_leader_kf36": {
+        "mean_pct_error": 0.000548695727628834,
+        "median_pct_error": 0.022381232061214118,
+        "max_pct_error": 0.15578353424039104
+      }
+    },
+    {
+      "candidate_name": "relay_l11back1_l12y0p125_on_entry",
+      "family": "closing_q4_back_dwell_microgrid",
+      "hypothesis_id": "Z2",
+      "rationale": "Moderately tighten the q4 back dwell from 2.0 s to 1.0 s. This is the gentler version of the same z-to-y handoff hypothesis.",
+      "total_time_s": 1346.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back1_l12y0p125_on_entry_shared_noise0p08_param_errors.json",
+        "kf36": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3closedloop_relay_l11back1_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified",
+        "kf36": "rerun"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0635487508925887,
+          "median_pct_error": 0.6097456030619728,
+          "max_pct_error": 4.660264475452428
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.660264475452428,
+          "eb_x": 4.578803601842442,
+          "Ka2_y": 2.8474225529414348,
+          "dKa_xx": 2.571144018815352,
+          "dKg_yy": 2.4644857060638126
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.660264475452428
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.006487527036452612,
+        "median_pct_error": 0.0010458848988320613,
+        "max_pct_error": 0.053485589291101476
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.890872543964045,
+        "median_pct_error": -0.17912491924306861,
+        "max_pct_error": 10.461378951787491
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.4928303360429138,
+        "median_pct_error": 0.20305422060361022,
+        "max_pct_error": 10.053027465494885
+      },
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 1.0632810400486423,
+          "median_pct_error": 0.6097009138613485,
+          "max_pct_error": 4.66043943549888
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.66043943549888,
+          "eb_x": 4.576778531809169,
+          "Ka2_y": 2.845544849637066,
+          "dKa_xx": 2.5699928019157605,
+          "dKg_yy": 2.464251130371609
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.66043943549888
+        }
+      },
+      "delta_vs_leader_kf36": {
+        "mean_pct_error": -0.006489525910829741,
+        "median_pct_error": 0.0010193310997674843,
+        "max_pct_error": 0.05352063681154373
+      }
+    },
+    {
+      "candidate_name": "relay_l11back3_l12y0p125_on_entry",
+      "family": "closing_q4_back_dwell_microgrid",
+      "hypothesis_id": "Z2",
+      "rationale": "Loosen the q4 back dwell to 3.0 s as the opposite-direction control. If the handoff win is real, the heavier buffer should stop helping or reverse.",
+      "total_time_s": 1348.875,
+      "result_files": {
+        "markov42": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3closedloop_relay_l11back3_l12y0p125_on_entry_shared_noise0p08_param_errors.json"
+      },
+      "result_modes": {
+        "markov42": "reused_verified"
+      },
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 1.0652788189035534,
+          "median_pct_error": 0.6011105542718629,
+          "max_pct_error": 4.778242722624601
+        },
+        "key_param_errors": {
+          "dKg_xx": 4.778242722624601,
+          "eb_x": 4.611505034006359,
+          "Ka2_y": 2.906285943526231,
+          "dKa_xx": 2.5828757832642024,
+          "dKg_yy": 2.461540923867947
+        },
+        "max_driver": {
+          "name": "dKg_xx",
+          "pct_error": 4.778242722624601
+        }
+      },
+      "delta_vs_leader_markov42": {
+        "mean_pct_error": -0.008217595047417259,
+        "median_pct_error": 0.009680933688941962,
+        "max_pct_error": -0.06449265788107095
+      },
+      "delta_vs_faithful12_markov42": {
+        "mean_pct_error": 0.8891424759530804,
+        "median_pct_error": -0.17048987045295871,
+        "max_pct_error": 10.34340070461532
+      },
+      "delta_vs_default18_markov42": {
+        "mean_pct_error": 0.49110026803194917,
+        "median_pct_error": 0.21168926939372013,
+        "max_pct_error": 9.935049218322714
+      }
+    }
+  ],
+  "bottom_line": {
+    "beat_current_leader": "YES",
+    "statement": "The z-to-y handoff direction did find a genuine corrected-frontier upgrade: tightening only the anchor11 closing q4 back dwell improved both mean and max, and the win survived KF36."
+  }
+}

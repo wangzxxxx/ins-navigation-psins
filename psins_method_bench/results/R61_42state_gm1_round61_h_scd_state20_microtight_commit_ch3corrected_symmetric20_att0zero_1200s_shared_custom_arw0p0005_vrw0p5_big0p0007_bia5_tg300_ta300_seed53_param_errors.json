@@ -1,0 +1,682 @@
+{
+  "variant": "42state_gm1_round61_h_scd_state20_microtight_commit_ch3corrected_symmetric20_att0zero_1200s_custom_arw0p0005_vrw0p5_big0p0007_bia5_tg300_ta300_seed53",
+  "method_file": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_42state_gm1_round61_h_scd_state20_microtight_commit.py on corrected symmetric20 path",
+  "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+  "param_order": [
+    "eb_x",
+    "eb_y",
+    "eb_z",
+    "db_x",
+    "db_y",
+    "db_z",
+    "dKg_xx",
+    "dKg_yx",
+    "dKg_zx",
+    "dKg_xy",
+    "dKg_yy",
+    "dKg_zy",
+    "dKg_xz",
+    "dKg_yz",
+    "dKg_zz",
+    "dKa_xx",
+    "dKa_xy",
+    "dKa_xz",
+    "dKa_yy",
+    "dKa_yz",
+    "dKa_zz",
+    "Ka2_x",
+    "Ka2_y",
+    "Ka2_z",
+    "rx_x",
+    "rx_y",
+    "rx_z",
+    "ry_x",
+    "ry_y",
+    "ry_z"
+  ],
+  "param_errors": {
+    "eb_x": {
+      "true": 4.84813681109536e-07,
+      "est": 4.090904992900528e-07,
+      "abs_error": 7.572318181948324e-08,
+      "pct_error": 15.61902742640936
+    },
+    "eb_y": {
+      "true": 9.69627362219072e-07,
+      "est": 9.520552172801199e-07,
+      "abs_error": 1.7572144938952234e-08,
+      "pct_error": 1.8122575355894386
+    },
+    "eb_z": {
+      "true": 1.4544410433286078e-06,
+      "est": 1.4490208334885816e-06,
+      "abs_error": 5.420209840026207e-09,
+      "pct_error": 0.37266617749053693
+    },
+    "db_x": {
+      "true": 0.00097803267715,
+      "est": 0.0009746513628184043,
+      "abs_error": 3.3813143315955833e-06,
+      "pct_error": 0.3457261102408948
+    },
+    "db_y": {
+      "true": 0.0019560653543,
+      "est": 0.0020028718851518553,
+      "abs_error": 4.680653085185546e-05,
+      "pct_error": 2.3928919731112823
+    },
+    "db_z": {
+      "true": 0.00293409803145,
+      "est": 0.0029445735822066247,
+      "abs_error": 1.0475550756624576e-05,
+      "pct_error": 0.35702797399198244
+    },
+    "dKg_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -1.1392830185918967e-05,
+      "abs_error": 1.3928301859644776e-06,
+      "pct_error": 13.928301859708164
+    },
+    "dKg_yx": {
+      "true": 0.0001454441043328608,
+      "est": 0.0001418184522346011,
+      "abs_error": 3.625652098259688e-06,
+      "pct_error": 2.4928147585563765
+    },
+    "dKg_zx": {
+      "true": 0.00024240684055476798,
+      "est": 0.00024173006764488067,
+      "abs_error": 6.767729098873152e-07,
+      "pct_error": 0.2791888662623814
+    },
+    "dKg_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 5.0547572442819664e-05,
+      "abs_error": 2.066204331866067e-06,
+      "pct_error": 4.261852361792655
+    },
+    "dKg_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -2.2086212401628558e-05,
+      "abs_error": 2.086212401608556e-06,
+      "pct_error": 10.431062008032347
+    },
+    "dKg_zy": {
+      "true": 0.0002908882086657216,
+      "est": 0.0002936591808098854,
+      "abs_error": 2.7709721441638094e-06,
+      "pct_error": 0.9525900540534156
+    },
+    "dKg_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.90581062801449e-05,
+      "abs_error": 2.095370058237701e-06,
+      "pct_error": 2.1610054953918323
+    },
+    "dKg_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.0001941657431594818,
+      "abs_error": 2.4027071566742365e-07,
+      "pct_error": 0.12389848153498081
+    },
+    "dKg_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -2.8126547211737574e-05,
+      "abs_error": 1.8734527882369179e-06,
+      "pct_error": 6.244842627461702
+    },
+    "dKa_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -1.1298468701070874e-05,
+      "abs_error": 1.2984687011163842e-06,
+      "pct_error": 12.984687011222936
+    },
+    "dKa_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 5.24516427716903e-05,
+      "abs_error": 3.970274660736704e-06,
+      "pct_error": 8.189279336446125
+    },
+    "dKa_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.700722854289232e-05,
+      "abs_error": 4.4492320985128377e-08,
+      "pct_error": 0.04588599983740562
+    },
+    "dKa_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -1.9821165310629496e-05,
+      "abs_error": 1.7883468939050573e-07,
+      "pct_error": 0.8941734469516344
+    },
+    "dKa_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.00019027909710934152,
+      "abs_error": 3.6463753344728646e-06,
+      "pct_error": 1.8802972546730916
+    },
+    "dKa_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -3.060215574746117e-05,
+      "abs_error": 6.021557474866768e-07,
+      "pct_error": 2.0071858249572956
+    },
+    "Ka2_x": {
+      "true": 1.0224607248440952e-06,
+      "est": 8.085842284556215e-07,
+      "abs_error": 2.1387649638847372e-07,
+      "pct_error": 20.917820234228127
+    },
+    "Ka2_y": {
+      "true": 2.0449214496881904e-06,
+      "est": 1.7422671333664816e-06,
+      "abs_error": 3.026543163217088e-07,
+      "pct_error": 14.80029056215619
+    },
+    "Ka2_z": {
+      "true": 3.0673821745322856e-06,
+      "est": 2.942352740608682e-06,
+      "abs_error": 1.2502943392360346e-07,
+      "pct_error": 4.076095732761697
+    },
+    "rx_x": {
+      "true": 0.01,
+      "est": 0.009982231940292479,
+      "abs_error": 1.7768059707521516e-05,
+      "pct_error": 0.17768059707521516
+    },
+    "rx_y": {
+      "true": 0.02,
+      "est": 0.02038367827059022,
+      "abs_error": 0.0003836782705902188,
+      "pct_error": 1.9183913529510939
+    },
+    "rx_z": {
+      "true": 0.03,
+      "est": 0.03001808069719255,
+      "abs_error": 1.80806971925504e-05,
+      "pct_error": 0.06026899064183466
+    },
+    "ry_x": {
+      "true": 0.04,
+      "est": 0.03971612121846868,
+      "abs_error": 0.0002838787815313201,
+      "pct_error": 0.7096969538283003
+    },
+    "ry_y": {
+      "true": 0.05,
+      "est": 0.050351483934401864,
+      "abs_error": 0.0003514839344018611,
+      "pct_error": 0.7029678688037222
+    },
+    "ry_z": {
+      "true": 0.06,
+      "est": 0.060505182473869275,
+      "abs_error": 0.000505182473869277,
+      "pct_error": 0.8419707897821285
+    }
+  },
+  "focus_scale_pct": {
+    "dKg_xx": 13.928301859708164,
+    "dKg_xy": 4.261852361792655,
+    "dKg_yy": 10.431062008032347,
+    "dKg_zz": 6.244842627461702,
+    "dKa_xx": 12.984687011222936
+  },
+  "lever_guard_pct": {
+    "rx_y": 1.9183913529510939,
+    "ry_z": 0.8419707897821285
+  },
+  "overall": {
+    "mean_pct_error": 4.3993948555314715,
+    "median_pct_error": 1.8993443038120927,
+    "max_pct_error": 20.917820234228127
+  },
+  "extra": {
+    "iter_bounds": [
+      5992,
+      11984,
+      17976
+    ],
+    "selected_state_labels": {
+      "12": "dKg_xx",
+      "15": "dKg_xy",
+      "16": "dKg_yy",
+      "20": "dKg_zz",
+      "21": "dKa_xx"
+    },
+    "iteration_policies": [
+      {
+        "name": "iter1_seed",
+        "selected_prior_scale": 1.38,
+        "other_scale_prior_scale": 0.94,
+        "ka2_prior_scale": 0.93,
+        "lever_prior_scale": 0.91,
+        "selected_q_static_scale": 0.62,
+        "selected_q_dynamic_scale": 0.88,
+        "selected_q_late_mult": 1.42,
+        "other_scale_q_scale": 0.92,
+        "other_scale_q_late_mult": 1.05,
+        "ka2_q_scale": 0.95,
+        "lever_q_scale": 0.93,
+        "static_r_scale": 1.06,
+        "dynamic_r_scale": 1.0,
+        "late_r_mult": 0.99,
+        "late_release_frac": 0.55,
+        "selected_alpha_floor": 0.88,
+        "selected_alpha_span": 0.16,
+        "other_scale_alpha": 0.98,
+        "ka2_alpha": 1.0,
+        "lever_alpha": 1.0,
+        "markov_alpha": 1.0,
+        "trust_score_soft": 2.4,
+        "trust_cov_soft": 0.48,
+        "trust_mix": 0.56,
+        "state_alpha_mult": {
+          "15": 1.02,
+          "20": 0.97
+        },
+        "post_rx_y_mult": 1.00047,
+        "post_ry_z_mult": 1.00116
+      },
+      {
+        "name": "iter2_commit",
+        "selected_prior_scale": 1.24,
+        "other_scale_prior_scale": 0.97,
+        "ka2_prior_scale": 0.96,
+        "lever_prior_scale": 0.94,
+        "selected_q_static_scale": 0.78,
+        "selected_q_dynamic_scale": 1.0,
+        "selected_q_late_mult": 1.28,
+        "other_scale_q_scale": 0.96,
+        "other_scale_q_late_mult": 1.03,
+        "ka2_q_scale": 0.98,
+        "lever_q_scale": 0.98,
+        "static_r_scale": 1.03,
+        "dynamic_r_scale": 1.0,
+        "late_r_mult": 0.995,
+        "late_release_frac": 0.58,
+        "selected_alpha_floor": 0.96,
+        "selected_alpha_span": 0.12,
+        "other_scale_alpha": 0.99,
+        "ka2_alpha": 1.0,
+        "lever_alpha": 1.0,
+        "markov_alpha": 1.0,
+        "trust_score_soft": 2.1,
+        "trust_cov_soft": 0.44,
+        "trust_mix": 0.58,
+        "state_alpha_mult": {
+          "15": 0.76,
+          "20": 0.8988,
+          "16": 1.008,
+          "21": 1.006,
+          "12": 1.0018
+        },
+        "post_rx_y_mult": 1.00047,
+        "post_ry_z_mult": 1.00116
+      },
+      {
+        "name": "iter3_readout_only",
+        "readout_only": true
+      }
+    ],
+    "feedback_log": [
+      {
+        "policy_name": "iter1_seed",
+        "selected_state_labels": {
+          "12": "dKg_xx",
+          "15": "dKg_xy",
+          "16": "dKg_yy",
+          "20": "dKg_zz",
+          "21": "dKa_xx"
+        },
+        "selected_trust": {
+          "12": {
+            "p_diag": 7.979555272265106e-11,
+            "x_abs": 1.2619443601392934e-05,
+            "snr_like": 1.4127029868223837,
+            "score_n": 0.37052531804995675,
+            "cov_drop": 13.150740242799944,
+            "cov_n": 0.961997476729551,
+            "trust": 0.6307730678689782,
+            "alpha": 0.9809236908590365,
+            "label": "dKg_xx",
+            "base_alpha": 0.9809236908590365,
+            "alpha_mult": 1.0,
+            "alpha_add": 0.0,
+            "x_feedback": -1.237871119406581e-05
+          },
+          "15": {
+            "p_diag": 1.250394414510903e-10,
+            "x_abs": 5.236360067183478e-05,
+            "snr_like": 4.682804097868302,
+            "score_n": 0.6611511532950173,
+            "cov_drop": 50.93201959711063,
+            "cov_n": 0.9904784612115102,
+            "trust": 0.8060551687782742,
+            "alpha": 1.0291482035446142,
+            "label": "dKg_xy",
+            "base_alpha": 1.0089688270045238,
+            "alpha_mult": 1.02,
+            "alpha_add": 0.0,
+            "x_feedback": 5.388990556254632e-05
+          },
+          "16": {
+            "p_diag": 5.3960494864093885e-11,
+            "x_abs": 2.1905617161553444e-05,
+            "snr_like": 2.982067924371213,
+            "score_n": 0.5540747471557799,
+            "cov_drop": 15.99195581823034,
+            "cov_n": 0.9689761265066162,
+            "trust": 0.7366313540701479,
+            "alpha": 0.9978610166512236,
+            "label": "dKg_yy",
+            "base_alpha": 0.9978610166512236,
+            "alpha_mult": 1.0,
+            "alpha_add": 0.0,
+            "x_feedback": -2.1858761411200213e-05
+          },
+          "20": {
+            "p_diag": 7.109272053949714e-11,
+            "x_abs": 2.2837120067312644e-05,
+            "snr_like": 2.7084995531504146,
+            "score_n": 0.5301947323221515,
+            "cov_drop": 13.932433417196219,
+            "cov_n": 0.9642123106919146,
+            "trust": 0.7211624668048473,
+            "alpha": 0.9655244148481122,
+            "label": "dKg_zz",
+            "base_alpha": 0.9953859946887755,
+            "alpha_mult": 0.97,
+            "alpha_add": 0.0,
+            "x_feedback": -2.2049796989808122e-05
+          },
+          "21": {
+            "p_diag": 3.35785526690596e-11,
+            "x_abs": 1.0370964315624955e-05,
+            "snr_like": 1.789732619201699,
+            "score_n": 0.4271710827080679,
+            "cov_drop": 20.272558240265496,
+            "cov_n": 0.9756993502228222,
+            "trust": 0.6685235204145598,
+            "alpha": 0.9869637632663295,
+            "label": "dKa_xx",
+            "base_alpha": 0.9869637632663295,
+            "alpha_mult": 1.0,
+            "alpha_add": 0.0,
+            "x_feedback": -1.023576596965002e-05
+          }
+        },
+        "other_scale_alpha": 0.98,
+        "ka2_alpha": 1.0,
+        "lever_alpha": 1.0,
+        "markov_alpha": 1.0,
+        "state_prior_diag_mult": {},
+        "state_q_static_mult": {},
+        "state_q_dynamic_mult": {},
+        "state_q_late_mult": {},
+        "state_alpha_mult": {
+          "15": 1.02,
+          "20": 0.97
+        },
+        "state_alpha_add": {},
+        "post_rx_y_mult": 1.00047,
+        "post_ry_z_mult": 1.00116,
+        "post_rx_y_before": -0.020416487304358386,
+        "post_rx_y_after": -0.020426083053391435,
+        "post_ry_z_before": -0.06051609792440638,
+        "post_ry_z_after": -0.0605862965979987
+      },
+      {
+        "policy_name": "iter2_commit",
+        "selected_state_labels": {
+          "12": "dKg_xx",
+          "15": "dKg_xy",
+          "16": "dKg_yy",
+          "20": "dKg_zz",
+          "21": "dKa_xx"
+        },
+        "selected_trust": {
+          "12": {
+            "p_diag": 8.617377856807358e-11,
+            "x_abs": 9.72551002571405e-07,
+            "snr_like": 0.10476707468769884,
+            "score_n": 0.047518432169320605,
+            "cov_drop": 11.995635875174443,
+            "cov_n": 0.9615237836528887,
+            "trust": 0.43140067979241925,
+            "alpha": 1.0135892641219255,
+            "label": "dKg_xx",
+            "base_alpha": 1.0117680815750902,
+            "alpha_mult": 1.0018,
+            "alpha_add": 0.0,
+            "x_feedback": 9.857672550173913e-07
+          },
+          "15": {
+            "p_diag": 1.257573556346399e-10,
+            "x_abs": 4.307924492019155e-06,
+            "snr_like": 0.3841504835421195,
+            "score_n": 0.15464058481447712,
+            "cov_drop": 48.1414327269373,
+            "cov_n": 0.9907526954363671,
+            "trust": 0.505807671275671,
+            "alpha": 0.7757296596203411,
+            "label": "dKg_xy",
+            "base_alpha": 1.0206969205530805,
+            "alpha_mult": 0.76,
+            "alpha_add": 0.0,
+            "x_feedback": -3.34178479986415e-06
+          },
+          "16": {
+            "p_diag": 5.5493895803532895e-11,
+            "x_abs": 2.2278205999007912e-07,
+            "snr_like": 0.02990595036708242,
+            "score_n": 0.014040972260736785,
+            "cov_drop": 14.948177128608995,
+            "cov_n": 0.9694193367188177,
+            "trust": 0.41529988533313084,
+            "alpha": 1.0179146741298954,
+            "label": "dKg_yy",
+            "base_alpha": 1.0098359862399757,
+            "alpha_mult": 1.008,
+            "alpha_add": 0.0,
+            "x_feedback": -2.267731279967882e-07
+          },
+          "20": {
+            "p_diag": 7.655809638374928e-11,
+            "x_abs": 6.582429789446142e-06,
+            "snr_like": 0.7522993253908855,
+            "score_n": 0.26375188560821494,
+            "cov_drop": 12.726684546816498,
+            "cov_n": 0.9638356695855053,
+            "trust": 0.5577870748786768,
+            "alpha": 0.9230086827481147,
+            "label": "dKg_zz",
+            "base_alpha": 1.0269344489854413,
+            "alpha_mult": 0.8988,
+            "alpha_add": 0.0,
+            "x_feedback": -6.075639849238633e-06
+          },
+          "21": {
+            "p_diag": 3.578697137691699e-11,
+            "x_abs": 1.0412565959086104e-06,
+            "snr_like": 0.17405852243371206,
+            "score_n": 0.07654091603914992,
+            "cov_drop": 18.614371175389504,
+            "cov_n": 0.975629170591121,
+            "trust": 0.4541579829509778,
+            "alpha": 1.020585951701842,
+            "label": "dKa_xx",
+            "base_alpha": 1.0144989579541173,
+            "alpha_mult": 1.006,
+            "alpha_add": 0.0,
+            "x_feedback": -1.0626918539012096e-06
+          }
+        },
+        "other_scale_alpha": 0.99,
+        "ka2_alpha": 1.0,
+        "lever_alpha": 1.0,
+        "markov_alpha": 1.0,
+        "state_prior_diag_mult": {},
+        "state_q_static_mult": {},
+        "state_q_dynamic_mult": {},
+        "state_q_late_mult": {},
+        "state_alpha_mult": {
+          "15": 0.76,
+          "20": 0.8988,
+          "16": 1.008,
+          "21": 1.006,
+          "12": 1.0018
+        },
+        "state_alpha_add": {},
+        "post_rx_y_mult": 1.00047,
+        "post_ry_z_mult": 1.00116,
+        "post_rx_y_before": -0.020374102442442272,
+        "post_rx_y_after": -0.02038367827059022,
+        "post_ry_z_before": -0.06043507778364025,
+        "post_ry_z_after": -0.060505182473869275
+      }
+    ],
+    "schedule_log": [
+      {
+        "policy_name": "iter1_seed",
+        "n_static_meas": 5192,
+        "n_dynamic_sched": 800,
+        "n_late_sched": 2697,
+        "late_release_frac": 0.55
+      },
+      {
+        "policy_name": "iter2_commit",
+        "n_static_meas": 5192,
+        "n_dynamic_sched": 800,
+        "n_late_sched": 2517,
+        "late_release_frac": 0.58
+      },
+      {
+        "policy_name": "iter3_readout_only",
+        "n_static_meas": 5192,
+        "n_dynamic_sched": 800,
+        "n_late_sched": 0,
+        "late_release_frac": 1.0
+      }
+    ],
+    "scd_log": [
+      {
+        "policy_name": "iter1_seed",
+        "enabled": false,
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "scale_block",
+        "target_indices": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "bias_to_target": true,
+        "n_transition_eligible": 0,
+        "n_scd": 0
+      },
+      {
+        "policy_name": "iter2_commit",
+        "enabled": true,
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "scale_block",
+        "target_indices": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "bias_to_target": true,
+        "n_transition_eligible": 4972,
+        "n_scd": 21
+      },
+      {
+        "policy_name": "iter3_readout_only",
+        "enabled": false,
+        "mode": "once_per_phase",
+        "alpha": 0.999,
+        "transition_duration": 2.0,
+        "target": "scale_block",
+        "target_indices": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "bias_to_target": true,
+        "n_transition_eligible": 0,
+        "n_scd": 0
+      }
+    ],
+    "policy": "Round59-H probe keeps the full Round58 internalized feedback stack intact and adds only a very mild post-ZUPT SCD-style cross-covariance suppression in iter2 under tightly bounded alpha/scope rules.",
+    "comparison_mode": "four_group_progression_19pos_markov_20pos_round61_custom_noise",
+    "group_key": "g4_round61_20",
+    "case_key": "symmetric20",
+    "case_tag": "ch3corrected_symmetric20_att0zero_1200s",
+    "case_display_name": "20-position corrected symmetric scheme",
+    "att0_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_motion_rows": 20,
+    "claimed_position_count": 20,
+    "total_time_s": 1200.0,
+    "timing_note": "uniform 20 × 60 s = 1200 s, row split 6 / 6 / 48 s",
+    "source_builder": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_ch3_corrected_symmetric20_front2_back11.py",
+    "source_reference": "anchor2_zpair_anchor11_xpair_symmetric20_60s",
+    "noise_tag": "custom_arw0p0005_vrw0p5_big0p0007_bia5_tg300_ta300_seed53",
+    "noise_config": {
+      "arw_dpsh": 0.0005,
+      "vrw_ugpsHz": 0.5,
+      "bi_g_dph": 0.0007,
+      "bi_a_ug": 5.0,
+      "tau_g": 300.0,
+      "tau_a": 300.0,
+      "seed": 53,
+      "base_family": "user_explicit_custom_noise"
+    },
+    "round61_selected_candidate": "r61_s20_08988_ryz00116",
+    "round61_candidate_description": "Keep exact R60 route, only tighten iter2 state20 from 0.899 to 0.8988.",
+    "round61_candidate_rationale": "Most conservative zz-only follow-up: preserve the R60 lever repair and nudge only the dKg_zz line.",
+    "transfer_note": "Round61 hybrid method transferred onto corrected symmetric20 path without a new 20pos-specific search."
+  }
+}

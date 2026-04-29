@@ -1,0 +1,5366 @@
+{
+  "experiment": "ch3_12pos_append_tail_search",
+  "report_date": "2026-03-31",
+  "noise_scale": 0.08,
+  "hard_constraints": {
+    "fixed_original_12_positions": true,
+    "append_only": true,
+    "max_total_positions": 18,
+    "max_appended_positions": 6,
+    "real_dual_axis_rule": {
+      "inner_axis": "body y only",
+      "outer_axis": "x/z family determined by current inner attitude"
+    },
+    "time_budget_s": 1800.0,
+    "seed": 42
+  },
+  "references": {
+    "faithful12": {
+      "name": "faithful12",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 15.290300274032441,
+          "median_pct_error": 1.483362834112179,
+          "max_pct_error": 122.58269656383278
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.58269656383278,
+          "dKg_zz": 85.57075351197156,
+          "Ka2_y": 99.94129544126406,
+          "Ka2_z": 64.70431004852547,
+          "dKg_xz": 18.68063496921905,
+          "dKa_xz": 18.85408106874926
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3faithful12_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 15.288687861181792,
+          "median_pct_error": 1.4837439708458107,
+          "max_pct_error": 122.5882646997851
+        },
+        "key_param_errors": {
+          "dKa_yy": 122.5882646997851,
+          "dKg_zz": 85.57095512255164,
+          "Ka2_y": 99.94128958152183,
+          "Ka2_z": 64.68594016040949,
+          "dKg_xz": 18.674921597907467,
+          "dKa_xz": 18.84829522348288
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3faithful12_shared_noise0p08_param_errors.json",
+      "base_face_sequence": [
+        "+Y",
+        "-Z",
+        "+X",
+        "+Y",
+        "-X",
+        "+Z",
+        "-Y",
+        "-Z",
+        "-X",
+        "-Y",
+        "+X",
+        "+Z"
+      ]
+    },
+    "incumbent": {
+      "name": "legal_flip_8_11_12_retime_flipnodes_pre20_post70",
+      "markov42": {
+        "overall": {
+          "mean_pct_error": 11.014162810085333,
+          "median_pct_error": 1.0603379306680452,
+          "max_pct_error": 99.92214937787182
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.77132397757674,
+          "dKg_zz": 76.46895197802066,
+          "Ka2_y": 99.92214937787182,
+          "Ka2_z": 3.8821190036200264,
+          "dKg_xz": 0.43475000616637505,
+          "dKa_xz": 0.14567951573398194
+        }
+      },
+      "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json",
+      "kf36": {
+        "overall": {
+          "mean_pct_error": 11.014092121257267,
+          "median_pct_error": 1.0602406508286844,
+          "max_pct_error": 99.92213961977083
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.76480779442812,
+          "dKg_zz": 76.46961291525153,
+          "Ka2_y": 99.92213961977083,
+          "Ka2_z": 3.8809407722658174,
+          "dKg_xz": 0.4344164417122317,
+          "dKa_xz": 0.14535565627381575
+        }
+      },
+      "kf36_run_json": "/root/.openclaw/workspace/psins_method_bench/results/KF36_ch3legaldual2_legal_flip_8_11_12_retime_flipnodes_pre20_post70_shared_noise0p08_param_errors.json"
+    }
+  },
+  "candidate_specs": [
+    {
+      "name": "tail_y_pair_pos",
+      "batch": "batch1",
+      "family": "y_pair",
+      "rationale": "Minimal y-only closure loop from the +Z end state. Probes whether extra inner-axis dwell alone helps dKa_yy / Ka2_y without adding new z-family outer excitation.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_y_pair_neg",
+      "batch": "batch1",
+      "family": "y_pair",
+      "rationale": "Opposite-sign y-only closure loop. Same theory as tail_y_pair_pos but on the mirrored branch.",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_return_nx_py",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Open to the -X branch, execute a z-family +Y/-Y excitation-return pair, then close back to +Z. Intended as the safest dKg_zz-targeting motif with net closure.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_return_nx_ny",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Mirror of tail_z_return_nx_py on the -Y branch. Tests whether the sign of the late y-face matters for dKg_zz / dKa_yy trade-off.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_return_px_py",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Closed z-family excitation-return pair on the +X / +Y branch. Same dKg_zz-oriented motif but mirrored in the x branch.",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_return_px_ny",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Closed z-family excitation-return pair on the +X / -Y branch.",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_sweep_nx",
+      "batch": "batch1",
+      "family": "z_sweep_closed",
+      "rationale": "Open to -X, keep the z-family outer sweep in the same rotational direction for two nodes, then close. Stronger dKg_zz excitation, but with more risk to already-good channels.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_sweep_px",
+      "batch": "batch1",
+      "family": "z_sweep_closed",
+      "rationale": "Mirror of tail_z_sweep_nx on the +X branch.",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_return_then_yswap_nx",
+      "batch": "batch1",
+      "family": "z_then_yswap",
+      "rationale": "First perform the safe closed z-return motif, then add one extra mirrored y-pair. Intended to preserve the dKg_zz benefit while giving dKa_yy / Ka2_y one more pure-y correction opportunity.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          -90
+        ],
+        [
+          "inner",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_return_then_yswap_px",
+      "batch": "batch1",
+      "family": "z_then_yswap",
+      "rationale": "Mirror of tail_z_return_then_yswap_nx.",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ],
+        [
+          "inner",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "base100"
+    },
+    {
+      "name": "tail_z_return_px_ny_burst10",
+      "batch": "batch2",
+      "family": "z_return_closed_short",
+      "rationale": "Short append-only burst analogue of the helpful localized z-return idea: same +X/-Y branch as the best dKa_yy-friendly batch-1 return motif, but each appended node is only 10 s total.",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "timing_policy": "burst10"
+    },
+    {
+      "name": "tail_z_return_nx_ny_burst10",
+      "batch": "batch2",
+      "family": "z_return_closed_short",
+      "rationale": "Short burst version of the -X/-Y closed z-return motif, included because it had the cleanest median among the batch-1 return pairs.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "burst10"
+    },
+    {
+      "name": "tail_z_sweep_nx_burst10",
+      "batch": "batch2",
+      "family": "z_sweep_closed_short",
+      "rationale": "Short burst version of the batch-1 best family (closed z sweep on the -X branch). Tests whether keeping the same geometry but dramatically shrinking dwell can preserve dKg_zz benefit without wrecking guard channels.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "burst10"
+    },
+    {
+      "name": "tail_z_return_px_ny_burst20",
+      "batch": "batch2",
+      "family": "z_return_closed_short",
+      "rationale": "Intermediate-duration short z-return tail on the +X/-Y branch, to check whether 10 s nodes are too short but 100 s nodes are too long.",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "timing_policy": "burst20"
+    },
+    {
+      "name": "tail_z_sweep_nx_burst20",
+      "batch": "batch2",
+      "family": "z_sweep_closed_short",
+      "rationale": "Intermediate-duration version of the best batch-1 geometry.",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "timing_policy": "burst20"
+    }
+  ],
+  "markov42_rows": [
+    {
+      "candidate_name": "tail_z_sweep_nx",
+      "batch": "batch1",
+      "family": "z_sweep_closed",
+      "rationale": "Open to -X, keep the z-family outer sweep in the same rotational direction for two nodes, then close. Stronger dKg_zz excitation, but with more risk to already-good channels.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "+Y",
+        "+X",
+        "-Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 400.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": false,
+        "tail_length": 4,
+        "tail_total_time_s": 400.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 15.905936741765055,
+          "median_pct_error": 2.2939942742899664,
+          "max_pct_error": 99.96320399146316
+        },
+        "key_param_errors": {
+          "dKa_yy": 97.42634324229309,
+          "dKg_zz": 71.77263001410894,
+          "Ka2_y": 99.96320399146316,
+          "Ka2_z": 53.55387257825477,
+          "dKg_xz": 17.397018712432914,
+          "dKa_xz": 16.977807893364417
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_sweep_nx_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 15.905936741765055,
+            "improvement_pct_points": -0.6156364677326138,
+            "relative_improvement_pct": -4.02632032529898
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 2.2939942742899664,
+            "improvement_pct_points": -0.8106314401777874,
+            "relative_improvement_pct": -54.64822372086502
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.96320399146316,
+            "improvement_pct_points": 22.619492572369623,
+            "relative_improvement_pct": 18.452435136790225
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 97.42634324229309,
+              "improvement_pct_points": 25.156353321539697
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 71.77263001410894,
+              "improvement_pct_points": 13.798123497862619
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.96320399146316,
+              "improvement_pct_points": -0.02190855019910032
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 53.55387257825477,
+              "improvement_pct_points": 11.150437470270703
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 17.397018712432914,
+              "improvement_pct_points": 1.2836162567861358
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 16.977807893364417,
+              "improvement_pct_points": 1.876273175384842
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 97.42634324229309,
+            "improvement_pct_points": 25.156353321539697
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 71.77263001410894,
+            "improvement_pct_points": 13.798123497862619
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.96320399146316,
+            "improvement_pct_points": -0.02190855019910032
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 53.55387257825477,
+            "improvement_pct_points": 11.150437470270703
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 17.397018712432914,
+            "improvement_pct_points": 1.2836162567861358
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 16.977807893364417,
+            "improvement_pct_points": 1.876273175384842
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 15.905936741765055,
+            "improvement_pct_points": -4.891773931679722,
+            "relative_improvement_pct": -44.413488487753916
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 2.2939942742899664,
+            "improvement_pct_points": -1.2336563436219212,
+            "relative_improvement_pct": -116.3455826619991
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.96320399146316,
+            "improvement_pct_points": -0.041054613591342104,
+            "relative_improvement_pct": -0.04108659976487037
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 97.42634324229309,
+              "improvement_pct_points": -12.655019264716344
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 71.77263001410894,
+              "improvement_pct_points": 4.696321963911714
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.96320399146316,
+              "improvement_pct_points": -0.041054613591342104
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 53.55387257825477,
+              "improvement_pct_points": -49.67175357463474
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 17.397018712432914,
+              "improvement_pct_points": -16.96226870626654
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 16.977807893364417,
+              "improvement_pct_points": -16.832128377630436
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 97.42634324229309,
+            "improvement_pct_points": -12.655019264716344
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 71.77263001410894,
+            "improvement_pct_points": 4.696321963911714
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.96320399146316,
+            "improvement_pct_points": -0.041054613591342104
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 53.55387257825477,
+            "improvement_pct_points": -49.67175357463474
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 17.397018712432914,
+            "improvement_pct_points": -16.96226870626654
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 16.977807893364417,
+            "improvement_pct_points": -16.832128377630436
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 17.397018712432914,
+          "improvement_pct_points": -16.96226870626654
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 16.977807893364417,
+          "improvement_pct_points": -16.832128377630436
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 53.55387257825477,
+          "improvement_pct_points": -49.67175357463474
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_nx_ny",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Mirror of tail_z_return_nx_py on the -Y branch. Tests whether the sign of the late y-face matters for dKg_zz / dKa_yy trade-off.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "-Y",
+        "-X",
+        "+Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 400.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 4,
+        "tail_total_time_s": 400.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 16.62111949556446,
+          "median_pct_error": 1.2248793346000388,
+          "max_pct_error": 99.94924204424947
+        },
+        "key_param_errors": {
+          "dKa_yy": 97.51798556935327,
+          "dKg_zz": 90.7910732603059,
+          "Ka2_y": 99.94924204424947,
+          "Ka2_z": 57.06794582742509,
+          "dKg_xz": 17.747792903080203,
+          "dKa_xz": 17.768149068867945
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_nx_ny_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 16.62111949556446,
+            "improvement_pct_points": -1.3308192215320194,
+            "relative_improvement_pct": -8.703682711791823
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 1.2248793346000388,
+            "improvement_pct_points": 0.2584834995121401,
+            "relative_improvement_pct": 17.42550733832073
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.94924204424947,
+            "improvement_pct_points": 22.63345451958331,
+            "relative_improvement_pct": 18.463824955749228
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 97.51798556935327,
+              "improvement_pct_points": 25.064710994479512
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 90.7910732603059,
+              "improvement_pct_points": -5.220319748334333
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.94924204424947,
+              "improvement_pct_points": -0.007946602985413165
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 57.06794582742509,
+              "improvement_pct_points": 7.636364221100379
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 17.747792903080203,
+              "improvement_pct_points": 0.9328420661388463
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 17.768149068867945,
+              "improvement_pct_points": 1.0859319998813142
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 97.51798556935327,
+            "improvement_pct_points": 25.064710994479512
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 90.7910732603059,
+            "improvement_pct_points": -5.220319748334333
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.94924204424947,
+            "improvement_pct_points": -0.007946602985413165
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 57.06794582742509,
+            "improvement_pct_points": 7.636364221100379
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 17.747792903080203,
+            "improvement_pct_points": 0.9328420661388463
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 17.768149068867945,
+            "improvement_pct_points": 1.0859319998813142
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 16.62111949556446,
+            "improvement_pct_points": -5.606956685479128,
+            "relative_improvement_pct": -50.906789577733576
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 1.2248793346000388,
+            "improvement_pct_points": -0.16454140393199368,
+            "relative_improvement_pct": -15.517826833595173
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.94924204424947,
+            "improvement_pct_points": -0.02709266637765495,
+            "relative_improvement_pct": -0.027113774619878957
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 97.51798556935327,
+              "improvement_pct_points": -12.74666159177653
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 90.7910732603059,
+              "improvement_pct_points": -14.322121282285238
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.94924204424947,
+              "improvement_pct_points": -0.02709266637765495
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 57.06794582742509,
+              "improvement_pct_points": -53.185826823805066
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 17.747792903080203,
+              "improvement_pct_points": -17.313042896913828
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 17.768149068867945,
+              "improvement_pct_points": -17.622469553133964
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 97.51798556935327,
+            "improvement_pct_points": -12.74666159177653
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 90.7910732603059,
+            "improvement_pct_points": -14.322121282285238
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.94924204424947,
+            "improvement_pct_points": -0.02709266637765495
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 57.06794582742509,
+            "improvement_pct_points": -53.185826823805066
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 17.747792903080203,
+            "improvement_pct_points": -17.313042896913828
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 17.768149068867945,
+            "improvement_pct_points": -17.622469553133964
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 17.747792903080203,
+          "improvement_pct_points": -17.313042896913828
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 17.768149068867945,
+          "improvement_pct_points": -17.622469553133964
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 57.06794582742509,
+          "improvement_pct_points": -53.185826823805066
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_px_py",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Closed z-family excitation-return pair on the +X / +Y branch. Same dKg_zz-oriented motif but mirrored in the x branch.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "tail_faces": [
+        "+X",
+        "+Y",
+        "+X",
+        "+Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 400.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 4,
+        "tail_total_time_s": 400.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 16.82275717140181,
+          "median_pct_error": 2.7859594220104857,
+          "max_pct_error": 99.94976861823982
+        },
+        "key_param_errors": {
+          "dKa_yy": 99.48236504065999,
+          "dKg_zz": 76.49178580396182,
+          "Ka2_y": 99.94976861823982,
+          "Ka2_z": 54.12102707593237,
+          "dKg_xz": 16.982009107386915,
+          "dKa_xz": 16.614557576896793
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_px_py_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 16.82275717140181,
+            "improvement_pct_points": -1.5324568973693697,
+            "relative_improvement_pct": -10.022412051462098
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 2.7859594220104857,
+            "improvement_pct_points": -1.3025965878983068,
+            "relative_improvement_pct": -87.81375385327999
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.94976861823982,
+            "improvement_pct_points": 22.632927945592968,
+            "relative_improvement_pct": 18.463395389419638
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 99.48236504065999,
+              "improvement_pct_points": 23.100331523172798
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 76.49178580396182,
+              "improvement_pct_points": 9.078967708009742
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.94976861823982,
+              "improvement_pct_points": -0.008473176975755337
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 54.12102707593237,
+              "improvement_pct_points": 10.583282972593103
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 16.982009107386915,
+              "improvement_pct_points": 1.6986258618321344
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 16.614557576896793,
+              "improvement_pct_points": 2.2395234918524665
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 99.48236504065999,
+            "improvement_pct_points": 23.100331523172798
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 76.49178580396182,
+            "improvement_pct_points": 9.078967708009742
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.94976861823982,
+            "improvement_pct_points": -0.008473176975755337
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 54.12102707593237,
+            "improvement_pct_points": 10.583282972593103
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 16.982009107386915,
+            "improvement_pct_points": 1.6986258618321344
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 16.614557576896793,
+            "improvement_pct_points": 2.2395234918524665
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 16.82275717140181,
+            "improvement_pct_points": -5.808594361316478,
+            "relative_improvement_pct": -52.737502263882696
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 2.7859594220104857,
+            "improvement_pct_points": -1.7256214913424406,
+            "relative_improvement_pct": -162.74259756559368
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.94976861823982,
+            "improvement_pct_points": -0.027619240367997122,
+            "relative_improvement_pct": -0.02764075887073894
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 99.48236504065999,
+              "improvement_pct_points": -14.711041063083243
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 76.49178580396182,
+              "improvement_pct_points": -0.0228338259411629
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.94976861823982,
+              "improvement_pct_points": -0.027619240367997122
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 54.12102707593237,
+              "improvement_pct_points": -50.23890807231234
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 16.982009107386915,
+              "improvement_pct_points": -16.54725910122054
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 16.614557576896793,
+              "improvement_pct_points": -16.468878061162812
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 99.48236504065999,
+            "improvement_pct_points": -14.711041063083243
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 76.49178580396182,
+            "improvement_pct_points": -0.0228338259411629
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.94976861823982,
+            "improvement_pct_points": -0.027619240367997122
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 54.12102707593237,
+            "improvement_pct_points": -50.23890807231234
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 16.982009107386915,
+            "improvement_pct_points": -16.54725910122054
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 16.614557576896793,
+            "improvement_pct_points": -16.468878061162812
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 16.982009107386915,
+          "improvement_pct_points": -16.54725910122054
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 16.614557576896793,
+          "improvement_pct_points": -16.468878061162812
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 54.12102707593237,
+          "improvement_pct_points": -50.23890807231234
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_sweep_px",
+      "batch": "batch1",
+      "family": "z_sweep_closed",
+      "rationale": "Mirror of tail_z_sweep_nx on the +X branch.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "tail_faces": [
+        "+X",
+        "-Y",
+        "-X",
+        "-Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 400.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": false,
+        "tail_length": 4,
+        "tail_total_time_s": 400.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 16.9681405685845,
+          "median_pct_error": 2.3604704085113326,
+          "max_pct_error": 100.09472478579289
+        },
+        "key_param_errors": {
+          "dKa_yy": 100.09472478579289,
+          "dKg_zz": 93.9210992690586,
+          "Ka2_y": 99.97580235338228,
+          "Ka2_z": 51.85069990795085,
+          "dKg_xz": 16.540330808818336,
+          "dKa_xz": 16.12658466675513
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_sweep_px_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 16.9681405685845,
+            "improvement_pct_points": -1.6778402945520572,
+            "relative_improvement_pct": -10.97323312480356
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 2.3604704085113326,
+            "improvement_pct_points": -0.8771075743991537,
+            "relative_improvement_pct": -59.12967173160432
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 100.09472478579289,
+            "improvement_pct_points": 22.487971778039892,
+            "relative_improvement_pct": 18.34514365274195
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 100.09472478579289,
+              "improvement_pct_points": 22.487971778039892
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 93.9210992690586,
+              "improvement_pct_points": -8.350345757087041
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.97580235338228,
+              "improvement_pct_points": -0.03450691211821777
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 51.85069990795085,
+              "improvement_pct_points": 12.853610140574624
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 16.540330808818336,
+              "improvement_pct_points": 2.1403041604007136
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 16.12658466675513,
+              "improvement_pct_points": 2.727496401994131
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 100.09472478579289,
+            "improvement_pct_points": 22.487971778039892
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 93.9210992690586,
+            "improvement_pct_points": -8.350345757087041
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.97580235338228,
+            "improvement_pct_points": -0.03450691211821777
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 51.85069990795085,
+            "improvement_pct_points": 12.853610140574624
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 16.540330808818336,
+            "improvement_pct_points": 2.1403041604007136
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 16.12658466675513,
+            "improvement_pct_points": 2.727496401994131
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 16.9681405685845,
+            "improvement_pct_points": -5.953977758499166,
+            "relative_improvement_pct": -54.05747001530874
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 2.3604704085113326,
+            "improvement_pct_points": -1.3001324778432874,
+            "relative_improvement_pct": -122.61491739941476
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 100.09472478579289,
+            "improvement_pct_points": -0.17257540792107307,
+            "relative_improvement_pct": -0.17270986362438137
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 100.09472478579289,
+              "improvement_pct_points": -15.32340080821615
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 93.9210992690586,
+              "improvement_pct_points": -17.452147291037946
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.97580235338228,
+              "improvement_pct_points": -0.053652975510459555
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 51.85069990795085,
+              "improvement_pct_points": -47.96858090433082
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 16.540330808818336,
+              "improvement_pct_points": -16.10558080265196
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 16.12658466675513,
+              "improvement_pct_points": -15.980905151021148
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 100.09472478579289,
+            "improvement_pct_points": -15.32340080821615
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 93.9210992690586,
+            "improvement_pct_points": -17.452147291037946
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.97580235338228,
+            "improvement_pct_points": -0.053652975510459555
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 51.85069990795085,
+            "improvement_pct_points": -47.96858090433082
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 16.540330808818336,
+            "improvement_pct_points": -16.10558080265196
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 16.12658466675513,
+            "improvement_pct_points": -15.980905151021148
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 16.540330808818336,
+          "improvement_pct_points": -16.10558080265196
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 16.12658466675513,
+          "improvement_pct_points": -15.980905151021148
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 51.85069990795085,
+          "improvement_pct_points": -47.96858090433082
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_nx_py",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Open to the -X branch, execute a z-family +Y/-Y excitation-return pair, then close back to +Z. Intended as the safest dKg_zz-targeting motif with net closure.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "+Y",
+        "-X",
+        "+Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 400.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 4,
+        "tail_total_time_s": 400.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.10024891145357,
+          "median_pct_error": 1.3922767580867206,
+          "max_pct_error": 100.66577776291976
+        },
+        "key_param_errors": {
+          "dKa_yy": 100.66577776291976,
+          "dKg_zz": 94.99255518120151,
+          "Ka2_y": 99.96424853685856,
+          "Ka2_z": 63.084347174161536,
+          "dKg_xz": 20.15780512531587,
+          "dKa_xz": 19.571446121064238
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_nx_py_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 17.10024891145357,
+            "improvement_pct_points": -1.8099486374211278,
+            "relative_improvement_pct": -11.837234096016862
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 1.3922767580867206,
+            "improvement_pct_points": 0.09108607602545837,
+            "relative_improvement_pct": 6.140512215271669
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 100.66577776291976,
+            "improvement_pct_points": 21.916918800913024,
+            "relative_improvement_pct": 17.879292441164544
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 100.66577776291976,
+              "improvement_pct_points": 21.916918800913024
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 94.99255518120151,
+              "improvement_pct_points": -9.42180166922995
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.96424853685856,
+              "improvement_pct_points": -0.022953095594502315
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 63.084347174161536,
+              "improvement_pct_points": 1.6199628743639352
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 20.15780512531587,
+              "improvement_pct_points": -1.4771701560968218
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 19.571446121064238,
+              "improvement_pct_points": -0.7173650523149782
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 100.66577776291976,
+            "improvement_pct_points": 21.916918800913024
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 94.99255518120151,
+            "improvement_pct_points": -9.42180166922995
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.96424853685856,
+            "improvement_pct_points": -0.022953095594502315
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 63.084347174161536,
+            "improvement_pct_points": 1.6199628743639352
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 20.15780512531587,
+            "improvement_pct_points": -1.4771701560968218
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 19.571446121064238,
+            "improvement_pct_points": -0.7173650523149782
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 17.10024891145357,
+            "improvement_pct_points": -6.086086101368236,
+            "relative_improvement_pct": -55.256910636870124
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 1.3922767580867206,
+            "improvement_pct_points": -0.3319388274186754,
+            "relative_improvement_pct": -31.305003604798316
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 100.66577776291976,
+            "improvement_pct_points": -0.7436283850479413,
+            "relative_improvement_pct": -0.7442077554154584
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 100.66577776291976,
+              "improvement_pct_points": -15.894453785343018
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 94.99255518120151,
+              "improvement_pct_points": -18.523603203180855
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.96424853685856,
+              "improvement_pct_points": -0.0420991589867441
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 63.084347174161536,
+              "improvement_pct_points": -59.20222817054151
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 20.15780512531587,
+              "improvement_pct_points": -19.723055119149496
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 19.571446121064238,
+              "improvement_pct_points": -19.425766605330256
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 100.66577776291976,
+            "improvement_pct_points": -15.894453785343018
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 94.99255518120151,
+            "improvement_pct_points": -18.523603203180855
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.96424853685856,
+            "improvement_pct_points": -0.0420991589867441
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 63.084347174161536,
+            "improvement_pct_points": -59.20222817054151
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 20.15780512531587,
+            "improvement_pct_points": -19.723055119149496
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 19.571446121064238,
+            "improvement_pct_points": -19.425766605330256
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 20.15780512531587,
+          "improvement_pct_points": -19.723055119149496
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 19.571446121064238,
+          "improvement_pct_points": -19.425766605330256
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 63.084347174161536,
+          "improvement_pct_points": -59.20222817054151
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_px_ny",
+      "batch": "batch1",
+      "family": "z_return_closed",
+      "rationale": "Closed z-family excitation-return pair on the +X / -Y branch.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "tail_faces": [
+        "+X",
+        "-Y",
+        "+X",
+        "+Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 400.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 4,
+        "tail_total_time_s": 400.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.107271248134886,
+          "median_pct_error": 3.0124770960278315,
+          "max_pct_error": 99.9827100450128
+        },
+        "key_param_errors": {
+          "dKa_yy": 84.11595627746874,
+          "dKg_zz": 82.70026588289569,
+          "Ka2_y": 99.9827100450128,
+          "Ka2_z": 53.58530361869241,
+          "dKg_xz": 17.02233683944947,
+          "dKa_xz": 16.38666476454237
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_px_ny_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 17.107271248134886,
+            "improvement_pct_points": -1.8169709741024445,
+            "relative_improvement_pct": -11.88316083751613
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 3.0124770960278315,
+            "improvement_pct_points": -1.5291142619156526,
+            "relative_improvement_pct": -103.08430457817535
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.9827100450128,
+            "improvement_pct_points": 22.59998651881999,
+            "relative_improvement_pct": 18.436522569930123
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 84.11595627746874,
+              "improvement_pct_points": 38.46674028636404
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 82.70026588289569,
+              "improvement_pct_points": 2.8704876290758676
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.9827100450128,
+              "improvement_pct_points": -0.04141460374873418
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 53.58530361869241,
+              "improvement_pct_points": 11.119006429833064
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 17.02233683944947,
+              "improvement_pct_points": 1.6582981297695802
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 16.38666476454237,
+              "improvement_pct_points": 2.467416304206889
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 84.11595627746874,
+            "improvement_pct_points": 38.46674028636404
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 82.70026588289569,
+            "improvement_pct_points": 2.8704876290758676
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.9827100450128,
+            "improvement_pct_points": -0.04141460374873418
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 53.58530361869241,
+            "improvement_pct_points": 11.119006429833064
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 17.02233683944947,
+            "improvement_pct_points": 1.6582981297695802
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 16.38666476454237,
+            "improvement_pct_points": 2.467416304206889
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 17.107271248134886,
+            "improvement_pct_points": -6.093108438049553,
+            "relative_improvement_pct": -55.32066797187962
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 3.0124770960278315,
+            "improvement_pct_points": -1.9521391653597864,
+            "relative_improvement_pct": -184.10537894554798
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.9827100450128,
+            "improvement_pct_points": -0.060560667140975966,
+            "relative_improvement_pct": -0.060607850729827654
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 84.11595627746874,
+              "improvement_pct_points": 0.6553677001080018
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 82.70026588289569,
+              "improvement_pct_points": -6.231313904875037
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.9827100450128,
+              "improvement_pct_points": -0.060560667140975966
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 53.58530361869241,
+              "improvement_pct_points": -49.70318461507238
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 17.02233683944947,
+              "improvement_pct_points": -16.587586833283094
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 16.38666476454237,
+              "improvement_pct_points": -16.24098524880839
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 84.11595627746874,
+            "improvement_pct_points": 0.6553677001080018
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 82.70026588289569,
+            "improvement_pct_points": -6.231313904875037
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.9827100450128,
+            "improvement_pct_points": -0.060560667140975966
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 53.58530361869241,
+            "improvement_pct_points": -49.70318461507238
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 17.02233683944947,
+            "improvement_pct_points": -16.587586833283094
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 16.38666476454237,
+            "improvement_pct_points": -16.24098524880839
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 17.02233683944947,
+          "improvement_pct_points": -16.587586833283094
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 16.38666476454237,
+          "improvement_pct_points": -16.24098524880839
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 53.58530361869241,
+          "improvement_pct_points": -49.70318461507238
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_sweep_nx_burst20",
+      "batch": "batch2",
+      "family": "z_sweep_closed_short",
+      "rationale": "Intermediate-duration version of the best batch-1 geometry.",
+      "timing_policy": "burst20",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "+Y",
+        "+X",
+        "-Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 80.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": false,
+        "tail_length": 4,
+        "tail_total_time_s": 80.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.22281235383236,
+          "median_pct_error": 4.6615026550431855,
+          "max_pct_error": 103.773415322431
+        },
+        "key_param_errors": {
+          "dKa_yy": 98.13813029492424,
+          "dKg_zz": 103.773415322431,
+          "Ka2_y": 100.01030006334952,
+          "Ka2_z": 49.169253442273295,
+          "dKg_xz": 15.714805130994925,
+          "dKa_xz": 14.457742422238265
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_sweep_nx_burst20_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 17.22281235383236,
+            "improvement_pct_points": -1.9325120797999187,
+            "relative_improvement_pct": -12.638810521477522
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 4.6615026550431855,
+            "improvement_pct_points": -3.1781398209310066,
+            "relative_improvement_pct": -214.2523560550972
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 103.773415322431,
+            "improvement_pct_points": 18.809281241401777,
+            "relative_improvement_pct": 15.344156857903002
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 98.13813029492424,
+              "improvement_pct_points": 24.444566268908545
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 103.773415322431,
+              "improvement_pct_points": -18.202661810459446
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 100.01030006334952,
+              "improvement_pct_points": -0.06900462208545832
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 49.169253442273295,
+              "improvement_pct_points": 15.535056606252176
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 15.714805130994925,
+              "improvement_pct_points": 2.965829838224124
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 14.457742422238265,
+              "improvement_pct_points": 4.396338646510994
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 98.13813029492424,
+            "improvement_pct_points": 24.444566268908545
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 103.773415322431,
+            "improvement_pct_points": -18.202661810459446
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 100.01030006334952,
+            "improvement_pct_points": -0.06900462208545832
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 49.169253442273295,
+            "improvement_pct_points": 15.535056606252176
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 15.714805130994925,
+            "improvement_pct_points": 2.965829838224124
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 14.457742422238265,
+            "improvement_pct_points": 4.396338646510994
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 17.22281235383236,
+            "improvement_pct_points": -6.208649543747027,
+            "relative_improvement_pct": -56.36969101330113
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 4.6615026550431855,
+            "improvement_pct_points": -3.60116472437514,
+            "relative_improvement_pct": -339.62424810232875
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 103.773415322431,
+            "improvement_pct_points": -3.851265944559188,
+            "relative_improvement_pct": -3.8542665150196087
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 98.13813029492424,
+              "improvement_pct_points": -13.366806317347496
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 103.773415322431,
+              "improvement_pct_points": -27.30446334441035
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 100.01030006334952,
+              "improvement_pct_points": -0.08815068547770011
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 49.169253442273295,
+              "improvement_pct_points": -45.28713443865327
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 15.714805130994925,
+              "improvement_pct_points": -15.28005512482855
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 14.457742422238265,
+              "improvement_pct_points": -14.312062906504284
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 98.13813029492424,
+            "improvement_pct_points": -13.366806317347496
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 103.773415322431,
+            "improvement_pct_points": -27.30446334441035
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 100.01030006334952,
+            "improvement_pct_points": -0.08815068547770011
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 49.169253442273295,
+            "improvement_pct_points": -45.28713443865327
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 15.714805130994925,
+            "improvement_pct_points": -15.28005512482855
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 14.457742422238265,
+            "improvement_pct_points": -14.312062906504284
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 15.714805130994925,
+          "improvement_pct_points": -15.28005512482855
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 14.457742422238265,
+          "improvement_pct_points": -14.312062906504284
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 49.169253442273295,
+          "improvement_pct_points": -45.28713443865327
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_then_yswap_px",
+      "batch": "batch1",
+      "family": "z_then_yswap",
+      "rationale": "Mirror of tail_z_return_then_yswap_nx.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ],
+        [
+          "inner",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "+X",
+        "-Y",
+        "+X",
+        "+Z",
+        "-X",
+        "+Z"
+      ],
+      "tail_length": 6,
+      "tail_total_time_s": 600.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 4,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 6,
+        "tail_total_time_s": 600.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.34557695600058,
+          "median_pct_error": 1.0813134063383103,
+          "max_pct_error": 99.98861485545054
+        },
+        "key_param_errors": {
+          "dKa_yy": 85.10465593960885,
+          "dKg_zz": 90.5232060393087,
+          "Ka2_y": 99.98861485545054,
+          "Ka2_z": 55.30626164552254,
+          "dKg_xz": 16.890037425438383,
+          "dKa_xz": 16.27039058000437
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_then_yswap_px_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 17.34557695600058,
+            "improvement_pct_points": -2.05527668196814,
+            "relative_improvement_pct": -13.441702550855863
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 1.0813134063383103,
+            "improvement_pct_points": 0.40204942777386865,
+            "relative_improvement_pct": 27.103916757797354
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.98861485545054,
+            "improvement_pct_points": 22.594081708382248,
+            "relative_improvement_pct": 18.431705568344043
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 85.10465593960885,
+              "improvement_pct_points": 37.47804062422394
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 90.5232060393087,
+              "improvement_pct_points": -4.952452527337144
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.98861485545054,
+              "improvement_pct_points": -0.04731941418647523
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 55.30626164552254,
+              "improvement_pct_points": 9.398048403002932
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 16.890037425438383,
+              "improvement_pct_points": 1.7905975437806667
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 16.27039058000437,
+              "improvement_pct_points": 2.583690488744889
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 85.10465593960885,
+            "improvement_pct_points": 37.47804062422394
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 90.5232060393087,
+            "improvement_pct_points": -4.952452527337144
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.98861485545054,
+            "improvement_pct_points": -0.04731941418647523
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 55.30626164552254,
+            "improvement_pct_points": 9.398048403002932
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 16.890037425438383,
+            "improvement_pct_points": 1.7905975437806667
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 16.27039058000437,
+            "improvement_pct_points": 2.583690488744889
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 17.34557695600058,
+            "improvement_pct_points": -6.331414145915248,
+            "relative_improvement_pct": -57.484297763582774
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 1.0813134063383103,
+            "improvement_pct_points": -0.020975475670265142,
+            "relative_improvement_pct": -1.9781878082065738
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.98861485545054,
+            "improvement_pct_points": -0.06646547757871701,
+            "relative_improvement_pct": -0.06651726168075811
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 85.10465593960885,
+              "improvement_pct_points": -0.3333319620321049
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 90.5232060393087,
+              "improvement_pct_points": -14.054254061288049
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.98861485545054,
+              "improvement_pct_points": -0.06646547757871701
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 55.30626164552254,
+              "improvement_pct_points": -51.42414264190251
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 16.890037425438383,
+              "improvement_pct_points": -16.455287419272008
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 16.27039058000437,
+              "improvement_pct_points": -16.12471106427039
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 85.10465593960885,
+            "improvement_pct_points": -0.3333319620321049
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 90.5232060393087,
+            "improvement_pct_points": -14.054254061288049
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.98861485545054,
+            "improvement_pct_points": -0.06646547757871701
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 55.30626164552254,
+            "improvement_pct_points": -51.42414264190251
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 16.890037425438383,
+            "improvement_pct_points": -16.455287419272008
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 16.27039058000437,
+            "improvement_pct_points": -16.12471106427039
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 16.890037425438383,
+          "improvement_pct_points": -16.455287419272008
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 16.27039058000437,
+          "improvement_pct_points": -16.12471106427039
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 55.30626164552254,
+          "improvement_pct_points": -51.42414264190251
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_then_yswap_nx",
+      "batch": "batch1",
+      "family": "z_then_yswap",
+      "rationale": "First perform the safe closed z-return motif, then add one extra mirrored y-pair. Intended to preserve the dKg_zz benefit while giving dKa_yy / Ka2_y one more pure-y correction opportunity.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "inner",
+          -90
+        ],
+        [
+          "inner",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "+Y",
+        "-X",
+        "+Z",
+        "+X",
+        "+Z"
+      ],
+      "tail_length": 6,
+      "tail_total_time_s": 600.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 4,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 6,
+        "tail_total_time_s": 600.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.62790355697119,
+          "median_pct_error": 2.7161436039888915,
+          "max_pct_error": 99.96886518592639
+        },
+        "key_param_errors": {
+          "dKa_yy": 96.44217622552311,
+          "dKg_zz": 99.75516961514522,
+          "Ka2_y": 99.96886518592639,
+          "Ka2_z": 59.17917588123173,
+          "dKg_xz": 18.09229332772778,
+          "dKa_xz": 17.310753461009583
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_then_yswap_nx_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 17.62790355697119,
+            "improvement_pct_points": -2.3376032829387494,
+            "relative_improvement_pct": -15.288145039955214
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 2.7161436039888915,
+            "improvement_pct_points": -1.2327807698767126,
+            "relative_improvement_pct": -83.10716309772958
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.96886518592639,
+            "improvement_pct_points": 22.613831377906394,
+            "relative_improvement_pct": 18.447816871225896
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 96.44217622552311,
+              "improvement_pct_points": 26.14052033830967
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 99.75516961514522,
+              "improvement_pct_points": -14.18441610317366
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.96886518592639,
+              "improvement_pct_points": -0.027569744662329754
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 59.17917588123173,
+              "improvement_pct_points": 5.525134167293743
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 18.09229332772778,
+              "improvement_pct_points": 0.5883416414912688
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 17.310753461009583,
+              "improvement_pct_points": 1.543327607739677
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 96.44217622552311,
+            "improvement_pct_points": 26.14052033830967
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 99.75516961514522,
+            "improvement_pct_points": -14.18441610317366
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.96886518592639,
+            "improvement_pct_points": -0.027569744662329754
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 59.17917588123173,
+            "improvement_pct_points": 5.525134167293743
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 18.09229332772778,
+            "improvement_pct_points": 0.5883416414912688
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 17.310753461009583,
+            "improvement_pct_points": 1.543327607739677
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 17.62790355697119,
+            "improvement_pct_points": -6.613740746885858,
+            "relative_improvement_pct": -60.04760289933119
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 2.7161436039888915,
+            "improvement_pct_points": -1.6558056733208464,
+            "relative_improvement_pct": -156.15829873006982
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.96886518592639,
+            "improvement_pct_points": -0.04671580805457154,
+            "relative_improvement_pct": -0.046752204936973615
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 96.44217622552311,
+              "improvement_pct_points": -11.670852247946371
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 99.75516961514522,
+              "improvement_pct_points": -23.286217637124565
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.96886518592639,
+              "improvement_pct_points": -0.04671580805457154
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 59.17917588123173,
+              "improvement_pct_points": -55.2970568776117
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 18.09229332772778,
+              "improvement_pct_points": -17.657543321561405
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 17.310753461009583,
+              "improvement_pct_points": -17.1650739452756
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 96.44217622552311,
+            "improvement_pct_points": -11.670852247946371
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 99.75516961514522,
+            "improvement_pct_points": -23.286217637124565
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.96886518592639,
+            "improvement_pct_points": -0.04671580805457154
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 59.17917588123173,
+            "improvement_pct_points": -55.2970568776117
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 18.09229332772778,
+            "improvement_pct_points": -17.657543321561405
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 17.310753461009583,
+            "improvement_pct_points": -17.1650739452756
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 18.09229332772778,
+          "improvement_pct_points": -17.657543321561405
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 17.310753461009583,
+          "improvement_pct_points": -17.1650739452756
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 59.17917588123173,
+          "improvement_pct_points": -55.2970568776117
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_px_ny_burst20",
+      "batch": "batch2",
+      "family": "z_return_closed_short",
+      "rationale": "Intermediate-duration short z-return tail on the +X/-Y branch, to check whether 10 s nodes are too short but 100 s nodes are too long.",
+      "timing_policy": "burst20",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "tail_faces": [
+        "+X",
+        "-Y",
+        "+X",
+        "+Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 80.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 4,
+        "tail_total_time_s": 80.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.705651780526615,
+          "median_pct_error": 2.8219193802947116,
+          "max_pct_error": 99.98298493789368
+        },
+        "key_param_errors": {
+          "dKa_yy": 92.648668413205,
+          "dKg_zz": 98.81570897105138,
+          "Ka2_y": 99.98298493789368,
+          "Ka2_z": 64.27374254668604,
+          "dKg_xz": 20.1664535653086,
+          "dKa_xz": 19.092911785141695
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_px_ny_burst20_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 17.705651780526615,
+            "improvement_pct_points": -2.415351506494174,
+            "relative_improvement_pct": -15.796625724847091
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 2.8219193802947116,
+            "improvement_pct_points": -1.3385565461825326,
+            "relative_improvement_pct": -90.23797249064044
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.98298493789368,
+            "improvement_pct_points": 22.599711625939108,
+            "relative_improvement_pct": 18.43629831896438
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 92.648668413205,
+              "improvement_pct_points": 29.934028150627782
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 98.81570897105138,
+              "improvement_pct_points": -13.244955459079819
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.98298493789368,
+              "improvement_pct_points": -0.04168949662961552
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 64.27374254668604,
+              "improvement_pct_points": 0.43056750183943393
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 20.1664535653086,
+              "improvement_pct_points": -1.4858185960895511
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 19.092911785141695,
+              "improvement_pct_points": -0.23883071639243525
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 92.648668413205,
+            "improvement_pct_points": 29.934028150627782
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 98.81570897105138,
+            "improvement_pct_points": -13.244955459079819
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.98298493789368,
+            "improvement_pct_points": -0.04168949662961552
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 64.27374254668604,
+            "improvement_pct_points": 0.43056750183943393
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 20.1664535653086,
+            "improvement_pct_points": -1.4858185960895511
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 19.092911785141695,
+            "improvement_pct_points": -0.23883071639243525
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 17.705651780526615,
+            "improvement_pct_points": -6.6914889704412825,
+            "relative_improvement_pct": -60.75349607429165
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 2.8219193802947116,
+            "improvement_pct_points": -1.7615814496266664,
+            "relative_improvement_pct": -166.13396528376728
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.98298493789368,
+            "improvement_pct_points": -0.060835560021857304,
+            "relative_improvement_pct": -0.06088295778326162
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 92.648668413205,
+              "improvement_pct_points": -7.87734443562826
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 98.81570897105138,
+              "improvement_pct_points": -22.346756993030723
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.98298493789368,
+              "improvement_pct_points": -0.060835560021857304
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 64.27374254668604,
+              "improvement_pct_points": -60.39162354306601
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 20.1664535653086,
+              "improvement_pct_points": -19.731703559142225
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 19.092911785141695,
+              "improvement_pct_points": -18.947232269407714
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 92.648668413205,
+            "improvement_pct_points": -7.87734443562826
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 98.81570897105138,
+            "improvement_pct_points": -22.346756993030723
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.98298493789368,
+            "improvement_pct_points": -0.060835560021857304
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 64.27374254668604,
+            "improvement_pct_points": -60.39162354306601
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 20.1664535653086,
+            "improvement_pct_points": -19.731703559142225
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 19.092911785141695,
+            "improvement_pct_points": -18.947232269407714
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 20.1664535653086,
+          "improvement_pct_points": -19.731703559142225
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 19.092911785141695,
+          "improvement_pct_points": -18.947232269407714
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 64.27374254668604,
+          "improvement_pct_points": -60.39162354306601
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_sweep_nx_burst10",
+      "batch": "batch2",
+      "family": "z_sweep_closed_short",
+      "rationale": "Short burst version of the batch-1 best family (closed z sweep on the -X branch). Tests whether keeping the same geometry but dramatically shrinking dwell can preserve dKg_zz benefit without wrecking guard channels.",
+      "timing_policy": "burst10",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "+Y",
+        "+X",
+        "-Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 40.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": false,
+        "tail_length": 4,
+        "tail_total_time_s": 40.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 17.776498190923853,
+          "median_pct_error": 4.69018407992376,
+          "max_pct_error": 109.70849245330578
+        },
+        "key_param_errors": {
+          "dKa_yy": 97.03795209749244,
+          "dKg_zz": 109.70849245330578,
+          "Ka2_y": 100.08179007082599,
+          "Ka2_z": 59.002672768426066,
+          "dKg_xz": 18.689110140169813,
+          "dKa_xz": 17.448910374249856
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_sweep_nx_burst10_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 17.776498190923853,
+            "improvement_pct_points": -2.4861979168914115,
+            "relative_improvement_pct": -16.259967903401662
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 4.69018407992376,
+            "improvement_pct_points": -3.2068212458115815,
+            "relative_improvement_pct": -216.18589680595073
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 109.70849245330578,
+            "improvement_pct_points": 12.874204110527003,
+            "relative_improvement_pct": 10.502464435364242
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 97.03795209749244,
+              "improvement_pct_points": 25.544744466340347
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 109.70849245330578,
+              "improvement_pct_points": -24.13773894133422
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 100.08179007082599,
+              "improvement_pct_points": -0.14049462956192826
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 59.002672768426066,
+              "improvement_pct_points": 5.701637280099405
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 18.689110140169813,
+              "improvement_pct_points": -0.008475170950763555
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 17.448910374249856,
+              "improvement_pct_points": 1.4051706944994038
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 97.03795209749244,
+            "improvement_pct_points": 25.544744466340347
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 109.70849245330578,
+            "improvement_pct_points": -24.13773894133422
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 100.08179007082599,
+            "improvement_pct_points": -0.14049462956192826
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 59.002672768426066,
+            "improvement_pct_points": 5.701637280099405
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 18.689110140169813,
+            "improvement_pct_points": -0.008475170950763555
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 17.448910374249856,
+            "improvement_pct_points": 1.4051706944994038
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 17.776498190923853,
+            "improvement_pct_points": -6.76233538083852,
+            "relative_improvement_pct": -61.39672617374473
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 4.69018407992376,
+            "improvement_pct_points": -3.629846149255715,
+            "relative_improvement_pct": -342.3291805631061
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 109.70849245330578,
+            "improvement_pct_points": -9.786343075433962,
+            "relative_improvement_pct": -9.79396774025078
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 97.03795209749244,
+              "improvement_pct_points": -12.266628119915694
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 109.70849245330578,
+              "improvement_pct_points": -33.239540475285125
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 100.08179007082599,
+              "improvement_pct_points": -0.15964069295417005
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 59.002672768426066,
+              "improvement_pct_points": -55.12055376480604
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 18.689110140169813,
+              "improvement_pct_points": -18.254360134003438
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 17.448910374249856,
+              "improvement_pct_points": -17.303230858515875
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 97.03795209749244,
+            "improvement_pct_points": -12.266628119915694
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 109.70849245330578,
+            "improvement_pct_points": -33.239540475285125
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 100.08179007082599,
+            "improvement_pct_points": -0.15964069295417005
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 59.002672768426066,
+            "improvement_pct_points": -55.12055376480604
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 18.689110140169813,
+            "improvement_pct_points": -18.254360134003438
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 17.448910374249856,
+            "improvement_pct_points": -17.303230858515875
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 18.689110140169813,
+          "improvement_pct_points": -18.254360134003438
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 17.448910374249856,
+          "improvement_pct_points": -17.303230858515875
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 59.002672768426066,
+          "improvement_pct_points": -55.12055376480604
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_y_pair_neg",
+      "batch": "batch1",
+      "family": "y_pair",
+      "rationale": "Opposite-sign y-only closure loop. Same theory as tail_y_pair_pos but on the mirrored branch.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "tail_faces": [
+        "+X",
+        "+Z"
+      ],
+      "tail_length": 2,
+      "tail_total_time_s": 200.0,
+      "theory_tags": {
+        "z_outer_hits": 0,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 2,
+        "tail_total_time_s": 200.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 18.36577765277993,
+          "median_pct_error": 4.5099632548938065,
+          "max_pct_error": 99.96729501310496
+        },
+        "key_param_errors": {
+          "dKa_yy": 94.17709907412771,
+          "dKg_zz": 95.37806829966712,
+          "Ka2_y": 99.96729501310496,
+          "Ka2_z": 59.09366575571246,
+          "dKg_xz": 19.28211321303398,
+          "dKa_xz": 18.36665581188527
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_y_pair_neg_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 18.36577765277993,
+            "improvement_pct_points": -3.075477378747488,
+            "relative_improvement_pct": -20.113910934571898
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 4.5099632548938065,
+            "improvement_pct_points": -3.0266004207816275,
+            "relative_improvement_pct": -204.03641989541322
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 99.96729501310496,
+            "improvement_pct_points": 22.615401550727825,
+            "relative_improvement_pct": 18.449097780249314
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 94.17709907412771,
+              "improvement_pct_points": 28.405597489705073
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 95.37806829966712,
+              "improvement_pct_points": -9.80731478769556
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.96729501310496,
+              "improvement_pct_points": -0.02599957184089874
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 59.09366575571246,
+              "improvement_pct_points": 5.610644292813014
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 19.28211321303398,
+              "improvement_pct_points": -0.6014782438149311
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 18.36665581188527,
+              "improvement_pct_points": 0.48742525686398963
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 94.17709907412771,
+            "improvement_pct_points": 28.405597489705073
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 95.37806829966712,
+            "improvement_pct_points": -9.80731478769556
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.96729501310496,
+            "improvement_pct_points": -0.02599957184089874
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 59.09366575571246,
+            "improvement_pct_points": 5.610644292813014
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 19.28211321303398,
+            "improvement_pct_points": -0.6014782438149311
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 18.36665581188527,
+            "improvement_pct_points": 0.48742525686398963
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 18.36577765277993,
+            "improvement_pct_points": -7.351614842694596,
+            "relative_improvement_pct": -66.74692366053412
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 4.5099632548938065,
+            "improvement_pct_points": -3.449625324225761,
+            "relative_improvement_pct": -325.33263447931097
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 99.96729501310496,
+            "improvement_pct_points": -0.045145635233140524,
+            "relative_improvement_pct": -0.04518080877385351
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 94.17709907412771,
+              "improvement_pct_points": -9.405775096550968
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 95.37806829966712,
+              "improvement_pct_points": -18.909116321646465
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.96729501310496,
+              "improvement_pct_points": -0.045145635233140524
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 59.09366575571246,
+              "improvement_pct_points": -55.21154675209243
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 19.28211321303398,
+              "improvement_pct_points": -18.847363206867605
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 18.36665581188527,
+              "improvement_pct_points": -18.22097629615129
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 94.17709907412771,
+            "improvement_pct_points": -9.405775096550968
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 95.37806829966712,
+            "improvement_pct_points": -18.909116321646465
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.96729501310496,
+            "improvement_pct_points": -0.045145635233140524
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 59.09366575571246,
+            "improvement_pct_points": -55.21154675209243
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 19.28211321303398,
+            "improvement_pct_points": -18.847363206867605
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 18.36665581188527,
+            "improvement_pct_points": -18.22097629615129
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 19.28211321303398,
+          "improvement_pct_points": -18.847363206867605
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 18.36665581188527,
+          "improvement_pct_points": -18.22097629615129
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 59.09366575571246,
+          "improvement_pct_points": -55.21154675209243
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_nx_ny_burst10",
+      "batch": "batch2",
+      "family": "z_return_closed_short",
+      "rationale": "Short burst version of the -X/-Y closed z-return motif, included because it had the cleanest median among the batch-1 return pairs.",
+      "timing_policy": "burst10",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "-Y",
+        "-X",
+        "+Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 40.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 4,
+        "tail_total_time_s": 40.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 18.47805394371149,
+          "median_pct_error": 5.132161432662363,
+          "max_pct_error": 107.74220207426708
+        },
+        "key_param_errors": {
+          "dKa_yy": 97.4216412357312,
+          "dKg_zz": 107.74220207426708,
+          "Ka2_y": 99.97758082094657,
+          "Ka2_z": 73.61559557890617,
+          "dKg_xz": 21.89753897071192,
+          "dKa_xz": 21.23108055600353
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_nx_ny_burst10_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 18.47805394371149,
+            "improvement_pct_points": -3.187753669679049,
+            "relative_improvement_pct": -20.84820842330232
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 5.132161432662363,
+            "improvement_pct_points": -3.648798598550184,
+            "relative_improvement_pct": -245.98153025278268
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 107.74220207426708,
+            "improvement_pct_points": 14.8404944895657,
+            "relative_improvement_pct": 12.10651658477571
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 97.4216412357312,
+              "improvement_pct_points": 25.161055328101583
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 107.74220207426708,
+              "improvement_pct_points": -22.171448562295524
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.97758082094657,
+              "improvement_pct_points": -0.036285379682510666
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 73.61559557890617,
+              "improvement_pct_points": -8.911285530380695
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 21.89753897071192,
+              "improvement_pct_points": -3.216904001492871
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 21.23108055600353,
+              "improvement_pct_points": -2.3769994872542703
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 97.4216412357312,
+            "improvement_pct_points": 25.161055328101583
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 107.74220207426708,
+            "improvement_pct_points": -22.171448562295524
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.97758082094657,
+            "improvement_pct_points": -0.036285379682510666
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 73.61559557890617,
+            "improvement_pct_points": -8.911285530380695
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 21.89753897071192,
+            "improvement_pct_points": -3.216904001492871
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 21.23108055600353,
+            "improvement_pct_points": -2.3769994872542703
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 18.47805394371149,
+            "improvement_pct_points": -7.4638911336261575,
+            "relative_improvement_pct": -67.76630473259121
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 5.132161432662363,
+            "improvement_pct_points": -4.071823501994317,
+            "relative_improvement_pct": -384.01186869066777
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 107.74220207426708,
+            "improvement_pct_points": -7.8200526963952655,
+            "relative_improvement_pct": -7.82614539927726
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 97.4216412357312,
+              "improvement_pct_points": -12.650317258154459
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 107.74220207426708,
+              "improvement_pct_points": -31.27325009624643
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.97758082094657,
+              "improvement_pct_points": -0.05543144307475245
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 73.61559557890617,
+              "improvement_pct_points": -69.73347657528615
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 21.89753897071192,
+              "improvement_pct_points": -21.462788964545545
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 21.23108055600353,
+              "improvement_pct_points": -21.08540104026955
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 97.4216412357312,
+            "improvement_pct_points": -12.650317258154459
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 107.74220207426708,
+            "improvement_pct_points": -31.27325009624643
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.97758082094657,
+            "improvement_pct_points": -0.05543144307475245
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 73.61559557890617,
+            "improvement_pct_points": -69.73347657528615
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 21.89753897071192,
+            "improvement_pct_points": -21.462788964545545
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 21.23108055600353,
+            "improvement_pct_points": -21.08540104026955
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 21.89753897071192,
+          "improvement_pct_points": -21.462788964545545
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 21.23108055600353,
+          "improvement_pct_points": -21.08540104026955
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 73.61559557890617,
+          "improvement_pct_points": -69.73347657528615
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_z_return_px_ny_burst10",
+      "batch": "batch2",
+      "family": "z_return_closed_short",
+      "rationale": "Short append-only burst analogue of the helpful localized z-return idea: same +X/-Y branch as the best dKa_yy-friendly batch-1 return motif, but each appended node is only 10 s total.",
+      "timing_policy": "burst10",
+      "tail_actions": [
+        [
+          "inner",
+          -90
+        ],
+        [
+          "outer",
+          -90
+        ],
+        [
+          "outer",
+          90
+        ],
+        [
+          "inner",
+          90
+        ]
+      ],
+      "tail_faces": [
+        "+X",
+        "-Y",
+        "+X",
+        "+Z"
+      ],
+      "tail_length": 4,
+      "tail_total_time_s": 40.0,
+      "theory_tags": {
+        "z_outer_hits": 2,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 4,
+        "tail_total_time_s": 40.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 18.843975126285308,
+          "median_pct_error": 3.6999441347095967,
+          "max_pct_error": 101.85969379081563
+        },
+        "key_param_errors": {
+          "dKa_yy": 98.11736879462754,
+          "dKg_zz": 101.85969379081563,
+          "Ka2_y": 99.98497115504598,
+          "Ka2_z": 78.95153763547246,
+          "dKg_xz": 24.16141596327478,
+          "dKa_xz": 23.30107171633434
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_return_px_ny_burst10_shared_noise0p08_param_errors.json",
+      "status": "rerun",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 18.843975126285308,
+            "improvement_pct_points": -3.5536748522528665,
+            "relative_improvement_pct": -23.24136732807061
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 3.6999441347095967,
+            "improvement_pct_points": -2.2165813005974178,
+            "relative_improvement_pct": -149.42947535314812
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 101.85969379081563,
+            "improvement_pct_points": 20.723002773017157,
+            "relative_improvement_pct": 16.905324612618568
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 98.11736879462754,
+              "improvement_pct_points": 24.465327769205246
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 101.85969379081563,
+              "improvement_pct_points": -16.288940278844066
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.98497115504598,
+              "improvement_pct_points": -0.04367571378192281
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 78.95153763547246,
+              "improvement_pct_points": -14.247227586946991
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 24.16141596327478,
+              "improvement_pct_points": -5.480780994055731
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 23.30107171633434,
+              "improvement_pct_points": -4.446990647585082
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 98.11736879462754,
+            "improvement_pct_points": 24.465327769205246
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 101.85969379081563,
+            "improvement_pct_points": -16.288940278844066
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.98497115504598,
+            "improvement_pct_points": -0.04367571378192281
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 78.95153763547246,
+            "improvement_pct_points": -14.247227586946991
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 24.16141596327478,
+            "improvement_pct_points": -5.480780994055731
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 23.30107171633434,
+            "improvement_pct_points": -4.446990647585082
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 18.843975126285308,
+            "improvement_pct_points": -7.829812316199975,
+            "relative_improvement_pct": -71.08858341035648
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 3.6999441347095967,
+            "improvement_pct_points": -2.6396062040415513,
+            "relative_improvement_pct": -248.94009048403268
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 101.85969379081563,
+            "improvement_pct_points": -1.937544412943808,
+            "relative_improvement_pct": -1.9390539785294945
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 98.11736879462754,
+              "improvement_pct_points": -13.346044817050796
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 101.85969379081563,
+              "improvement_pct_points": -25.39074181279497
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.98497115504598,
+              "improvement_pct_points": -0.0628217771741646
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 78.95153763547246,
+              "improvement_pct_points": -75.06941863185244
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 24.16141596327478,
+              "improvement_pct_points": -23.726665957108406
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 23.30107171633434,
+              "improvement_pct_points": -23.15539220060036
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 98.11736879462754,
+            "improvement_pct_points": -13.346044817050796
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 101.85969379081563,
+            "improvement_pct_points": -25.39074181279497
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.98497115504598,
+            "improvement_pct_points": -0.0628217771741646
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 78.95153763547246,
+            "improvement_pct_points": -75.06941863185244
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 24.16141596327478,
+            "improvement_pct_points": -23.726665957108406
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 23.30107171633434,
+            "improvement_pct_points": -23.15539220060036
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 24.16141596327478,
+          "improvement_pct_points": -23.726665957108406
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 23.30107171633434,
+          "improvement_pct_points": -23.15539220060036
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 78.95153763547246,
+          "improvement_pct_points": -75.06941863185244
+        }
+      }
+    },
+    {
+      "candidate_name": "tail_y_pair_pos",
+      "batch": "batch1",
+      "family": "y_pair",
+      "rationale": "Minimal y-only closure loop from the +Z end state. Probes whether extra inner-axis dwell alone helps dKa_yy / Ka2_y without adding new z-family outer excitation.",
+      "timing_policy": "base100",
+      "tail_actions": [
+        [
+          "inner",
+          90
+        ],
+        [
+          "inner",
+          -90
+        ]
+      ],
+      "tail_faces": [
+        "-X",
+        "+Z"
+      ],
+      "tail_length": 2,
+      "tail_total_time_s": 200.0,
+      "theory_tags": {
+        "z_outer_hits": 0,
+        "x_outer_hits": 0,
+        "y_inner_hits": 2,
+        "closed_to_plusZ_beta0": true,
+        "tail_length": 2,
+        "tail_total_time_s": 200.0
+      },
+      "metrics": {
+        "overall": {
+          "mean_pct_error": 18.901305736804666,
+          "median_pct_error": 3.114488340006966,
+          "max_pct_error": 103.19616631383148
+        },
+        "key_param_errors": {
+          "dKa_yy": 103.19616631383148,
+          "dKg_zz": 96.54618871413864,
+          "Ka2_y": 99.95588441915454,
+          "Ka2_z": 69.26530318974677,
+          "dKg_xz": 22.07420688863734,
+          "dKa_xz": 21.028352143577937
+        }
+      },
+      "run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_y_pair_pos_shared_noise0p08_param_errors.json",
+      "status": "reused_verified",
+      "delta_vs_faithful": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 15.290300274032441,
+            "candidate": 18.901305736804666,
+            "improvement_pct_points": -3.6110054627722246,
+            "relative_improvement_pct": -23.616314905893674
+          },
+          "median_pct_error": {
+            "base": 1.483362834112179,
+            "candidate": 3.114488340006966,
+            "improvement_pct_points": -1.6311255058947869,
+            "relative_improvement_pct": -109.96133032219637
+          },
+          "max_pct_error": {
+            "base": 122.58269656383278,
+            "candidate": 103.19616631383148,
+            "improvement_pct_points": 19.3865302500013,
+            "relative_improvement_pct": 15.815062642145506
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 122.58269656383278,
+              "candidate": 103.19616631383148,
+              "improvement_pct_points": 19.3865302500013
+            },
+            "dKg_zz": {
+              "base": 85.57075351197156,
+              "candidate": 96.54618871413864,
+              "improvement_pct_points": -10.975435202167077
+            },
+            "Ka2_y": {
+              "base": 99.94129544126406,
+              "candidate": 99.95588441915454,
+              "improvement_pct_points": -0.01458897789048308
+            },
+            "Ka2_z": {
+              "base": 64.70431004852547,
+              "candidate": 69.26530318974677,
+              "improvement_pct_points": -4.560993141221303
+            },
+            "dKg_xz": {
+              "base": 18.68063496921905,
+              "candidate": 22.07420688863734,
+              "improvement_pct_points": -3.3935719194182923
+            },
+            "dKa_xz": {
+              "base": 18.85408106874926,
+              "candidate": 21.028352143577937,
+              "improvement_pct_points": -2.1742710748286775
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 103.19616631383148,
+            "improvement_pct_points": 19.3865302500013
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 96.54618871413864,
+            "improvement_pct_points": -10.975435202167077
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.95588441915454,
+            "improvement_pct_points": -0.01458897789048308
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 69.26530318974677,
+            "improvement_pct_points": -4.560993141221303
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 22.07420688863734,
+            "improvement_pct_points": -3.3935719194182923
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 21.028352143577937,
+            "improvement_pct_points": -2.1742710748286775
+          }
+        }
+      },
+      "delta_vs_incumbent": {
+        "overall": {
+          "mean_pct_error": {
+            "base": 11.014162810085333,
+            "candidate": 18.901305736804666,
+            "improvement_pct_points": -7.887142926719333,
+            "relative_improvement_pct": -71.60910059816182
+          },
+          "median_pct_error": {
+            "base": 1.0603379306680452,
+            "candidate": 3.114488340006966,
+            "improvement_pct_points": -2.054150409338921,
+            "relative_improvement_pct": -193.7260141250199
+          },
+          "max_pct_error": {
+            "base": 99.92214937787182,
+            "candidate": 103.19616631383148,
+            "improvement_pct_points": -3.274016935959665,
+            "relative_improvement_pct": -3.2765677643486617
+          },
+          "key_params": {
+            "dKa_yy": {
+              "base": 84.77132397757674,
+              "candidate": 103.19616631383148,
+              "improvement_pct_points": -18.42484233625474
+            },
+            "dKg_zz": {
+              "base": 76.46895197802066,
+              "candidate": 96.54618871413864,
+              "improvement_pct_points": -20.07723673611798
+            },
+            "Ka2_y": {
+              "base": 99.92214937787182,
+              "candidate": 99.95588441915454,
+              "improvement_pct_points": -0.033735041282724865
+            },
+            "Ka2_z": {
+              "base": 3.8821190036200264,
+              "candidate": 69.26530318974677,
+              "improvement_pct_points": -65.38318418612675
+            },
+            "dKg_xz": {
+              "base": 0.43475000616637505,
+              "candidate": 22.07420688863734,
+              "improvement_pct_points": -21.639456882470967
+            },
+            "dKa_xz": {
+              "base": 0.14567951573398194,
+              "candidate": 21.028352143577937,
+              "improvement_pct_points": -20.882672627843956
+            }
+          }
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 103.19616631383148,
+            "improvement_pct_points": -18.42484233625474
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 96.54618871413864,
+            "improvement_pct_points": -20.07723673611798
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.95588441915454,
+            "improvement_pct_points": -0.033735041282724865
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 69.26530318974677,
+            "improvement_pct_points": -65.38318418612675
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 22.07420688863734,
+            "improvement_pct_points": -21.639456882470967
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 21.028352143577937,
+            "improvement_pct_points": -20.882672627843956
+          }
+        }
+      },
+      "guard_vs_incumbent": {
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 22.07420688863734,
+          "improvement_pct_points": -21.639456882470967
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 21.028352143577937,
+          "improvement_pct_points": -20.882672627843956
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 69.26530318974677,
+          "improvement_pct_points": -65.38318418612675
+        }
+      }
+    }
+  ],
+  "best_candidate": {
+    "name": "tail_z_sweep_nx",
+    "family": "z_sweep_closed",
+    "batch": "batch1",
+    "rationale": "Open to -X, keep the z-family outer sweep in the same rotational direction for two nodes, then close. Stronger dKg_zz excitation, but with more risk to already-good channels.",
+    "timing_policy": "base100",
+    "tail_actions": [
+      [
+        "inner",
+        90
+      ],
+      [
+        "outer",
+        90
+      ],
+      [
+        "outer",
+        90
+      ],
+      [
+        "inner",
+        -90
+      ]
+    ],
+    "tail_faces": [
+      "-X",
+      "+Y",
+      "+X",
+      "-Z"
+    ],
+    "theory_tags": {
+      "z_outer_hits": 2,
+      "x_outer_hits": 0,
+      "y_inner_hits": 2,
+      "closed_to_plusZ_beta0": false,
+      "tail_length": 4,
+      "tail_total_time_s": 400.0
+    },
+    "markov42": {
+      "overall": {
+        "mean_pct_error": 15.905936741765055,
+        "median_pct_error": 2.2939942742899664,
+        "max_pct_error": 99.96320399146316
+      },
+      "key_param_errors": {
+        "dKa_yy": 97.42634324229309,
+        "dKg_zz": 71.77263001410894,
+        "Ka2_y": 99.96320399146316,
+        "Ka2_z": 53.55387257825477,
+        "dKg_xz": 17.397018712432914,
+        "dKa_xz": 16.977807893364417
+      }
+    },
+    "markov42_run_json": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3appendtail_tail_z_sweep_nx_shared_noise0p08_param_errors.json",
+    "kf36": null,
+    "kf36_status": "not_run_not_promising",
+    "kf36_run_json": null,
+    "delta_vs_faithful": {
+      "overall": {
+        "mean_pct_error": {
+          "base": 15.290300274032441,
+          "candidate": 15.905936741765055,
+          "improvement_pct_points": -0.6156364677326138,
+          "relative_improvement_pct": -4.02632032529898
+        },
+        "median_pct_error": {
+          "base": 1.483362834112179,
+          "candidate": 2.2939942742899664,
+          "improvement_pct_points": -0.8106314401777874,
+          "relative_improvement_pct": -54.64822372086502
+        },
+        "max_pct_error": {
+          "base": 122.58269656383278,
+          "candidate": 99.96320399146316,
+          "improvement_pct_points": 22.619492572369623,
+          "relative_improvement_pct": 18.452435136790225
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 122.58269656383278,
+            "candidate": 97.42634324229309,
+            "improvement_pct_points": 25.156353321539697
+          },
+          "dKg_zz": {
+            "base": 85.57075351197156,
+            "candidate": 71.77263001410894,
+            "improvement_pct_points": 13.798123497862619
+          },
+          "Ka2_y": {
+            "base": 99.94129544126406,
+            "candidate": 99.96320399146316,
+            "improvement_pct_points": -0.02190855019910032
+          },
+          "Ka2_z": {
+            "base": 64.70431004852547,
+            "candidate": 53.55387257825477,
+            "improvement_pct_points": 11.150437470270703
+          },
+          "dKg_xz": {
+            "base": 18.68063496921905,
+            "candidate": 17.397018712432914,
+            "improvement_pct_points": 1.2836162567861358
+          },
+          "dKa_xz": {
+            "base": 18.85408106874926,
+            "candidate": 16.977807893364417,
+            "improvement_pct_points": 1.876273175384842
+          }
+        }
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 122.58269656383278,
+          "candidate": 97.42634324229309,
+          "improvement_pct_points": 25.156353321539697
+        },
+        "dKg_zz": {
+          "base": 85.57075351197156,
+          "candidate": 71.77263001410894,
+          "improvement_pct_points": 13.798123497862619
+        },
+        "Ka2_y": {
+          "base": 99.94129544126406,
+          "candidate": 99.96320399146316,
+          "improvement_pct_points": -0.02190855019910032
+        },
+        "Ka2_z": {
+          "base": 64.70431004852547,
+          "candidate": 53.55387257825477,
+          "improvement_pct_points": 11.150437470270703
+        },
+        "dKg_xz": {
+          "base": 18.68063496921905,
+          "candidate": 17.397018712432914,
+          "improvement_pct_points": 1.2836162567861358
+        },
+        "dKa_xz": {
+          "base": 18.85408106874926,
+          "candidate": 16.977807893364417,
+          "improvement_pct_points": 1.876273175384842
+        }
+      }
+    },
+    "delta_vs_incumbent": {
+      "overall": {
+        "mean_pct_error": {
+          "base": 11.014162810085333,
+          "candidate": 15.905936741765055,
+          "improvement_pct_points": -4.891773931679722,
+          "relative_improvement_pct": -44.413488487753916
+        },
+        "median_pct_error": {
+          "base": 1.0603379306680452,
+          "candidate": 2.2939942742899664,
+          "improvement_pct_points": -1.2336563436219212,
+          "relative_improvement_pct": -116.3455826619991
+        },
+        "max_pct_error": {
+          "base": 99.92214937787182,
+          "candidate": 99.96320399146316,
+          "improvement_pct_points": -0.041054613591342104,
+          "relative_improvement_pct": -0.04108659976487037
+        },
+        "key_params": {
+          "dKa_yy": {
+            "base": 84.77132397757674,
+            "candidate": 97.42634324229309,
+            "improvement_pct_points": -12.655019264716344
+          },
+          "dKg_zz": {
+            "base": 76.46895197802066,
+            "candidate": 71.77263001410894,
+            "improvement_pct_points": 4.696321963911714
+          },
+          "Ka2_y": {
+            "base": 99.92214937787182,
+            "candidate": 99.96320399146316,
+            "improvement_pct_points": -0.041054613591342104
+          },
+          "Ka2_z": {
+            "base": 3.8821190036200264,
+            "candidate": 53.55387257825477,
+            "improvement_pct_points": -49.67175357463474
+          },
+          "dKg_xz": {
+            "base": 0.43475000616637505,
+            "candidate": 17.397018712432914,
+            "improvement_pct_points": -16.96226870626654
+          },
+          "dKa_xz": {
+            "base": 0.14567951573398194,
+            "candidate": 16.977807893364417,
+            "improvement_pct_points": -16.832128377630436
+          }
+        }
+      },
+      "key_params": {
+        "dKa_yy": {
+          "base": 84.77132397757674,
+          "candidate": 97.42634324229309,
+          "improvement_pct_points": -12.655019264716344
+        },
+        "dKg_zz": {
+          "base": 76.46895197802066,
+          "candidate": 71.77263001410894,
+          "improvement_pct_points": 4.696321963911714
+        },
+        "Ka2_y": {
+          "base": 99.92214937787182,
+          "candidate": 99.96320399146316,
+          "improvement_pct_points": -0.041054613591342104
+        },
+        "Ka2_z": {
+          "base": 3.8821190036200264,
+          "candidate": 53.55387257825477,
+          "improvement_pct_points": -49.67175357463474
+        },
+        "dKg_xz": {
+          "base": 0.43475000616637505,
+          "candidate": 17.397018712432914,
+          "improvement_pct_points": -16.96226870626654
+        },
+        "dKa_xz": {
+          "base": 0.14567951573398194,
+          "candidate": 16.977807893364417,
+          "improvement_pct_points": -16.832128377630436
+        }
+      }
+    },
+    "guard_vs_incumbent": {
+      "dKg_xz": {
+        "base": 0.43475000616637505,
+        "candidate": 17.397018712432914,
+        "improvement_pct_points": -16.96226870626654
+      },
+      "dKa_xz": {
+        "base": 0.14567951573398194,
+        "candidate": 16.977807893364417,
+        "improvement_pct_points": -16.832128377630436
+      },
+      "Ka2_z": {
+        "base": 3.8821190036200264,
+        "candidate": 53.55387257825477,
+        "improvement_pct_points": -49.67175357463474
+      }
+    },
+    "tail_table": [
+      {
+        "seq": 13,
+        "tail_idx": 1,
+        "legal_motor_action": "I(0→90) +90°",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "face_after": "-X",
+        "outer_mode": null,
+        "beta_before": 0,
+        "beta_after": 90
+      },
+      {
+        "seq": 14,
+        "tail_idx": 2,
+        "legal_motor_action": "O[+Z] +90°",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "face_after": "+Y",
+        "outer_mode": "z",
+        "beta_before": 90,
+        "beta_after": 90
+      },
+      {
+        "seq": 15,
+        "tail_idx": 3,
+        "legal_motor_action": "O[+Z] +90°",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "face_after": "+X",
+        "outer_mode": "z",
+        "beta_before": 90,
+        "beta_after": 90
+      },
+      {
+        "seq": 16,
+        "tail_idx": 4,
+        "legal_motor_action": "I(90→0) -90°",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "face_after": "-Z",
+        "outer_mode": null,
+        "beta_before": 90,
+        "beta_after": 0
+      }
+    ],
+    "tail_rows": [
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 1
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 2
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 3
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 4
+      }
+    ],
+    "all_rows": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 1
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 2
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 3
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "rotation_time_s": 10.0,
+        "pre_static_s": 10.0,
+        "post_static_s": 80.0,
+        "node_total_s": 100.0,
+        "segment_role": "tail",
+        "tail_idx": 4
+      }
+    ],
+    "all_actions": [
+      {
+        "pos_id": 1,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 2,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 3,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 4,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 5,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 6,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 7,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 8,
+        "kind": "outer",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          1,
+          0,
+          0
+        ],
+        "outer_mode": "x",
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 9,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": -90,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 10,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 11,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          -1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": -90,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 12,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": -90,
+        "inner_beta_after_deg": 0,
+        "segment_role": "base"
+      },
+      {
+        "pos_id": 13,
+        "kind": "inner",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 0,
+        "inner_beta_after_deg": 90,
+        "segment_role": "tail",
+        "tail_idx": 1
+      },
+      {
+        "pos_id": 14,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "segment_role": "tail",
+        "tail_idx": 2
+      },
+      {
+        "pos_id": 15,
+        "kind": "outer",
+        "motor_angle_deg": 90,
+        "effective_body_axis": [
+          0,
+          0,
+          1
+        ],
+        "outer_mode": "z",
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 90,
+        "segment_role": "tail",
+        "tail_idx": 3
+      },
+      {
+        "pos_id": 16,
+        "kind": "inner",
+        "motor_angle_deg": -90,
+        "effective_body_axis": [
+          0,
+          1,
+          0
+        ],
+        "outer_mode": null,
+        "inner_beta_before_deg": 90,
+        "inner_beta_after_deg": 0,
+        "segment_role": "tail",
+        "tail_idx": 4
+      }
+    ],
+    "all_faces": [
+      {
+        "pos_id": 1,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 2,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          2.220446049250313e-16,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      },
+      {
+        "pos_id": 3,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 4,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 5,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.0,
+          0.0,
+          -1.1102230246251565e-16
+        ],
+        "face_name": "-X",
+        "face_key": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 6,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          0.0,
+          1.0
+        ],
+        "face_name": "+Z",
+        "face_key": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "pos_id": 7,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-Y",
+        "face_key": [
+          0,
+          -1,
+          0
+        ]
+      },
+      {
+        "pos_id": 8,
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      },
+      {
+        "pos_id": 9,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          -1.0,
+          -2.220446049250313e-16,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-X",
+        "face_key": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 10,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.1102230246251565e-16,
+          -1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-Y",
+        "face_key": [
+          0,
+          -1,
+          0
+        ]
+      },
+      {
+        "pos_id": 11,
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.0,
+          0.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 12,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "face_name": "+Z",
+        "face_key": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "pos_id": 13,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          -1.0,
+          0.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "-X",
+        "face_key": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 14,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          -1.1102230246251565e-16,
+          1.0,
+          1.1102230246251565e-16
+        ],
+        "face_name": "+Y",
+        "face_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "pos_id": 15,
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "angle_deg": 90.0,
+        "gravity_body": [
+          1.0,
+          2.220446049250313e-16,
+          1.1102230246251565e-16
+        ],
+        "face_name": "+X",
+        "face_key": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "pos_id": 16,
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "angle_deg": -90.0,
+        "gravity_body": [
+          2.220446049250313e-16,
+          2.220446049250313e-16,
+          -1.0
+        ],
+        "face_name": "-Z",
+        "face_key": [
+          0,
+          0,
+          -1
+        ]
+      }
+    ]
+  },
+  "material_improvement_over_incumbent": false,
+  "scientific_bottom_line": "No appended-tail candidate materially beat the current incumbent. The best append-only result was tail_z_sweep_nx, which shows what tail motif helps most, but the append-only branch still leaves the dominant max channel essentially unresolved.",
+  "mechanism_learning": {
+    "best_family": "z_sweep_closed",
+    "main_blocker": "Stronger z sweeps add excitation, but the extra asymmetry starts to leak into protected channels before Ka2_y is repaired enough."
+  },
+  "files": {
+    "json": "/root/.openclaw/workspace/psins_method_bench/results/ch3_12pos_append_tail_search_noise0p08.json",
+    "report": "/root/.openclaw/workspace/reports/psins_ch3_12pos_append_tail_search_2026-03-31.md"
+  }
+}

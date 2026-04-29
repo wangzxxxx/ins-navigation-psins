@@ -1,0 +1,707 @@
+{
+  "variant": "42state_gm1_round46_scaleblock_reprofile4",
+  "method_file": "/root/.openclaw/workspace/psins_method_bench/methods/markov/method_42state_gm1_round46_scaleblock_reprofile4.py",
+  "source_file": "/root/.openclaw/workspace/tmp_psins_py/psins_py/test_calibration_markov_pruned.py",
+  "param_order": [
+    "eb_x",
+    "eb_y",
+    "eb_z",
+    "db_x",
+    "db_y",
+    "db_z",
+    "dKg_xx",
+    "dKg_yx",
+    "dKg_zx",
+    "dKg_xy",
+    "dKg_yy",
+    "dKg_zy",
+    "dKg_xz",
+    "dKg_yz",
+    "dKg_zz",
+    "dKa_xx",
+    "dKa_xy",
+    "dKa_xz",
+    "dKa_yy",
+    "dKa_yz",
+    "dKa_zz",
+    "Ka2_x",
+    "Ka2_y",
+    "Ka2_z",
+    "rx_x",
+    "rx_y",
+    "rx_z",
+    "ry_x",
+    "ry_y",
+    "ry_z"
+  ],
+  "param_errors": {
+    "eb_x": {
+      "true": 4.84813681109536e-07,
+      "est": 4.676884706115083e-07,
+      "abs_error": 1.7125210498027722e-08,
+      "pct_error": 3.532328225316428
+    },
+    "eb_y": {
+      "true": 9.69627362219072e-07,
+      "est": 8.997488562071757e-07,
+      "abs_error": 6.987850601189639e-08,
+      "pct_error": 7.206738251690183
+    },
+    "eb_z": {
+      "true": 1.4544410433286078e-06,
+      "est": 1.3720390472107876e-06,
+      "abs_error": 8.240199611782026e-08,
+      "pct_error": 5.665543921205394
+    },
+    "db_x": {
+      "true": 0.00097803267715,
+      "est": 0.0010041123628189868,
+      "abs_error": 2.60796856689869e-05,
+      "pct_error": 2.666545431281851
+    },
+    "db_y": {
+      "true": 0.0019560653543,
+      "est": 0.0020085357429226428,
+      "abs_error": 5.2470388622642954e-05,
+      "pct_error": 2.6824455791979442
+    },
+    "db_z": {
+      "true": 0.00293409803145,
+      "est": 0.0030508827606918567,
+      "abs_error": 0.00011678472924185656,
+      "pct_error": 3.980259963711669
+    },
+    "dKg_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -7.3792211512380135e-06,
+      "abs_error": 2.6207788487164763e-06,
+      "pct_error": 26.207788487284034
+    },
+    "dKg_yx": {
+      "true": 0.0001454441043328608,
+      "est": 0.0001422073738750478,
+      "abs_error": 3.2367304578129912e-06,
+      "pct_error": 2.225411935849574
+    },
+    "dKg_zx": {
+      "true": 0.00024240684055476798,
+      "est": 0.00024806178598682683,
+      "abs_error": 5.6549454320588505e-06,
+      "pct_error": 2.332832447763043
+    },
+    "dKg_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.3894596156038974e-05,
+      "abs_error": 4.586771954914623e-06,
+      "pct_error": 9.460896285800802
+    },
+    "dKg_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -1.922739425586073e-05,
+      "abs_error": 7.726057441592715e-07,
+      "pct_error": 3.863028720792494
+    },
+    "dKg_zy": {
+      "true": 0.0002908882086657216,
+      "est": 0.00029241416260669564,
+      "abs_error": 1.5259539409740613e-06,
+      "pct_error": 0.5245843232950131
+    },
+    "dKg_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.41879391976363e-05,
+      "abs_error": 2.7747970242708933e-06,
+      "pct_error": 2.861714852931277
+    },
+    "dKg_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.00019151629298513176,
+      "abs_error": 2.409179458682625e-06,
+      "pct_error": 1.2423223356491404
+    },
+    "dKg_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -3.148430211896702e-05,
+      "abs_error": 1.484302118992531e-06,
+      "pct_error": 4.94767372997931
+    },
+    "dKa_xx": {
+      "true": -9.99999999995449e-06,
+      "est": -9.684125806375121e-06,
+      "abs_error": 3.158741935793685e-07,
+      "pct_error": 3.1587419358080604
+    },
+    "dKa_xy": {
+      "true": 4.84813681109536e-05,
+      "est": 4.645565140491436e-05,
+      "abs_error": 2.025716706039238e-06,
+      "pct_error": 4.1783406388268975
+    },
+    "dKa_xz": {
+      "true": 9.69627362219072e-05,
+      "est": 9.187091776139223e-05,
+      "abs_error": 5.091818460514961e-06,
+      "pct_error": 5.251314741017535
+    },
+    "dKa_yy": {
+      "true": -2.0000000000020002e-05,
+      "est": -2.04571966557765e-05,
+      "abs_error": 4.571966557564977e-07,
+      "pct_error": 2.2859832787802024
+    },
+    "dKa_yz": {
+      "true": 0.0001939254724438144,
+      "est": 0.00019180957528349874,
+      "abs_error": 2.1158971603156454e-06,
+      "pct_error": 1.09108779452822
+    },
+    "dKa_zz": {
+      "true": -2.999999999997449e-05,
+      "est": -2.781591648193249e-05,
+      "abs_error": 2.1840835180420015e-06,
+      "pct_error": 7.280278393479529
+    },
+    "Ka2_x": {
+      "true": 1.0224607248440952e-06,
+      "est": 8.1090621270865e-07,
+      "abs_error": 2.115545121354452e-07,
+      "pct_error": 20.690722586699163
+    },
+    "Ka2_y": {
+      "true": 2.0449214496881904e-06,
+      "est": 1.7794739687358235e-06,
+      "abs_error": 2.654474809523669e-07,
+      "pct_error": 12.980815521928351
+    },
+    "Ka2_z": {
+      "true": 3.0673821745322856e-06,
+      "est": 2.5898890444335056e-06,
+      "abs_error": 4.774931300987801e-07,
+      "pct_error": 15.56679614504144
+    },
+    "rx_x": {
+      "true": 0.01,
+      "est": 0.009880401015680645,
+      "abs_error": 0.00011959898431935546,
+      "pct_error": 1.1959898431935547
+    },
+    "rx_y": {
+      "true": 0.02,
+      "est": 0.01963059629985301,
+      "abs_error": 0.0003694037001469898,
+      "pct_error": 1.8470185007349489
+    },
+    "rx_z": {
+      "true": 0.03,
+      "est": 0.029407119417225867,
+      "abs_error": 0.0005928805827741315,
+      "pct_error": 1.9762686092471053
+    },
+    "ry_x": {
+      "true": 0.04,
+      "est": 0.03907223441326653,
+      "abs_error": 0.0009277655867334714,
+      "pct_error": 2.3194139668336784
+    },
+    "ry_y": {
+      "true": 0.05,
+      "est": 0.0496076866881521,
+      "abs_error": 0.00039231331184789997,
+      "pct_error": 0.7846266236957999
+    },
+    "ry_z": {
+      "true": 0.06,
+      "est": 0.05877810246839663,
+      "abs_error": 0.001221897531603365,
+      "pct_error": 2.0364958860056084
+    }
+  },
+  "focus_scale_pct": {
+    "dKg_xx": 26.207788487284034,
+    "dKg_xy": 9.460896285800802,
+    "dKg_yy": 3.863028720792494,
+    "dKg_zz": 4.94767372997931,
+    "dKa_xx": 3.1587419358080604
+  },
+  "lever_guard_pct": {
+    "rx_y": 1.8470185007349489,
+    "ry_z": 2.0364958860056084
+  },
+  "overall": {
+    "mean_pct_error": 5.401466965252276,
+    "median_pct_error": 3.0102283943696686,
+    "max_pct_error": 26.207788487284034
+  },
+  "extra": {
+    "iter_bounds": [
+      4902,
+      9804,
+      14706
+    ],
+    "round45_baseline": {
+      "profile": {
+        "12": -2.5,
+        "15": 1.057,
+        "16": 1.33,
+        "20": -2.12,
+        "21": -2.75
+      },
+      "rx_y_guard_mult": 1.0395,
+      "ry_z_guard_mult": 1.00245,
+      "focus_scale_pct": {
+        "dKg_xx": 26.72827143735908,
+        "dKg_xy": 9.46181939572527,
+        "dKg_yy": 4.09338508699654,
+        "dKg_zz": 4.991776264196545,
+        "dKa_xx": 3.3988518832894026
+      },
+      "lever_guard_pct": {
+        "rx_y": 1.8611799466300947,
+        "ry_z": 2.0462673192622045
+      },
+      "overall": {
+        "mean_pct_error": 5.436797934214955,
+        "median_pct_error": 3.130285852058491,
+        "max_pct_error": 26.72827143735908
+      }
+    },
+    "round29_reference": {
+      "focus_scale_pct": {
+        "dKg_xx": 39.74099863098036,
+        "dKg_xy": 10.432735618986317,
+        "dKg_yy": 14.30585064131308,
+        "dKg_zz": 9.666644826830554,
+        "dKa_xx": 16.604899156855776
+      },
+      "lever_guard_pct": {
+        "rx_y": 1.734723475976807e-14,
+        "ry_z": 2.285667434048788
+      },
+      "overall": {
+        "mean_pct_error": 6.785338466740472,
+        "median_pct_error": 3.1970407410204973,
+        "max_pct_error": 39.74099863098036
+      }
+    },
+    "selected_state_labels": {
+      "12": "dKg_xx",
+      "15": "dKg_xy",
+      "16": "dKg_yy",
+      "20": "dKg_zz",
+      "21": "dKa_xx"
+    },
+    "selected_xk": {
+      "12": 5.204791795739925e-07,
+      "15": 4.452685897748184e-07,
+      "16": -1.5356827860860753e-06,
+      "20": -6.615162403066951e-07,
+      "21": 4.802158960391099e-07
+    },
+    "profile_candidate_count": 8,
+    "profile_candidates_considered": [
+      {
+        "name": "C1_x12_-2.55_hold_round45_aux",
+        "profile": {
+          "12": -2.55,
+          "15": 1.057,
+          "16": 1.33,
+          "20": -2.12,
+          "21": -2.75
+        },
+        "rationale": "First controlled continuation from Round45: push only state12 to -2.55 while freezing state15/state16/state20/state21 at the Round45 winner.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.468030279845344,
+          "dKg_xy": 9.461817064830443,
+          "dKg_yy": 4.09338508699654,
+          "dKg_zz": 4.991776264196545,
+          "dKa_xx": 3.3988518832894026
+        },
+        "focus_scale_sum": 48.413860579158275,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.428123067003944,
+          "median_pct_error": 3.1302845880976156,
+          "max_pct_error": 26.468030279845344
+        },
+        "applied_feedback": {
+          "12": -1.3272219079136808e-06,
+          "15": 4.70648899391983e-07,
+          "16": -2.0424581054944804e-06,
+          "20": 1.4024144294501938e-06,
+          "21": -1.3205937141075522e-06
+        }
+      },
+      {
+        "name": "C2_x12_-2.60_hold_round45_aux",
+        "profile": {
+          "12": -2.6,
+          "15": 1.057,
+          "16": 1.33,
+          "20": -2.12,
+          "21": -2.75
+        },
+        "rationale": "Second controlled continuation: test whether a slightly deeper state12 push to -2.60 keeps driving dKg_xx down cleanly before touching the other four blocks.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.20778912011116,
+          "dKg_xy": 9.46181473393563,
+          "dKg_yy": 4.09338508699654,
+          "dKg_zz": 4.991776264196545,
+          "dKa_xx": 3.3988518832894026
+        },
+        "focus_scale_sum": 48.15361708852928,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.419448199718919,
+          "median_pct_error": 3.13028332413674,
+          "max_pct_error": 26.20778912011116
+        },
+        "applied_feedback": {
+          "12": -1.3532458668923805e-06,
+          "15": 4.70648899391983e-07,
+          "16": -2.0424581054944804e-06,
+          "20": 1.4024144294501938e-06,
+          "21": -1.3205937141075522e-06
+        }
+      },
+      {
+        "name": "C3_x12_-2.55_xy1.057_yy1.34_zz-2.12_ka-2.77",
+        "profile": {
+          "12": -2.55,
+          "15": 1.057,
+          "16": 1.34,
+          "20": -2.12,
+          "21": -2.77
+        },
+        "rationale": "Add a very small cooperative state16/state21 enhancement on top of the milder state12 branch, leaving state15 and state20 unchanged.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.468030279845344,
+          "dKg_xy": 9.461817064830443,
+          "dKg_yy": 4.01659963233534,
+          "dKg_zz": 4.991776264196545,
+          "dKa_xx": 3.3028079060732227
+        },
+        "focus_scale_sum": 48.24103114728089,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.422361924327979,
+          "median_pct_error": 3.0822625994895256,
+          "max_pct_error": 26.468030279845344
+        },
+        "applied_feedback": {
+          "12": -1.3272219079136808e-06,
+          "15": 4.70648899391983e-07,
+          "16": -2.0578149333553408e-06,
+          "20": 1.4024144294501938e-06,
+          "21": -1.3301980320283344e-06
+        }
+      },
+      {
+        "name": "C4_x12_-2.55_xy1.058_yy1.35_zz-2.13_ka-2.78",
+        "profile": {
+          "12": -2.55,
+          "15": 1.058,
+          "16": 1.35,
+          "20": -2.13,
+          "21": -2.78
+        },
+        "rationale": "Linked five-block nudge around the -2.55 branch: tiny +0.001 state15 move, slightly stronger state16/state21, and a one-notch state20 tightening.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.46802964701822,
+          "dKg_xy": 9.460898616695614,
+          "dKg_yy": 3.9398141765639174,
+          "dKg_zz": 4.969724996717853,
+          "dKa_xx": 3.2547859130242407
+        },
+        "focus_scale_sum": 48.09325335001984,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.417435824844505,
+          "median_pct_error": 3.0582516469386345,
+          "max_pct_error": 26.46802964701822
+        },
+        "applied_feedback": {
+          "12": -1.3272219079136808e-06,
+          "15": 4.7109416798175787e-07,
+          "16": -2.0731717612162016e-06,
+          "20": 1.4090295918532606e-06,
+          "21": -1.3350001909887254e-06
+        }
+      },
+      {
+        "name": "C5_x12_-2.60_xy1.057_yy1.34_zz-2.13_ka-2.77",
+        "profile": {
+          "12": -2.6,
+          "15": 1.057,
+          "16": 1.34,
+          "20": -2.13,
+          "21": -2.77
+        },
+        "rationale": "Take the stronger state12 branch and pair it with a still-small state16/state20/state21 boost, while keeping state15 exactly at the Round45 setting.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.20778912011116,
+          "dKg_xy": 9.46181473393563,
+          "dKg_yy": 4.01659963233534,
+          "dKg_zz": 4.969724996717853,
+          "dKa_xx": 3.3028079060732227
+        },
+        "focus_scale_sum": 47.958736389173204,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.412951970062443,
+          "median_pct_error": 3.08226133552865,
+          "max_pct_error": 26.20778912011116
+        },
+        "applied_feedback": {
+          "12": -1.3532458668923805e-06,
+          "15": 4.70648899391983e-07,
+          "16": -2.0578149333553408e-06,
+          "20": 1.4090295918532606e-06,
+          "21": -1.3301980320283344e-06
+        }
+      },
+      {
+        "name": "C6_x12_-2.60_xy1.058_yy1.35_zz-2.13_ka-2.78",
+        "profile": {
+          "12": -2.6,
+          "15": 1.058,
+          "16": 1.35,
+          "20": -2.13,
+          "21": -2.78
+        },
+        "rationale": "Stronger but still controlled five-block continuation: keep state15 movement tiny, then advance state12/state16/state20/state21 together by one small notch.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.207788487284034,
+          "dKg_xy": 9.460896285800802,
+          "dKg_yy": 3.9398141765639174,
+          "dKg_zz": 4.969724996717853,
+          "dKa_xx": 3.2547859130242407
+        },
+        "focus_scale_sum": 47.83300985939085,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.40876095755948,
+          "median_pct_error": 3.058250382977759,
+          "max_pct_error": 26.207788487284034
+        },
+        "applied_feedback": {
+          "12": -1.3532458668923805e-06,
+          "15": 4.7109416798175787e-07,
+          "16": -2.0731717612162016e-06,
+          "20": 1.4090295918532606e-06,
+          "21": -1.3350001909887254e-06
+        }
+      },
+      {
+        "name": "C7_x12_-2.60_xy1.0565_yy1.34_zz-2.11_ka-2.79",
+        "profile": {
+          "12": -2.6,
+          "15": 1.0565,
+          "16": 1.34,
+          "20": -2.11,
+          "21": -2.79
+        },
+        "rationale": "Median-aware tradeoff candidate: spend a touch more on state21, slightly ease state15 and state20, and check whether the center of the distribution improves without giving back too much on the main five.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.207789435414497,
+          "dKg_xy": 9.462273958003045,
+          "dKg_yy": 4.01659963233534,
+          "dKg_zz": 5.013827530935089,
+          "dKa_xx": 3.2067639244161503
+        },
+        "focus_scale_sum": 47.90725448110412,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.411235933446941,
+          "median_pct_error": 3.0342393227133106,
+          "max_pct_error": 26.207789435414497
+        },
+        "applied_feedback": {
+          "12": -1.3532458668923805e-06,
+          "15": 4.704262650970956e-07,
+          "16": -2.0578149333553408e-06,
+          "20": 1.3957992670471266e-06,
+          "21": -1.3398023499491165e-06
+        }
+      },
+      {
+        "name": "C8_x12_-2.60_xy1.058_yy1.36_zz-2.14_ka-2.80",
+        "profile": {
+          "12": -2.6,
+          "15": 1.058,
+          "16": 1.36,
+          "20": -2.14,
+          "21": -2.8
+        },
+        "rationale": "Round46 selected candidate: the strongest still-bounded linked continuation tested, pushing state12 to -2.60 and giving state16/state20/state21 one more coordinated micro-step while state15 moves only +0.001.",
+        "focus_scale_pct": {
+          "dKg_xx": 26.207788487284034,
+          "dKg_xy": 9.460896285800802,
+          "dKg_yy": 3.863028720792494,
+          "dKg_zz": 4.94767372997931,
+          "dKa_xx": 3.1587419358080604
+        },
+        "focus_scale_sum": 47.6381291596647,
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.4022647278906675,
+          "median_pct_error": 3.0102283943696686,
+          "max_pct_error": 26.207788487284034
+        },
+        "applied_feedback": {
+          "12": -1.3532458668923805e-06,
+          "15": 4.7109416798175787e-07,
+          "16": -2.0885285890770625e-06,
+          "20": 1.4156447542563276e-06,
+          "21": -1.3446045089095076e-06
+        }
+      }
+    ],
+    "selected_profile": {
+      "name": "C8_x12_-2.60_xy1.058_yy1.36_zz-2.14_ka-2.80",
+      "profile": {
+        "12": -2.6,
+        "15": 1.058,
+        "16": 1.36,
+        "20": -2.14,
+        "21": -2.8
+      },
+      "rationale": "Round46 selected candidate: the strongest still-bounded linked continuation tested, pushing state12 to -2.60 and giving state16/state20/state21 one more coordinated micro-step while state15 moves only +0.001."
+    },
+    "guard_candidates_considered": [
+      {
+        "name": "G0_keep_round45",
+        "rx_y_guard_mult": 1.0395,
+        "ry_z_guard_mult": 1.00245,
+        "rationale": "Keep the Round45 paired guard unchanged so the Round46 decision stays profile-led.",
+        "lever_guard_pct": {
+          "rx_y": 1.8611799466300947,
+          "ry_z": 2.0462673192622045
+        },
+        "overall": {
+          "mean_pct_error": 5.4022647278906675,
+          "median_pct_error": 3.0102283943696686,
+          "max_pct_error": 26.207788487284034
+        }
+      },
+      {
+        "name": "G1_softer_micro_pair",
+        "rx_y_guard_mult": 1.0394,
+        "ry_z_guard_mult": 1.0024,
+        "rationale": "Tiny softer confirmation only, checking whether the stronger Round46 profile already reduced the need for the full Round45 paired guard.",
+        "lever_guard_pct": {
+          "rx_y": 1.870620910560186,
+          "ry_z": 2.051153035890508
+        },
+        "overall": {
+          "mean_pct_error": 5.40274228390928,
+          "median_pct_error": 3.0102283943696686,
+          "max_pct_error": 26.207788487284034
+        }
+      },
+      {
+        "name": "G2_stronger_micro_pair",
+        "rx_y_guard_mult": 1.0396,
+        "ry_z_guard_mult": 1.0025,
+        "rationale": "Tiny stronger confirmation: nudge both lever guards up by one small notch and verify that rx_y / ry_z improve without touching the main-block story.",
+        "lever_guard_pct": {
+          "rx_y": 1.851738982699986,
+          "ry_z": 2.0413816026339124
+        },
+        "overall": {
+          "mean_pct_error": 5.401787171872055,
+          "median_pct_error": 3.0102283943696686,
+          "max_pct_error": 26.207788487284034
+        }
+      },
+      {
+        "name": "G3_stronger_plus_pair",
+        "rx_y_guard_mult": 1.03965,
+        "ry_z_guard_mult": 1.00255,
+        "rationale": "Final ultra-small confirmation only: a second tiny paired increase to see whether both lever metrics and overall mean can still fall together after the profile is fixed.",
+        "lever_guard_pct": {
+          "rx_y": 1.8470185007349489,
+          "ry_z": 2.0364958860056084
+        },
+        "overall": {
+          "mean_pct_error": 5.401466965252276,
+          "median_pct_error": 3.0102283943696686,
+          "max_pct_error": 26.207788487284034
+        }
+      }
+    ],
+    "selected_guard_candidate": {
+      "name": "G3_stronger_plus_pair",
+      "rx_y_guard_mult": 1.03965,
+      "ry_z_guard_mult": 1.00255,
+      "rationale": "Final ultra-small confirmation only: a second tiny paired increase to see whether both lever metrics and overall mean can still fall together after the profile is fixed."
+    },
+    "applied_feedback": {
+      "12": -1.3532458668923805e-06,
+      "15": 4.7109416798175787e-07,
+      "16": -2.0885285890770625e-06,
+      "20": 1.4156447542563276e-06,
+      "21": -1.3446045089095076e-06
+    },
+    "final_focus_scale_pct": {
+      "dKg_xx": 26.207788487284034,
+      "dKg_xy": 9.460896285800802,
+      "dKg_yy": 3.863028720792494,
+      "dKg_zz": 4.94767372997931,
+      "dKa_xx": 3.1587419358080604
+    },
+    "final_focus_scale_sum": 47.6381291596647,
+    "final_lever_guard_pct": {
+      "rx_y": 1.8470185007349489,
+      "ry_z": 2.0364958860056084
+    },
+    "final_overall": {
+      "mean_pct_error": 5.401466965252276,
+      "median_pct_error": 3.0102283943696686,
+      "max_pct_error": 26.207788487284034
+    },
+    "rx_y_guard": {
+      "target_axis": "rx_y",
+      "mode": "post_scale_multiplicative_guard",
+      "multiplier": 1.03965,
+      "rx_y_before": -0.01888192786019623,
+      "rx_y_after": -0.01963059629985301,
+      "rx_y_delta": -0.0007486684396567807,
+      "delta_vs_round45_mult": 0.00014999999999987246
+    },
+    "ry_z_guard": {
+      "target_axis": "ry_z",
+      "mode": "post_scale_multiplicative_guard",
+      "multiplier": 1.00255,
+      "ry_z_before": -0.058628599539570725,
+      "ry_z_after": -0.05877810246839663,
+      "ry_z_delta": -0.00014950292882590782,
+      "delta_vs_round45_mult": 9.999999999998899e-05
+    },
+    "selection_rationale": "Among the eight hand-designed Round46 profiles, C8 was the clean winner: it produced the lowest five-main-block sum, the lowest profile-stage mean, and the best profile-stage median, while simultaneously improving dKg_xx, dKg_xy, dKg_yy, dKg_zz, and dKa_xx versus Round45. A final ultra-small paired-guard confirmation then picked G3, because the slightly stronger-plus pair reduced both rx_y and ry_z again and shaved the overall mean further without changing the median or reopening a guard-focused search.",
+    "policy": "Round46 starts from the Round45 winner and performs one more tightly bounded five-block reprofile only: eight hand-designed profiles around state12/state15/state16/state20/state21, with one ultra-small paired-guard confirmation at the end. No README read, no directory scan, no brute-force search, and no edits to eb/db/Ka2/other lever states."
+  }
+}

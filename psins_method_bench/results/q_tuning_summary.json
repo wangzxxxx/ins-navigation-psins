@@ -1,0 +1,15 @@
+{
+  "method": "q_tuning",
+  "can_count_as_formal_result": false,
+  "status": "partial_progress_timeout",
+  "evidence": {
+    "runner_status": "timeout",
+    "llm_insight_blocks_observed": 10,
+    "q_scalar_values_observed": [
+      "1e-10"
+    ],
+    "stdout_nonempty": true
+  },
+  "assessment": "Entered real LLM-in-the-loop execution and produced multiple tuning decisions, but current run ended with timeout before a clean completed artifact was confirmed.",
+  "next_action": "Resume with longer background budget and preserve intermediate checkpoints."
+}

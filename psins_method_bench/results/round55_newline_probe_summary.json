@@ -1,0 +1,1626 @@
+{
+  "baseline_r53": {
+    "focus": {
+      "dKg_xx": 39.345508730150065,
+      "dKg_xy": 10.52098072427851,
+      "dKg_yy": 13.900668042729466,
+      "dKg_zz": 9.699915564106908,
+      "dKa_xx": 16.581951521952266
+    },
+    "lever": {
+      "rx_y": 5.591370282068253,
+      "ry_z": 2.28886407703652
+    },
+    "overall": {
+      "mean_pct_error": 6.9560489564221255,
+      "median_pct_error": 3.7350559866514095,
+      "max_pct_error": 39.345508730150065
+    }
+  },
+  "target_state_labels": {
+    "15": "dKg_xy",
+    "20": "dKg_zz"
+  },
+  "candidates": {
+    "alpha_split_xy_up_zz_damp": {
+      "description": "Pure new-line asymmetric alpha route: push state15 a bit harder in iter1 and damp its iter2 rollback, while directly damping state20 in both passes.",
+      "policy_patch": {
+        "1": {
+          "state_alpha_mult": {
+            "15": 1.02,
+            "20": 0.97
+          }
+        },
+        "2": {
+          "state_alpha_mult": {
+            "15": 0.76,
+            "20": 0.9
+          }
+        }
+      },
+      "post_rx_y_mult": 1.0,
+      "post_ry_z_mult": 1.0,
+      "focus": {
+        "dKg_xx": 39.334833216343725,
+        "dKg_xy": 8.762649574736315,
+        "dKg_yy": 13.904970072572937,
+        "dKg_zz": 9.22574791525769,
+        "dKa_xx": 16.58415336510453
+      },
+      "lever": {
+        "rx_y": 5.595333600505008,
+        "ry_z": 2.2891680571595376
+      },
+      "overall": {
+        "mean_pct_error": 6.879254914179464,
+        "median_pct_error": 3.7361325363358557,
+        "max_pct_error": 39.334833216343725
+      },
+      "delta_vs_r53": {
+        "dKg_xx": -0.010675513806340575,
+        "dKg_xy": -1.7583311495421956,
+        "dKg_yy": 0.004302029843470834,
+        "dKg_zz": -0.47416764884921747,
+        "dKa_xx": 0.002201843152263905,
+        "rx_y": 0.0039633184367549035,
+        "ry_z": 0.0003039801230175776,
+        "mean_pct_error": -0.0767940422426614,
+        "median_pct_error": 0.0010765496844462596,
+        "max_pct_error": -0.010675513806340575
+      },
+      "key_newline_delta": {
+        "dKg_xy": -1.7583311495421956,
+        "dKg_zz": -0.47416764884921747,
+        "ry_z": 0.0003039801230175776,
+        "protect_dKg_xx": -0.010675513806340575,
+        "protect_dKg_yy": 0.004302029843470834,
+        "protect_dKa_xx": 0.002201843152263905,
+        "protect_mean": -0.0767940422426614
+      },
+      "extra": {
+        "schedule_log": [
+          {
+            "policy_name": "iter1_seed",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2207,
+            "late_release_frac": 0.55
+          },
+          {
+            "policy_name": "iter2_commit",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2060,
+            "late_release_frac": 0.58
+          },
+          {
+            "policy_name": "iter3_readout_only",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 0,
+            "late_release_frac": 1.0
+          }
+        ],
+        "feedback_log": [
+          {
+            "policy_name": "iter1_seed",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.671838200485191e-11,
+                "x_abs": 3.350667409532974e-06,
+                "snr_like": 0.3598120787872764,
+                "score_n": 0.13037557214597956,
+                "cov_drop": 12.61490429751768,
+                "cov_n": 0.9603138653938325,
+                "trust": 0.4955484211750348,
+                "alpha": 0.9592877473880056,
+                "label": "dKg_xx",
+                "base_alpha": 0.9592877473880056,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -3.2142541915372906e-06
+              },
+              "15": {
+                "p_diag": 1.4352306280336302e-10,
+                "x_abs": 4.5864200075384456e-05,
+                "snr_like": 3.8283618206149255,
+                "score_n": 0.6146659315686563,
+                "cov_drop": 47.53938544378618,
+                "cov_n": 0.989791444625029,
+                "trust": 0.7797211573134604,
+                "alpha": 1.0248504928735567,
+                "label": "dKg_xy",
+                "base_alpha": 1.0047553851701536,
+                "alpha_mult": 1.02,
+                "alpha_add": 0.0,
+                "x_feedback": 4.7003948052509175e-05
+              },
+              "16": {
+                "p_diag": 8.726941057333233e-11,
+                "x_abs": 1.319734769559696e-05,
+                "snr_like": 1.4127185160531635,
+                "score_n": 0.3705278819050027,
+                "cov_drop": 12.575015291709637,
+                "cov_n": 0.9601825473975051,
+                "trust": 0.6299759347217037,
+                "alpha": 0.9807961495554726,
+                "label": "dKg_yy",
+                "base_alpha": 0.9807961495554726,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -1.2943907804186288e-05
+              },
+              "20": {
+                "p_diag": 9.137075713759282e-11,
+                "x_abs": 3.238849075039604e-05,
+                "snr_like": 3.3883409089347536,
+                "score_n": 0.5853734191268152,
+                "cov_drop": 12.289548599737744,
+                "cov_n": 0.9592167876335804,
+                "trust": 0.7498645012697919,
+                "alpha": 0.9699789705970716,
+                "label": "dKg_zz",
+                "base_alpha": 0.9999783202031667,
+                "alpha_mult": 0.97,
+                "alpha_add": 0.0,
+                "x_feedback": -3.1416154917261926e-05
+              },
+              "21": {
+                "p_diag": 3.46285875603834e-11,
+                "x_abs": 8.244802787165815e-06,
+                "snr_like": 1.4010798365673418,
+                "score_n": 0.36860047586704237,
+                "cov_drop": 19.962832109598903,
+                "cov_n": 0.9753122386031907,
+                "trust": 0.6355536514709477,
+                "alpha": 0.9816885842353517,
+                "label": "dKa_xx",
+                "base_alpha": 0.9816885842353517,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -8.09382877543249e-06
+              }
+            },
+            "other_scale_alpha": 0.98,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {},
+            "state_q_static_mult": {},
+            "state_q_dynamic_mult": {},
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "15": 1.02,
+              "20": 0.97
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0,
+            "post_rx_y_before": -0.018386556852101783,
+            "post_rx_y_after": -0.018386556852101783,
+            "post_ry_z_before": -0.05836571377743544,
+            "post_ry_z_after": -0.05836571377743544
+          },
+          {
+            "policy_name": "iter2_commit",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.635729260386944e-11,
+                "x_abs": 2.803484832471718e-06,
+                "snr_like": 0.30168151590611686,
+                "score_n": 0.12561262345073973,
+                "cov_drop": 11.98288340091143,
+                "cov_n": 0.9614808289153252,
+                "trust": 0.47667726974586566,
+                "alpha": 1.0172012723695039,
+                "label": "dKg_xx",
+                "base_alpha": 1.0172012723695039,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.851708338658837e-06
+              },
+              "15": {
+                "p_diag": 1.427830497194718e-10,
+                "x_abs": 3.578083315172092e-06,
+                "snr_like": 0.2994415911972753,
+                "score_n": 0.12479636607776716,
+                "cov_drop": 45.18012024797848,
+                "cov_n": 0.9901389777177947,
+                "trust": 0.48824026296657874,
+                "alpha": 0.774127511982552,
+                "label": "dKg_xy",
+                "base_alpha": 1.0185888315559894,
+                "alpha_mult": 0.76,
+                "alpha_add": 0.0,
+                "x_feedback": -2.769892734440453e-06
+              },
+              "16": {
+                "p_diag": 8.686318017159334e-11,
+                "x_abs": 4.187302766152166e-06,
+                "snr_like": 0.4492793950365287,
+                "score_n": 0.17623780112579263,
+                "cov_drop": 11.947938538664115,
+                "cov_n": 0.9613626295482611,
+                "trust": 0.5059902290632294,
+                "alpha": 1.0207188274875876,
+                "label": "dKg_yy",
+                "base_alpha": 1.0207188274875876,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -4.274058769802371e-06
+              },
+              "20": {
+                "p_diag": 9.129874341334206e-11,
+                "x_abs": 1.480015636678449e-06,
+                "snr_like": 0.15489375339392625,
+                "score_n": 0.06869226240074051,
+                "cov_drop": 11.654092008205634,
+                "cov_n": 0.9603392508666272,
+                "trust": 0.44318399755641297,
+                "alpha": 0.9118638717360925,
+                "label": "dKg_zz",
+                "base_alpha": 1.0131820797067694,
+                "alpha_mult": 0.9,
+                "alpha_add": 0.0,
+                "x_feedback": -1.3495727886915684e-06
+              },
+              "21": {
+                "p_diag": 3.460958480061725e-11,
+                "x_abs": 2.451680882924955e-07,
+                "snr_like": 0.0416740536048075,
+                "score_n": 0.019458634956455143,
+                "cov_drop": 18.928345212586756,
+                "cov_n": 0.9760457463692214,
+                "trust": 0.42122522174981697,
+                "alpha": 1.010547026609978,
+                "label": "dKa_xx",
+                "base_alpha": 1.010547026609978,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.477538826436339e-07
+              }
+            },
+            "other_scale_alpha": 0.99,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {},
+            "state_q_static_mult": {},
+            "state_q_dynamic_mult": {},
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "15": 0.76,
+              "20": 0.9
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0,
+            "post_rx_y_before": -0.018880933279899,
+            "post_rx_y_after": -0.018880933279899,
+            "post_ry_z_before": -0.058626499165704275,
+            "post_ry_z_after": -0.058626499165704275
+          }
+        ]
+      }
+    },
+    "priorq_split_xy_up_zz_damp": {
+      "description": "No alpha surgery; only selected-state prior/q asymmetry so 15 gets a bit more room while 20 gets slightly tighter covariance.",
+      "policy_patch": {
+        "1": {
+          "state_prior_diag_mult": {
+            "15": 1.08,
+            "20": 0.92
+          },
+          "state_q_static_mult": {
+            "15": 1.1,
+            "20": 0.9
+          },
+          "state_q_dynamic_mult": {
+            "15": 1.05,
+            "20": 0.95
+          },
+          "state_q_late_mult": {
+            "15": 1.04,
+            "20": 0.96
+          }
+        },
+        "2": {
+          "state_prior_diag_mult": {
+            "15": 1.04,
+            "20": 0.95
+          },
+          "state_q_dynamic_mult": {
+            "15": 1.04,
+            "20": 0.96
+          },
+          "state_q_late_mult": {
+            "15": 1.03,
+            "20": 0.97
+          }
+        }
+      },
+      "post_rx_y_mult": 1.0,
+      "post_ry_z_mult": 1.0,
+      "focus": {
+        "dKg_xx": 39.34448382110354,
+        "dKg_xy": 10.521227304141323,
+        "dKg_yy": 13.901063930496479,
+        "dKg_zz": 9.698691213115945,
+        "dKa_xx": 16.5820212239742
+      },
+      "lever": {
+        "rx_y": 5.591797978490471,
+        "ry_z": 2.2889101342293947
+      },
+      "overall": {
+        "mean_pct_error": 6.955628972313651,
+        "median_pct_error": 3.73504531659871,
+        "max_pct_error": 39.34448382110354
+      },
+      "delta_vs_r53": {
+        "dKg_xx": -0.0010249090465279664,
+        "dKg_xy": 0.0002465798628126237,
+        "dKg_yy": 0.0003958877670129368,
+        "dKg_zz": -0.0012243509909630745,
+        "dKa_xx": 6.970202193201658e-05,
+        "rx_y": 0.0004276964222187374,
+        "ry_z": 4.6057192874648933e-05,
+        "mean_pct_error": -0.00041998410847465806,
+        "median_pct_error": -1.0670052699612853e-05,
+        "max_pct_error": -0.0010249090465279664
+      },
+      "key_newline_delta": {
+        "dKg_xy": 0.0002465798628126237,
+        "dKg_zz": -0.0012243509909630745,
+        "ry_z": 4.6057192874648933e-05,
+        "protect_dKg_xx": -0.0010249090465279664,
+        "protect_dKg_yy": 0.0003958877670129368,
+        "protect_dKa_xx": 6.970202193201658e-05,
+        "protect_mean": -0.00041998410847465806
+      },
+      "extra": {
+        "schedule_log": [
+          {
+            "policy_name": "iter1_seed",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2207,
+            "late_release_frac": 0.55
+          },
+          {
+            "policy_name": "iter2_commit",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2060,
+            "late_release_frac": 0.58
+          },
+          {
+            "policy_name": "iter3_readout_only",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 0,
+            "late_release_frac": 1.0
+          }
+        ],
+        "feedback_log": [
+          {
+            "policy_name": "iter1_seed",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.671628385012234e-11,
+                "x_abs": 3.3544327898359045e-06,
+                "snr_like": 0.3602207826961872,
+                "score_n": 0.13050433681045,
+                "cov_drop": 12.61505690934466,
+                "cov_n": 0.9603143661416631,
+                "trust": 0.4956207497161837,
+                "alpha": 0.9592993199545894,
+                "label": "dKg_xx",
+                "base_alpha": 0.9592993199545894,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -3.2179050941229593e-06
+              },
+              "15": {
+                "p_diag": 1.4352772892662993e-10,
+                "x_abs": 4.5865201180204476e-05,
+                "snr_like": 3.8283831521395366,
+                "score_n": 0.6146672512952954,
+                "cov_drop": 49.40357548850853,
+                "cov_n": 0.9901807509945169,
+                "trust": 0.7798931911629527,
+                "alpha": 1.0047829105860724,
+                "label": "dKg_xy",
+                "base_alpha": 1.0047829105860724,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": 4.608457033646161e-05
+              },
+              "16": {
+                "p_diag": 8.726712129511761e-11,
+                "x_abs": 1.3193493214705848e-05,
+                "snr_like": 1.4123244350710389,
+                "score_n": 0.37046281320616975,
+                "cov_drop": 12.575180230803166,
+                "cov_n": 0.96018309218028,
+                "trust": 0.6299397359547783,
+                "alpha": 0.9807903577527646,
+                "label": "dKg_yy",
+                "base_alpha": 0.9807903577527646,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -1.2940050930060021e-05
+              },
+              "20": {
+                "p_diag": 9.131818251944227e-11,
+                "x_abs": 3.23698797368419e-05,
+                "snr_like": 3.3873685908939937,
+                "score_n": 0.5853037589870763,
+                "cov_drop": 11.791113700461086,
+                "cov_n": 0.9574132589949506,
+                "trust": 0.749031938990541,
+                "alpha": 0.9998451102384865,
+                "label": "dKg_zz",
+                "base_alpha": 0.9998451102384865,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -3.236486597388924e-05
+              },
+              "21": {
+                "p_diag": 3.462854940315562e-11,
+                "x_abs": 8.244304527844725e-06,
+                "snr_like": 1.4009959367920946,
+                "score_n": 0.3685865389202403,
+                "cov_drop": 19.962843108126638,
+                "cov_n": 0.9753122525686908,
+                "trust": 0.6355458529255585,
+                "alpha": 0.9816873364680894,
+                "label": "dKa_xx",
+                "base_alpha": 0.9816873364680894,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -8.093329352971697e-06
+              }
+            },
+            "other_scale_alpha": 0.98,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.08,
+              "20": 0.92
+            },
+            "state_q_static_mult": {
+              "15": 1.1,
+              "20": 0.9
+            },
+            "state_q_dynamic_mult": {
+              "15": 1.05,
+              "20": 0.95
+            },
+            "state_q_late_mult": {
+              "15": 1.04,
+              "20": 0.96
+            },
+            "state_alpha_mult": {},
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0,
+            "post_rx_y_before": -0.018384551525721375,
+            "post_rx_y_after": -0.018384551525721375,
+            "post_ry_z_before": -0.05836517184243745,
+            "post_ry_z_after": -0.05836517184243745
+          },
+          {
+            "policy_name": "iter2_commit",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.635568108433346e-11,
+                "x_abs": 2.7989720614755107e-06,
+                "snr_like": 0.3011987093710092,
+                "score_n": 0.12543681128743725,
+                "cov_drop": 11.982995209192977,
+                "cov_n": 0.9614812059409867,
+                "trust": 0.4765754570419281,
+                "alpha": 1.0171890548450313,
+                "label": "dKg_xx",
+                "base_alpha": 1.0171890548450313,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.8470837457499236e-06
+              },
+              "15": {
+                "p_diag": 1.4278572207852542e-10,
+                "x_abs": 2.659006588805162e-06,
+                "snr_like": 0.2225240842202462,
+                "score_n": 0.0958113139631684,
+                "cov_drop": 46.0744317865854,
+                "cov_n": 0.9903327366127928,
+                "trust": 0.47151031147601064,
+                "alpha": 1.0165812373771212,
+                "label": "dKg_xy",
+                "base_alpha": 1.0165812373771212,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.70309620824147e-06
+              },
+              "16": {
+                "p_diag": 8.68616931211905e-11,
+                "x_abs": 4.191805770449328e-06,
+                "snr_like": 0.4497663977288106,
+                "score_n": 0.17639513883681163,
+                "cov_drop": 11.948040811082121,
+                "cov_n": 0.9613629765383507,
+                "trust": 0.5060816306714581,
+                "alpha": 1.020729795680575,
+                "label": "dKg_yy",
+                "base_alpha": 1.020729795680575,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -4.278701047603398e-06
+              },
+              "20": {
+                "p_diag": 9.126334088322008e-11,
+                "x_abs": 5.373120693143565e-07,
+                "snr_like": 0.05624428684695751,
+                "score_n": 0.02608437605611127,
+                "cov_drop": 11.361206765230174,
+                "cov_n": 0.9592638110200437,
+                "trust": 0.4180197387409629,
+                "alpha": 1.0101623686489156,
+                "label": "dKg_zz",
+                "base_alpha": 1.0101623686489156,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -5.427724326422407e-07
+              },
+              "21": {
+                "p_diag": 3.460956000006571e-11,
+                "x_abs": 2.458723534691017e-07,
+                "snr_like": 0.04179378067103456,
+                "score_n": 0.01951344758221324,
+                "cov_drop": 18.928351994431377,
+                "cov_n": 0.9760457552134566,
+                "trust": 0.4212570167873355,
+                "alpha": 1.0105508420144802,
+                "label": "dKa_xx",
+                "base_alpha": 1.0105508420144802,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.484665138262826e-07
+              }
+            },
+            "other_scale_alpha": 0.99,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.04,
+              "20": 0.95
+            },
+            "state_q_static_mult": {},
+            "state_q_dynamic_mult": {
+              "15": 1.04,
+              "20": 0.96
+            },
+            "state_q_late_mult": {
+              "15": 1.03,
+              "20": 0.97
+            },
+            "state_alpha_mult": {},
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0,
+            "post_rx_y_before": -0.018881640404301906,
+            "post_rx_y_after": -0.018881640404301906,
+            "post_ry_z_before": -0.05862665391946236,
+            "post_ry_z_after": -0.05862665391946236
+          }
+        ]
+      }
+    },
+    "hybrid_xy_up_zz_damp_ryz_guard": {
+      "description": "Hybrid 15-up / 20-damp branch with both asym prior/q and alpha, then a very small ry_z post-guard to see if zz and ry_z can fall together.",
+      "policy_patch": {
+        "1": {
+          "state_prior_diag_mult": {
+            "15": 1.06,
+            "20": 0.94
+          },
+          "state_q_static_mult": {
+            "15": 1.08,
+            "20": 0.92
+          },
+          "state_q_dynamic_mult": {
+            "15": 1.03,
+            "20": 0.96
+          },
+          "state_alpha_mult": {
+            "15": 1.015,
+            "20": 0.975
+          }
+        },
+        "2": {
+          "state_prior_diag_mult": {
+            "15": 1.03,
+            "20": 0.96
+          },
+          "state_q_dynamic_mult": {
+            "15": 1.03,
+            "20": 0.97
+          },
+          "state_alpha_mult": {
+            "15": 0.82,
+            "20": 0.92
+          }
+        }
+      },
+      "post_rx_y_mult": 1.0,
+      "post_ry_z_mult": 1.0009,
+      "focus": {
+        "dKg_xx": 39.33542965257747,
+        "dKg_xy": 9.288896693854037,
+        "dKg_yy": 13.904984022525241,
+        "dKg_zz": 9.35783953142144,
+        "dKa_xx": 16.58389272026548
+      },
+      "lever": {
+        "rx_y": 5.595161546953411,
+        "ry_z": 2.2008704592643125
+      },
+      "overall": {
+        "mean_pct_error": 6.89824366024631,
+        "median_pct_error": 3.735900457670101,
+        "max_pct_error": 39.33542965257747
+      },
+      "delta_vs_r53": {
+        "dKg_xx": -0.010079077572598294,
+        "dKg_xy": -1.232084030424474,
+        "dKg_yy": 0.004315979795775249,
+        "dKg_zz": -0.34207603268546727,
+        "dKa_xx": 0.0019411983132151533,
+        "rx_y": 0.003791264885157908,
+        "ry_z": -0.0879936177722076,
+        "mean_pct_error": -0.057805296175815535,
+        "median_pct_error": 0.0008444710186914506,
+        "max_pct_error": -0.010079077572598294
+      },
+      "key_newline_delta": {
+        "dKg_xy": -1.232084030424474,
+        "dKg_zz": -0.34207603268546727,
+        "ry_z": -0.0879936177722076,
+        "protect_dKg_xx": -0.010079077572598294,
+        "protect_dKg_yy": 0.004315979795775249,
+        "protect_dKa_xx": 0.0019411983132151533,
+        "protect_mean": -0.057805296175815535
+      },
+      "extra": {
+        "schedule_log": [
+          {
+            "policy_name": "iter1_seed",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2207,
+            "late_release_frac": 0.55
+          },
+          {
+            "policy_name": "iter2_commit",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2060,
+            "late_release_frac": 0.58
+          },
+          {
+            "policy_name": "iter3_readout_only",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 0,
+            "late_release_frac": 1.0
+          }
+        ],
+        "feedback_log": [
+          {
+            "policy_name": "iter1_seed",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.6716841731556e-11,
+                "x_abs": 3.3534329653561185e-06,
+                "snr_like": 0.3601122566758007,
+                "score_n": 0.13047014874297522,
+                "cov_drop": 12.615016330621929,
+                "cov_n": 0.9603142329965487,
+                "trust": 0.4956015458145475,
+                "alpha": 0.9592962473303276,
+                "label": "dKg_xx",
+                "base_alpha": 0.9592962473303276,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -3.2169356593399367e-06
+              },
+              "15": {
+                "p_diag": 1.435266295439129e-10,
+                "x_abs": 4.586498012874218e-05,
+                "snr_like": 3.8283793630943515,
+                "score_n": 0.614667016877462,
+                "cov_drop": 48.94418480537376,
+                "cov_n": 0.9900875977173553,
+                "trust": 0.779852072447015,
+                "alpha": 1.0198479765653952,
+                "label": "dKg_xy",
+                "base_alpha": 1.0047763315915224,
+                "alpha_mult": 1.015,
+                "alpha_add": 0.0,
+                "x_feedback": 4.6775307179509766e-05
+              },
+              "16": {
+                "p_diag": 8.726772997330721e-11,
+                "x_abs": 1.3194519014273358e-05,
+                "snr_like": 1.4124293181235374,
+                "score_n": 0.37048013228969967,
+                "cov_drop": 12.575136375810684,
+                "cov_n": 0.960182947331633,
+                "trust": 0.6299493709081503,
+                "alpha": 0.9807918993453041,
+                "label": "dKg_yy",
+                "base_alpha": 0.9807918993453041,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -1.2941077364956896e-05
+              },
+              "20": {
+                "p_diag": 9.13321592656639e-11,
+                "x_abs": 3.2374828159514346e-05,
+                "snr_like": 3.387627184532533,
+                "score_n": 0.585322287791098,
+                "cov_drop": 11.917676906778636,
+                "cov_n": 0.9578861548782344,
+                "trust": 0.749250389309438,
+                "alpha": 0.9748830607322724,
+                "label": "dKg_zz",
+                "base_alpha": 0.9998800622895101,
+                "alpha_mult": 0.975,
+                "alpha_add": 0.0,
+                "x_feedback": -3.156167156682871e-05
+              },
+              "21": {
+                "p_diag": 3.4628559548084836e-11,
+                "x_abs": 8.244437108744598e-06,
+                "snr_like": 1.4010182617039062,
+                "score_n": 0.36859024746591534,
+                "cov_drop": 19.96284018392696,
+                "cov_n": 0.975312248855658,
+                "trust": 0.6355479280774021,
+                "alpha": 0.9816876684923843,
+                "label": "dKa_xx",
+                "base_alpha": 0.9816876684923843,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -8.093462243315578e-06
+              }
+            },
+            "other_scale_alpha": 0.98,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.06,
+              "20": 0.94
+            },
+            "state_q_static_mult": {
+              "15": 1.08,
+              "20": 0.92
+            },
+            "state_q_dynamic_mult": {
+              "15": 1.03,
+              "20": 0.96
+            },
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "15": 1.015,
+              "20": 0.975
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0009,
+            "post_rx_y_before": -0.018385085144169925,
+            "post_rx_y_after": -0.018385085144169925,
+            "post_ry_z_before": -0.058365315902444675,
+            "post_ry_z_after": -0.05841784468675687
+          },
+          {
+            "policy_name": "iter2_commit",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.635612429263281e-11,
+                "x_abs": 2.8008136032281935e-06,
+                "snr_like": 0.3013961051159158,
+                "score_n": 0.12550870074030013,
+                "cov_drop": 11.98296445879869,
+                "cov_n": 0.9614811022491553,
+                "trust": 0.4766171093740193,
+                "alpha": 1.0171940531248822,
+                "label": "dKg_xx",
+                "base_alpha": 1.0171940531248822,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.8489709411149916e-06
+              },
+              "15": {
+                "p_diag": 1.4278507101567467e-10,
+                "x_abs": 3.3495728456272247e-06,
+                "snr_like": 0.28031608964935667,
+                "score_n": 0.11776422924177683,
+                "cov_drop": 45.852489577153676,
+                "cov_n": 0.9902853650989867,
+                "trust": 0.484223106301805,
+                "alpha": 0.8348475536600976,
+                "label": "dKg_xy",
+                "base_alpha": 1.0181067727562165,
+                "alpha_mult": 0.82,
+                "alpha_add": 0.0,
+                "x_feedback": -2.79638269597818e-06
+              },
+              "16": {
+                "p_diag": 8.686197924573296e-11,
+                "x_abs": 4.190046390116542e-06,
+                "snr_like": 0.44957688178885685,
+                "score_n": 0.17633391838469317,
+                "cov_drop": 11.948021132561351,
+                "cov_n": 0.9613629097735055,
+                "trust": 0.5060460947679943,
+                "alpha": 1.0207255313721593,
+                "label": "dKg_yy",
+                "base_alpha": 1.0207255313721593,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -4.276887328025705e-06
+              },
+              "20": {
+                "p_diag": 9.12707501776889e-11,
+                "x_abs": 1.3348821797304937e-06,
+                "snr_like": 0.13972596745798294,
+                "score_n": 0.06238529600858601,
+                "cov_drop": 11.42038247818298,
+                "cov_n": 0.9594857730946493,
+                "trust": 0.4391674963847326,
+                "alpha": 0.9316840916008745,
+                "label": "dKg_zz",
+                "base_alpha": 1.012700099566168,
+                "alpha_mult": 0.92,
+                "alpha_add": 0.0,
+                "x_feedback": -1.2436884910164004e-06
+              },
+              "21": {
+                "p_diag": 3.4609564738757193e-11,
+                "x_abs": 2.455560736430099e-07,
+                "snr_like": 0.04174001605669701,
+                "score_n": 0.019488834192652096,
+                "cov_drop": 18.92835069861006,
+                "cov_n": 0.9760457535235705,
+                "trust": 0.42124274031163783,
+                "alpha": 1.0105491288373964,
+                "label": "dKa_xx",
+                "base_alpha": 1.0105491288373964,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.4814647630067524e-07
+              }
+            },
+            "other_scale_alpha": 0.99,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.03,
+              "20": 0.96
+            },
+            "state_q_static_mult": {},
+            "state_q_dynamic_mult": {
+              "15": 1.03,
+              "20": 0.97
+            },
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "15": 0.82,
+              "20": 0.92
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0009,
+            "post_rx_y_before": -0.018880967690609318,
+            "post_rx_y_after": -0.018880967690609318,
+            "post_ry_z_before": -0.058626713682127504,
+            "post_ry_z_after": -0.05867947772444141
+          }
+        ]
+      }
+    },
+    "hybrid_micro_lever_pair": {
+      "description": "Same new line but with a very small paired rx_y / ry_z lever guard, checking whether the selected-state repair can coexist with a micro lever confirmation.",
+      "policy_patch": {
+        "1": {
+          "state_prior_diag_mult": {
+            "15": 1.05,
+            "20": 0.95
+          },
+          "state_q_static_mult": {
+            "15": 1.06,
+            "20": 0.93
+          },
+          "state_q_dynamic_mult": {
+            "15": 1.025,
+            "20": 0.97
+          },
+          "state_alpha_mult": {
+            "15": 1.012,
+            "20": 0.978
+          }
+        },
+        "2": {
+          "state_prior_diag_mult": {
+            "15": 1.02,
+            "20": 0.97
+          },
+          "state_q_dynamic_mult": {
+            "15": 1.02,
+            "20": 0.98
+          },
+          "state_alpha_mult": {
+            "15": 0.84,
+            "20": 0.94
+          }
+        }
+      },
+      "post_rx_y_mult": 1.0003,
+      "post_ry_z_mult": 1.001,
+      "focus": {
+        "dKg_xx": 39.33660187267623,
+        "dKg_xy": 9.469316003966476,
+        "dKg_yy": 13.904494580704835,
+        "dKg_zz": 9.465457538519924,
+        "dKa_xx": 16.583624539232545
+      },
+      "lever": {
+        "rx_y": 5.566116741461472,
+        "ry_z": 2.191020563126929
+      },
+      "overall": {
+        "mean_pct_error": 6.906871032523687,
+        "median_pct_error": 3.735760101116681,
+        "max_pct_error": 39.33660187267623
+      },
+      "delta_vs_r53": {
+        "dKg_xx": -0.00890685747383202,
+        "dKg_xy": -1.0516647203120346,
+        "dKg_yy": 0.0038265379753692486,
+        "dKg_zz": -0.23445802558698325,
+        "dKa_xx": 0.001673017280278799,
+        "rx_y": -0.025253540606780867,
+        "ry_z": -0.097843513909591,
+        "mean_pct_error": -0.04917792389843889,
+        "median_pct_error": 0.0007041144652717435,
+        "max_pct_error": -0.00890685747383202
+      },
+      "key_newline_delta": {
+        "dKg_xy": -1.0516647203120346,
+        "dKg_zz": -0.23445802558698325,
+        "ry_z": -0.097843513909591,
+        "protect_dKg_xx": -0.00890685747383202,
+        "protect_dKg_yy": 0.0038265379753692486,
+        "protect_dKa_xx": 0.001673017280278799,
+        "protect_mean": -0.04917792389843889
+      },
+      "extra": {
+        "schedule_log": [
+          {
+            "policy_name": "iter1_seed",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2207,
+            "late_release_frac": 0.55
+          },
+          {
+            "policy_name": "iter2_commit",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2060,
+            "late_release_frac": 0.58
+          },
+          {
+            "policy_name": "iter3_readout_only",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 0,
+            "late_release_frac": 1.0
+          }
+        ],
+        "feedback_log": [
+          {
+            "policy_name": "iter1_seed",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.671711190196246e-11,
+                "x_abs": 3.352948451040606e-06,
+                "snr_like": 0.3600596656576681,
+                "score_n": 0.13045358045615763,
+                "cov_drop": 12.614996679328952,
+                "cov_n": 0.9603141685172722,
+                "trust": 0.495592239203048,
+                "alpha": 0.9592947582724877,
+                "label": "dKg_xx",
+                "base_alpha": 0.9592947582724877,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -3.2164658738411103e-06
+              },
+              "15": {
+                "p_diag": 1.4352606385138146e-10,
+                "x_abs": 4.586486244579383e-05,
+                "snr_like": 3.8283770845688254,
+                "score_n": 0.6146668759111996,
+                "cov_drop": 48.71286492156737,
+                "cov_n": 0.9900400193933027,
+                "trust": 0.7798310590433248,
+                "alpha": 1.0168302450802953,
+                "label": "dKg_xy",
+                "base_alpha": 1.004772969446932,
+                "alpha_mult": 1.012,
+                "alpha_add": 0.0,
+                "x_feedback": 4.663677932133057e-05
+              },
+              "16": {
+                "p_diag": 8.72680247485869e-11,
+                "x_abs": 1.3195015569757841e-05,
+                "snr_like": 1.4124800871798955,
+                "score_n": 0.3704885153183087,
+                "cov_drop": 12.57511513754797,
+                "cov_n": 0.9601828771834001,
+                "trust": 0.6299540345389489,
+                "alpha": 0.9807926455262318,
+                "label": "dKg_yy",
+                "base_alpha": 0.9807926455262318,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -1.2941574228422611e-05
+              },
+              "20": {
+                "p_diag": 9.133892848090785e-11,
+                "x_abs": 3.237722459937219e-05,
+                "snr_like": 3.38775240069852,
+                "score_n": 0.5853312592103378,
+                "cov_drop": 11.98045713437152,
+                "cov_n": 0.9581168539463917,
+                "trust": 0.7493569208942015,
+                "alpha": 0.9778993709815247,
+                "label": "dKg_zz",
+                "base_alpha": 0.9998971073430722,
+                "alpha_mult": 0.978,
+                "alpha_add": 0.0,
+                "x_feedback": -3.166166756985361e-05
+              },
+              "21": {
+                "p_diag": 3.462856446124226e-11,
+                "x_abs": 8.244501291870996e-06,
+                "snr_like": 1.4010290692720977,
+                "score_n": 0.3685920427702482,
+                "cov_drop": 19.962838767746685,
+                "cov_n": 0.9753122470574481,
+                "trust": 0.6355489326566162,
+                "alpha": 0.9816878292250586,
+                "label": "dKa_xx",
+                "base_alpha": 0.9816878292250586,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -8.093526576260028e-06
+              }
+            },
+            "other_scale_alpha": 0.98,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.05,
+              "20": 0.95
+            },
+            "state_q_static_mult": {
+              "15": 1.06,
+              "20": 0.93
+            },
+            "state_q_dynamic_mult": {
+              "15": 1.025,
+              "20": 0.97
+            },
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "15": 1.012,
+              "20": 0.978
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0003,
+            "post_ry_z_mult": 1.001,
+            "post_rx_y_before": -0.018385343465859037,
+            "post_rx_y_after": -0.018390859068898795,
+            "post_ry_z_before": -0.05836538567621374,
+            "post_ry_z_after": -0.05842375106188994
+          },
+          {
+            "policy_name": "iter2_commit",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.635638568564679e-11,
+                "x_abs": 2.801150897547287e-06,
+                "snr_like": 0.3014319452194907,
+                "score_n": 0.1255217520611186,
+                "cov_drop": 11.982946323107033,
+                "cov_n": 0.9614810410944555,
+                "trust": 0.4766246534551202,
+                "alpha": 1.0171949584146143,
+                "label": "dKg_xx",
+                "base_alpha": 1.0171949584146143,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.8493165707436722e-06
+              },
+              "15": {
+                "p_diag": 1.427844101531198e-10,
+                "x_abs": 3.2110742644586233e-06,
+                "snr_like": 0.2687261647719605,
+                "score_n": 0.11344754356518495,
+                "cov_drop": 45.62946737827958,
+                "cov_n": 0.9902372931034005,
+                "trust": 0.4816992383712355,
+                "alpha": 0.8549552832278206,
+                "label": "dKg_xy",
+                "base_alpha": 1.0178039086045483,
+                "alpha_mult": 0.84,
+                "alpha_add": 0.0,
+                "x_feedback": -2.7453249072357877e-06
+              },
+              "16": {
+                "p_diag": 8.686229896064467e-11,
+                "x_abs": 4.1896601764851875e-06,
+                "snr_like": 0.4495346151521534,
+                "score_n": 0.176320263502414,
+                "cov_drop": 11.94799914394211,
+                "cov_n": 0.9613628351707368,
+                "trust": 0.5060381436031096,
+                "alpha": 1.0207245772323732,
+                "label": "dKg_yy",
+                "base_alpha": 1.0207245772323732,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -4.2764891123901535e-06
+              },
+              "20": {
+                "p_diag": 9.127796526024141e-11,
+                "x_abs": 1.2357106404865829e-06,
+                "snr_like": 0.12934028427599029,
+                "score_n": 0.0580172911189264,
+                "cov_drop": 11.479255822843783,
+                "cov_n": 0.9597042136260338,
+                "trust": 0.43672579857191157,
+                "alpha": 0.9516626700789115,
+                "label": "dKg_zz",
+                "base_alpha": 1.0124070958286293,
+                "alpha_mult": 0.94,
+                "alpha_add": 0.0,
+                "x_feedback": -1.1759796875703833e-06
+              },
+              "21": {
+                "p_diag": 3.4609570009595606e-11,
+                "x_abs": 2.455189993134817e-07,
+                "snr_like": 0.04173371092467537,
+                "score_n": 0.019485947628221808,
+                "cov_drop": 18.928349257270547,
+                "cov_n": 0.9760457516439132,
+                "trust": 0.4212410653148122,
+                "alpha": 1.0105489278377775,
+                "label": "dKa_xx",
+                "base_alpha": 1.0105489278377775,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -2.48108961520043e-07
+              }
+            },
+            "other_scale_alpha": 0.99,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.02,
+              "20": 0.97
+            },
+            "state_q_static_mult": {},
+            "state_q_dynamic_mult": {
+              "15": 1.02,
+              "20": 0.98
+            },
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "15": 0.84,
+              "20": 0.94
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0003,
+            "post_ry_z_mult": 1.001,
+            "post_rx_y_before": -0.018881112318012302,
+            "post_rx_y_after": -0.018886776651707706,
+            "post_ry_z_before": -0.058626760901222624,
+            "post_ry_z_after": -0.05868538766212384
+          }
+        ]
+      }
+    },
+    "commit_protect_121621_with_1520_repair": {
+      "description": "Let 15/20 take the new asymmetric repair, but add a very small iter2 protection on 12/16/21 so xx/yy/Ka_xx stay closer to the R53 plateau.",
+      "policy_patch": {
+        "1": {
+          "state_prior_diag_mult": {
+            "15": 1.04,
+            "20": 0.96
+          },
+          "state_alpha_mult": {
+            "15": 1.018,
+            "20": 0.972
+          }
+        },
+        "2": {
+          "state_prior_diag_mult": {
+            "15": 1.02,
+            "20": 0.97
+          },
+          "state_alpha_mult": {
+            "12": 0.995,
+            "15": 0.8,
+            "16": 0.997,
+            "20": 0.9,
+            "21": 0.997
+          }
+        }
+      },
+      "post_rx_y_mult": 1.0,
+      "post_ry_z_mult": 1.0007,
+      "focus": {
+        "dKg_xx": 39.47732143756635,
+        "dKg_xy": 9.097112721275783,
+        "dKg_yy": 13.969297682478363,
+        "dKg_zz": 9.240566801375909,
+        "dKa_xx": 16.591531054674938
+      },
+      "lever": {
+        "rx_y": 5.595423855402539,
+        "ry_z": 2.22050798990292
+      },
+      "overall": {
+        "mean_pct_error": 6.895626546457773,
+        "median_pct_error": 3.736039237468498,
+        "max_pct_error": 39.47732143756635
+      },
+      "delta_vs_r53": {
+        "dKg_xx": 0.13181270741628737,
+        "dKg_xy": -1.4238680030027275,
+        "dKg_yy": 0.06862963974889702,
+        "dKg_zz": -0.45934876273099867,
+        "dKa_xx": 0.009579532722671757,
+        "rx_y": 0.004053573334286575,
+        "ry_z": -0.06835608713359997,
+        "mean_pct_error": -0.06042240996435222,
+        "median_pct_error": 0.00098325081708861,
+        "max_pct_error": 0.13181270741628737
+      },
+      "key_newline_delta": {
+        "dKg_xy": -1.4238680030027275,
+        "dKg_zz": -0.45934876273099867,
+        "ry_z": -0.06835608713359997,
+        "protect_dKg_xx": 0.13181270741628737,
+        "protect_dKg_yy": 0.06862963974889702,
+        "protect_dKa_xx": 0.009579532722671757,
+        "protect_mean": -0.06042240996435222
+      },
+      "extra": {
+        "schedule_log": [
+          {
+            "policy_name": "iter1_seed",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2207,
+            "late_release_frac": 0.55
+          },
+          {
+            "policy_name": "iter2_commit",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 2060,
+            "late_release_frac": 0.58
+          },
+          {
+            "policy_name": "iter3_readout_only",
+            "n_static_meas": 3912,
+            "n_dynamic_sched": 990,
+            "n_late_sched": 0,
+            "late_release_frac": 1.0
+          }
+        ],
+        "feedback_log": [
+          {
+            "policy_name": "iter1_seed",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.671737646696794e-11,
+                "x_abs": 3.3524737701204375e-06,
+                "snr_like": 0.36000814240688084,
+                "score_n": 0.13043734794671064,
+                "cov_drop": 12.61497743584312,
+                "cov_n": 0.9603141053758782,
+                "trust": 0.4955831212155443,
+                "alpha": 0.9592932993944872,
+                "label": "dKg_xx",
+                "base_alpha": 0.9592932993944872,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -3.21600562407231e-06
+              },
+              "15": {
+                "p_diag": 1.4352548708591908e-10,
+                "x_abs": 4.586473991954172e-05,
+                "snr_like": 3.828374549452651,
+                "score_n": 0.614666719070241,
+                "cov_drop": 48.480441362749154,
+                "cov_n": 0.9899917518195983,
+                "trust": 0.7798097334799581,
+                "alpha": 1.0228554093892155,
+                "label": "dKg_xy",
+                "base_alpha": 1.0047695573567932,
+                "alpha_mult": 1.018,
+                "alpha_add": 0.0,
+                "x_feedback": 4.6912997326932744e-05
+              },
+              "16": {
+                "p_diag": 8.726831341131524e-11,
+                "x_abs": 1.3195501673369193e-05,
+                "snr_like": 1.4125297867034086,
+                "score_n": 0.3704967215285116,
+                "cov_drop": 12.575094339792722,
+                "cov_n": 0.9601828084898875,
+                "trust": 0.6299585997915169,
+                "alpha": 0.9807933759666427,
+                "label": "dKg_yy",
+                "base_alpha": 0.9807933759666427,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -1.2942060633797254e-05
+              },
+              "20": {
+                "p_diag": 9.134555763647769e-11,
+                "x_abs": 3.2379571332396116e-05,
+                "snr_like": 3.3878750087164726,
+                "score_n": 0.5853400433862812,
+                "cov_drop": 12.042910090726123,
+                "cov_n": 0.9583438561768945,
+                "trust": 0.749461721014151,
+                "alpha": 0.9719162868521207,
+                "label": "dKg_zz",
+                "base_alpha": 0.9999138753622642,
+                "alpha_mult": 0.972,
+                "alpha_add": 0.0,
+                "x_feedback": -3.1470232739245806e-05
+              },
+              "21": {
+                "p_diag": 3.4628569272589644e-11,
+                "x_abs": 8.244564127509533e-06,
+                "snr_like": 1.4010396499130418,
+                "score_n": 0.3685938003685634,
+                "cov_drop": 19.96283738091267,
+                "cov_n": 0.9753122452965006,
+                "trust": 0.6355499161368557,
+                "alpha": 0.9816879865818969,
+                "label": "dKa_xx",
+                "base_alpha": 0.9816879865818969,
+                "alpha_mult": 1.0,
+                "alpha_add": 0.0,
+                "x_feedback": -8.093589558580168e-06
+              }
+            },
+            "other_scale_alpha": 0.98,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.04,
+              "20": 0.96
+            },
+            "state_q_static_mult": {},
+            "state_q_dynamic_mult": {},
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "15": 1.018,
+              "20": 0.972
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0007,
+            "post_rx_y_before": -0.01838559636025067,
+            "post_rx_y_after": -0.01838559636025067,
+            "post_ry_z_before": -0.058365454008082004,
+            "post_ry_z_after": -0.05840630982588766
+          },
+          {
+            "policy_name": "iter2_commit",
+            "selected_state_labels": {
+              "12": "dKg_xx",
+              "15": "dKg_xy",
+              "16": "dKg_yy",
+              "20": "dKg_zz",
+              "21": "dKa_xx"
+            },
+            "selected_trust": {
+              "12": {
+                "p_diag": 8.635644107252948e-11,
+                "x_abs": 2.801786293511046e-06,
+                "snr_like": 0.3015002235137493,
+                "score_n": 0.1255466148042285,
+                "cov_drop": 11.982942480323912,
+                "cov_n": 0.9614810281363229,
+                "trust": 0.4766390684037081,
+                "alpha": 1.0121107047674027,
+                "label": "dKg_xx",
+                "base_alpha": 1.0171966882084449,
+                "alpha_mult": 0.995,
+                "alpha_add": 0.0,
+                "x_feedback": -2.8357179001331137e-06
+              },
+              "15": {
+                "p_diag": 1.427844087961821e-10,
+                "x_abs": 3.4872009066320754e-06,
+                "snr_like": 0.29183446183527084,
+                "score_n": 0.1220128175640317,
+                "cov_drop": 45.62946759509717,
+                "cov_n": 0.9902372931503663,
+                "trust": 0.4866670973102923,
+                "alpha": 0.8147200413417881,
+                "label": "dKg_xy",
+                "base_alpha": 1.0184000516772351,
+                "alpha_mult": 0.8,
+                "alpha_add": 0.0,
+                "x_feedback": -2.8410924668184055e-06
+              },
+              "16": {
+                "p_diag": 8.686228433371902e-11,
+                "x_abs": 4.189058106160062e-06,
+                "snr_like": 0.44947005313789584,
+                "score_n": 0.17629940488404117,
+                "cov_drop": 11.948000149916618,
+                "cov_n": 0.9613628385838034,
+                "trust": 0.5060260470379414,
+                "alpha": 1.0176609562676193,
+                "label": "dKg_yy",
+                "base_alpha": 1.020723125644553,
+                "alpha_mult": 0.997,
+                "alpha_add": 0.0,
+                "x_feedback": -4.263040878175471e-06
+              },
+              "20": {
+                "p_diag": 9.127796217303315e-11,
+                "x_abs": 1.4258633258656336e-06,
+                "snr_like": 0.1492433300989534,
+                "score_n": 0.06635268318985638,
+                "cov_drop": 11.479256016969792,
+                "cov_n": 0.9597042143424251,
+                "trust": 0.4415603262739353,
+                "alpha": 0.9116885152375851,
+                "label": "dKg_zz",
+                "base_alpha": 1.0129872391528723,
+                "alpha_mult": 0.9,
+                "alpha_add": 0.0,
+                "x_feedback": -1.2999432184901645e-06
+              },
+              "21": {
+                "p_diag": 3.460956985920505e-11,
+                "x_abs": 2.4541065742560375e-07,
+                "snr_like": 0.04171529488848232,
+                "score_n": 0.019477516450502077,
+                "cov_drop": 18.92834929839566,
+                "cov_n": 0.9760457516975446,
+                "trust": 0.42123617525426,
+                "alpha": 1.0075166960074196,
+                "label": "dKa_xx",
+                "base_alpha": 1.0105483410305112,
+                "alpha_mult": 0.997,
+                "alpha_add": 0.0,
+                "x_feedback": -2.4725533473445297e-07
+              }
+            },
+            "other_scale_alpha": 0.99,
+            "ka2_alpha": 1.0,
+            "lever_alpha": 1.0,
+            "markov_alpha": 1.0,
+            "state_prior_diag_mult": {
+              "15": 1.02,
+              "20": 0.97
+            },
+            "state_q_static_mult": {},
+            "state_q_dynamic_mult": {},
+            "state_q_late_mult": {},
+            "state_alpha_mult": {
+              "12": 0.995,
+              "15": 0.8,
+              "16": 0.997,
+              "20": 0.9,
+              "21": 0.997
+            },
+            "state_alpha_add": {},
+            "post_rx_y_mult": 1.0,
+            "post_ry_z_mult": 1.0007,
+            "post_rx_y_before": -0.018880915228919493,
+            "post_rx_y_after": -0.018880915228919493,
+            "post_ry_z_before": -0.05862665654647572,
+            "post_ry_z_after": -0.058667695206058246
+          }
+        ]
+      }
+    }
+  }
+}

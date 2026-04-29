@@ -1,0 +1,107 @@
+[LLM] Client initialized: model=mimo-claw-0301, provider=xiaomi
+Generating IMU trajectory...
+
+[A] Clean (No noise)...
+  [Clean] Iter 1/3
+  [Clean] Iter 2/3
+  [Clean] Iter 3/3
+
+[B] Noisy (Standard KF)...
+  [Noisy KF] Iter 1/3
+  [Noisy KF] Iter 2/3
+  [Noisy KF] Iter 3/3
+
+[C] Noisy w/ LLM Masking (Scheme A)...
+  [Noisy LLM] Iter 1/3
+
+============================================================
+[LLM Insight]
+REASONING: The turntable is STRICTLY STATIONARY at T=0.0s. Rotation-dependent scale factors and misalignments (Indices 12-35) have no physical reason to drift when there is no rotation. The state values are all very small (e-08 to e-15 range for most), indicating these are near-zero calibration parameters. With large standard deviations still present (1e-4 to 1e-1), the filter could otherwise allow random walk drift from measurement noise. Since no rotation is occurring, these parameters must remain physically constant. Applying a very small Q_SCALAR to lock down their assumed drift rate.
+
+Q_SCALAR: 0.01
+============================================================
+
+
+============================================================
+[LLM Insight]
+REASONING: The system is currently in a stationary state as indicated by the context at T=78.1s, following a period of rotation. The live Kalman filter state for indices 12-35 shows values that are very small (mostly on the order of 1e-08 or smaller) and within their respective standard deviations, suggesting minimal dynamics and low process noise. To maintain accurate estimation without introducing unnecessary uncertainty, a small Q_SCALAR is appropriate, reflecting the reduced need for process noise during stationary conditions.
+
+Q_SCALAR: 1e-10
+============================================================
+
+
+============================================================
+[LLM Insight]
+### Reasoning:
+Based on the provided timeline, the last recorded event at T=177.1s indicates that the system is STATIONARY. Assuming no subsequent rotation events are mentioned or implied, the system is likely still in a stationary state at this very moment. In Kalman filtering, when the system is stationary, the process noise covariance (Q) should be scaled down to reflect the reduced dynamics and improve estimation accuracy. Therefore, a Q_SCALAR value less than 1.0 is appropriate. Common practice suggests using a Q_SCALAR of around 0.1 for stationary conditions to lower process noise, while higher values (e.g., 10.0) are used during rotation or dynamic motion. Since no specific current time or further dynamics are provided, I infer the state as stationary and apply a conservative Q_SCALAR.
+
+### Q_SCALAR:
+0.1
+============================================================
+
+
+============================================================
+[LLM Insight]
+REASONING
+At T=226.1s, the system has entered a STATIONARY phase, transitioning from a ROTATING phase at T=216.9s. The provided Kalman filter state indices 12-35 show very small magnitude values and corresponding standard deviations, indicating a stable, low-dynamic regime. In a stationary phase, process noise for attitude error states should be minimal to reflect the expected low rate of change. A Q_SCALAR of 1e-6 appropriately scales the process noise covariance to maintain filter stability and prevent unnecessary inflation of state uncertainties during this period of low dynamics.
+
+Q_SCALAR = 1e-6
+============================================================
+
+
+============================================================
+[LLM Insight]
+REASONING: Based on the provided context, the last recorded state at T=275.1s is STATIONARY, indicating that the system is currently at rest with minimal dynamics. The Kalman filter state values for indices 12-35 are all very small (on the order of 1e-11 to 1e-6) with low standard deviations (e.g., 3.4485e-09 to 7.1131e-07), reflecting high estimation confidence and no significant motion or disturbances. In Kalman filtering, the process noise covariance (Q) should be scaled down during stationary periods to avoid unnecessary growth in state uncertainty and maintain filter stability. Therefore, Q_SCALAR should be set to a low value to match the current low-dynamic conditions.
+
+Q_SCALAR: 0.1
+============================================================
+
+
+============================================================
+[LLM Insight]
+**REASONING**
+
+Based on the provided timeline and Kalman filter state, the system is currently in a **stationary phase** (last recorded event at T=324.1s is STATIONARY). The numerical values for indices 12–35 are extremely small (most on the order of 1e-8 to 1e-11), which is consistent with low dynamics and high filter confidence (small standard deviations).  
+
+In stationary conditions, process noise should be minimized to prevent unnecessary state drift and maintain stability. Therefore, a **very low Q_SCALAR** is appropriate to reflect the lack of motion and trust the current state estimate.
+
+**Q_SCALAR**  
+0.001
+============================================================
+
+
+============================================================
+[LLM Insight]
+**REASONING**  
+The system is currently in a **STATIONARY** state (last event at T=373.1s). In this phase, the Kalman filter should prioritize stability and trust its internal model more, as there is no active rotational motion. The state values (indices 12–35) are extremely small (mostly on the order of 1e-8 to 1e-11), and the associated standard deviations are also very low, indicating high confidence in the current state estimates. To avoid unnecessary inflation of process noise—which could introduce jitter or degrade accuracy—the Q_SCALAR should be kept minimal. A value of **1.0e-6** is appropriate for stationary conditions, ensuring the filter remains responsive to any subtle changes (e.g., sensor bias drift) while maintaining overall stability.
+
+**Q_SCALAR**: 1.0e-6
+============================================================
+
+
+============================================================
+[LLM Insight]
+REASONING:  
+- The timeline indicates that at **T=422.1s** the system transitioned to **STATIONARY** after a **Z-axis rotation**.  
+- Looking at the numerical state:  
+  - Indices 30–35 have much larger magnitudes (e.g., –8.3e–6, +4.6e–5, –5.4e–5) compared to earlier indices, which are mostly <1e–7.  
+  - The standard deviations for indices 30–35 are also larger (1.4059e–8), indicating higher uncertainty in those states.  
+  - The remaining indices (12–29) have very small values and standard deviations (typically ~1e–11 to 1e–8), suggesting they are well-constrained after the recent rotational motion has stopped.  
+
+Given the system is now stationary but some states (indices 30–35) still show significant deviations and uncertainty, the process noise should be tuned to allow those states to converge toward zero without destabilizing the already well-estimated states.  
+- A **moderate Q_SCALAR** is appropriate here—larger than during rotation but smaller than during rapid maneuvers—to balance convergence speed and stability.
+
+Q_SCALAR = **1e-10**
+============================================================
+
+
+============================================================
+[LLM Insight]
+REASONING: Based on the provided timeline, the last state transition occurred at T=471.1s, where the system became STATIONARY after rotating around the X-axis. The live Kalman filter state data for indices 12-35 shows values that are very small (on the order of 1e-11 to 1e-06), which is consistent with a low-dynamic or stationary condition. No subsequent rotation events are indicated, so at this very moment, the system is likely stationary. In Kalman filtering, process noise (Q) should be scaled down during stationary periods to reflect minimal expected state changes, reducing unnecessary filter responsiveness. Therefore, Q_SCALAR should be set to a baseline value appropriate for low dynamics.
+
+Q_SCALAR: 1.0
+============================================================
+
+
+============================================================
+[LLM Insight]

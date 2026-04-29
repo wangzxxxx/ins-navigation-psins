@@ -1,0 +1,162 @@
+[
+  {
+    "method": "llm_masking_scheme_a",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/schmidt_shadow/method_llm_masking_scheme_a.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/llm_masking_scheme_a.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/llm_masking_scheme_a.stderr.txt",
+    "summary": {
+      "method": "llm_masking_scheme_a",
+      "tuple_len": 5,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry"
+      ],
+      "eb_norm": 1.4983553148408397e-06,
+      "db_norm": 0.00483023546210469,
+      "Ka2_norm": 3.3167346349040247e-06,
+      "rx_norm": 0.03369234652772364,
+      "ry_norm": 0.08639535754296108,
+      "p_trace_shape": [
+        14706,
+        36
+      ],
+      "x_trace_shape": [
+        14706,
+        36
+      ],
+      "iter_info_type": "list",
+      "source": "test_calibration_schmidt_llm.py",
+      "method_label": "Noisy w/ LLM Masking (Scheme A)",
+      "llm_client_enabled": true
+    }
+  },
+  {
+    "method": "shadow_observer",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/schmidt_shadow/method_shadow_observer.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/shadow_observer.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/shadow_observer.stderr.txt",
+    "summary": {
+      "method": "shadow_observer",
+      "source": "test_shadow_observer.py",
+      "method_label": "shadow observer standalone test",
+      "plot_exists": true,
+      "plot_path": "/root/.openclaw/workspace/psins_method_bench/results/shadow_test_convergence.png"
+    }
+  },
+  {
+    "method": "shadow_hybrid_update",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/schmidt_shadow/method_shadow_hybrid_update.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/shadow_hybrid_update.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/shadow_hybrid_update.stderr.txt",
+    "summary": {
+      "method": "shadow_hybrid_update",
+      "source": "test_system_calibration_19pos_hybrid.py",
+      "method_label": "shadow KF hybrid update with pseudo measurement + inflation",
+      "returncode": 0,
+      "stdout_tail": [
+        "dKg_zy       |    2.908882e-04 |    2.912039e-04 |    2.912039e-04 | 3.157289e-07 |      0.11% | 3.157289e-07 |      0.11%",
+        "dKg_zz       |   -3.000000e-05 |   -3.144123e-05 |   -3.144123e-05 | 1.441227e-06 |      4.80% | 1.441227e-06 |      4.80%",
+        "dKa_xx       |   -1.000000e-05 |   -9.674407e-06 |   -9.674407e-06 | 3.255927e-07 |      3.26% | 3.255927e-07 |      3.26%",
+        "dKa_xy       |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "dKa_xz       |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "dKa_yx       |    4.848137e-05 |    4.628604e-05 |    4.628604e-05 | 2.195332e-06 |      4.53% | 2.195332e-06 |      4.53%",
+        "dKa_yy       |   -2.000000e-05 |   -1.948127e-05 |   -1.948127e-05 | 5.187256e-07 |      2.59% | 5.187256e-07 |      2.59%",
+        "dKa_yz       |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "dKa_zx       |    9.696274e-05 |    9.735358e-05 |    9.735358e-05 | 3.908424e-07 |      0.40% | 3.908424e-07 |      0.40%",
+        "dKa_zy       |    1.454441e-04 |    1.444404e-04 |    1.444404e-04 | 1.003706e-06 |      0.69% | 1.003706e-06 |      0.69%",
+        "dKa_zz       |   -3.000000e-05 |   -2.952774e-05 |   -2.952774e-05 | 4.722639e-07 |      1.57% | 4.722639e-07 |      1.57%",
+        "dKa2_x       |    1.022461e-06 |    1.169260e-06 |    1.169260e-06 | 1.467990e-07 |     14.36% | 1.467990e-07 |     14.36%",
+        "dKa2_y       |    2.044921e-06 |    1.968025e-06 |    1.968025e-06 | 7.689646e-08 |      3.76% | 7.689646e-08 |      3.76%",
+        "dKa2_z       |    3.067382e-06 |    3.090503e-06 |    3.090503e-06 | 2.312115e-08 |      0.75% | 2.312115e-08 |      0.75%",
+        "rx           |    1.000000e-02 |    9.802028e-03 |    9.802028e-03 | 1.979716e-04 |      1.98% | 1.979716e-04 |      1.98%",
+        "ry           |    4.000000e-02 |    4.015671e-02 |    4.015671e-02 | 1.567142e-04 |      0.39% | 1.567142e-04 |      0.39%",
+        "rz           |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "tGA          |    5.000000e-03 |    4.999563e-03 |    4.999563e-03 | 4.368293e-07 |      0.01% | 4.368293e-07 |      0.01%",
+        "=====================================================================================",
+        ""
+      ],
+      "stderr_tail": []
+    }
+  },
+  {
+    "method": "llm_staged_graduation",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/hybrid_staged/method_llm_staged_graduation.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/llm_staged_graduation.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/llm_staged_graduation.stderr.txt",
+    "summary": {
+      "method": "llm_staged_graduation",
+      "tuple_len": 5,
+      "final_keys": [
+        "Ka",
+        "Ka2",
+        "Kg",
+        "db",
+        "eb",
+        "rx",
+        "ry"
+      ],
+      "eb_norm": 1.7831977587038743e-06,
+      "db_norm": 0.00379337484023264,
+      "Ka2_norm": 3.2290704714467843e-06,
+      "rx_norm": 0.0362495185910445,
+      "ry_norm": 0.08606781879430186,
+      "p_trace_shape": [
+        24510,
+        36
+      ],
+      "x_trace_shape": [
+        24510,
+        36
+      ],
+      "iter_info_type": "list",
+      "source": "staged_calibration_llm/test_calibration_staged_llm.py",
+      "method_label": "Noisy + LLM Staged Graduation",
+      "llm_client_enabled": true
+    }
+  },
+  {
+    "method": "hybrid_shadow_kf",
+    "path": "/root/.openclaw/workspace/psins_method_bench/methods/hybrid_staged/method_hybrid_shadow_kf.py",
+    "returncode": 0,
+    "stdout_file": "/root/.openclaw/workspace/psins_method_bench/results/hybrid_shadow_kf.stdout.txt",
+    "stderr_file": "/root/.openclaw/workspace/psins_method_bench/results/hybrid_shadow_kf.stderr.txt",
+    "summary": {
+      "method": "hybrid_shadow_kf",
+      "source": "test_system_calibration_19pos_hybrid.py",
+      "method_label": "hybrid shadow KF full mode",
+      "returncode": 0,
+      "stdout_tail": [
+        "dKg_zy       |    2.908882e-04 |    2.893640e-04 |    2.893640e-04 | 1.524197e-06 |      0.52% | 1.524197e-06 |      0.52%",
+        "dKg_zz       |   -3.000000e-05 |   -2.865942e-05 |   -2.865942e-05 | 1.340579e-06 |      4.47% | 1.340579e-06 |      4.47%",
+        "dKa_xx       |   -1.000000e-05 |   -9.669995e-06 |   -9.669995e-06 | 3.300052e-07 |      3.30% | 3.300052e-07 |      3.30%",
+        "dKa_xy       |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "dKa_xz       |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "dKa_yx       |    4.848137e-05 |    5.036633e-05 |    5.036633e-05 | 1.884963e-06 |      3.89% | 1.884963e-06 |      3.89%",
+        "dKa_yy       |   -2.000000e-05 |   -1.941357e-05 |   -1.941357e-05 | 5.864346e-07 |      2.93% | 5.864346e-07 |      2.93%",
+        "dKa_yz       |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "dKa_zx       |    9.696274e-05 |    9.731675e-05 |    9.731675e-05 | 3.540120e-07 |      0.37% | 3.540120e-07 |      0.37%",
+        "dKa_zy       |    1.454441e-04 |    1.451176e-04 |    1.451176e-04 | 3.264653e-07 |      0.22% | 3.264653e-07 |      0.22%",
+        "dKa_zz       |   -3.000000e-05 |   -2.954976e-05 |   -2.954976e-05 | 4.502351e-07 |      1.50% | 4.502351e-07 |      1.50%",
+        "dKa2_x       |    1.022461e-06 |    8.611684e-07 |    8.611684e-07 | 1.612923e-07 |     15.77% | 1.612923e-07 |     15.77%",
+        "dKa2_y       |    2.044921e-06 |    2.071401e-06 |    2.071401e-06 | 2.647917e-08 |      1.29% | 2.647917e-08 |      1.29%",
+        "dKa2_z       |    3.067382e-06 |    3.097965e-06 |    3.097965e-06 | 3.058233e-08 |      1.00% | 3.058233e-08 |      1.00%",
+        "rx           |    1.000000e-02 |    9.705678e-03 |    9.705678e-03 | 2.943224e-04 |      2.94% | 2.943224e-04 |      2.94%",
+        "ry           |    4.000000e-02 |    3.967880e-02 |    3.967880e-02 | 3.212036e-04 |      0.80% | 3.212036e-04 |      0.80%",
+        "rz           |    0.000000e+00 |   -0.000000e+00 |   -0.000000e+00 | 0.000000e+00 |      0.00% | 0.000000e+00 |      0.00%",
+        "tGA          |    5.000000e-03 |    4.999420e-03 |    4.999420e-03 | 5.799989e-07 |      0.01% | 5.799989e-07 |      0.01%",
+        "=====================================================================================",
+        ""
+      ],
+      "stderr_tail": []
+    }
+  }
+]

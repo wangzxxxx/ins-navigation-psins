@@ -1,0 +1,497 @@
+{
+  "task": "g4_retune_on_corrected_symmetric20",
+  "report_date": "2026-04-05",
+  "noise_scale": 0.12,
+  "noise_config": {
+    "arw_dpsh": 0.0006,
+    "vrw_ugpsHz": 0.6,
+    "bi_g_dph": 0.00024,
+    "bi_a_ug": 0.6,
+    "tau_g": 300.0,
+    "tau_a": 300.0,
+    "seed": 42,
+    "base_family": "round53_round61_shared"
+  },
+  "comparison_mode": "g4_sym20_retune_r59_r60_r61_on_corrected_symmetric20_att0zero_1200s",
+  "path_case": {
+    "case_key": "symmetric20",
+    "case_tag": "ch3corrected_symmetric20_att0zero_1200s",
+    "display_name": "20-position corrected symmetric scheme",
+    "att0_deg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "n_motion_rows": 20,
+    "claimed_position_count": 20,
+    "total_time_s": 1200.0,
+    "timing_note": "uniform 20 × 60 s = 1200 s, row split 6 / 6 / 48 s",
+    "source_builder": "/root/.openclaw/workspace/psins_method_bench/scripts/probe_ch3_corrected_symmetric20_front2_back11.py",
+    "source_reference": "anchor2_zpair_anchor11_xpair_symmetric20_60s",
+    "builder_method_tag": "ch3closedloop_anchor2_zpair_anchor11_xpair_symmetric20_60s"
+  },
+  "baseline": {
+    "json_path": "/root/.openclaw/workspace/psins_method_bench/results/M_markov_42state_gm1_ch3corrected_symmetric20_att0zero_1200s_shared_noise0p12_param_errors.json",
+    "overall": {
+      "mean_pct_error": 0.8635092356514139,
+      "median_pct_error": 0.456621051385936,
+      "max_pct_error": 4.337295383400988
+    },
+    "variant": "ch3corrected_symmetric20_att0zero_1200s_markov42_noisy_noise0p12"
+  },
+  "candidate_count": 12,
+  "ranking_rule": "sort by mean_pct_error, then max_pct_error, then median_pct_error (ascending)",
+  "ranking": [
+    {
+      "family": "round59_hybrid",
+      "source_name": "scd_scale_once_a0999_biaslink_commit",
+      "candidate_name": "scd_scale_once_a0999_biaslink_commit",
+      "merge_source": "probe_round59_h_scd_hybrid._merge_hybrid_candidate",
+      "overall": {
+        "mean_pct_error": 0.9868073619304258,
+        "median_pct_error": 0.4694474274082392,
+        "max_pct_error": 4.3738707972097
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12329812627901193,
+        "median_pct_error": 0.012826376022303188,
+        "max_pct_error": 0.036575413808711765
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12329812627901193,
+        "median_pct_error": -0.012826376022303188,
+        "max_pct_error": -0.036575413808711765
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_scale_once_a0999_biaslink_commit_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 1
+    },
+    {
+      "family": "round59_hybrid",
+      "source_name": "scd_sel_once_a0999_navonly_commit",
+      "candidate_name": "scd_sel_once_a0999_navonly_commit",
+      "merge_source": "probe_round59_h_scd_hybrid._merge_hybrid_candidate",
+      "overall": {
+        "mean_pct_error": 0.986872958468964,
+        "median_pct_error": 0.4607138950403371,
+        "max_pct_error": 4.376985476835024
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12336372281755004,
+        "median_pct_error": 0.0040928436544011015,
+        "max_pct_error": 0.039690093434035845
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12336372281755004,
+        "median_pct_error": -0.0040928436544011015,
+        "max_pct_error": -0.039690093434035845
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_once_a0999_navonly_commit_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 2
+    },
+    {
+      "family": "round60_conservative",
+      "source_name": "scale_once_a0999_s20tight_0899",
+      "candidate_name": "scale_once_a0999_s20tight_0899",
+      "merge_source": "probe_round60_conservative._merge_round60_candidate",
+      "overall": {
+        "mean_pct_error": 0.9874813796160578,
+        "median_pct_error": 0.4694474274082392,
+        "max_pct_error": 4.3738707972097
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12397214396464384,
+        "median_pct_error": 0.012826376022303188,
+        "max_pct_error": 0.036575413808711765
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12397214396464384,
+        "median_pct_error": -0.012826376022303188,
+        "max_pct_error": -0.036575413808711765
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scale_once_a0999_s20tight_0899_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 3
+    },
+    {
+      "family": "round61_micro",
+      "source_name": "r61_td22_s20_0899_ryz00116",
+      "candidate_name": "r61_td22_s20_0899_ryz00116",
+      "merge_source": "probe_round61_hybrid_micro._merge_round61_candidate",
+      "overall": {
+        "mean_pct_error": 0.9875651000457143,
+        "median_pct_error": 0.4693790465042599,
+        "max_pct_error": 4.375081990577521
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12405586439430039,
+        "median_pct_error": 0.012757995118323873,
+        "max_pct_error": 0.037786607176532705
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12405586439430039,
+        "median_pct_error": -0.012757995118323873,
+        "max_pct_error": -0.037786607176532705
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_td22_s20_0899_ryz00116_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 4
+    },
+    {
+      "family": "round60_conservative",
+      "source_name": "scale_once_a0999_s20tight_0899_ryz00116",
+      "candidate_name": "scale_once_a0999_s20tight_0899_ryz00116",
+      "merge_source": "probe_round60_conservative._merge_round60_candidate",
+      "overall": {
+        "mean_pct_error": 0.9875820318239793,
+        "median_pct_error": 0.46944774578349135,
+        "max_pct_error": 4.3738752281097915
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12407279617256539,
+        "median_pct_error": 0.01282669439755535,
+        "max_pct_error": 0.036579844708803044
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12407279617256539,
+        "median_pct_error": -0.01282669439755535,
+        "max_pct_error": -0.036579844708803044
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scale_once_a0999_s20tight_0899_ryz00116_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 5
+    },
+    {
+      "family": "round61_micro",
+      "source_name": "r61_td18_s20_0899_ryz00116",
+      "candidate_name": "r61_td18_s20_0899_ryz00116",
+      "merge_source": "probe_round61_hybrid_micro._merge_round61_candidate",
+      "overall": {
+        "mean_pct_error": 0.9875975506692364,
+        "median_pct_error": 0.46953048423587457,
+        "max_pct_error": 4.372556673955043
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12408831501782247,
+        "median_pct_error": 0.012909432849938562,
+        "max_pct_error": 0.0352612905540548
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12408831501782247,
+        "median_pct_error": -0.012909432849938562,
+        "max_pct_error": -0.0352612905540548
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_td18_s20_0899_ryz00116_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 6
+    },
+    {
+      "family": "round61_micro",
+      "source_name": "r61_s20_08988_ryz00116",
+      "candidate_name": "r61_s20_08988_ryz00116",
+      "merge_source": "probe_round61_hybrid_micro._merge_round61_candidate",
+      "overall": {
+        "mean_pct_error": 0.9877168353759085,
+        "median_pct_error": 0.46944774578349135,
+        "max_pct_error": 4.3738752281097915
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12420759972449458,
+        "median_pct_error": 0.01282669439755535,
+        "max_pct_error": 0.036579844708803044
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12420759972449458,
+        "median_pct_error": -0.01282669439755535,
+        "max_pct_error": -0.036579844708803044
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_s20_08988_ryz00116_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 7
+    },
+    {
+      "family": "round61_micro",
+      "source_name": "r61_s20_08988_ryz00118",
+      "candidate_name": "r61_s20_08988_ryz00118",
+      "merge_source": "probe_round61_hybrid_micro._merge_round61_candidate",
+      "overall": {
+        "mean_pct_error": 0.9877839369293356,
+        "median_pct_error": 0.46944795803393,
+        "max_pct_error": 4.373878183523483
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12427470127792173,
+        "median_pct_error": 0.012826906647994019,
+        "max_pct_error": 0.036582800122494596
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12427470127792173,
+        "median_pct_error": -0.012826906647994019,
+        "max_pct_error": -0.036582800122494596
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_s20_08988_ryz00118_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 8
+    },
+    {
+      "family": "round61_micro",
+      "source_name": "r61_s20_08986_ryz00117",
+      "candidate_name": "r61_s20_08986_ryz00117",
+      "merge_source": "probe_round61_hybrid_micro._merge_round61_candidate",
+      "overall": {
+        "mean_pct_error": 0.9878851896724125,
+        "median_pct_error": 0.4694478519081413,
+        "max_pct_error": 4.373876705816637
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.12437595402099855,
+        "median_pct_error": 0.012826800522205306,
+        "max_pct_error": 0.03658132241564882
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.12437595402099855,
+        "median_pct_error": -0.012826800522205306,
+        "max_pct_error": -0.03658132241564882
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_s20_08986_ryz00117_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 9
+    },
+    {
+      "family": "round59_hybrid",
+      "source_name": "scd_sel_once_a0999_biaslink_commit",
+      "candidate_name": "scd_sel_once_a0999_biaslink_commit",
+      "merge_source": "probe_round59_h_scd_hybrid._merge_hybrid_candidate",
+      "overall": {
+        "mean_pct_error": 1.0012059904471078,
+        "median_pct_error": 0.4672034518219118,
+        "max_pct_error": 4.652324680493935
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.13769675479569388,
+        "median_pct_error": 0.010582400435975803,
+        "max_pct_error": 0.3150292970929467
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.13769675479569388,
+        "median_pct_error": -0.010582400435975803,
+        "max_pct_error": -0.3150292970929467
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_once_a0999_biaslink_commit_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 10
+    },
+    {
+      "family": "round59_hybrid",
+      "source_name": "scd_sel_once_a0998_biaslink_commit",
+      "candidate_name": "scd_sel_once_a0998_biaslink_commit",
+      "merge_source": "probe_round59_h_scd_hybrid._merge_hybrid_candidate",
+      "overall": {
+        "mean_pct_error": 1.0203986719953007,
+        "median_pct_error": 0.548623576418316,
+        "max_pct_error": 4.921479159198458
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 0.15688943634388675,
+        "median_pct_error": 0.09200252503238004,
+        "max_pct_error": 0.5841837757974693
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -0.15688943634388675,
+        "median_pct_error": -0.09200252503238004,
+        "max_pct_error": -0.5841837757974693
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_once_a0998_biaslink_commit_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 11
+    },
+    {
+      "family": "round59_hybrid",
+      "source_name": "scd_sel_repeat_a09998_biaslink_commit",
+      "candidate_name": "scd_sel_repeat_a09998_biaslink_commit",
+      "merge_source": "probe_round59_h_scd_hybrid._merge_hybrid_candidate",
+      "overall": {
+        "mean_pct_error": 2.7864670515009995,
+        "median_pct_error": 0.724720737806829,
+        "max_pct_error": 27.96637175637411
+      },
+      "delta_vs_g3": {
+        "mean_pct_error": 1.9229578158495855,
+        "median_pct_error": 0.268099686420893,
+        "max_pct_error": 23.62907637297312
+      },
+      "improvement_vs_g3": {
+        "mean_pct_error": -1.9229578158495855,
+        "median_pct_error": -0.268099686420893,
+        "max_pct_error": -23.62907637297312
+      },
+      "beats_g3": {
+        "mean": false,
+        "median": false,
+        "max": false,
+        "all_three": false
+      },
+      "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_repeat_a09998_biaslink_commit_shared_noise0p12_param_errors.json",
+      "status": "rerun",
+      "rank": 12
+    }
+  ],
+  "best_candidate": {
+    "family": "round59_hybrid",
+    "source_name": "scd_scale_once_a0999_biaslink_commit",
+    "candidate_name": "scd_scale_once_a0999_biaslink_commit",
+    "merge_source": "probe_round59_h_scd_hybrid._merge_hybrid_candidate",
+    "overall": {
+      "mean_pct_error": 0.9868073619304258,
+      "median_pct_error": 0.4694474274082392,
+      "max_pct_error": 4.3738707972097
+    },
+    "delta_vs_g3": {
+      "mean_pct_error": 0.12329812627901193,
+      "median_pct_error": 0.012826376022303188,
+      "max_pct_error": 0.036575413808711765
+    },
+    "improvement_vs_g3": {
+      "mean_pct_error": -0.12329812627901193,
+      "median_pct_error": -0.012826376022303188,
+      "max_pct_error": -0.036575413808711765
+    },
+    "beats_g3": {
+      "mean": false,
+      "median": false,
+      "max": false,
+      "all_three": false
+    },
+    "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_scale_once_a0999_biaslink_commit_shared_noise0p12_param_errors.json",
+    "status": "rerun",
+    "rank": 1
+  },
+  "any_beats_g3": {
+    "mean": false,
+    "median": false,
+    "max": false
+  },
+  "any_beats_g3_all_three": false,
+  "clear_all_three_winner": null,
+  "nearest_gap_best_vs_g3": {
+    "mean_pct_error": 0.12329812627901193,
+    "median_pct_error": 0.012826376022303188,
+    "max_pct_error": 0.036575413808711765
+  },
+  "current_transferred_round61": {
+    "family": "round61_micro",
+    "source_name": "r61_s20_08988_ryz00116",
+    "candidate_name": "r61_s20_08988_ryz00116",
+    "merge_source": "probe_round61_hybrid_micro._merge_round61_candidate",
+    "overall": {
+      "mean_pct_error": 0.9877168353759085,
+      "median_pct_error": 0.46944774578349135,
+      "max_pct_error": 4.3738752281097915
+    },
+    "delta_vs_g3": {
+      "mean_pct_error": 0.12420759972449458,
+      "median_pct_error": 0.01282669439755535,
+      "max_pct_error": 0.036579844708803044
+    },
+    "improvement_vs_g3": {
+      "mean_pct_error": -0.12420759972449458,
+      "median_pct_error": -0.01282669439755535,
+      "max_pct_error": -0.036579844708803044
+    },
+    "beats_g3": {
+      "mean": false,
+      "median": false,
+      "max": false,
+      "all_three": false
+    },
+    "result_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_s20_08988_ryz00116_shared_noise0p12_param_errors.json",
+    "status": "rerun",
+    "rank": 7
+  },
+  "artifacts": {
+    "summary_json": "/root/.openclaw/workspace/psins_method_bench/results/g4_sym20_retune_2026-04-05_noise0p12_summary.json",
+    "report_md": "/root/.openclaw/workspace/reports/psins_g4_sym20_retune_2026-04-05_noise0p12.md",
+    "best_candidate_json": "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_scale_once_a0999_biaslink_commit_shared_noise0p12_param_errors.json",
+    "all_candidate_jsons": [
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_scale_once_a0999_biaslink_commit_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_once_a0999_navonly_commit_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scale_once_a0999_s20tight_0899_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_td22_s20_0899_ryz00116_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scale_once_a0999_s20tight_0899_ryz00116_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_td18_s20_0899_ryz00116_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_s20_08988_ryz00116_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_s20_08988_ryz00118_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_r61_s20_08986_ryz00117_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_once_a0999_biaslink_commit_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_once_a0998_biaslink_commit_shared_noise0p12_param_errors.json",
+      "/root/.openclaw/workspace/psins_method_bench/results/G4_sym20_retune_scd_sel_repeat_a09998_biaslink_commit_shared_noise0p12_param_errors.json"
+    ]
+  }
+}
