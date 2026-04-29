@@ -82,27 +82,6 @@ python generate_ch4_alignment_convergence_fig_2026-03-31.py
 
 > 详细结果见 `benchmark/results/` 与 `benchmark/summary/`
 
-## 📚 相关论文与参考
-
-1. **SkVM (2026)**：Skill Virtual Machine for Cross-Model Skill Execution  
-   arXiv:2604.03088v2 | https://arxiv.org/abs/2604.03088
-
-2. **PSINS (Python)**：Python-Based Inertial Navigation System  
-   核心实现见 `core/` 目录
-
-## 📝 提交信息
-
-- **提交邮箱**：wrichu0126@gmail.com
-- **维护者**：wrichu0126
-- **最后更新**：2026-04-29
-
-## 👥 贡献者
-
-| 贡献者 | GitHub 账号 | 邮箱 | 角色 |
-|----------|-------------|------|------|
-| wrichu0126 | wrichu0126 | wrichu0126@gmail.com | 项目维护者、算法设计 |
-| wangzxxxx | wangzxxxx | — | 代码托管、仓库管理 |
-
 ## 📄 License
 
 未经书面许可，不得用于商业用途。学术研究请注明出处。
