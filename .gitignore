@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Results (large JSON files)
+results/*.json
+!results/README.md
+
+# Plots (generated images)
+**/plots/
+**/*.png
+**/*.svg
+**/*.pdf
+
+# Temporary files
+tmp/
+tmp_*/
+*.log
+*.txt
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
